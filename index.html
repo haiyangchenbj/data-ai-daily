@@ -1,454 +1,424 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data+AI 全球日报 | 2026-03-12</title>
-    <style>
-        :root {
-            --primary: #1a73e8;
-            --primary-light: #e8f0fe;
-            --accent: #e8710a;
-            --text: #202124;
-            --text-secondary: #5f6368;
-            --bg: #ffffff;
-            --bg-surface: #f8f9fa;
-            --border: #dadce0;
-            --signal-red: #d93025;
-            --signal-green: #188038;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
-            line-height: 1.8;
-            color: var(--text);
-            background: var(--bg-surface);
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-            background: var(--bg);
-            border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
-            color: white;
-            padding: 40px 40px 32px;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            letter-spacing: -0.5px;
-        }
-
-        .header .subtitle {
-            font-size: 14px;
-            opacity: 0.85;
-            margin-top: 8px;
-        }
-
-        .content { padding: 32px 40px 40px; }
-
-        .top-changes {
-            background: linear-gradient(135deg, #fef7e0 0%, #fff8e1 100%);
-            border-left: 4px solid var(--accent);
-            border-radius: 0 8px 8px 0;
-            padding: 20px 24px;
-            margin-bottom: 28px;
-        }
-
-        .top-changes h2 {
-            font-size: 16px;
-            color: var(--accent);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .top-changes ol {
-            padding-left: 20px;
-            font-size: 14px;
-        }
-
-        .top-changes li {
-            margin-bottom: 8px;
-            line-height: 1.7;
-        }
-
-        .top-changes li strong { color: var(--text); }
-
-        .verdict {
-            background: var(--primary-light);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 32px;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        .verdict strong { color: var(--primary); }
-
-        .section-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--primary);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            margin-top: 36px;
-        }
-
-        .section-title:first-of-type { margin-top: 0; }
-
-        .event {
-            background: var(--bg-surface);
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin-bottom: 16px;
-            border: 1px solid var(--border);
-            transition: box-shadow 0.2s;
-        }
-
-        .event:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .event h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .event .source {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-
-        .event .source a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .event .source a:hover { text-decoration: underline; }
-
-        .event .summary {
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-
-        .event .impact {
-            font-size: 13px;
-            color: var(--text-secondary);
-            background: white;
-            border-left: 3px solid var(--primary);
-            padding: 10px 14px;
-            border-radius: 0 6px 6px 0;
-            line-height: 1.7;
-        }
-
-        .event .impact strong { color: var(--primary); }
-
-        .data-point {
-            background: #e8f5e9;
-            border-radius: 4px;
-            padding: 2px 8px;
-            font-size: 13px;
-            color: var(--signal-green);
-            font-weight: 600;
-            display: inline;
-        }
-
-        .price-up {
-            background: #fce4ec;
-            color: var(--signal-red);
-        }
-
-        .watchlist-item {
-            background: #fff3e0;
-            border: 1px solid #ffe0b2;
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 12px;
-        }
-
-        .watchlist-item h3 {
-            font-size: 15px;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .watchlist-item p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .footer {
-            font-size: 12px;
-            color: var(--text-secondary);
-            text-align: center;
-            padding: 24px 40px;
-            border-top: 1px solid var(--border);
-            line-height: 1.8;
-            font-style: italic;
-        }
-
-        @media (max-width: 600px) {
-            body { padding: 8px; }
-            .header { padding: 24px 20px 20px; }
-            .header h1 { font-size: 22px; }
-            .content { padding: 20px; }
-            .event { padding: 16px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data+AI 全球日报 | 2026-03-11</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --border: #dadce0;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+  }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header .date { font-size: 16px; opacity: 0.9; }
+  
+  /* Summary Box */
+  .summary-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .summary-box h2 { color: var(--accent); font-size: 18px; margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box ol li { margin-bottom: 10px; font-size: 15px; }
+  .summary-box ol li strong { color: var(--text); }
+  .verdict {
+    margin-top: 16px;
+    padding: 14px 18px;
+    background: #fff3e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #e65100;
+    border: 1px solid #ffe0b2;
+  }
+  .verdict strong { color: #bf360c; }
+  
+  /* Section */
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-light);
+  }
+  .section-title .badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+  .badge-red { background: var(--accent); }
+  .badge-blue { background: var(--primary); }
+  .badge-green { background: var(--green); }
+  .badge-purple { background: var(--purple); }
+  .badge-orange { background: var(--orange); color: #333; }
+  
+  /* News Item */
+  .news-item {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .news-item h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .news-item .source {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .news-item .source a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .news-item .source a:hover { text-decoration: underline; }
+  .news-item .content { font-size: 15px; color: #3c4043; margin-bottom: 10px; }
+  .news-item .impact {
+    font-size: 14px;
+    padding: 10px 14px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    color: #1565c0;
+    margin-top: 8px;
+  }
+  .news-item .impact strong { color: #0d47a1; }
+  
+  /* People quote */
+  .quote-box {
+    border-left: 3px solid var(--purple);
+    padding: 12px 16px;
+    background: #f3e8fd;
+    border-radius: 0 8px 8px 0;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #4a148c;
+  }
+  
+  /* Watchlist */
+  .watchlist-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding: 14px;
+    background: #fffde7;
+    border-radius: 8px;
+    border: 1px solid #fff9c4;
+  }
+  .watchlist-item:last-child { margin-bottom: 0; }
+  .watchlist-icon { font-size: 24px; flex-shrink: 0; }
+  .watchlist-content h4 { font-size: 15px; margin-bottom: 4px; }
+  .watchlist-content p { font-size: 14px; color: var(--text-secondary); }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    margin-top: 12px;
+  }
+  
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section { padding: 20px; }
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📊 Data+AI 全球日报</h1>
-            <div style="font-size: 24px; font-weight: 300; margin-top: 4px;">2026-03-12 · 周四</div>
-            <div class="subtitle">数据平台 · 数据基础设施 · 数据治理 · AI for Data</div>
-        </div>
+<div class="container">
 
-        <div class="content">
+<!-- Header -->
+<div class="header">
+  <h1>📊 Data+AI 全球日报</h1>
+  <div class="date">2026年3月11日 · 星期三</div>
+</div>
 
-            <div class="top-changes">
-                <h2>🔥 今日最重要的3个变化</h2>
-                <ol>
-                    <li><strong>腾讯云 ADP 智能体开发平台宣布模型涨价，混元 HY2.0 涨幅超 460%</strong> — 第三方模型 GLM 5、MiniMax 2.5、Kimi 2.5 结束免费公测，Agent 驱动的 Token 消耗从"免费补贴"走向商业化定价</li>
-                    <li><strong>工信部启动"工业数据筑基行动"，面向 AI 赋能建设高质量行业数据集</strong> — 首次以国家级通知形式推动工业数据标准化、可流通、赋能行业大模型与工业智能体</li>
-                    <li><strong>微信秘密研发 AI Agent 项目曝光：拟打通数百万小程序，2026年中灰度测试</strong> — 腾讯将微信从"社交入口"升级为"智能任务中心"，Agent 与数据平台的交互规模将呈量级跃升</li>
-                </ol>
-            </div>
+<!-- Summary -->
+<div class="summary-box">
+  <h2>🔥 今日最重要的3个变化</h2>
+  <ol>
+    <li><strong>Gartner Data & Analytics Summit 2026 在 Orlando 开幕，定调"AI 回报三支柱"</strong> — 超半数 IT 领导者担忧 AI 成本失控，仅 44% 组织建立了 AI FinOps 实践，Gartner 警告治理成熟度低的组织将无法实现 AI 价值</li>
+    <li><strong>Databricks 发布多智能体可视化方案与 Unity Catalog 数据发现增强</strong> — 将 Vega-Lite 引入多智能体系统实现自动化数据可视化，Unity Catalog 新增业务上下文的统一数据发现能力</li>
+    <li><strong>华为宣布 3 月 20 日数据存储峰会将发布新品</strong> — 围绕"AI 语料准备→AI 训练→AI 推理"三环节发布创新产品，延续 MWC 2026 的 AI 数据平台战略</li>
+  </ol>
+  <div class="verdict">
+    <strong>总判断：</strong>今日行业信号集中于<strong>数据治理与 AI 价值回报的现实落地</strong>。Gartner 明确指出 AI 成本管理和数据治理是实现 AI 价值的前提，Databricks 的产品更新则从技术侧回应了数据发现和多智能体协作的工程化需求。"从 AI 兴奋期走向 AI 价值兑现期"成为主旋律。
+  </div>
+</div>
 
-            <div class="verdict">
-                <strong>总判断：</strong>今日行业信号集中于 <strong>Agent 商业化与数据治理的制度化</strong>。腾讯云模型涨价标志着 Agent 生态从"烧钱获客"进入"价值变现"阶段，工信部工业数据筑基行动则将数据标准化从企业行为提升为国家行动。Token 定价与数据治理同步升温，数据平台的成本管理和数据质量能力成为刚需。
-            </div>
+<!-- Section A: Top Signals -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-red">A</span> Top Signals
+  </div>
 
-            <!-- A. Top Signals -->
-            <h2 class="section-title">A. Top Signals</h2>
-
-            <div class="event">
-                <h3>1. 腾讯云 ADP 智能体开发平台宣布模型涨价：混元 HY2.0 涨幅超 460%，第三方模型结束免费</h3>
-                <div class="source">
-                    📌 <a href="https://new.qq.com/rain/a/20260311A058CU00" target="_blank">腾讯云官方公告</a> |
-                    <a href="https://finance.sina.com.cn/tech/roll/2026-03-11/doc-inhqqyvn5604563.shtml" target="_blank">新浪财经</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    <p>3月11日，腾讯云宣布自3月13日起，智能体开发平台（Tencent Cloud ADP）对部分模型计费策略进行调整。GLM 5、MiniMax 2.5、Kimi 2.5 三个第三方模型将结束免费公测，正式商用计费。自研混元系列涨幅显著：</p>
-                    <ul style="margin: 8px 0 8px 20px; font-size: 13px;">
-                        <li>HY2.0 Instruct 输入：0.0008 → 0.004505 元/千Token <span class="data-point price-up">↑ 463%</span></li>
-                        <li>HY2.0 Instruct 输出：0.002 → 0.01113 元/千Token <span class="data-point price-up">↑ 456%</span></li>
-                        <li>HY2.0 Think 输入：0.001 → 0.0053 元/千Token <span class="data-point price-up">↑ 430%</span></li>
-                        <li>HY2.0 Think 输出：0.004 → 0.0212 元/千Token <span class="data-point price-up">↑ 430%</span></li>
-                    </ul>
-                </div>
-                <div class="impact">
-                    <strong>📊 数据平台影响：</strong>Agent 模式下单任务 Token 消耗较 Chatbot 提升 3 个数量级，叠加涨价，企业 Agent 应用的推理成本将大幅上升。直接驱动数据平台必须提供 Token 消耗监控、成本归因、FinOps 仪表盘等能力。涨价信号验证 Agent 驱动的算力消耗已从"免费试用"走向真实商业化。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>2. 工信部启动"工业数据筑基行动"：面向 AI 赋能建设高质量行业数据集</h3>
-                <div class="source">
-                    📌 <a href="http://www.chinanews.com.cn/cj/2026/03-11/10585282.shtml" target="_blank">中国新闻网 / 工信部"工信微报"</a> |
-                    <a href="http://finance.sina.com.cn/roll/2026-03-12/doc-inhqshrc5138272.shtml" target="_blank">新华社 / 新浪财经</a>（通知发布 2026-03-10，3月11日广泛报道）
-                </div>
-                <div class="summary">
-                    <p>工信部印发《关于启动工业数据筑基行动 开展面向人工智能赋能的高质量行业数据集建设先行先试的通知》（工信厅信发函〔2026〕64号）。目标：到2026年底，培育行业数据合作联合体，建设重点行业数据可信互联平台，打造<strong>四大资源库</strong>（数据资源库、数据技术攻关库、工业数据标准库、高质量行业数据集库）。聚焦钢铁、汽车等重点行业，依托四类主体推动先行先试。</p>
-                </div>
-                <div class="impact">
-                    <strong>📊 数据平台影响：</strong>国家层面首次以专项通知推动工业数据标准化和 AI 赋能数据集建设，直接创造了数据平台在数据采集（"采"）、数据集构建（"集"）、数据应用（"用"）三环节的大规模需求。能提供"数据可信互联平台"能力的厂商将直接受益。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>3. 微信秘密研发 AI Agent 项目曝光：打通数百万小程序，2026年中灰度测试</h3>
-                <div class="source">
-                    📌 <a href="https://www.pingwest.com/w/311961" target="_blank">The Information / 品玩</a> |
-                    <a href="https://finance.sina.com.cn/tech/roll/2026-03-11/doc-inhqqupq5624393.shtml" target="_blank">新浪科技</a> |
-                    <a href="https://www.myzaker.com/article/69b0d1aa8e9f0962741bc58d" target="_blank">ZAKER</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    <p>据 The Information 报道，腾讯微信团队正秘密研发一款高优先级 AI Agent 产品，由微信技术负责人周颢负责、直接向张小龙汇报，2025年上半年启动。Agent 将全面接入微信生态内数百万小程序，实现跨应用任务执行——用户通过自然语言即可调用打车、外卖、订票、缴费等服务。计划2026年中灰度测试，Q3 逐步放量。技术选型上并行测试智谱、DeepSeek、阿里等外部模型及自研小模型。马化腾3月11日凌晨在朋友圈转发腾讯"龙虾"产品矩阵，配文"还有一批产品陆续赶来"。</p>
-                </div>
-                <div class="impact">
-                    <strong>📊 数据平台影响：</strong>微信 14 亿月活 + 数百万小程序 + AI Agent = 数据交互量量级跃升。Agent 需实时调用小程序 API、管理用户会话历史、处理跨服务数据流转，对数据平台的实时处理能力、会话存储、隐私合规提出全新挑战。可能成为中国覆盖面最广的 Agent 产品。
-                </div>
-            </div>
-
-            <!-- B. Product & Tech -->
-            <h2 class="section-title">B. Product & Tech</h2>
-
-            <div class="event">
-                <h3>1. 百度智能云发布 DuClaw：OpenClaw "零部署"服务，首购 17.8 元/月</h3>
-                <div class="source">
-                    📌 <a href="https://finance.people.com.cn/n1/2026/0311/c1004-40679953.html" target="_blank">百度智能云 / 人民网</a> |
-                    <a href="http://finance.eastmoney.com/a/202603113668739841.html" target="_blank">东方财富网</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    百度智能云发布 DuClaw，将"一键部署"升级为"零部署"——用户无需选择镜像、配置服务器或填写 API Key，订阅即用。首购 <span class="data-point">17.8 元/月</span>。预置百度搜索、百科等 Skills，支持 DeepSeek、Kimi K2.5、GLM-5、MiniMax M2.5 等主流模型。后续将支持企微、钉钉、飞书。
-                </div>
-                <div class="impact">
-                    <strong>📊 影响判断：</strong>Agent 部署门槛从"会运维"降至"会订阅"，Agent-as-a-Service 进入零门槛阶段。Token 消耗将加速集中到云端，推理侧数据管道需支撑更大规模集中式调用。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>2. 国家超算互联网向全体 OpenClaw 用户免费发放 1000 万 Tokens</h3>
-                <div class="source">
-                    📌 <a href="https://finance.eastmoney.com/a/202603113669026966.html" target="_blank">超算互联网 / 东方财富网</a> |
-                    <a href="https://www.donews.com/news/detail/8/6462259.html" target="_blank">DoNews</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    国家超算互联网宣布面向全体 OpenClaw 用户免费发放每人 <span class="data-point">1000 万 Tokens</span>（限时 2 周）。同时公布 Token 续购价格：<span class="data-point">0.1 元/百万 Tokens</span>，较市场均价有明显降幅。此前（3月9日）已打通飞书、企业微信。
-                </div>
-                <div class="impact">
-                    <strong>📊 影响判断：</strong>国家级算力基础设施入场补贴 Agent Token 消耗，与腾讯云涨价形成鲜明对比。价格分化将加速 Agent 算力市场分层，对数据平台的多云/混合云部署能力提出更高要求。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>3. CNCERT 发布 OpenClaw 安全风险提示：默认配置脆弱，系统控制权可被获取</h3>
-                <div class="source">
-                    📌 <a href="http://finance.eastmoney.com/a/202603103667667051.html" target="_blank">CNCERT / 东方财富网</a> |
-                    <a href="http://tech.hexun.com/2026-03-10/223655929.html" target="_blank">和讯网</a>（2026-03-10，3月11日广泛传播）
-                </div>
-                <div class="summary">
-                    CNCERT 发布《关于 OpenClaw 安全应用的风险提示》，指出 OpenClaw 被授予较高系统权限，但默认安全配置极为脆弱。已曝出多个高中危漏洞：(1) 提示词注入——攻击者诱导 Agent 泄露系统密钥；(2) 误操作——Agent 错误理解指令可能删除核心数据；(3) 功能插件投毒。
-                </div>
-                <div class="impact">
-                    <strong>📊 影响判断：</strong>Agent 安全问题上升到国家网络安全机构关注层面。数据平台需提供细粒度权限控制、审计日志、数据沙箱等安全能力来支撑 Agent 安全运行。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>4. Databricks 发布 LogSentinel：用 LLM 驱动 PII 检测与治理</h3>
-                <div class="source">
-                    📌 <a href="https://www.databricks.com/blog" target="_blank">Databricks 官方博客</a>（2026-03-06）
-                </div>
-                <div class="summary">
-                    Databricks 发布 LogSentinel 案例——展示如何利用 LLM 自动检测和治理日志中的个人身份信息（PII）。这是 Databricks 自身使用自家平台进行数据治理的"dogfooding"实践。
-                </div>
-                <div class="impact">
-                    <strong>📊 影响判断：</strong>LLM 驱动的 PII 检测代表数据治理新范式——从规则匹配转向语义理解，显著提升非结构化数据中的 PII 检出率。数据平台将治理能力与 LLM 深度集成是必然趋势。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>5. Databricks 发布 KARL Agent：基于强化学习的企业知识检索加速</h3>
-                <div class="source">
-                    📌 <a href="https://www.databricks.com/blog" target="_blank">Databricks 官方博客</a>（2026-03-05）
-                </div>
-                <div class="summary">
-                    Databricks 发布 KARL（A Faster Agent for Enterprise Knowledge），通过自定义强化学习（RL）优化企业知识库的检索和回答速度，旨在解决大规模企业知识检索中 Agent 响应延迟高的问题。
-                </div>
-                <div class="impact">
-                    <strong>📊 影响判断：</strong>RL 优化 Agent 检索是降低企业 AI 应用延迟和 Token 消耗的关键技术路径。Databricks 正从"数据平台提供 AI 能力"走向"AI 优化数据平台自身性能"。
-                </div>
-            </div>
-
-            <!-- C. People & Views -->
-            <h2 class="section-title">C. People & Views</h2>
-
-            <div class="event">
-                <h3>1. 马化腾凌晨发圈力挺"龙虾"矩阵：Agent 生态成腾讯战略优先级</h3>
-                <div class="source">
-                    📌 <a href="https://k.sina.com.cn/article_7857201856_1d45362c0019033az6.html" target="_blank">新浪科技</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    3月11日凌晨 2:06，腾讯董事会主席马化腾在朋友圈转发腾讯全系"龙虾"产品矩阵公众号文章，配文"还有一批产品陆续赶来"。结合同日腾讯云 ADP 涨价和微信 AI Agent 曝光，表明 Agent 生态已上升为腾讯集团级战略。
-                </div>
-                <div class="impact">
-                    <strong>📊 映射到数据平台：</strong>当中国最大互联网平台的一把手亲自为 Agent 产品站台，Agent 对数据基础设施的需求将从"技术探索"变为"业务刚需"。数据平台在会话存储、实时检索、权限控制等方面的能力将成为 Agent 生态基础设施层。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>2. 苏州市 AI 协会发布 OpenClaw 理性应用倡议书：不制造焦虑、不鼓吹神话</h3>
-                <div class="source">
-                    📌 <a href="https://www.sohu.com/a/995012936_121157270" target="_blank">苏州市人工智能行业协会 / 搜狐</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    苏州市 AI 协会联合多家企事业单位发布倡议书：(1) 回归理性认知，OpenClaw 更适合流程明确、容错率高的辅助任务；(2) 严格落实安全配置基线，遵循最小权限原则；(3) 建立数据隔离与审计日志机制；(4) 不制造焦虑、不鼓吹神话。
-                </div>
-                <div class="impact">
-                    <strong>📊 映射到数据平台：</strong>国内首份地方行业协会级别的 Agent 理性应用倡议。"最小权限原则"和"数据隔离与审计日志"要求直接对应数据平台的权限管理和日志审计能力。Agent 治理从技术议题走向行业自律。
-                </div>
-            </div>
-
-            <!-- D. Analyst Insights -->
-            <h2 class="section-title">D. Analyst Insights</h2>
-
-            <div class="event">
-                <h3>1. OpenClaw 驱动国产大模型调用量暴增：阶跃星辰日调用量增长超 20 倍</h3>
-                <div class="source">
-                    📌 <a href="http://www.sohu.com/a/995119593_222256" target="_blank">科创板日报 / 搜狐</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    <p>基于 OpenRouter 统计，OpenClaw 日榜与月榜前三均为中国大模型：阶跃星辰 Step 3.5 Flash、Kimi K2.5、MiniMax M2.5。关键数据：</p>
-                    <ul style="margin: 8px 0 8px 20px; font-size: 13px;">
-                        <li>阶跃星辰 Step 3.5 Flash 日调用量较30天前 <span class="data-point">增长超 20 倍</span></li>
-                        <li>MiniMax M2 系列 2月日均 Token 消耗较去年12月 <span class="data-point">增长超 6 倍</span></li>
-                        <li>其中 Coding Plan Token 消耗 <span class="data-point">增长超 10 倍</span></li>
-                    </ul>
-                </div>
-                <div class="impact">
-                    <strong>📊 数据平台映射：</strong>国产大模型调用量暴增意味着推理侧数据基础设施面临极大压力——日志系统、监控平台、计费系统都需要应对 10-20 倍量级的流量增长。数据平台的弹性伸缩和实时处理能力成为关键。
-                </div>
-            </div>
-
-            <div class="event">
-                <h3>2. 券商：Agent 模式下 Token 消耗结构性变化，AI 云服务进入涨价周期</h3>
-                <div class="source">
-                    📌 <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_74269b1fb6d09452" target="_blank">企鹅号 / 港股概念追踪</a>（2026-03-11）
-                </div>
-                <div class="summary">
-                    腾讯云涨价叠加 OpenClaw Token 消耗暴增，AI 云服务正式进入涨价周期。涨价逻辑：(1) 免费补贴不可持续；(2) Agent 对高质量推理的持续需求；(3) GPU 算力供给仍紧张。Agent 模式使 AI 算力消耗从"按需对话"转变为"全天候持续运行"，单用户 Token 消耗提升 2-3 个数量级。
-                </div>
-                <div class="impact">
-                    <strong>📊 数据平台映射：</strong>推理成本上升将倒逼企业更关注 Token 使用效率和成本优化。数据平台需提供推理成本归因、缓存复用、智能路由等 FinOps 能力。
-                </div>
-            </div>
-
-            <!-- E. Watchlist -->
-            <h2 class="section-title">E. Watchlist</h2>
-
-            <div class="watchlist-item">
-                <h3>🔭 1. NVIDIA GTC 2026 下周开幕（3月16-19日，圣何塞）</h3>
-                <p>Jensen Huang 主题演讲 3月16日。近期 NVIDIA Developer Blog 密集发布推理优化教程。重点关注：新推理加速硬件/软件栈对数据平台 AI workload 成本的影响；NIM 微服务对数据平台集成的新进展；RAPIDS 数据处理性能更新。</p>
-            </div>
-
-            <div class="watchlist-item">
-                <h3>🔭 2. 腾讯云涨价后的市场连锁反应</h3>
-                <p>腾讯云 ADP 混元模型涨价 460%+ 是否会引发其他云厂商跟进？阿里云、火山引擎、百度智能云是否调整定价策略？同时需观察涨价对 Agent 开发者的实际影响——是否加速向低价算力（如超算互联网 0.1 元/百万 Token）迁移。</p>
-            </div>
-
-            <div class="watchlist-item">
-                <h3>🔭 3. 华为数据存储峰会（3月20日，深圳）</h3>
-                <p>将围绕 AI 语料准备→训练→推理三环节发布新品。需关注：OceanStor 新产品；AI 数据平台"3+1"架构商业化落地方案；国产算力生态（昇腾+OceanStor）整合深度。</p>
-            </div>
-
-        </div>
-
-        <div class="footer">
-            本日报基于腾讯云官方公告、工信部通知、The Information 报道、百度智能云官方、CNCERT 风险提示、Databricks 官方博客、超算互联网公告、券商研报及行业协会倡议书编制。<br>
-            严格只包含 3月11日08:00 至 3月12日08:00 首次公开或被广泛传播的信息。信息截至北京时间 2026-03-12 08:00。
-        </div>
+  <div class="news-item">
+    <h3>1. Gartner Data & Analytics Summit 2026 开幕：AI 回报需建立在治理与 FinOps 基础上</h3>
+    <div class="source">
+      来源：<a href="https://www.gartner.com/events-na/data-analytics/" target="_blank">Gartner 官方</a> |
+      <a href="https://infotechlead.com/artificial-intelligence/gartner-data-analytics-summit-2026-highlights-ai-strategy-data-governance-and-future-ready-da-organizations-take-center-stage-94317" target="_blank">InfotechLead 报道</a>（2026-03-10）
     </div>
+    <div class="content">
+      Gartner Data & Analytics Summit 2026 于 3 月 9-11 日在 Orlando 举行。开幕主题演讲由分析师 Adam Ronthal 和 Georgia O'Callaghan 主讲"Navigate AI on Your Data & Analytics Journey to Value"，提出 AI 价值三支柱框架：(1) <strong>AI Ambition</strong> — 建立清晰目标，追求"Return on Intelligence"；(2) <strong>Strong AI Foundations</strong> — 构建可信数据系统和治理，实现"Return on Integrity"；(3) <strong>People Empowerment</strong> — 赋能员工技能，达成"Return on Individuals"。<br><br>
+      关键数据：超半数 IT 领导者担忧 AI 成本超支，仅 44% 组织实施了 AI FinOps 实践，不到 20% 的数据/AI 领导者认为不确定成本会限制 AI 价值（存在认知断层）。
+    </div>
+    <div class="impact">
+      <strong>为什么对数据平台重要：</strong>Gartner 明确将数据治理和 AI FinOps 定位为 AI 价值实现的前提条件。仅 26% 组织将文化和沟通纳入治理策略，意味着数据平台的"治理即产品"能力存在巨大市场空间。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>2. Databricks 发布多智能体系统可视化方案及 Unity Catalog 数据发现增强</h3>
+    <div class="source">
+      来源：<a href="https://www.databricks.com/blog" target="_blank">Databricks 官方博客</a>（2026-03-10 / 2026-03-04）
+    </div>
+    <div class="content">
+      3 月 10 日，Databricks 发布博客"Bringing Visualizations to Life in Multi-Agent Systems with Vega-Lite"，将声明式可视化语言 Vega-Lite 引入多智能体系统，使 Agent 能够自动生成数据分析图表。3 月 4 日发布"Unified Data Discovery with Business Context in Unity Catalog"，在 Unity Catalog 中新增业务上下文的统一数据发现功能。
+    </div>
+    <div class="impact">
+      <strong>为什么对数据平台重要：</strong>多智能体系统中的可视化能力解决了"Agent 能分析但不能呈现"的短板。Unity Catalog 的业务上下文数据发现强化了"数据民主化"能力，降低非技术用户的使用门槛。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>3. 华为宣布 3 月 20 日数据存储峰会，将围绕 AI 三大环节发布新品</h3>
+    <div class="source">
+      来源：<a href="https://finance.sina.com.cn/7x24/2026-03-10/doc-inhqnvwn6278238.shtml" target="_blank">新浪财经</a> |
+      <a href="http://finance.eastmoney.com/a/202603103667483124.html" target="_blank">东方财富网</a> |
+      <a href="https://www.guandian.cn/article/20260310/547470.html" target="_blank">观点网</a>（2026-03-10）
+    </div>
+    <div class="content">
+      3 月 10 日，华为数据存储宣布华为中国合作伙伴大会 2026·数据存储峰会将于 3 月 20 日在深圳国际会展中心举行。峰会将围绕"AI 语料准备→AI 训练→AI 推理"三大关键环节发布创新的数据存储产品与解决方案。延续 MWC 2026 发布的 AI 数据平台"3+1"架构战略方向。
+    </div>
+    <div class="impact">
+      <strong>为什么对数据平台重要：</strong>华为将数据存储产品线与 AI 全生命周期深度绑定，存储层将从被动 I/O 转向主动参与 AI 工作流，成为数据平台的关键差异化要素。
+    </div>
+  </div>
+</div>
+
+<!-- Section B: Product & Tech -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-blue">B</span> Product & Tech
+  </div>
+
+  <div class="news-item">
+    <h3>1. Databricks AI/BI Dashboard 支持通过 Asset Bundles 安全大规模发布变更</h3>
+    <div class="source">
+      来源：<a href="https://www.databricks.com/blog" target="_blank">Databricks 官方博客</a>（2026-03-03）
+    </div>
+    <div class="content">
+      Databricks 发布教程"How to Ship AI/BI Dashboard Changes Safely at Scale with Databricks Asset Bundles"，将软件工程最佳实践（版本控制、代码审查、CI/CD）引入 AI/BI Dashboard 的变更管理流程。
+    </div>
+    <div class="impact">
+      <strong>影响判断：</strong>BI 资产的"代码化管理"趋势加速。Dashboard 变更可以像应用代码一样走 CI/CD 流水线，显著提升数据团队的工程化水平和交付效率。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>2. 华为云码道代码智能体公测一周：日活用户增长 3 倍，扩容昇腾算力</h3>
+    <div class="source">
+      来源：<a href="http://finance.eastmoney.com/a/202603093666113158.html" target="_blank">东方财富网</a> |
+      <a href="https://www.chinastarmarket.cn/" target="_blank">科创板日报</a>（2026-03-09）
+    </div>
+    <div class="content">
+      华为云码道（CodeArts）代码智能体公测版发布一周，参与用户数翻倍，日活用户增长三倍。华为云正进行极限压测并再度扩容昇腾算力。本周起，用户可通过码道 Skill 快速安装部署 OpenClaw。华为已申请注册"华为云码道"商标。
+    </div>
+    <div class="impact">
+      <strong>影响判断：</strong>码道全链路跑在昇腾芯片上，是国产 AI 算力在开发者场景的规模化验证。将 OpenClaw 纳入码道 Skill 生态，形成"芯片→算力→Agent→开发者"的闭环。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>3. 开源证券研报：OpenClaw Token 消耗指数级增长驱动 AI 云算力持续扩张</h3>
+    <div class="source">
+      来源：<a href="https://www.chinastarmarket.cn/detail/2308175" target="_blank">开源证券研报 / 科创板日报</a>（2026-03-10）|
+      <a href="https://www.sohu.com/a/994509077_211762" target="_blank">搜狐</a>
+    </div>
+    <div class="content">
+      开源证券 3 月 10 日研报指出，OpenClaw 的多轮自我修正和庞大上下文特性使 Token 消耗量面临指数级增长。Agent 模式将 AI 算力消耗从"Chatbot 式对话请求"转变为"全天候持续运行"。2026 年开年算力需求激增已驱动算力租赁市场进入涨价周期。
+    </div>
+    <div class="impact">
+      <strong>影响判断：</strong>Agent 模式的 Token 消耗模式变化意味着推理侧数据管道需要 7×24 小时持续运行，对实时数据处理和日志系统的吞吐量要求将显著提升。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>4. Snowflake "Data for Breakfast" 全球百城活动启动</h3>
+    <div class="source">
+      来源：<a href="https://www.snowflake.com/about/events/" target="_blank">Snowflake 官方</a>（2026-03-04 起）
+    </div>
+    <div class="content">
+      Snowflake 启动 "Data for Breakfast" 全球 100 城活动（3-4 月），以"Serving the Next Era of Enterprise Intelligence"为主题。此前 Snowflake Intelligence 智能代理平台已拥有 2500+ 客户、1.5 万个 AI 代理部署，Agent Goal-Plan-Action 框架错误拦截率 95%。
+    </div>
+    <div class="impact">
+      <strong>影响判断：</strong>Snowflake 从"数据云"向"智能平台"转型的信号明确。百城活动规模意味着对企业 AI Agent 市场的高度投入。
+    </div>
+  </div>
+</div>
+
+<!-- Section C: People & Views -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-green">C</span> People & Views
+  </div>
+
+  <div class="news-item">
+    <h3>1. Gartner 分析师 Nate Novosel：仅 26% 组织将文化纳入数据治理策略</h3>
+    <div class="source">
+      来源：<a href="https://infotechlead.com/artificial-intelligence/gartner-data-analytics-summit-2026-highlights-ai-strategy-data-governance-and-future-ready-da-organizations-take-center-stage-94317" target="_blank">Gartner Summit / InfotechLead</a>（2026-03-10）
+    </div>
+    <div class="quote-box">
+      "数据治理成熟度低的组织将无法实现 AI 价值。" — Nate Novosel, Gartner Analyst
+    </div>
+    <div class="content">
+      Novosel 提出 7 项即时可行动的改进措施：明确治理的业务成果目标、增量改进而非大规模转型、将治理定位为多团队协作、将治理实践融入日常业务运营、改善沟通和文化对齐。
+    </div>
+    <div class="impact">
+      <strong>映射到数据平台：</strong>数据平台的治理能力不仅是技术特性，更是组织文化的映射。厂商需要提供更低门槛、更嵌入日常工作流的治理工具。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>2. Gartner VP Analyst Jorg Heizenberg：数据组织应采用技能导向而非角色导向</h3>
+    <div class="source">
+      来源：<a href="https://infotechlead.com/artificial-intelligence/gartner-data-analytics-summit-2026-highlights-ai-strategy-data-governance-and-future-ready-da-organizations-take-center-stage-94317" target="_blank">Gartner Summit / InfotechLead</a>（2026-03-10）
+    </div>
+    <div class="content">
+      Gartner VP 分析师 Jorg Heizenberg 指出，面向未来的 D&A 组织应采用混合架构——集中化特定能力的同时允许业务单元灵活创新。关键转变：从刚性职位定义转向技能导向，通过映射团队的技能层级实现更好的人才规划。
+    </div>
+    <div class="impact">
+      <strong>映射到数据平台：</strong>数据平台工具需支持不同技能水平的用户，产品的"低代码/无代码"能力和"自助式分析"能力将成为关键竞争维度。
+    </div>
+  </div>
+</div>
+
+<!-- Section D: Analyst Insights -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-purple">D</span> Analyst Insights
+  </div>
+
+  <div class="news-item">
+    <h3>1. Gartner：超半数 IT 领导者担忧 AI 成本超支，AI FinOps 实践严重不足</h3>
+    <div class="source">
+      来源：<a href="https://infotechlead.com/artificial-intelligence/gartner-data-analytics-summit-2026-highlights-ai-strategy-data-governance-and-future-ready-da-organizations-take-center-stage-94317" target="_blank">Gartner Data & Analytics Summit 2026 开幕主题演讲</a>（2026-03-10）
+    </div>
+    <div class="content">
+      <strong>核心数据：</strong><br>
+      • 超过 50% 的 IT 领导者担忧 AI 项目成本失控<br>
+      • 仅 44% 的组织建立了财务护栏或 AI FinOps 实践<br>
+      • 不到 20% 的数据/AI 领导者认为不确定成本会限制 AI 价值（认知断层）
+    </div>
+    <div class="impact">
+      <strong>对数据平台的映射：</strong>AI FinOps 将成为数据平台的必备能力。当前"仅 44% 有 FinOps 实践"的现状意味着 Token 消耗监控、推理成本归因、资源用量可视化等成本管理工具存在巨大产品机会。
+    </div>
+  </div>
+
+  <div class="news-item">
+    <h3>2. Databricks 年化营收超 54 亿美元，估值 1340 亿，2026 年有望 IPO</h3>
+    <div class="source">
+      来源：<a href="https://new.qq.com/rain/a/20260210A00AJR00" target="_blank">腾讯网</a>（2026-02-10）| 3月持续被券商引用
+    </div>
+    <div class="content">
+      Databricks 2 月宣布完成 50 亿美元融资（另获 20 亿美元债务额度），估值 1340 亿美元（较去年夏季提升 34%）。截至 1 月季度年化营收超 54 亿美元，同比增长 65%，已实现正向自由现金流。公司被列为 2026 年最有可能 IPO 的高估值科技企业之一。
+    </div>
+    <div class="impact">
+      <strong>对数据平台的映射：</strong>Databricks 营收增速 65% 和正向现金流是湖仓一体赛道持续高增长的强信号。若 2026 年成功 IPO，将为数据平台赛道引入新的资本关注度和估值锚点。
+    </div>
+  </div>
+</div>
+
+<!-- Section E: Watchlist -->
+<div class="section">
+  <div class="section-title">
+    <span class="badge badge-orange">E</span> Watchlist
+  </div>
+
+  <div class="watchlist-item">
+    <div class="watchlist-icon">🔭</div>
+    <div class="watchlist-content">
+      <h4>NVIDIA GTC 2026 下周开幕（3月16-19日，圣何塞）</h4>
+      <p>Jensen Huang 主题演讲 3月16日。重点关注：(1) 新推理加速硬件/软件栈对数据平台 AI workload 成本的影响；(2) NIM 微服务对数据平台集成的新进展；(3) RAPIDS 数据处理性能更新。GTC 通常是数据平台领域年度最重要的基础设施方向风向标。</p>
+    </div>
+  </div>
+
+  <div class="watchlist-item">
+    <div class="watchlist-icon">📦</div>
+    <div class="watchlist-content">
+      <h4>华为数据存储峰会（3月20日，深圳）</h4>
+      <p>将围绕 AI 语料准备→训练→推理三环节发布新品。需关注：(1) 是否发布新一代 OceanStor 产品；(2) AI 数据平台"3+1"架构的商业化落地方案；(3) 对国产 AI 算力生态（昇腾+OceanStor）的整合深度。</p>
+    </div>
+  </div>
+
+  <div class="watchlist-item">
+    <div class="watchlist-icon">📊</div>
+    <div class="watchlist-content">
+      <h4>Gartner Summit 后续议程及研报发布</h4>
+      <p>Summit 今日（3月11日）最后一天。后续可能发布新的 Magic Quadrant、Hype Cycle 或 Market Guide 相关数据平台评估。Gartner 关于 Agentic AI 对数据平台影响的深度分析值得跟踪。</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>本日报基于 Gartner 官方活动、InfotechLead 报道、Databricks 官方博客、华为官方公告、券商研报及新闻稿编制。<br>
+  严格只包含 3月10日08:00 至 3月11日08:00 首次公开或被广泛传播的信息。<br>
+  信息截至北京时间 2026-03-11 08:00。</p>
+</div>
+
+</div>
 </body>
 </html>
