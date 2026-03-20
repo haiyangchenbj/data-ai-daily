@@ -3,395 +3,324 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-03-19</title>
+<title>Data+AI 全球日报 | 2026-03-20</title>
 <style>
   :root {
     --primary: #1a73e8;
     --primary-light: #e8f0fe;
-    --accent: #f9ab00;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
     --text: #202124;
     --text-secondary: #5f6368;
-    --bg: #ffffff;
-    --card-bg: #f8f9fa;
     --border: #dadce0;
-    --success: #34a853;
-    --warning: #ea8600;
-    --danger: #d93025;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+    --teal: #00897b;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
-    line-height: 1.7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
     color: var(--text);
-    background: #f1f3f4;
+    line-height: 1.7;
     padding: 20px;
   }
-  .container {
-    max-width: 820px;
-    margin: 0 auto;
-    background: var(--bg);
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
-    overflow: hidden;
-  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
     padding: 32px 40px;
-  }
-  .header h1 {
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    letter-spacing: -0.5px;
-  }
-  .header .date {
-    font-size: 14px;
-    opacity: 0.85;
-  }
-  .content { padding: 32px 40px; }
-  .top-changes {
-    background: var(--primary-light);
-    border-left: 4px solid var(--primary);
-    border-radius: 0 8px 8px 0;
-    padding: 20px 24px;
+    border-radius: 16px;
     margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
   }
-  .top-changes h2 {
-    font-size: 16px;
-    color: var(--primary);
-    margin-bottom: 12px;
-  }
-  .top-changes ol {
-    padding-left: 20px;
-    font-size: 14px;
-  }
-  .top-changes li {
-    margin-bottom: 8px;
-  }
-  .verdict {
-    background: #fef7e0;
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .header .date { font-size: 14px; opacity: 0.85; }
+
+  /* Summary Box */
+  .summary-box {
+    background: var(--card-bg);
     border-left: 4px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-    padding: 16px 24px;
+    border-radius: 12px;
+    padding: 28px;
     margin-bottom: 24px;
-    font-size: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
-  .verdict strong { color: #e37400; }
-  .note-box {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+  .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-size: 15px; }
+  .summary-box .verdict {
+    background: var(--primary-light);
+    padding: 12px 16px;
     border-radius: 8px;
-    padding: 14px 20px;
-    margin-bottom: 28px;
-    font-size: 13px;
-    color: var(--text-secondary);
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
   }
-  .section-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--primary);
-    margin-bottom: 20px;
-    margin-top: 32px;
-  }
-  .section-title:first-of-type { margin-top: 0; }
-  .card {
+
+  /* Section */
+  .section {
     background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    transition: box-shadow 0.2s;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
-  .card:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
   }
-  .card h3 {
+  .section-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+  .badge-a { background: var(--accent); }
+  .badge-b { background: var(--primary); }
+  .badge-c { background: var(--green); }
+  .badge-d { background: var(--teal); }
+  .badge-e { background: var(--orange); }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+
+  /* Item */
+  .item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--text);
   }
-  .card .source {
-    font-size: 12px;
-    color: var(--primary);
-    margin-bottom: 10px;
-  }
-  .card .source a {
-    color: var(--primary);
-    text-decoration: none;
-  }
-  .card .source a:hover { text-decoration: underline; }
-  .card .summary {
-    font-size: 14px;
-    color: var(--text);
-    margin-bottom: 10px;
-  }
-  .card .summary ul {
-    padding-left: 18px;
-    margin-top: 6px;
-  }
-  .card .summary li {
-    margin-bottom: 4px;
-  }
-  .card .impact {
+  .item .source {
     font-size: 13px;
     color: var(--text-secondary);
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 14px;
-    border-left: 3px solid var(--success);
+    margin-bottom: 8px;
   }
-  .card .impact-watchlist {
+  .item .source a { color: var(--primary); text-decoration: none; }
+  .item .source a:hover { text-decoration: underline; }
+  .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .body p { margin-bottom: 8px; }
+  .item .impact {
+    background: #f0f7ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
     font-size: 13px;
-    color: var(--text-secondary);
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px 14px;
-    border-left: 3px solid var(--warning);
+    color: #1a56db;
   }
-  .badge {
+
+  /* 投融资特殊样式 */
+  .funding-tag {
     display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .badge-top { background: #d93025; color: white; }
-  .badge-product { background: #1a73e8; color: white; }
-  .badge-people { background: #7b1fa2; color: white; }
-  .badge-analyst { background: #0d652d; color: white; }
-  .badge-watch { background: #ea8600; color: white; }
-  .footer {
-    padding: 20px 40px;
-    background: var(--card-bg);
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--text-secondary);
-    text-align: center;
-  }
-  .tag {
-    display: inline-block;
-    background: #e8f0fe;
-    color: var(--primary);
-    font-size: 11px;
     padding: 2px 8px;
     border-radius: 4px;
-    margin-right: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
+  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section, .summary-box { padding: 20px; }
   }
 </style>
 </head>
 <body>
 <div class="container">
+
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026年3月19日 · 周四</div>
+    <div class="date">2026-03-20 · 严格只包含过去24小时信息</div>
   </div>
 
-  <div class="content">
-    <div class="top-changes">
-      <h2>🔥 今日最重要的 3 个变化</h2>
-      <ol>
-        <li><strong>微软 FabCon/SQLCon 2026 发布数据库与 Fabric 统一平台战略</strong> — Database Hub 统一管理多引擎数据库、Fabric IQ 通过 MCP 服务器开放语义层给 AI Agent、OneLake 安全 GA、Runtime 2.0 引入 Spark 4.x，Fabric 有史以来最大规模平台更新</li>
-        <li><strong>Snowflake 发布 Project SnowWork 自主企业 AI 平台</strong> — 将 AI Agent 直接带到业务用户桌面，从查询驱动转向结果驱动的多步骤工作流自动化</li>
-        <li><strong>阿里云与百度智能云同日宣布 AI 算力涨价</strong> — AI 算力最高涨 34%、并行文件存储涨 30%，4月18日生效，全球算力紧张传导至中国市场</li>
-      </ol>
-    </div>
-
+  <div class="summary-box">
+    <h2>🔥 今日最重要的3个变化</h2>
+    <ol>
+      <li><strong>Databricks 将实时流处理推入亚毫秒时代</strong> — Real-Time Mode GA 让 Spark Structured Streaming 实现端到端毫秒级延迟，比 Flink 快 92%，流批一体架构的最后一块短板被补齐。</li>
+      <li><strong>GPU 训练从基础设施工程变为按需服务</strong> — Databricks AI Runtime 将 NVIDIA H100/A10 GPU 包装为 Serverless 即开即用能力，AI 模型训练的门槛从"管集群"降为"写代码"。</li>
+      <li><strong>FabCon 2026 Fabric 功能密集落地</strong> — 微软 Fabric 3月更新集中释放数十项功能，平台成熟度加速追赶 Databricks 和 Snowflake。</li>
+    </ol>
     <div class="verdict">
-      <strong>总判断：</strong>今日行业信号集中于 <strong>平台统一与 Agent 化</strong> — 微软通过 Database Hub + Fabric IQ + MCP 服务器，将分散的数据库资产统一在单一语义层上并开放给 AI Agent；Snowflake 通过 Project SnowWork 将数据平台价值延伸到业务用户桌面。两大平台同日发布 Agent 战略，标志着数据平台竞争从"谁的数据更快"进入"谁离业务决策更近"的新阶段。中国市场阿里云与百度智能云同日涨价，AI 驱动的算力和存储成本上升正成为全球共同挑战。
+      <strong>总判断：</strong>今日行业信号集中于<strong>流处理与训练基础设施的产品化</strong> — Databricks 在同一天发布 Real-Time Mode GA 和 AI Runtime 公测，一手解决流处理延迟问题（比 Flink 快 92%），一手将 GPU 训练封装为 Serverless 服务，两步棋共同指向一个目标：让数据平台从"分析引擎"全面升级为"AI 生产力平台"。数据平台竞争正式进入"谁能让用户最快从数据到 AI 产出"的阶段。
+    </div>
+  </div>
+
+  <!-- Section A: Top Signals -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals</h2>
     </div>
 
-    <div class="note-box">
-      📌 本日 AWS、Google Cloud（数据平台方向）、华为云、腾讯云、火山引擎在24小时窗口内无数据平台产品发布或版本更新。Databricks 收购 Quotient AI（3/11发布）和 Gartner D&A 预测（3/11发布）均在窗口外，不予纳入。
-    </div>
-
-    <!-- A. Top Signals -->
-    <h2 class="section-title">A. Top Signals</h2>
-
-    <div class="card">
-      <h3><span class="badge badge-top">A1</span> 微软 FabCon/SQLCon 2026 Keynote：数据库与 Fabric 统一为单一数据平台</h3>
-      <div class="source">
-        来源：<a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank">Azure 官方博客（Arun Ulag）</a>，
-        <a href="https://blog.fabric.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-whats-new-in-microsoft-onelake/" target="_blank">Microsoft Fabric Blog</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        微软在 FabCon/SQLCon 2026 上发布了自 Fabric 产品线诞生以来最大规模的平台更新：
-        <ul>
-          <li><strong>Database Hub（早期预览）</strong>：将 Azure SQL、Cosmos DB、PostgreSQL、MySQL、SQL Server 和 Fabric Databases 整合到统一管理视图，内置 Copilot 驱动的 AI 洞察和智能代理持续监控</li>
-          <li><strong>Fabric IQ + MCP 服务器（预览）</strong>：将分析和运营数据统一在共享语义框架中，通过 MCP 服务器让 AI Agent 发现、理解和操作语义层</li>
-          <li><strong>OneLake 安全（即将 GA）</strong>：单一模型定义角色、行/列级控制，跨所有分析体验强制执行</li>
-          <li><strong>Runtime 2.0（预览）</strong>：包含 Apache Spark 4.x、Delta Lake 4.x、Scala 2.13</li>
-          <li><strong>互操作扩展</strong>：Databricks Unity Catalog 原生读取进入公开预览，Oracle/SAP 镜像 GA，Dremio/SharePoint 镜像预览</li>
-          <li><strong>数据库节省计划</strong>：特定服务最高节省 35%</li>
-        </ul>
+    <div class="item">
+      <h3>1. Databricks Real-Time Mode 正式 GA：Spark Structured Streaming 进入亚毫秒时代</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/announcing-general-availability-real-time-mode-apache-spark-structured-streaming-databricks" target="_blank">Databricks 官方博客</a>（2026年3月19日）</div>
+      <div class="body">
+        <p>Databricks 宣布 Real-Time Mode（RTM）在 Spark Structured Streaming 中正式 GA，将端到端延迟从传统的秒级/分钟级降至毫秒级。RTM 通过三大架构创新实现：（1）连续数据流 — 数据到达即处理，不再按批次离散化；（2）管道调度 — 各阶段并行执行不阻塞；（3）流式 Shuffle — 任务间直接传递数据，绕过传统磁盘 Shuffle 延迟。内部基准测试显示 RTM 比 Apache Flink 快最高 92%。</p>
+        <p>GA 版本新增：OSS 支持（RTM 无状态转换已进入开源 Apache Spark 4.1）、Standard Access Mode 支持、异步状态检查点和初始状态加载。Coinbase 实现端到端延迟降低 80%+（P99 亚 100ms），MakeMyTrip 实现亚 50ms P50 延迟并带来 7% CTR 提升。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>这是微软在数据平台领域发出的最强整合信号。Database Hub 解决了企业多引擎数据库资产碎片化的痛点，Fabric IQ 通过 MCP 服务器将语义层开放给 AI Agent，是对 Gartner "语义层是 Agent 就绪数据的关键" 预测的直接回应。OneLake 同时向 Databricks 和 Snowflake 开放互操作，表明微软正以"数据层中立"策略抢占平台层话语权。
+        <strong>为什么对数据平台重要：</strong>这是 Spark 流处理能力的里程碑式升级。RTM GA 意味着企业可以用同一套 Spark API 覆盖批处理和实时流处理，真正实现流批一体。RTM 进入开源 Spark 4.1 更意味着这不是 Databricks 的私有功能，而是整个 Spark 生态的能力跃升。在 IBM 刚完成 Confluent 收购、强化 Kafka 流处理定位的背景下，Databricks 用 Spark 原生实时能力回应，数据平台的流处理竞争进入新阶段。
       </div>
     </div>
 
-    <div class="card">
-      <h3><span class="badge badge-top">A2</span> Snowflake 发布 Project SnowWork：自主 AI 平台将 Agent 带到业务用户桌面</h3>
-      <div class="source">
-        来源：<a href="https://www.snowflake.com/en/news/press-releases/snowflake-launches-project-snowwork-bringing-outcome-driven-ai-to-every-business-user/" target="_blank">Snowflake 官方新闻稿</a>，
-        <a href="https://siliconangle.com/2026/03/18/snowflake-previews-project-automate-workflows-ai-agents/" target="_blank">SiliconANGLE</a>，
-        <a href="https://www.constellationr.com/insights/news/snowflake-launches-project-snowwork-eyes-ai-workflows" target="_blank">Constellation Research</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        Snowflake 宣布 Project SnowWork 研究预览版，这是一个全新的自主企业 AI 平台：
-        <ul>
-          <li><strong>结果驱动（Outcome-Driven）</strong>：从查询工具转向能够规划和执行多步骤工作流的自主系统</li>
-          <li><strong>桌面端部署</strong>：将安全的数据驱动 AI Agent 直接放在业务用户桌面</li>
-          <li><strong>企业治理内置</strong>：自动执行 Snowflake 平台的安全策略、RBAC 和治理规则</li>
-          <li><strong>消除分析师积压</strong>：业务用户可直接从数据获取行动建议，无需等待分析师</li>
-        </ul>
+    <div class="item">
+      <h3>2. Databricks 发布 AI Runtime 公测：Serverless NVIDIA GPU 训练即开即用</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/introducing-ai-runtime-scalable-serverless-nvidia-gpus-databricks-training-and-finetuning" target="_blank">Databricks 官方博客</a>（2026年3月19日）</div>
+      <div class="body">
+        <p>Databricks 宣布 AI Runtime（AIR）进入公测，支持在 Notebook 中即时获取 NVIDIA A10 和 H100 GPU 进行分布式训练和微调，无需搭建集群或管理基础设施。核心特性：按需 Serverless GPU、预装 PyTorch/CUDA 的优化分布式训练、Lakeflow 生产级编排、Unity Catalog 统一治理。</p>
+        <p>当前公测支持单节点 8×H100，多节点支持处于私测阶段。Rivian、FactSet、YipitData 等客户已在 Beta 阶段使用。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>Snowflake 正从"数据仓库/湖仓平台"向"业务生产力平台"转型。桌面端定位意味着 Snowflake 直接触达业务决策者，与同日微软 Fabric IQ Agent 策略形成直接竞争。数据平台的价值衡量标准正从查询性能和成本转向"业务用户自主完成多少工作"。
+        <strong>为什么对数据平台重要：</strong>AI Runtime 解决了数据平台用户在训练 AI 模型时面临的最大摩擦点 — 基础设施管理。将 GPU 训练封装为 Serverless 服务，意味着数据工程师和数据科学家可以在同一个 Lakehouse 平台中完成从数据准备到模型训练的全流程。结合 Unity Catalog 的治理能力，这进一步巩固了 Databricks 作为"数据+AI 一体化平台"的定位。
       </div>
     </div>
 
-    <div class="card">
-      <h3><span class="badge badge-top">A3</span> 阿里云与百度智能云同日宣布 AI 算力涨价：全球算力紧张传导至中国市场</h3>
-      <div class="source">
-        来源：阿里云官网公告 + 百度智能云公告（2026-03-18），
-        <a href="https://www.nbd.com.cn/articles/2026-03-18/4297462.html" target="_blank">每日经济新闻</a>
-      </div>
-      <div class="summary">
-        3月18日，阿里云与百度智能云同日宣布 AI 相关产品涨价：
-        <ul>
-          <li><strong>阿里云</strong>：平头哥真武810E 等算力卡产品上涨 5%-34%，CPFS（智算版）上涨 30%</li>
-          <li><strong>百度智能云</strong>：AI 算力产品上涨 5%-30%，并行文件存储上涨 30%</li>
-          <li><strong>生效日期</strong>：均为 2026年4月18日</li>
-          <li><strong>原因</strong>：全球 AI 需求爆发、供应链硬件成本上涨、春节 AI Agent 应用爆发致资源紧缺</li>
-        </ul>
+    <div class="item">
+      <h3>3. Microsoft Fabric 3月功能大更新：FabCon 2026 期间密集释放平台能力</h3>
+      <div class="source">来源：<a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-march-2026-feature-summary" target="_blank">Microsoft Fabric Blog</a>（2026年3月19日）；<a href="https://powerbi.microsoft.com/zh-cn/blog/power-bi-march-2026-feature-summary/" target="_blank">Power BI Blog</a>（2026年3月15日）</div>
+      <div class="body">
+        <p>微软在 FabCon 2026 期间发布 Fabric 3月功能汇总更新，涵盖平台各产品线的数十项新功能和改进。配合大会 300+ 场 Session 和 Workshop 的展示，Fabric 从 Keynote 公告（Database Hub、Fabric IQ、Runtime 2.0）延伸到全面的功能落地。FabCon 26 是 Microsoft Fabric 有史以来规模最大的社区会议。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>并行文件存储是大规模数据平台和 AI 训推管道的核心基础设施，30% 涨幅将直接推高存储成本。此前 AWS、Google Cloud 年初已涨价，中国厂商同日跟进标志着成本上涨成为全球趋势。需重新评估冷热分层、数据生命周期管理和存算分离策略。
+        <strong>为什么对数据平台重要：</strong>FabCon 2026 标志着 Microsoft Fabric 从"产品发布期"进入"平台成熟期"。3月功能更新的密集程度表明 Fabric 正在快速填充功能矩阵，缩小与 Databricks 和 Snowflake 在特定场景下的差距。对于已在 Azure 生态中的企业数据团队，Fabric 正成为一个越来越难以忽视的统一平台选项。
       </div>
     </div>
+  </div>
 
-    <!-- B. Product & Tech -->
-    <h2 class="section-title">B. Product & Tech</h2>
+  <!-- Section B: Product & Tech -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-b">B</span>
+      <h2>Product & Tech</h2>
+    </div>
 
-    <div class="card">
-      <h3><span class="badge badge-product">B4</span> OneLake 扩展互操作：Databricks Unity Catalog 读取公开预览，Oracle/SAP 镜像 GA</h3>
-      <div class="source">
-        来源：<a href="https://blog.fabric.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-whats-new-in-microsoft-onelake/" target="_blank">Microsoft Fabric Blog（Josh Caplan）</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        OneLake 在 FabCon 2026 宣布多项互操作扩展：Databricks Unity Catalog 原生读取进入公开预览（双方正共同开发双向互操作）；Oracle 和 SAP Datasphere 镜像 GA；新增 Dremio 和 SharePoint 列表镜像预览；快捷方式转换 GA（支持 Excel 到 Delta 表自动转换）；Snowflake 镜像数据支持变更数据流和视图创建。
+    <div class="item">
+      <h3>4. Databricks AI Runtime 技术架构：RDMA + Unity Catalog + Lakeflow 编排</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/introducing-ai-runtime-scalable-serverless-nvidia-gpus-databricks-training-and-finetuning" target="_blank">Databricks 官方博客</a>（2026年3月19日）</div>
+      <div class="body">
+        <p>AI Runtime 的技术架构包含多项数据平台相关能力：（1）RDMA 优化数据加载 — 分布式训练时直接从 Lakehouse 存储高速读取训练数据；（2）Unity Catalog 治理 — 训练数据、模型和实验全部通过 Unity Catalog 管理权限和血缘；（3）MLflow 可观测性 — GPU 利用率和实验跟踪统一到 MLflow；（4）Genie Code 集成 — AI 辅助编写和调试训练代码。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>OneLake 正加速成为多引擎数据架构的统一存储层。Databricks 双向互操作意味着企业可在 Fabric 和 Databricks 之间零拷贝数据共享。Oracle/SAP 镜像 GA 解锁了大量传统 ERP 数据的零拷贝接入。
+        <strong>对数据平台的影响：</strong>RDMA 数据加载意味着 Lakehouse 存储层可以直接为 GPU 训练提供高带宽数据供给，消除了传统方案中数据从湖仓拷贝到训练集群的额外环节。Unity Catalog 的治理能力确保训练数据与分析数据共享同一套权限体系，这对数据合规要求严格的企业（金融、医疗）尤为关键。
       </div>
     </div>
 
-    <div class="card">
-      <h3><span class="badge badge-product">B5</span> Fabric Database Hub：统一管理 SQL 和 NoSQL 数据库资产</h3>
-      <div class="source">
-        来源：<a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank">Azure 官方博客</a>，
-        <a href="https://www.theregister.com/2026/03/18/microsoft_fabric_latest/" target="_blank">The Register</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        Database Hub（早期预览）将 Azure SQL、Cosmos DB、PostgreSQL/MySQL、SQL Server（通过 Arc）和 Fabric Databases 整合到统一视图。内置 Copilot AI 洞察和智能代理持续监控，同步推出数据库节省计划（最高省 35%）。
+    <div class="item">
+      <h3>5. Databricks RTM GA 新增开源支持：Real-Time Mode 进入 Apache Spark 4.1</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/announcing-general-availability-real-time-mode-apache-spark-structured-streaming-databricks" target="_blank">Databricks 官方博客</a>（2026年3月19日）</div>
+      <div class="body">
+        <p>RTM GA 版本的一个关键更新是 Real-Time Mode 对无状态转换的支持已贡献回开源 Apache Spark 4.1。这意味着非 Databricks 用户也可以在原生 Spark 4.1 中使用 RTM 的连续处理模式。GA 版本还增加了 Standard Access Mode 支持、异步状态检查点（显著降低有状态流的延迟）、以及从 Delta 表加载初始状态的能力。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>是微软将 OLTP 和分析型平台整合到同一管理界面的关键一步。结合 Fabric IQ 语义层，从数据库管理到 AI Agent 消费数据形成完整闭环。
+        <strong>对数据平台的影响：</strong>RTM 核心能力回馈开源是一个重要信号 — Databricks 选择让 Spark 社区而非仅 Databricks 用户受益。这强化了 Spark 作为统一数据处理引擎的生态地位，同时也可能影响 Flink 在实时流处理场景中的市场份额。
       </div>
     </div>
+  </div>
 
-    <div class="card">
-      <h3><span class="badge badge-product">B6</span> Fabric Runtime 2.0 预览：引入 Apache Spark 4.x 和 Delta Lake 4.x</h3>
-      <div class="source">
-        来源：<a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank">Azure 官方博客 FabCon 2026 Keynote</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        Fabric Runtime 2.0 进入预览，核心组件包括 Apache Spark 4.x、Delta Lake 4.x、Scala 2.13 和 Azure Linux Mariner 3.0。同步宣布物化湖视图 GA，简化 Spark SQL 和 PySpark 的分层架构实现，支持始终最新的数据管道。
+  <!-- Section C: Views & Research -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research</h2>
+    </div>
+
+    <div class="item">
+      <h3>6. SoftwareReviews（Info-Tech）：IBM 收购 Confluent 对数据平台技术选型的结构性影响</h3>
+      <div class="source">来源：<a href="https://www.softwarereviews.com/research/ibm-s-smartest-ai-infrastructure-move-since-red-hat" target="_blank">SoftwareReviews</a>（Igor Ikonnikov、Shashi Bellamkonda，2026年3月19日）</div>
+      <div class="body">
+        <p>SoftwareReviews 在 IBM 3/17 完成收购后发布首份深度技术影响分析。核心论点：（1）IBM 将沿用 Red Hat 模式 — 保持 Kafka 开源以最大化采纳，通过企业级"包装层"（治理、安全、运维控制）变现；（2）竞争格局未根本改变 — AWS MSK、Azure Event Hubs、Google Pub/Sub 和自建 Kafka 仍是有效替代；（3）风险提示：IBM 在 Confluent 已成为关键依赖的客户中议价能力将增强；（4）建议现有客户在续约前要求 IBM 明确定价路线图，避免签订多年期合同。</p>
       </div>
       <div class="impact">
-        <strong>💡 对数据平台的影响：</strong>Spark 4.x 是重大版本升级，Fabric 率先将其纳入托管运行时。Delta Lake 4.x 同步升级确保湖仓一体架构的最佳兼容。物化湖视图 GA 降低了数据工程团队的管道编排复杂度。
+        <strong>映射到数据平台的判断：</strong>如果 IBM 确实保持 Kafka 开源+企业层收费的策略，那么 Kafka 的开源生态不会受损，但 Confluent Cloud 的定价和捆绑策略可能发生变化。对数据平台技术选型团队，短期内应保持现有合同不动，但需在下次续约前建立竞争性替代评估的技术储备。
       </div>
     </div>
+  </div>
 
-    <!-- C. People & Views -->
-    <h2 class="section-title">C. People & Views</h2>
+  <!-- Section D: Capital & Corporate -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate</h2>
+    </div>
 
-    <div class="card">
-      <h3><span class="badge badge-people">C7</span> Sridhar Ramaswamy（Snowflake CEO）：数据平台下一阶段是消除"分析师积压"</h3>
-      <div class="source">
-        来源：<a href="https://www.snowflake.com/en/news/press-releases/snowflake-launches-project-snowwork-bringing-outcome-driven-ai-to-every-business-user/" target="_blank">Snowflake 官方新闻稿</a>，
-        <a href="https://www.constellationr.com/insights/news/snowflake-launches-project-snowwork-eyes-ai-workflows" target="_blank">Constellation Research</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        Ramaswamy 在 Project SnowWork 发布中表示，数据平台的下一阶段不是更快的查询，而是让"安全的、数据驱动的 AI Agent 出现在每个业务用户的桌面上"。当前企业的核心瓶颈是"分析师积压"——业务数据需求远超数据团队的交付能力。Project SnowWork 通过自主 AI Agent 从根本上消除这一瓶颈。
+    <div class="item">
+      <h3>7. <span class="funding-tag tag-ma">收购兼并</span> IBM 完成 Confluent 110 亿美元收购后的市场后续反应</h3>
+      <div class="source">来源：<a href="https://www.crn.com/news/ai/2026/ibm-completes-11-billion-confluent-acquisition" target="_blank">CRN</a>、<a href="https://www.financialcontent.com/article/marketminute-2026-3-17-ibm-seals-the-deal-11-billion-confluent-acquisition-completes-reshaping-the-real-time-data-landscape" target="_blank">Financial Content</a>（2026年3月19日后续报道）</div>
+      <div class="body">
+        <p><strong>核心数据：</strong>企业价值约 110 亿美元，每股 31 美元现金。Confluent 拥有超 6,500 家企业客户（40% 财富 500 强）。Day-1 整合覆盖 watsonx.data、IBM MQ、IBM webMethods 和 IBM Z。</p>
+        <p>IBM 于 3/17 正式完成收购（已在 3/18 日报详细覆盖），3/19 市场进入消化和分析阶段。CRN 指出该收购使 IBM 获得了 AI 就绪的实时数据处理平台。市场关注焦点转向：客户关系整合、Confluent Cloud 定价策略和 Apache Kafka 开源社区独立性。</p>
       </div>
       <div class="impact">
-        <strong>💡 映射到数据平台：</strong>Ramaswamy 将价值锚点从技术指标（查询速度、成本效率）重新定义为业务生产力指标。这与同日微软 Fabric IQ Agent 策略形成共振——两大平台 CEO 同时指向"数据到决策"距离的缩短。
+        <strong>对数据平台的影响：</strong>110 亿美元收购完成后的市场反应确认了行业共识：实时数据流已从"可选中间件"升级为"AI 基础设施必选项"。这是继 IBM 收购 Red Hat（340 亿美元）和 HashiCorp 后在企业基础设施领域的又一次重大押注，数据平台行业整合趋势仍在加速。
+      </div>
+    </div>
+  </div>
+
+  <!-- Section E: Watchlist -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-e">E</span>
+      <h2>Watchlist</h2>
+    </div>
+
+    <div class="item">
+      <h3>8. 【跟踪】Databricks RTM GA 对 Apache Flink 市场份额的潜在影响</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/announcing-general-availability-real-time-mode-apache-spark-structured-streaming-databricks" target="_blank">Databricks 官方博客</a>（2026年3月19日）</div>
+      <div class="body">
+        <p><strong>为什么值得继续看：</strong>Databricks 声称 RTM 比 Flink 快 92% 并已贡献回开源 Spark 4.1，如果这一性能优势在更多真实场景中得到验证，可能改变实时流处理的技术选型格局。目前 Flink 在流处理领域仍拥有最成熟的有状态处理和事件时间语义能力。</p>
+        <p><strong>需要等待什么信号：</strong>（1）更多非 Databricks 用户在开源 Spark 4.1 上的 RTM 基准测试；（2）有状态流处理场景的延迟表现是否同样优于 Flink；（3）Confluent/IBM 和 Flink 社区的竞争回应。</p>
       </div>
     </div>
 
-    <!-- D. Analyst Insights -->
-    <h2 class="section-title">D. Analyst Insights</h2>
-
-    <div class="card">
-      <h3><span class="badge badge-analyst">D8</span> Gartner 发布 2026 iPaaS Magic Quadrant：集成平台成为 AI Agent 连接枢纽</h3>
-      <div class="source">
-        来源：<a href="https://www.businesswire.com/news/home/20260318294684/en/Workato-Named-a-Leader-in-the-2026-Gartner-Magic-Quadrant-for-iPaaS-for-the-8th-Consecutive-Time" target="_blank">Business Wire（Workato 公告）</a>，
-        <a href="https://boomi.com/content/report/gartner-magic-quadrant-ipaas/" target="_blank">Boomi</a>，
-        <a href="https://blogs.mulesoft.com/news/mulesoft-recognized-in-gartner-magic-quadrant-for-ipaas/" target="_blank">MuleSoft</a>（报告发布 2026-03-16，厂商公告 2026-03-18）
-      </div>
-      <div class="summary">
-        Gartner 发布 2026 年 iPaaS 魔力象限：Boomi 连续第12次入选 Leader、Workato 连续第8次入选 Leader、MuleSoft 连续第10年获认可、SnapLogic 被评为 Visionary。分析师为 Andrew Humphreys、Keith Guttridge 等。
-      </div>
-      <div class="impact">
-        <strong>💡 对数据平台的映射：</strong>在微软（MCP 服务器）和 Snowflake（SnowWork Agent）同日发布 Agent 战略的背景下，iPaaS 正从传统 ETL/应用集成工具升级为 AI Agent 与企业系统的连接枢纽。对数据平台团队，iPaaS 在数据管道和 Agent 工作流中的定位需重新评估。
+    <div class="item">
+      <h3>9. 【跟踪】FabCon 2026 持续进行中：Session 级技术细节待消化</h3>
+      <div class="source">来源：<a href="https://fabriccon.com/" target="_blank">FabCon 官网</a>（2026年3月16-20日）</div>
+      <div class="body">
+        <p><strong>为什么值得继续看：</strong>FabCon 2026 的 300+ 场 Session 中大量技术细节将在后续几天陆续披露。Keynote 级公告已在 3/19 日报覆盖，Session 级深度技术内容可能包含对数据平台选型有实际指导意义的信息。</p>
+        <p><strong>需要等待什么信号：</strong>（1）Database Hub 公测接入方式和支持的数据库引擎清单；（2）Fabric IQ MCP 服务器的 API 文档和第三方集成案例；（3）Runtime 2.0（Spark 4.x）的性能基准对比数据。</p>
       </div>
     </div>
-
-    <!-- E. Watchlist -->
-    <h2 class="section-title">E. Watchlist</h2>
-
-    <div class="card">
-      <h3><span class="badge badge-watch">E9</span> 微软与 NVIDIA 战略合作：Fabric IQ + Omniverse 驱动物理 AI 与数字孪生</h3>
-      <div class="source">
-        来源：<a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank">Azure 官方博客 FabCon 2026 Keynote</a>（2026-03-18）
-      </div>
-      <div class="summary">
-        微软在 FabCon Keynote 中宣布与 NVIDIA 建立战略合作，将 Fabric 实时智能和 Fabric IQ 与 NVIDIA Omniverse 库集成，驱动下一代物理 AI（数字孪生和预测性维护）。具体产品集成方案和 GA 时间线尚未披露。
-      </div>
-      <div class="impact-watchlist">
-        <strong>👀 为什么值得跟踪：</strong>继 GTC 2026 发布 AI Data Platform 后，微软与 NVIDIA 在 Fabric 层面的合作扩展到物理 AI 领域。如果 Fabric IQ 语义层与 Omniverse 物理仿真引擎打通，数据平台应用边界将从商业分析延伸到工业数字孪生。
-      </div>
-    </div>
-
-    <div class="card">
-      <h3><span class="badge badge-watch">E10</span> 全球云厂商 AI 服务集体涨价趋势确立</h3>
-      <div class="source">
-        来源：<a href="https://m.21jingji.com/article/20260319/dc87269d43cf6484cd86d9837635343c.html" target="_blank">21世纪经济报道</a>（2026-03-19）
-      </div>
-      <div class="summary">
-        2026年初以来，全球云厂商相继涨价。AWS 和 Google Cloud 年初率先公布部分服务涨价，阿里云与百度智能云 3月18日跟进。Agent 应用爆发被认为是推高算力需求的核心驱动力。
-      </div>
-      <div class="impact-watchlist">
-        <strong>👀 为什么值得跟踪：</strong>如果成本上升持续，可能加速企业对存算分离架构、冷热分层存储、开源自建方案的评估。值得持续跟踪各厂商后续涨价动作和客户迁移反应。
-      </div>
-    </div>
-
   </div>
 
   <div class="footer">
-    <p>本日报由 Data+AI 全球日报系统生成 · 覆盖 2026-03-18 08:00 CST ~ 2026-03-19 08:00 CST（24小时窗口）</p>
-    <p>所有条目均经过发布日期逐条验证和数据平台相关性审查 · 信息宁缺毋滥</p>
-    <p style="margin-top: 8px;">
-      <a href="https://haiyangchenbj.github.io/data-ai-daily/" target="_blank" style="color: var(--primary);">GitHub Pages 归档</a>
-    </p>
+    <p>Powered by Data+AI Daily Brief v4.0</p>
+    <p>信息截至北京时间 2026-03-20 08:00 · 覆盖 2026-03-19 08:00 ~ 2026-03-20 08:00 CST</p>
   </div>
+
 </div>
 </body>
 </html>
