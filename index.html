@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-03-25</title>
+<title>Data+AI 全球日报 | 2026-03-26</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -127,8 +127,8 @@
     color: #1a56db;
   }
 
-  /* 投融资特殊样式 */
-  .funding-tag {
+  /* Watchlist tag */
+  .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
@@ -136,22 +136,9 @@
     font-weight: 600;
     margin-right: 6px;
   }
-  .tag-funding { background: #fce4ec; color: #c62828; }
-  .tag-earnings { background: #e3f2fd; color: #1565c0; }
-  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
-  .tag-ma { background: #e8f5e9; color: #2e7d32; }
-
-  /* Watchlist type tags */
-  .watch-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 6px;
-    background: #fff3e0;
-    color: #e65100;
-  }
+  .tag-track { background: #fff3e0; color: #e65100; }
+  .tag-downgrade { background: #fce4ec; color: #c62828; }
+  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
 
   /* Footer */
   .footer {
@@ -175,18 +162,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-03-25 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-03-26 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据平台头部厂商正在从分析市场向安全市场做纵向延伸，安全数据成为湖仓的新增长极</li>
-      <li>FabCon 后行业反馈集中：数据平台的竞争维度从"分析能力"转向"可信数据控制平面"</li>
-      <li>第三方 AI 洞察工具加速适配多平台，独立分析层与平台内置能力的边界模糊化加剧</li>
+      <li>传统数据库巨头正在将 AI Agent 的运行时锚定在数据库内部，而非外挂</li>
+      <li>开放表格式成为数据库厂商接入数据湖生态的标准通道，Iceberg 生态加速扩张</li>
+      <li>数据库原生安全正在从访问控制升级为 Agent 行为约束，应对 AI 时代新威胁面</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Databricks 用 Lakewatch 将湖仓架构延伸到安全领域，本质是"数据已在湖仓里，安全分析理应也在这里运行"的逻辑。这与 FabCon 后 Microsoft 将 Fabric 定位为"AI 数据控制平面"的思路异曲同工——数据平台的战场正在从"谁分析更快"扩展到"谁掌控数据流经的每一个环节"。
+      <strong>总判断：</strong>Oracle 在 AI World Tour 上发布的 Agentic 创新标志着一种路线分歧正在清晰化——Databricks 和 Snowflake 从数据湖向外扩展，Oracle 从数据库向内收敛。两条路线的交汇点是"谁来做 Agent 的可信运行时"，这将成为下一阶段数据平台竞争的核心议题。
     </div>
   </div>
 
@@ -198,14 +185,21 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks 发布 Lakewatch 进入安全市场——基于湖仓架构的开源 Agentic SIEM</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-enters-security-market-launch-lakewatch-new-open-agentic-siem" target="_blank">Databricks 官方公告</a>（March 24, 2026）；<a href="https://www.databricks.com/blog/databricks-announces-lakewatch-new-open-agentic-siem" target="_blank">Databricks 官方博客</a></div>
+      <h3>1. Oracle 在 AI World Tour 发布 AI Database Agentic 创新——将数据库打造为企业 Agent 控制平面</h3>
+      <div class="source">来源：<a href="https://www.oracle.com/news/announcement/oracle-unveils-ai-database-agentic-innovations-for-business-data-2026-03-24/" target="_blank">Oracle 官方公告</a>（March 24, 2026）；<a href="https://www.prnewswire.com/news-releases/oracle-unveils-ai-database-agentic-innovations-for-business-data-302722719.html" target="_blank">PR Newswire</a></div>
       <div class="body">
-        <p>Databricks 正式发布 Lakewatch，一款基于"安全湖仓"（Security Lakehouse）架构的开源 Agentic SIEM。核心设计理念是"安全数据应与 IT 和业务数据共存于同一湖仓环境"，通过存算分离 + 开放格式（Delta Lake / Iceberg）实现 PB 级安全遥测数据的无限留存和低成本查询。产品内置 Genie AI Agent 进行自动化分诊和多步骤威胁狩猎，支持多模态数据（日志、视频、音频），采用 Detection-as-Code 方式管理检测规则。同时宣布收购 Antimatter（AI Agent 安全认证）和 SiftD.ai（Splunk SPL 创造者创立），并与 Anthropic Claude 模型深度集成。Adobe、National Australia Bank、Anthropic 已成为首批客户。</p>
+        <p><strong>摘要：</strong>Oracle 在伦敦 AI World Tour 上发布一系列 Agentic AI 创新，核心思路是将 AI Agent 的构建、部署和安全管控全部锚定在 Oracle AI Database 内部。关键组件包括：Autonomous AI Vector Database（全功能向量数据库即服务）、Private Agent Factory（无代码 Agent 构建器，本地运行不外泄数据）、Unified Memory Core（将向量/JSON/图/关系数据的推理统一到单一事务引擎中，提供 ACID 保证）、Deep Data Security（在数据库层而非应用层强制实施行级列级访问控制，防御提示词注入）。同时发布 Oracle Vectors on Ice（对 Apache Iceberg 表中的向量数据提供原生搜索支持）和 Autonomous AI Database MCP Server（使外部 AI Agent 通过 MCP 协议安全访问数据库）。</p>
       </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是数据平台头部厂商首次以完整产品形态进入安全市场。Lakewatch 的核心逻辑是"安全数据本质就是大数据问题"——存储成本高、查询延迟大、数据孤岛多，正是湖仓架构擅长解决的问题。传统 SIEM（Splunk、Microsoft Sentinel、Google Chronicle）按数据量计费的模式被直接挑战，Databricks 声称 TCO 可降低 80%。此举意味着湖仓平台的数据引力效应进一步增强：当安全、IT、业务数据都汇聚到同一湖仓时，平台的粘性和壁垒将显著提升。
+      <div class="impact"><strong>为什么对数据平台重要：</strong>Oracle 的核心主张是"数据库，而非 LLM，应成为企业自动化的主要控制点"——这与 Databricks（从湖仓向安全/Agent 延伸）和 Microsoft Fabric（从分析平台向数据控制平面升级）的路线形成鲜明对比。Unified Memory Core 将多模态数据推理整合进单一事务引擎的做法，直接挑战了当前"操作数据库 + 独立向量库 + 外部模型"的三件套架构。而 Vectors on Ice 对 Iceberg 的原生支持，则表明即使是最传统的数据库厂商也在向开放表格式靠拢。这些能力免费包含在 Fusion Applications 订阅中的策略，将对独立 AI Agent 平台和向量数据库初创公司形成定价压力。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. Oracle Deep Data Security 将 Agent 安全从应用层下沉到数据库层——防御提示词注入的新范式</h3>
+      <div class="source">来源：<a href="https://www.oracle.com/news/announcement/oracle-unveils-ai-database-agentic-innovations-for-business-data-2026-03-24/" target="_blank">Oracle 官方公告</a>（March 24, 2026）；<a href="https://www.enterprisetimes.co.uk/2026/03/25/oracle-launches-ai-database-agentic-innovations-for-business-data/" target="_blank">Enterprise Times</a>（March 25, 2026）</div>
+      <div class="body">
+        <p><strong>摘要：</strong>Oracle Deep Data Security 在数据库内核层面实施终端用户特定的数据访问规则，确保每个用户或代表用户的 AI Agent 只能访问被授权的数据。关键设计决策是通过数据库原生控件（而非应用代码）执行最小权限访问，直接在数据源阻断提示词注入等新型 AI 威胁。同时发布 Private AI Services Container，允许受监管行业在防火墙内运行私有 AI 模型实例；以及 Trusted Answer Search，通过匹配预创建报告而非让 LLM 直接生成答案，从架构层面减少幻觉风险。</p>
       </div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>当 AI Agent 获得操作数据的权限后，安全边界从"谁能登录系统"变成"Agent 能触达哪些数据"。Oracle 选择在数据库层而非应用层解决这个问题，与 Databricks 前一天发布 Lakewatch（从湖仓延伸到安全市场）形成互补视角——一个在数据层做访问控制，一个在分析层做威胁检测。这意味着"AI 时代的数据安全"正在成为数据平台的标配能力而非可选项。</div>
     </div>
   </div>
 
@@ -217,14 +211,12 @@
     </div>
 
     <div class="item">
-      <h3>1. dotData Insight 原生支持 Azure Databricks 和 Snowflake on Azure</h3>
-      <div class="source">来源：<a href="https://dotdata.com/news/pressrelease-20260324/" target="_blank">dotData 官方公告</a>（March 24, 2026）</div>
+      <h3>1. Oracle Vectors on Ice：AI Database 原生支持 Apache Iceberg 向量搜索</h3>
+      <div class="source">来源：<a href="https://www.oracle.com/news/announcement/oracle-unveils-ai-database-agentic-innovations-for-business-data-2026-03-24/" target="_blank">Oracle 官方公告</a>（March 24, 2026）</div>
       <div class="body">
-        <p>AI 洞察发现平台 dotData 宣布其 dotData Insight 产品原生支持 Azure Databricks 和 Snowflake on Microsoft Azure。此次集成直接对接 Unity Catalog（Databricks）和 Horizon Catalog（Snowflake）的治理体系，在数据不出平台的前提下完成自动化业务驱动因素发现和分析，生成的 Drivers 和 Scorecards 直接存储在相应平台中。支持 Self-Managed 部署模式，满足金融机构等严格安全要求。</p>
+        <p><strong>摘要：</strong>Oracle AI Database 新增 Vectors on Ice 功能，对存储在 Apache Iceberg 表中的向量数据提供原生搜索支持。AI Vector Search 可直接从 Iceberg 表读取向量数据、创建索引并自动维护索引更新，实现对数据湖和数据库中业务数据的统一向量搜索。此外同步发布 Autonomous AI Database MCP Server，使外部 AI Agent 和 MCP 客户端无需自定义集成即可安全访问数据库能力。</p>
       </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>第三方 AI 分析工具正加速适配 Databricks 和 Snowflake 的多云生态。dotData 明确对接 Unity Catalog 和 Horizon Catalog 的治理层——数据治理目录正在成为平台生态的"接口标准"，第三方工具以此为锚点实现无数据拷贝的原生集成。
-      </div>
+      <div class="impact"><strong>对数据平台的影响：</strong>Iceberg 正成为数据平台互操作的事实标准——继 Snowflake 的 Iceberg Tables、Databricks 的 Universal Format、Microsoft Fabric 对 Iceberg 的 GA 支持后，Oracle 也选择以 Iceberg 为桥梁接入数据湖生态。Vectors on Ice 的独特之处在于将向量搜索能力延伸到了 Iceberg 表，这是主流云平台中的首个实现。而 MCP Server 的发布则表明 Anthropic 推动的 Model Context Protocol 正在获得企业数据库层的采纳。</div>
     </div>
   </div>
 
@@ -236,36 +228,16 @@
     </div>
 
     <div class="item">
-      <h3>1. FabCon 2026 深度分析：Microsoft 正将 Fabric 从分析层打造为企业 AI 数据控制平面</h3>
-      <div class="source">来源：<a href="https://www.telm.ai/blog/fabcon-2026-recap-how-microsoft-is-turning-fabric-into-the-control-plane-for-trustworthy-ai-ready-data/" target="_blank">Telmai 博客</a>（March 24, 2026）</div>
+      <h3>1. Futurum Group：Oracle 押注"数据库是 Agent 控制点"，挑战 1.2 万亿美元数据+AI 市场</h3>
+      <div class="source">来源：<a href="https://futurumgroup.com/insights/oracle-positions-ai-database-26ai-to-lead-1-2-trillion-market-by-bridging-the-agentic-reasoning-gap/" target="_blank">Futurum Group 分析报告</a>（March 25, 2026）</div>
       <div class="body">
-        <p><strong>核心观点：</strong>Telmai CEO Anoop Gopalam 在 FabCon 2026 后发布深度分析指出，Microsoft 在 FabCon 上的战略定位已从"统一分析平台"升级为"企业数据控制平面"。关键判断：（1）Direct Lake GA 消除了数据从 OneLake 到报表之间的缓冲层，坏数据将直接影响 AI 模型和仪表盘，持续数据质量监控从可选变为刚需；（2）Fabric IQ 引入本体驱动的语义层，AI Agent 获得的不再是裸 schema 而是业务语义上下文；（3）OneLake 正成为多引擎中枢（已 GA 支持 Snowflake Iceberg 互操作、Preview 支持 Databricks Unity Catalog），数据质量标准需在数据层定义一次并跨引擎执行。</p>
+        <p><strong>核心观点：</strong>Futurum 分析师 Brad Shimmin 和 Keith Kirkpatrick 认为，Oracle 此次发布标志着与行业"外部无状态 AI 架构"潮流的明确分歧——Oracle 下注"数据库而非 LLM 应成为企业自动化的主要控制点"。关键判断包括：（1）Unified Memory Core 将多模态数据推理整合进带 ACID 保证的单一事务引擎，比当前 RAG 的"胶带架构"更可靠；（2）Oracle 通过将 Agentic 能力免费包含在 Fusion Applications 订阅中来压缩纯 AI 自动化初创公司的市场空间——如果 CIO 通过现有 ERP 订阅实现 80% 自动化，独立 Agent 平台很难证明额外许可费的价值；（3）数据+AI 市场预计 2026 年达 $5411 亿，以 16.9% CAGR 增长到 2031 年超 $1.2 万亿。</p>
       </div>
-      <div class="impact">
-        <strong>映射到数据平台的判断：</strong>Fabric 的"控制平面"定位直接挑战 Databricks Unity Catalog 的治理层角色——两者都试图成为企业数据的"操作系统"。Direct Lake GA 带来的"零缓冲"架构意味着数据质量从 BI 团队的下游问题变成了数据工程的上游刚需。
-      </div>
+      <div class="impact"><strong>映射到数据平台的判断：</strong>这一分析框架揭示了数据平台竞争的新维度：不仅是"谁的分析更快"或"谁的治理更好"，而是"AI Agent 运行时归谁管"。Oracle 的"收敛"路线与 Databricks/Snowflake 的"扩张"路线之间的张力，将决定企业数据栈的下一代架构形态。</div>
     </div>
   </div>
 
-  <!-- Section D: Capital & Corporate -->
-  <div class="section">
-    <div class="section-header">
-      <span class="badge badge-d">D</span>
-      <h2>Capital & Corporate</h2>
-    </div>
-
-    <div class="item">
-      <h3>1. <span class="funding-tag tag-ma">收购兼并</span> Databricks 收购 Antimatter 和 SiftD.ai 强化安全能力</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-enters-security-market-launch-lakewatch-new-open-agentic-siem" target="_blank">Databricks 官方公告</a>（March 24, 2026）；<a href="https://www.cnbc.com/2026/03/24/databricks-cybersecurity-lakewatch-ipo.html" target="_blank">CNBC 报道</a></div>
-      <div class="body">
-        <p><strong>核心数据：</strong>收购金额未披露。Antimatter 由 UC Berkeley 安全研究人员创立，专注 AI Agent 安全认证；SiftD.ai 创始团队拥有 Splunk 39 年累计经验，包括 SPL 搜索语言和用户界面的核心创造者。</p>
-        <p>两项收购作为 Lakewatch 产品发布的配套战略同时宣布。Antimatter 技术已集成到 Lakewatch，为 AI Agent 提供安全认证能力；SiftD.ai 的 Splunk 核心团队将帮助 Databricks 构建安全分析师熟悉的交互体验。CNBC 指出此举也是 Databricks 在潜在 2026 年 IPO 前向市场展示平台横向扩展能力的举措。</p>
-      </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>SiftD.ai 的收购尤为值得注意——从 Splunk 核心团队中挖人，直接瞄准了 Splunk 用户的迁移路径。这延续了 Databricks 近年来"通过收购快速进入新领域"的策略（Neon → Lakebase、MosaicML → AI 训练）。
-      </div>
-    </div>
-  </div>
+  <!-- Section D: Capital & Corporate - 留空 -->
 
   <!-- Section E: Watchlist -->
   <div class="section">
@@ -275,27 +247,27 @@
     </div>
 
     <div class="item">
-      <h3>1. <span class="watch-tag">跟踪</span> Informatica IDMC 支持 Fabric Open Mirroring 将在 April 2026 Release 正式 GA</h3>
-      <div class="source">来源：<a href="https://www.dbta.com/Editorial/News-Flashes/Informatica-Deepens-Microsoft-Collaboration-with-Open-Mirroring-Support-for-Microsoft-Fabric-174041.aspx" target="_blank">DBTA 报道</a>（March 24, 2026）；<a href="https://www.salesforce.com/news/press-releases/2026/03/18/informatica-microsoft-fabric-integration-pod-expansion/" target="_blank">Salesforce 原始公告</a>（March 18, 2026）</div>
+      <h3><span class="watchlist-tag tag-track">跟踪</span>数据平台"Agent 控制平面"之争：Oracle vs Databricks vs Microsoft 三条路线并行</h3>
+      <div class="source">来源：<a href="https://www.oracle.com/news/announcement/oracle-unveils-ai-database-agentic-innovations-for-business-data-2026-03-24/" target="_blank">Oracle 官方公告</a>；<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-enters-security-market-launch-lakewatch-new-open-agentic-siem" target="_blank">Databricks Lakewatch 公告</a>（March 24）；<a href="https://www.telm.ai/blog/fabcon-2026-recap-how-microsoft-is-turning-fabric-into-the-control-plane-for-trustworthy-ai-ready-data/" target="_blank">Telmai FabCon 分析</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>Informatica（现属 Salesforce）在 FabCon 2026 期间宣布 IDMC 支持 Microsoft Fabric Open Mirroring，将在 April 2026 IDMC Release 中正式 GA。该功能允许一键启用 Open Mirroring，从 300+ 数据源直接摄取到 Fabric 镜像数据库，同时在管道中应用治理和质量管控。</p>
-        <p><strong>需要等待什么信号确认：</strong>April 2026 IDMC Release 正式发布后的客户采用情况；与 IBM watsonx.data integration 在 Fabric 生态中的竞争关系。</p>
+        <p><strong>为什么值得继续看：</strong>一周之内三家巨头分别定义了自己的"Agent 数据控制平面"路线——Oracle 从数据库层向内收敛（Unified Memory Core + Deep Data Security），Databricks 从湖仓向安全领域横向扩展（Lakewatch），Microsoft 从分析平台向治理层纵向升级（Fabric IQ + Direct Lake）。三条路线的交汇点是"谁掌控 Agent 访问和操作数据的运行时"，但出发点和架构完全不同。</p>
+        <p><strong>需要等待什么信号确认：</strong>各平台 Agent 能力的实际客户采用数据；AWS 是否会在 re:Invent 前发布类似的 Agent 数据控制平面产品；独立 Agent 平台公司如何回应平台厂商的"内嵌"策略。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3>2. <span class="watch-tag">跟踪</span> Databricks IPO 窗口期信号持续释放</h3>
-      <div class="source">来源：<a href="https://www.cnbc.com/2026/03/24/databricks-cybersecurity-lakewatch-ipo.html" target="_blank">CNBC 报道</a>（March 24, 2026）</div>
+      <h3><span class="watchlist-tag tag-downgrade">降级</span>华为发布 AI 推理场景数据基础设施——AI 数据平台 + FusionCube A1000</h3>
+      <div class="source">来源：<a href="https://www.guancha.cn/economy/2026_03_18_810471.shtml" target="_blank">观察者网</a>（March 18, 2026）；<a href="https://www.jiemian.com/article/14125921.html" target="_blank">界面新闻</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>CNBC 在 Lakewatch 报道中指出，CEO Ali Ghodsi 去年 12 月未排除 2026 年 IPO 的可能。Databricks 当前估值 $1340 亿，年化收入超 $54 亿且增长 65%+。Lakewatch 的发布被分析为向公开市场展示"平台可横向扩展至新领域"的信号。安全市场是一个大型、成熟、高毛利的市场，如果 Databricks 能在此领域取得进展，将显著扩大其 TAM 估算。</p>
-        <p><strong>需要等待什么信号确认：</strong>IPO 正式申请（S-1 文件）；Lakewatch 的商业化进展和客户签约情况。</p>
+        <p><strong>为什么值得继续看：</strong>华为在 2026 数据存储新春发布会上（3月17日）发布了面向 AI 推理场景的数据基础设施，包括 AI 数据平台（一体化/独立式两种部署模式）和 FusionCube A1000 AI 超融合一体机。FusionCube A1000 采用通算与智算融合一体化架构，内置 AI 平台预集成数据处理、模型训练与推理全流程，声称部署与上线周期缩短 80%。虽然发布日期超出今日时效窗口，但其"存储+推理一体化"思路与国际数据平台向 AI 运行时延伸的趋势同频，且此前日报未覆盖。</p>
+        <p><strong>需要等待什么信号确认：</strong>华为 AI 数据平台在金融、运营商等行业的落地案例；与国内云厂商的差异化定位。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.1</p>
-    <p>信息截至北京时间 2026-03-25 08:00</p>
+    <p>信息截至北京时间 2026-03-26 08:00</p>
   </div>
 
 </div>
