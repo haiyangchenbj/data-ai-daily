@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-03-30（含周末）</title>
+<title>Data+AI 全球日报 | 2026-03-31</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -29,6 +29,7 @@
   }
   .container { max-width: 900px; margin: 0 auto; }
 
+  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -40,6 +41,7 @@
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
 
+  /* Summary Box */
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -61,6 +63,7 @@
     font-weight: 500;
   }
 
+  /* Section */
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -94,6 +97,7 @@
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
 
+  /* Item */
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -122,6 +126,7 @@
     color: #1a56db;
   }
 
+  /* Empty section */
   .empty-note {
     font-size: 14px;
     color: var(--text-secondary);
@@ -129,6 +134,7 @@
     padding: 8px 0;
   }
 
+  /* Watchlist tag */
   .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -136,9 +142,11 @@
     font-size: 12px;
     font-weight: 600;
     margin-right: 6px;
+    background: #fff3e0;
+    color: #e65100;
   }
-  .tag-downgrade { background: #fff3e0; color: #e65100; }
 
+  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
@@ -146,6 +154,7 @@
     color: var(--text-secondary);
   }
 
+  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -159,18 +168,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-03-30（含周末）· 覆盖 03-27 08:00 至 03-30 08:00 CST（72小时）</div>
+    <div class="date">2026-03-31 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据协作平台将 AI Agent 交互嵌入隐私计算场景，使用门槛正在下降</li>
-      <li>流处理框架的 Agent 编排子项目进入稳定化阶段，生产可用性提升</li>
-      <li>中国云厂商的 Agent 基础设施治理方案开始触及数据安全与权限边界</li>
+      <li>CDC 生态正在从单一数据库捕获走向全链路多源多目标编排</li>
+      <li>开放表格式的连接器矩阵加速扩展，湖仓互通的最后一公里在缩短</li>
+      <li>半结构化数据处理能力正式进入 CDC 管道层，不再是查询引擎专属</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>周末 72 小时窗口是 FabCon/GTC 大周后连续第二个周末低谷期，窗口内无重大数据平台产品发布。但窗口边缘（03-25~26）Snowflake 和 Flink 的更新延续了数据平台 Agent 化的主线——从查询辅助向隐私协作、流编排等深水区渗透。
+      <strong>总判断：</strong>Flink CDC 3.6.0 是本窗口内唯一重大发布，但信号密度高——Oracle 源、Hudi 目标、Iceberg 多目录、VARIANT 类型一次性落地，表明 CDC 管道正在从"数据库复制工具"演变为湖仓架构的核心数据编排层。FabCon/GTC 后的信息消化期仍在持续。
     </div>
   </div>
 
@@ -180,7 +189,16 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-    <p class="empty-note">本期 72 小时窗口内（03-27 08:00 ~ 03-30 08:00 CST）无符合 A 板块准入标准的已确认事件。窗口边缘的重要更新已收录于 E 板块。</p>
+    <div class="item">
+      <h3>1. Apache Flink CDC 3.6.0 发布：Oracle 源连接器、Hudi Sink 和 VARIANT 类型一次性落地</h3>
+      <div class="source">来源：<a href="https://flink.apache.org/2026/03/30/apache-flink-cdc-3.6.0-release-announcement/" target="_blank">Apache Flink Blog — Flink CDC 3.6.0 Release Announcement (2026-03-30)</a></div>
+      <div class="body">
+        <p>Apache Flink CDC 3.6.0 于 3 月 30 日正式发布，这是一个功能密集的大版本。核心变化包括：新增 Oracle Pipeline Source 连接器和 Apache Hudi Pipeline Sink；Apache Iceberg 连接器新增 AWS Glue Catalog 和 BigQuery Catalog 支持；Transform 框架引入 VARIANT 类型和 PARSE_JSON 函数用于半结构化数据处理；Flink 版本支持扩展至 1.20.x 和 2.2.x，基础 JDK 升级至 11；PostgreSQL 新增 Schema Evolution 支持；StarRocks 支持重命名列 DDL 和修改列类型 DDL；同时修复了大量 MySQL CDC、MongoDB CDC 的关键 Bug。</p>
+      </div>
+      <div class="impact">
+        <strong>为什么对数据平台重要：</strong>这个版本标志着 Flink CDC 从"MySQL/PostgreSQL 复制工具"正式升级为覆盖 Oracle → Hudi/Iceberg/Paimon/Kafka/Doris/StarRocks 的全链路数据编排管道。Oracle Source 的加入填补了企业级传统数据库 CDC 的关键空白，Hudi Sink 补齐了对三大开放表格式（Iceberg/Paimon/Hudi）的完整支持。VARIANT 类型进入 CDC Transform 层，意味着半结构化数据不再需要先落仓再处理——CDC 管道本身就能完成 JSON 解析和路由，减少一次数据搬运。
+      </div>
+    </div>
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -189,23 +207,23 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-    <p class="empty-note">本期窗口内无符合 B 板块准入标准的产品发布。</p>
+    <p class="empty-note">本期窗口内无其他符合 B 板块准入标准的产品发布。Flink CDC 3.6.0 已作为当天最重要事件收录于 A 板块。</p>
   </div>
 
-  <!-- Section C: 观点与洞察 -->
+  <!-- Section C: Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
-      <h2>观点与洞察</h2>
+      <h2>Views & Research</h2>
     </div>
     <p class="empty-note">本期窗口内无符合准入标准的机构研究或原始观点。</p>
   </div>
 
-  <!-- Section D: 投融资 -->
+  <!-- Section D: Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
-      <h2>投融资</h2>
+      <h2>Capital & Corporate</h2>
     </div>
     <p class="empty-note">本期窗口内无符合准入标准的投融资/财报/收购事件。</p>
   </div>
@@ -216,44 +234,21 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
-
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span> 1. Snowflake Data Clean Rooms 集成 Cortex Code，隐私协作进入 Agent 交互时代</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-03-26-dcr" target="_blank">Snowflake Documentation — Mar 26, 2026 DCR Release Notes</a></div>
+      <h3><span class="watchlist-tag">跟踪</span> 1. Flink CDC 3.6.0 对湖仓连接器矩阵的补全效应</h3>
+      <div class="source">来源：<a href="https://flink.apache.org/2026/03/30/apache-flink-cdc-3.6.0-release-announcement/" target="_blank">Apache Flink CDC 3.6.0 Release Announcement</a></div>
       <div class="body">
-        <strong>为什么值得继续看：</strong>Snowflake Data Clean Rooms API 升级至 13.9，新增 Cortex Code 支持——用户可通过自然语言浏览对象、注册数据产品、创建 Clean Room 并执行分析。这是隐私数据协作场景首次嵌入 AI Agent 交互层，将 Clean Room 的使用者从安全工程师扩展到业务分析师。因发布日期（03-26）略早于本期窗口起点而降级收录。
+        <p>Flink CDC 3.6.0 一次性补齐了 Oracle Source + Hudi Sink + Iceberg 多目录 + Fluss 0.9 + VARIANT 类型，使其连接器矩阵在源端和目标端都达到了新的覆盖广度。但这些新连接器在企业级生产环境中的稳定性、性能和 Schema Evolution 完整性仍需验证，特别是 Oracle Source 在大规模 CDC 场景下的表现。</p>
       </div>
       <div class="impact">
-        <strong>需要等待什么信号确认：</strong>Cortex Code 在 Clean Room 场景的实际采用率和企业反馈，以及是否引发其他平台跟进类似能力。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span> 2. Apache Flink Agents 0.2.1 发布，MCP 兼容性和稳定性改善</h3>
-      <div class="source">来源：<a href="https://flink.apache.org/2026/03/26/apache-flink-agents-0.2.1-release-announcement/" target="_blank">Apache Flink Blog — Flink Agents 0.2.1 Release Announcement</a></div>
-      <div class="body">
-        <strong>为什么值得继续看：</strong>Flink Agents 0.2.1（03-26 发布）修复了远程 MCP 服务器连接兼容性问题和 Jackson 反序列化 bug，新增日志美化输出并优化包体积。作为将 Flink 流处理能力与 AI Agent 编排相结合的子项目，其 MCP 集成可靠性直接影响 Agent 在数据管道中的生产可用性。因发布日期略早于窗口起点而降级收录。
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>Flink Agents 0.3 的功能路线图，以及企业在流式 Agent 编排场景的实际采用进展。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span> 3. 腾讯云发布 Agent 产品全景图，MaaS 平台升级为 TokenHub</h3>
-      <div class="source">来源：<a href="https://news.qq.com/rain/a/20260327A05WT400" target="_blank">腾讯新闻 — 腾讯云公布2026年AI演进路线</a></div>
-      <div class="body">
-        <strong>为什么值得继续看：</strong>03-27 腾讯云城市峰会首站上海，首次发布覆盖全链路的 Agent 产品全景图，将 MaaS 平台升级为 TokenHub（多模型统一调度+统一计费），并推出企业级 Agent Infra 治理方案和业界首个《AI Agent 安全白皮书》（联合信通院）。核心定位偏 AI 应用层，但 Agent Infra 治理涉及的数据安全、权限管控和操作审计能力，与数据平台治理层存在交叉。
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>TokenHub 是否会深度集成腾讯云大数据产品（如 WeData、TBDS）的数据治理能力，以及 Agent Infra 治理方案是否形成独立的数据平台级产品。
+        <strong>需要等待什么信号确认：</strong>社区反馈 Oracle Source 在大表全量快照+增量切换场景的稳定性；Hudi Sink 与 Hudi 主流版本的 Schema Evolution 兼容性；企业用户实际采用 Flink CDC 替代传统 ETL 工具（如 Informatica、DataStage）进行 Oracle 迁移的案例。
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.1</p>
-    <p>信息截至北京时间 2026-03-30 08:00 | 本期为周一版，覆盖 03-27（周五）08:00 至 03-30（周一）08:00 共 72 小时</p>
+    <p>信息截至北京时间 2026-03-31 08:00</p>
   </div>
 
 </div>
