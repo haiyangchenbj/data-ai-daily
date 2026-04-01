@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-03-31</title>
+<title>Data+AI 全球日报 | 2026-04-01</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -126,15 +126,15 @@
     color: #1a56db;
   }
 
-  /* Empty section */
-  .empty-note {
-    font-size: 14px;
+  /* Empty Section */
+  .empty-notice {
     color: var(--text-secondary);
+    font-size: 14px;
     font-style: italic;
     padding: 8px 0;
   }
 
-  /* Watchlist tag */
+  /* Watchlist Tag */
   .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -168,18 +168,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-03-31 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-04-01 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>CDC 生态正在从单一数据库捕获走向全链路多源多目标编排</li>
-      <li>开放表格式的连接器矩阵加速扩展，湖仓互通的最后一公里在缩短</li>
-      <li>半结构化数据处理能力正式进入 CDC 管道层，不再是查询引擎专属</li>
+      <li>数据库厂商开始将完整数据平台打包为政府专用方案，平台边界向垂直行业延伸</li>
+      <li>头部数据平台公司高管换防信号密集，增长阶段的组织结构调整进入深水区</li>
+      <li>全球数据治理从碎片化走向机构化，首个专业国际组织落地标志治理范式转变</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Flink CDC 3.6.0 是本窗口内唯一重大发布，但信号密度高——Oracle 源、Hudi 目标、Iceberg 多目录、VARIANT 类型一次性落地，表明 CDC 管道正在从"数据库复制工具"演变为湖仓架构的核心数据编排层。FabCon/GTC 后的信息消化期仍在持续。
+      <strong>总判断：</strong>数据平台竞争正在从产品功能比拼转向行业解决方案输出和组织能力建设。Oracle 将全栈数据平台打包进联邦政府市场、Snowflake 在高速增长期更换销售一号位，都表明行业已进入精细化运营和垂直深耕阶段。
     </div>
   </div>
 
@@ -189,14 +189,26 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
+
     <div class="item">
-      <h3>1. Apache Flink CDC 3.6.0 发布：Oracle 源连接器、Hudi Sink 和 VARIANT 类型一次性落地</h3>
-      <div class="source">来源：<a href="https://flink.apache.org/2026/03/30/apache-flink-cdc-3.6.0-release-announcement/" target="_blank">Apache Flink Blog — Flink CDC 3.6.0 Release Announcement (2026-03-30)</a></div>
+      <h3>1. Oracle 发布面向美国联邦政府的 AI Data Platform</h3>
+      <div class="source">来源：<a href="https://www.oracle.com/news/announcement/oracle-unveils-ai-data-platform-for-us-federal-government-2026-03-31/" target="_blank">Oracle Press Release</a></div>
       <div class="body">
-        <p>Apache Flink CDC 3.6.0 于 3 月 30 日正式发布，这是一个功能密集的大版本。核心变化包括：新增 Oracle Pipeline Source 连接器和 Apache Hudi Pipeline Sink；Apache Iceberg 连接器新增 AWS Glue Catalog 和 BigQuery Catalog 支持；Transform 框架引入 VARIANT 类型和 PARSE_JSON 函数用于半结构化数据处理；Flink 版本支持扩展至 1.20.x 和 2.2.x，基础 JDK 升级至 11；PostgreSQL 新增 Schema Evolution 支持；StarRocks 支持重命名列 DDL 和修改列类型 DDL；同时修复了大量 MySQL CDC、MongoDB CDC 的关键 Bug。</p>
+        <p>Oracle 在 Oracle Federal Forum（华盛顿）正式发布 AI Data Platform for Federal Government，将 OCI、Autonomous AI Database（含 AI Vector Search 和 Select AI）、OCI Enterprise AI 和 Oracle Analytics 整合为面向联邦机构的统一数据基础设施。平台运行在 FedRAMP High 授权的政府云中，支持 IL4/IL5 级别数据处理，兼容 Spark 和开源 AI/ML 框架。</p>
       </div>
       <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这个版本标志着 Flink CDC 从"MySQL/PostgreSQL 复制工具"正式升级为覆盖 Oracle → Hudi/Iceberg/Paimon/Kafka/Doris/StarRocks 的全链路数据编排管道。Oracle Source 的加入填补了企业级传统数据库 CDC 的关键空白，Hudi Sink 补齐了对三大开放表格式（Iceberg/Paimon/Hudi）的完整支持。VARIANT 类型进入 CDC Transform 层，意味着半结构化数据不再需要先落仓再处理——CDC 管道本身就能完成 JSON 解析和路由，减少一次数据搬运。
+        <strong>为什么对数据平台重要：</strong>Oracle 将数据库+分析+AI 的全栈能力以"政府专用平台"形态输出，是数据库厂商从单品竞争转向垂直行业解决方案的典型动作。Select AI（自然语言查询）和 AI Vector Search 的联邦级落地，也为数据平台在高安全场景的 AI 化提供了参考模板。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>2. Snowflake 更换首席营收官，重申 FY2027 业绩指引</h3>
+      <div class="source">来源：<a href="https://www.sec.gov/Archives/edgar/data/1640147/000164014726000013/ex991_pressreleasex033126.htm" target="_blank">Snowflake SEC Filing</a> · <a href="https://www.businesswire.com/news/home/20260331685931/en/Snowflake-Appoints-Jonathan-Beaulier-as-Chief-Revenue-Officer" target="_blank">BusinessWire</a></div>
+      <div class="body">
+        <p>Snowflake 宣布 Jonathan Beaulier（2016 年加入的资深员工，曾负责美国主要客户销售和金融服务业务）于 3 月 31 日起接任首席营收官（CRO），接替因个人原因离职的 Mike Gannon。公司同时重申 FY2027 第一季度及全年业绩指引不变。消息公布后股价下跌约 4%。</p>
+      </div>
+      <div class="impact">
+        <strong>为什么对数据平台重要：</strong>CRO 是数据平台公司最核心的增长引擎岗位。Snowflake 在 AI Data Cloud 战略推进期更换销售一号位，既反映高速增长期的人才流动常态，也意味着其 go-to-market 策略可能在新领导下进行调整。Beaulier 的金融行业背景暗示 Snowflake 可能加大垂直行业深耕力度。
       </div>
     </div>
   </div>
@@ -207,7 +219,7 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-    <p class="empty-note">本期窗口内无其他符合 B 板块准入标准的产品发布。Flink CDC 3.6.0 已作为当天最重要事件收录于 A 板块。</p>
+    <p class="empty-notice">窗口内无符合准入标准的产品发布或技术更新。</p>
   </div>
 
   <!-- Section C: Views & Research -->
@@ -216,7 +228,7 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <p class="empty-note">本期窗口内无符合准入标准的机构研究或原始观点。</p>
+    <p class="empty-notice">窗口内无符合准入标准的机构研究或关键人物观点。</p>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -225,7 +237,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-note">本期窗口内无符合准入标准的投融资/财报/收购事件。</p>
+    <p class="empty-notice">Snowflake CRO 变更已纳入 A 板块，D 板块不重复展开。窗口内无其他合格投融资/收购事件。</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -234,21 +246,20 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
+
     <div class="item">
-      <h3><span class="watchlist-tag">跟踪</span> 1. Flink CDC 3.6.0 对湖仓连接器矩阵的补全效应</h3>
-      <div class="source">来源：<a href="https://flink.apache.org/2026/03/30/apache-flink-cdc-3.6.0-release-announcement/" target="_blank">Apache Flink CDC 3.6.0 Release Announcement</a></div>
+      <h3><span class="watchlist-tag">降级</span>世界数据组织（WDO）在北京正式成立</h3>
+      <div class="source">来源：<a href="https://www.news.cn/world/20260330/cc17838dc1cc4305a0f29e9c326a951c/c.html" target="_blank">新华社</a> · <a href="https://world.people.com.cn/n1/2026/0330/c1002-40691787.html" target="_blank">人民网</a> · <a href="https://news.cgtn.com/news/2026-03-30/World-Data-Organization-launches-in-Beijing-to-boost-data-governance-1LW8SriyLq8/detail.html" target="_blank">CGTN</a></div>
       <div class="body">
-        <p>Flink CDC 3.6.0 一次性补齐了 Oracle Source + Hudi Sink + Iceberg 多目录 + Fluss 0.9 + VARIANT 类型，使其连接器矩阵在源端和目标端都达到了新的覆盖广度。但这些新连接器在企业级生产环境中的稳定性、性能和 Schema Evolution 完整性仍需验证，特别是 Oracle Source 在大规模 CDC 场景下的表现。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>社区反馈 Oracle Source 在大表全量快照+增量切换场景的稳定性；Hudi Sink 与 Hudi 主流版本的 Schema Evolution 兼容性；企业用户实际采用 Flink CDC 替代传统 ETL 工具（如 Informatica、DataStage）进行 Oracle 迁移的案例。
+        <p><strong>为什么值得继续看：</strong>WDO 是全球首个专注数据发展与治理的专业国际组织，总部设在北京，汇集 200 余家会员覆盖 40 多国，聚焦弥合数据鸿沟、释放数据价值、赋能数字经济三大使命。其成立标志着全球数据治理从各国各自摸索进入机构化协调阶段。对数据平台从业者而言，跨境数据流动规则、治理标准和合规要求可能因此加速统一。</p>
+        <p><strong>需要等待什么信号确认：</strong>WDO 首批具体工作计划和标准制定议程公布；主要经济体和头部科技企业的参与程度；对跨境数据传输规则的实质性影响。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.1</p>
-    <p>信息截至北京时间 2026-03-31 08:00</p>
+    <p>信息截至北京时间 2026-04-01 08:00</p>
   </div>
 
 </div>
