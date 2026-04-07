@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-03</title>
+<title>Data+AI 全球日报 | 2026-04-07</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -126,8 +126,8 @@
     color: #1a56db;
   }
 
-  /* Capital tag */
-  .capital-tag {
+  /* 投融资特殊样式 */
+  .funding-tag {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
@@ -135,20 +135,12 @@
     font-weight: 600;
     margin-right: 6px;
   }
-  .tag-funding { background: #e8f5e9; color: #2e7d32; }
+  .tag-funding { background: #fce4ec; color: #c62828; }
   .tag-earnings { background: #e3f2fd; color: #1565c0; }
-  .tag-ipo { background: #fce4ec; color: #c62828; }
-  .tag-ma { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
 
-  /* Empty section */
-  .empty-note {
-    color: var(--text-secondary);
-    font-size: 14px;
-    font-style: italic;
-    padding: 8px 0;
-  }
-
-  /* Watchlist tag */
+  /* Watchlist 特殊样式 */
   .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -158,8 +150,7 @@
     margin-right: 6px;
   }
   .tag-downgrade { background: #fff3e0; color: #e65100; }
-  .tag-follow { background: #e8f5e9; color: #2e7d32; }
-  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
+  .tag-follow { background: #e8eaf6; color: #283593; }
 
   /* Footer */
   .footer {
@@ -183,18 +174,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-03 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-04-07 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据湖的小文件瓶颈被从架构层面突破，流式写入不再需要后置合并</li>
-      <li>数据平台供应商的伦理争议正在实质性影响企业采购决策</li>
-      <li>AI 工作负载正成为数据平台消费增长的核心驱动力，但尚未转化为利润确定性</li>
+      <li>数据平台的语义层正在从 BI 工具私有能力变成平台级公共基础设施</li>
+      <li>跨生态元数据互通加速，SAP 与湖仓平台的治理边界开始融合</li>
+      <li>AI 资本集中度创历史新高，基础设施层投资被模型层虹吸效应遮蔽</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>数据湖架构正在经历一次"写入路径"的范式升级——DuckLake 用目录内联数据的方式证明了小文件问题可以从根本上消除而非事后修补。与此同时，Palantir 在 NHS 的遭遇提醒行业：数据平台的采购逻辑正从纯技术能力扩展到供应商的社会声誉维度。
+      <strong>总判断：</strong>数据平台正同时在两个方向发力——向上通过语义层和 Agent 能力缩短业务到数据的距离，向下通过跨生态元数据同步打破治理孤岛。资本端的极端集中化值得警惕，基础设施层融资空间可能被模型层挤压。
     </div>
   </div>
 
@@ -206,31 +197,31 @@
     </div>
 
     <div class="item">
-      <h3>1. DuckLake 发布数据内联功能，从架构层面解决数据湖小文件问题</h3>
-      <div class="source">
-        来源：<a href="https://ducklake.select/2026/04/02/data-inlining-in-ducklake/" target="_blank">DuckLake Blog</a>
-      </div>
+      <h3>1. Databricks 发布三项 Unity Catalog 新能力：SAP 语义元数据同步、Genie Code 工作区技能、Marketplace 创建向导</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks on AWS Release Notes - April 2026</a></div>
       <div class="body">
-        <p>DuckDB Labs 于 4 月 2 日发布 DuckLake 数据内联（Data Inlining）功能。该功能将小批量写入直接存储在目录数据库中而非生成独立 Parquet 文件，按需刷新为合并文件。Benchmark 显示：在流式写入场景下，DuckLake 聚合查询比无内联模式快 926×，比 Apache Iceberg（Polaris）快 923×；插入速度比 Iceberg 快 105×。</p>
+        <p>Databricks 于 4 月 6 日一次性发布三项功能更新。最值得关注的是 SAP Business Data Cloud（BDC）语义元数据自动同步至 Unity Catalog——挂载 SAP BDC 共享时，表/列注释、主外键、治理标签等语义元数据将自动同步，且 SAP 治理标签可直接用于 Unity Catalog 的 ABAC（基于属性的访问控制）策略。同时，Genie Code Agent 模式新增工作区级技能（Workspace Skills），管理员可创建全工作区共享的机器学习流水线或领域专用技能。Marketplace 新增分步创建向导。</p>
       </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>小文件问题是数据湖流式写入的核心痛点，传统方案依赖后置 Compaction 作业消耗大量资源。DuckLake 的内联方案将写入成本从对象存储层降到目录数据库层，意味着数据湖架构在流式场景下的性能天花板被显著提升，对 Iceberg 生态的 Compaction 策略构成架构层面的挑战。
-      </div>
+      <div class="impact">💡 SAP BDC 元数据同步意味着企业 ERP 数据的治理语义可以零摩擦流入湖仓平台，这是跨生态数据治理真正落地的关键一步。ABAC 策略复用 SAP 标签，大幅降低了混合数据栈的治理成本。</div>
     </div>
 
     <div class="item">
-      <h3>2. NHS 员工大规模抵制 Palantir 数据平台，英国政府考虑触发合同终止条款</h3>
-      <div class="source">
-        来源：<a href="https://www.ft.com/content/dbb67083-bd1d-46e9-b196-1438d54c5795" target="_blank">Financial Times</a>
-      </div>
+      <h3>2. Crunchbase：北美 Q1 创投 $2,526 亿创历史纪录，AI 占比 87%，早期轮数量反降</h3>
+      <div class="source">来源：<a href="https://news.crunchbase.com/venture/funding-surges-all-stages-ai-north-america-q1-2026/" target="_blank">Crunchbase News</a></div>
       <div class="body">
-        <p>据 FT 4 月 2 日报道，越来越多 NHS 员工以"工作场所调整"为由正式拒绝使用 Palantir 提供的联邦数据平台（FDP）。该平台基于 Palantir 2023 年获得的 £3.3 亿合同建设，目前已在英格兰 205 家医院信托中的 123 家部署。反对原因涉及 Palantir 的美国国防业务及高管政治关联。英国政府据报正在寻求法律意见以触发合同终止条款。</p>
+        <p>Crunchbase 4 月 6 日发布北美 Q1 报告：美加两国种子轮至成长期融资总额达 $2,526 亿，其中 AI 相关类别占 87%（$2,210 亿），由 OpenAI、Anthropic、xAI、Waymo 等巨额轮次驱动。但早期（Series A/B）总额虽升至 $251 亿（环比+17%），轮次数量却下降，说明资本正向头部集中。数据基础设施领域，NextHop AI 以 $5 亿成为少数几个早期大额轮次之一。</p>
       </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是数据平台领域罕见的"非技术因素实质性影响采购决策"案例。£3.3 亿级别的企业数据平台合同可能因供应商的社会声誉问题被终止，意味着企业采购逻辑正在从纯能力评估扩展到 ESG 与供应商信誉维度，这对所有面向公共部门的数据平台厂商都是信号。
-      </div>
+      <div class="impact">💡 AI 资本的极端集中化意味着数据基础设施公司融资窗口变窄——投资人的注意力被模型层吸走。数据平台厂商需更多靠自身造血或战略并购获取资源，独立融资难度加大。</div>
     </div>
 
+    <div class="item">
+      <h3>3. 腾讯云发布 Data+AI 一体化平台技术架构：WeData OneFlow + TCCatalog + ChatBI Agent 体系</h3>
+      <div class="source">来源：<a href="https://cloud.tencent.cn/developer/article/2650659" target="_blank">腾讯云开发者社区</a></div>
+      <div class="body">
+        <p>腾讯云 4 月 6 日在开发者社区发布 Data+AI 平台深度技术解读，披露 AI-Ready 数据智能平台的完整产品矩阵：WeData OneFlow 融合 DataOps 与 AIOps 工作流、TCCatalog 多模态数据目录（兼容 Iceberg 与 Lance 生态）、ChatBI 数据分析 Agent（BIRD-Bench NL2SQL 国内第一、全球第三）、TCInsight 智能运维管家（根因定位从 4.5 小时降至 30 分钟）。已在能源央企落地 2000+ 节点湖仓平台。</p>
+      </div>
+      <div class="impact">💡 这是国内云厂商首次系统性公开 Data+AI 一体化平台的完整技术栈和量化指标，TCCatalog 同时兼容 Iceberg 和 Lance 的设计选择表明国内厂商正主动对齐湖仓+向量的双轨生态。</div>
+    </div>
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -239,29 +230,34 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-    <p class="empty-note">DuckLake 数据内联功能已作为当天最重要事件纳入 A 板块，不在 B 板块重复展开。窗口内无其他达标的正式产品发布。</p>
+
+    <div class="item">
+      <h3>1. Snowflake 10.11 版本发布：Dynamic Table Refresh Boundaries、医疗数据分类器、AI_FUNCTIONS_USER 角色 GA</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/all-release-notes" target="_blank">Snowflake Release Notes</a></div>
+      <div class="body">
+        <p>Snowflake 10.11 版本在 3 月 30 日至 4 月 6 日间陆续推出多项更新。4 月 6 日上线 Dynamic Table Refresh Boundaries 新功能，优化动态表增量刷新的边界控制；4 月 2 日 AI_FUNCTIONS_USER 数据库角色 GA，CREATE OR REPLACE TABLE 支持标签复制 GA，新增医疗健康数据敏感分类器，MIN_BY/MAX_BY 函数在动态表增量刷新中 GA。</p>
+      </div>
+      <div class="impact">💡 Dynamic Table Refresh Boundaries 提升了 Snowflake 在实时数据管道场景的精细控制力；医疗数据分类器是行业垂直治理能力的补齐，对受监管行业客户有直接吸引力。</div>
+    </div>
+
+
   </div>
 
   <!-- Section C: Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
-      <h2>Views & Research</h2>
+      <h2>观点与洞察</h2>
     </div>
 
     <div class="item">
-      <h3>1. Zacks Research：Snowflake AI 工作负载扩张能否支撑下一轮增长仍存疑</h3>
-      <div class="source">
-        来源：<a href="https://www.zacks.com/stock/news/2893518/can-ai-workload-expansion-strengthen-snowflakes-next-leg-of-growth" target="_blank">Zacks Investment Research</a>
-      </div>
+      <h3>1. Crunchbase 数据揭示 AI 投资虹吸效应：4 家公司吸收全球 Q1 VC 总额的 63%</h3>
+      <div class="source">来源：<a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank">Crunchbase News - Q1 2026 Global Report</a></div>
       <div class="body">
-        <p>Zacks 4 月 2 日分析指出，Snowflake 正从传统数据仓库向 AI 集成数据平台转型，通过 Snowflake Intelligence 套件和与 OpenAI、Anthropic、Google Cloud 的合作提升平台 AI 工作负载。Q4 FY2026 营收 $12.8 亿（同比+30%），但近期股价周跌 7%，39 家机构给出"买入"评级、1 家"卖出"。</p>
+        <p><strong>核心观点：</strong>全球 Q1 2026 创投 $2,970 亿中，AI 占 81%（$2,390 亿）。仅 OpenAI（$1,220 亿）、Anthropic（$300 亿）、xAI（$200 亿）、Waymo（$160 亿）四家即吸收 63%。这不是普惠式 AI 繁荣，而是高度集中的模型层资本虹吸。</p>
       </div>
-      <div class="impact">
-        <strong>映射到数据平台的判断：</strong>AI Agent 驱动的查询量增长正在成为数据平台消费模式的新引擎。但 Snowflake 的情况也揭示了一个行业性挑战：AI 工作负载带来的平台消费增长能否转化为可持续的盈利能力，目前尚缺乏验证——内部人士过去 6 个月净卖出 140 笔、零买入，市场对增长确定性的信心并不充分。
-      </div>
+      <div class="impact">💡 数据基础设施作为 AI 的"水电煤"并未等比例获益。资本结构的极端分化意味着数据平台创业公司需要更快证明商业化能力，或选择被并购（如 SAP 收购 Reltio）。对大厂数据平台来说，这反而是整合期的机会窗口。</div>
     </div>
-
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -270,7 +266,16 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-note">Crunchbase Q1 2026 全球 VC $3000 亿报告发布于 4 月 1 日，超出当期窗口（4月2日08:00起），已降级至 E 板块。窗口内无其他达标事件。</p>
+
+    <div class="item">
+      <h3><span class="funding-tag tag-funding">投融资</span>NextHop AI 完成 $5 亿早期融资，为 Q1 少数数据基础设施大额轮次</h3>
+      <div class="source">来源：<a href="https://news.crunchbase.com/venture/funding-surges-all-stages-ai-north-america-q1-2026/" target="_blank">Crunchbase News</a></div>
+      <div class="body">
+        <p><strong>核心数据：</strong>$5 亿（早期轮，Series A/B 级别），为 Q1 仅有的四个 $5 亿以上早期融资之一。</p>
+        <p>NextHop AI 是一家 AI 基础设施开发商，在 Q1 完成 $5 亿早期融资，成为少数在 AI 模型层巨额融资阴影下仍获得大额投资的基础设施公司。该轮次是 Q1 北美早期融资总额 $251 亿中的重要组成部分。</p>
+      </div>
+      <div class="impact">💡 表明投资人并未完全忽视基础设施层，但门槛极高——只有少数被认为是"明星级"的基础设施公司才能获得大额早期投资，中小型数据平台创业公司的融资环境更为严峻。</div>
+    </div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -281,50 +286,27 @@
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span>Q1 2026 全球 VC 投资 $3000 亿创纪录——AI 吸走 80%，数据平台层融资窗口可能被挤压</h3>
-      <div class="source">
-        来源：<a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank">Crunchbase News</a> · <a href="https://techcrunch.com/2026/04/01/startup-funding-shatters-all-records-in-q1/" target="_blank">TechCrunch</a>
-      </div>
+      <h3><span class="watchlist-tag tag-downgrade">降级</span>Databricks Unity Catalog Business Semantics GA 并宣布开源</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/redefining-semantics-data-layer-future-bi-and-ai" target="_blank">Databricks Blog</a></div>
       <div class="body">
-        <p>Crunchbase 4 月 1 日发布数据显示 Q1 全球风投 $3000 亿（同比+150%），AI 占 80%（$2420 亿）。前四大轮次（OpenAI $1220 亿 + Anthropic $300 亿 + xAI $200 亿 + Waymo $160 亿）占总额 63%。资本高度集中于头部 AI 基础设施，数据管理/治理/编排层的独立融资窗口可能被挤压。</p>
+        <p>Databricks 宣布 Unity Catalog Business Semantics 正式 GA 并计划开源至 Apache Spark 和 Unity Catalog OSS v0.5。这是数据平台语义层从 BI 工具私有能力向平台级开放标准演进的标志性事件——Metric Views 提供声明式指标定义、自动物化和智能查询改写，Tableau/Sigma/ThoughtSpot/Hex 等 15+ 厂商已接入。降级原因：发布日期约为 4 月 3 日，超出今日 24 小时窗口。</p>
       </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>Q2 是否有数据平台垂直领域的大额融资出现；数据基础设施类创业公司的融资节奏是否放缓。
-      </div>
+      <div class="impact">💡 需要等待：Apache Spark 正式集成的版本号和时间表、Unity Catalog OSS v0.5 发布、Open Semantic Interchange（OSI）倡议的其他厂商参与情况。</div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-follow">跟踪</span>Snowflake 证券集体诉讼截止日 4 月 27 日逼近</h3>
-      <div class="source">
-        来源：<a href="https://www.morningstar.com/news/pr-newswire/20260402dc25418/investor-alert-pomerantz-law-firm-reminds-investors-with-losses-on-their-investment-in-snowflake-inc-of-class-action-lawsuit-and-upcoming-deadlines-snow" target="_blank">Pomerantz LLP via PR Newswire</a>
-      </div>
+      <h3><span class="watchlist-tag tag-follow">跟踪</span>Dell Lightning File System 进入 4 月可用窗口，号称最快并行文件系统</h3>
+      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/dell-ai-data-platform-with-nvidia-supercharges-enterprise-ai-with-breakthrough-data-orchestration-and-storage-innovations-302715096.html" target="_blank">PR Newswire / Dell Technologies</a></div>
       <div class="body">
-        <p>多家律所（Pomerantz、Faruqi & Faruqi、Bronstein Gewirtz、Rosen Law、Gross Law）于 4 月 1-2 日密集发布投资者提醒，指控 Snowflake 存在误导性陈述。4 月 27 日为首席原告申请截止日。诉讼结果虽不确定，但若进入正式审理阶段，可能影响 Snowflake 的市场信心和企业客户续约决策。</p>
+        <p>Dell 3 月 16 日宣布的 Lightning File System 标称 150 GB/s/机架、20X 性能提升，定于 4 月可用。若如期交付，将直接影响 AI 训练场景的存储选型。</p>
       </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>4 月 27 日首席原告截止后，法院是否受理以及 Snowflake 的正式回应。
-      </div>
+      <div class="impact">💡 需要等待：正式 GA 公告、第三方基准测试验证、与 NVIDIA STX/Vera Rubin 架构的实际集成效果。</div>
     </div>
-
-    <div class="item">
-      <h3><span class="watchlist-tag tag-follow">跟踪</span>NHS 抵制 Palantir 事件的后续：英国政府是否真正终止合同</h3>
-      <div class="source">
-        来源：<a href="https://www.ft.com/content/dbb67083-bd1d-46e9-b196-1438d54c5795" target="_blank">Financial Times</a>
-      </div>
-      <div class="body">
-        <p>FT 报道英国政府正寻求法律意见触发终止条款，但 Palantir 目前已在 123/205 家医院部署，项目评级"按时按预算"。实际终止面临巨大的迁移成本和运营风险。这是一个观察"数据平台伦理争议能否真正改变采购结果"的关键案例。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>英国政府是否正式触发合同终止条款；若终止，替代方案和迁移路径。
-      </div>
-    </div>
-
   </div>
 
   <div class="footer">
-    <p>📊 本期条目数：A×2 + C×1 + E×3 = 6 条 | B/D 板块留空</p>
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-04-03 08:00</p>
+    <p>信息截至北京时间 2026-04-07 08:00</p>
   </div>
 
 </div>
