@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-13（含周末）</title>
+<title>Data+AI 全球日报 | 2026-04-14</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -128,8 +128,8 @@
 
   /* Empty section */
   .empty-note {
-    color: var(--text-secondary);
     font-size: 14px;
+    color: var(--text-secondary);
     font-style: italic;
     padding: 8px 0;
   }
@@ -143,8 +143,8 @@
     font-weight: 600;
     margin-right: 6px;
   }
-  .tag-downgrade { background: #fff3e0; color: #e65100; }
-  .tag-follow { background: #e8f5e9; color: #2e7d32; }
+  .tag-track { background: #fff3e0; color: #e65100; }
+  .tag-downgrade { background: #fce4ec; color: #c62828; }
   .tag-upcoming { background: #e3f2fd; color: #1565c0; }
 
   /* Footer */
@@ -169,18 +169,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-13（含周末） · 覆盖过去72小时信息（04-10 ~ 04-13）</div>
+    <div class="date">2026-04-14 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>开放表格式竞赛进入生产落地阶段，各平台围绕 Iceberg 的差异化不再是"是否支持"而是"治理能否跟上"</li>
-      <li>数据库开发工作流正在借鉴代码管理范式，存算分离架构释放了新的工程可能性</li>
-      <li>国内数据标准体系建设进入密集落地期，标准化节奏从规划转向"急用先行"的实操阶段</li>
+      <li>数据平台治理正在从平台内部规则走向跨系统策略自动同步，ERP 与湖仓的治理语义开始对齐</li>
+      <li>无代码应用构建正在成为数据平台扩大覆盖面的新路径，数据消费端的门槛被进一步拉低</li>
+      <li>治理标签从配置操作升级为 SQL 原语，数据治理正在融入开发者日常工作流</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>上周 Iceberg Summit 余波延续，Databricks 和 Snowflake 同步在 Iceberg 生态上加码产品化落地。与此同时，国内数据标准化进入执行期，数据平台从业者需要同时跟踪技术演进和合规要求两条线。
+      <strong>总判断：</strong>Databricks 连续在治理层和开发者生态两条线上加码，核心逻辑是让数据平台从"数据团队的工具"变成"全公司的基础设施"。当治理能力能跨系统同步、应用构建能脱离工程团队时，数据平台的价值覆盖面正在系统性扩大。
     </div>
   </div>
 
@@ -190,39 +190,7 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-
-    <div class="item">
-      <h3>1. Databricks Lakebase 推出 Git 式数据库分支，存算分离催生新开发范式</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/blog/database-branching-postgres-git-style-workflows-databricks-lakebase" target="_blank">Databricks Blog</a></div>
-      <div class="body">
-        <p>Databricks 于 4 月 10 日发布 Lakebase Postgres 的数据库分支（Database Branching）功能。基于写时复制（Copy-on-Write）机制，开发者可在秒级创建包含完整 schema 和数据的隔离 Postgres 环境，创建时间与数据库大小无关。每个分支拥有独立的连接字符串和计算端点，空闲自动缩容至零。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是存算分离架构在 OLTP 层面的一次范式突破——数据库终于可以像代码一样分支、测试、回滚。对于构建在 Lakehouse 之上的应用开发团队而言，"每个 PR 一个数据库"不再是理想而是可执行的工作流，直接改变了数据应用的开发效率和安全边界。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. Snowflake 动态 Iceberg 表新增分区与路径控制能力正式 GA</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank">Snowflake Release Notes</a></div>
-      <div class="body">
-        <p>Snowflake 于 4 月 13 日宣布动态 Apache Iceberg 表正式支持 PARTITION BY、TARGET_FILE_SIZE 和 PATH_LAYOUT 参数，进入 GA 状态。用户可在 Snowflake 内以声明式方式构建自动增量转换管道，同时精确控制 Iceberg 表的物理布局。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>动态 Iceberg 表是 Snowflake 将数据湖集成从"能读"推进到"能写且能调优"的关键一步。分区和文件大小控制能力的 GA 使其在生产环境中可用于高吞吐 ETL 场景，Snowflake 在 Iceberg 写路径上的能力差距正在快速收窄。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>3. 全国数标委发布 2026 年第一批数据领域国家标准需求清单</h3>
-      <div class="source">来源：<a href="https://www.nda.gov.cn/sjj/zwgk/tzgg/0410/20260410211223651215762_pc.html" target="_blank">国家数据局</a></div>
-      <div class="body">
-        <p>全国数据标准化技术委员会于 4 月 10 日发布 2026 年第一批数据领域国家标准需求清单，按照"急用先行、急需先用"原则，面向全社会征集标准申报，截止日期 4 月 30 日。这是国家数据局推动数据标准体系建设从规划进入密集落地执行的标志性动作。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>数据标准直接影响数据平台的合规架构设计、元数据管理和跨组织数据流通能力。"急用先行"的节奏意味着部分标准将快速进入强制或推荐执行，数据平台厂商和企业数据团队需要提前关注标准覆盖范围，评估对现有数据治理体系的影响。
-      </div>
-    </div>
+    <p class="empty-note">本期窗口内（04-13 08:00 ~ 04-14 08:00 CST）无达到 A 板块准入标准的重大战略事件。窗口内信息集中在 Databricks 平台功能更新层面，重要性更适合归入 B 板块。</p>
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -233,33 +201,55 @@
     </div>
 
     <div class="item">
-      <h3>1. Snowflake AI 功能预算管理正式 GA</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank">Snowflake Release Notes</a></div>
+      <h3>1. Databricks 实现 SAP BDC 列级治理标签自动同步至 Unity Catalog，并推出治理标签 SQL 管理语句</h3>
+      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/april" target="_blank">Azure Databricks Release Notes - April 2026</a></div>
       <div class="body">
-        <p>Snowflake 于 4 月 10 日宣布 Budgets for AI Features 进入 GA，为 AI 相关功能（Cortex 系列等）提供独立的预算控制能力，管理员可设定 AI 工作负载的消费上限并监控使用情况。</p>
+        <p>Databricks 于 4 月 13 日同步发布两项治理能力更新：一是 SAP Business Data Cloud（BDC）的列级个人数据治理标签（fieldSemantics、isPotentiallyPersonal、isPotentiallySensitive）现可自动同步至 Unity Catalog，并可在基于属性的访问控制（ABAC）策略中直接使用；二是 SQL 参考新增 CREATE/ALTER/DROP/DESCRIBE/SHOW GOVERNED TAG 五条治理标签管理语句，治理标签的生命周期管理正式成为 SQL 原语。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>AI 功能的成本不可控是企业采用的主要障碍之一。将 AI 功能纳入平台级预算管理体系，是 Snowflake 推动 AI 功能从实验走向生产部署的关键治理配套。这也释放了一个信号：平台 AI 能力的竞争焦点正从"能不能用"转向"用得起、管得住"。
+        <strong>对数据平台的影响：</strong>这两项更新代表了 Databricks 治理能力的两个方向性进展：向上，Unity Catalog 开始接收外部系统（SAP ERP）的治理语义，数据平台治理从"平台内自治"走向"跨系统策略同步"；向下，治理标签操作从管理界面下沉到 SQL 层面，让数据工程师能用熟悉的方式管理治理规则。对于同时使用 SAP 和 Databricks 的大型企业而言，敏感数据治理策略的统一执行不再需要人工映射。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>2. Databricks 与 Lovable 集成：无代码应用平台可直接查询 Lakehouse 数据</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/lovable-databricks-build-data-driven-apps-speed-thought" target="_blank">Databricks Blog</a></div>
+      <div class="body">
+        <p>Databricks 于 4 月 13 日宣布与无代码应用平台 Lovable 集成，推出 Databricks Connector。业务团队可通过自然语言描述需求，由 Lovable 的 AI Agent 直接连接 Databricks 工作区，通过 REST API + OAuth 机器对机器认证查询 Lakehouse 数据，在数小时内构建和部署内部应用。数据始终留在 Databricks 安全边界内，无需 ETL 或数据复制。</p>
+      </div>
+      <div class="impact">
+        <strong>对数据平台的影响：</strong>数据平台的价值实现长期受限于"最后一公里"——业务团队无法直接消费数据。Lovable 集成代表了一种新的扩展思路：不是让更多人学 SQL，而是让应用构建平台直接接入 Lakehouse。这降低了数据消费端的技术门槛，同时通过 OAuth + Unity Catalog 治理保持数据安全边界。对于 Databricks 而言，这是从"数据团队工具"向"全公司数据基础设施"定位演进的又一步。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>3. Databricks Mosaic AI Vector Search 推出内置检索质量评估功能（Beta）</h3>
+      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/april" target="_blank">Azure Databricks Release Notes - April 2026</a></div>
+      <div class="body">
+        <p>Databricks 于 4 月 13 日发布 Mosaic AI Vector Search 的内置检索质量评估（Retrieval Quality Evaluation）功能，进入 Beta 阶段。该功能可衡量和比较不同搜索策略在用户自有数据上的相关性表现，帮助开发者选择最优检索方案。</p>
+      </div>
+      <div class="impact">
+        <strong>对数据平台的影响：</strong>RAG 应用的质量瓶颈往往在检索环节而非生成环节。将检索质量评估内置到向量搜索服务中，降低了 RAG 应用调优的门槛，是 Databricks 在 AI 应用基础设施层面持续补全工具链的体现。
       </div>
     </div>
   </div>
 
-  <!-- Section C: 观点与洞察 -->
+  <!-- Section C: Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
       <h2>观点与洞察</h2>
     </div>
-    <p class="empty-note">本期窗口内（04-10 ~ 04-13）未发现符合准入标准的机构研究报告或关键人物原始观点。</p>
+    <p class="empty-note">本期窗口内（04-13~04-14）未发现符合准入标准的机构研究报告或关键人物原始观点。</p>
   </div>
 
-  <!-- Section D: 投融资 -->
+  <!-- Section D: Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
       <h2>投融资</h2>
     </div>
-    <p class="empty-note">本期窗口内（04-10 ~ 04-13）未发现符合准入标准的数据平台领域投融资、财报或收购兼并事件。</p>
+    <p class="empty-note">本期窗口内（04-13~04-14）未发现符合准入标准的数据平台领域投融资、财报或收购兼并事件。</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -270,36 +260,31 @@
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span>Redpanda Connect 四组件 GA：DynamoDB CDC、Oracle CDC、Salesforce 连接器</h3>
-      <div class="source">来源：<a href="https://www.redpanda.com/press/redpanda-connect-breaks-down-data-silos-salesforce-connectors-streaming-cdc-oracle-dynamodb" target="_blank">Redpanda Press Release</a></div>
+      <h3><span class="watchlist-tag tag-track">跟踪</span> 1. Databricks 治理标签体系成型：从 Governed Tags GA 到 SAP 跨系统同步的演进路径</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/admin/governed-tags" target="_blank">Databricks Governed Tags Documentation</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>Redpanda 于 4 月 9 日宣布 Connect 平台新增 DynamoDB CDC、Oracle CDC、Salesforce 处理器和输出四个企业级组件 GA。这些连接器直接替代了传统 Kafka Connect + Debezium 的重型部署模式，在 Kubernetes 上即可运行。Oracle CDC 和 DynamoDB CDC 的可用意味着企业核心事务系统的流式数据集成门槛显著降低。</p>
-        <p><strong>需要等待什么信号确认：</strong>降级原因为发布时间（美西4月9日）略早于本期72小时窗口起点。后续关注生产环境采用反馈及与 Iceberg Sink 的集成进展。</p>
+        <p>从 4 月 3 日 Governed Tags GA（治理标签从 Beta 进入生产），到 4 月 13 日 SAP 治理标签自动同步 + SQL 原语支持，Databricks 的治理标签体系在两周内完成了从"平台内功能"到"跨系统可编程治理层"的跳跃。这条演进线值得持续跟踪——Unity Catalog 的治理野心不再局限于 Lakehouse 内部数据资产，而是开始向企业 ERP/CRM 等核心系统的数据治理延伸。</p>
+      </div>
+      <div class="impact">
+        <strong>需要等待什么信号确认：</strong>SAP 之外的其他企业系统（Salesforce、Oracle ERP、Workday 等）治理标签同步的支持时间表；ABAC 策略在跨系统场景下的实际执行效果和性能影响。
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-follow">跟踪</span>Iceberg Summit 后多平台 V3 竞速：Databricks Preview、Snowflake 路线图、Dremio GA</h3>
-      <div class="source">来源：<a href="https://www.icebergsummit.org/" target="_blank">Iceberg Summit 2026</a></div>
+      <h3><span class="watchlist-tag tag-track">跟踪</span> 2. 世界互联网大会亚太峰会 4 月 13-14 日举办，关注数据治理与 AI 基础设施议题</h3>
+      <div class="source">来源：<a href="https://cn.wicinternet.org/2026-04/10/content_38701076.htm" target="_blank">世界互联网大会</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>4 月 8-9 日 Iceberg Summit 期间，Databricks 宣布 Iceberg V3 Public Preview（行血缘 + 删除向量 + VARIANT），Snowflake 公布 V3 GA 路线图（含治理可移植性和 Polaris 目录），Dremio 率先实现 V3 GA。三大平台在 Iceberg V3 上的落地节奏形成了清晰的竞争格局分化。</p>
-        <p><strong>需要等待什么信号确认：</strong>Snowflake Iceberg V3 从 Preview 到 GA 的具体时间表；Databricks V3 从 Public Preview 进入 GA 的周期；三平台在 VARIANT、删除向量等 V3 特性上的实际性能差异。</p>
+        <p>2026 年世界互联网大会亚太峰会于 4 月 13-14 日举办，议题涵盖数据治理、AI 基础设施等方向。虽然此类峰会以政策和行业趋势讨论为主，产品级发布较少，但可能释放国内数据治理政策走向和跨境数据流通的新信号。</p>
       </div>
-    </div>
-
-    <div class="item">
-      <h3><span class="watchlist-tag tag-follow">跟踪</span>Snowflake 证券集体诉讼提醒：4月27日截止</h3>
-      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/snow-shareholder-reminder-faruqi--faruqi-llp-reminds-snowflake-snow-investors-of-securities-class-action-deadline-on-april-27-2026-302739577.html" target="_blank">PR Newswire</a></div>
-      <div class="body">
-        <p><strong>为什么值得继续看：</strong>Faruqi & Faruqi 律所于 4 月 11-12 日多次发布提醒，针对 Snowflake 的证券集体诉讼截止日期为 4 月 27 日。虽然此类诉讼提醒属于常规法律流程，但对于跟踪 Snowflake 公司治理和资本市场信号的从业者仍有参考价值。</p>
-        <p><strong>需要等待什么信号确认：</strong>4 月 27 日诉讼截止后的实质进展；是否影响 Snowflake 的业务运营或市场信心。</p>
+      <div class="impact">
+        <strong>需要等待什么信号确认：</strong>是否有与数据平台直接相关的政策或标准发布；是否有国内云厂商在会上发布数据平台相关产品。
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-04-13 08:00</p>
+    <p>信息截至北京时间 2026-04-14 08:00</p>
   </div>
 
 </div>
