@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-16</title>
+<title>Data+AI 全球日报 | 2026-04-17</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -126,23 +126,13 @@
     color: #1a56db;
   }
 
+  /* Empty section */
   .empty-note {
-    color: var(--text-secondary);
     font-size: 14px;
+    color: var(--text-secondary);
     font-style: italic;
     padding: 8px 0;
   }
-
-  /* Watchlist tag */
-  .watchlist-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 6px;
-  }
-  .tag-track { background: #fff3e0; color: #e65100; }
 
   /* Footer */
   .footer {
@@ -166,18 +156,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-16 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-04-17 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据平台的 Agent 治理从"模型端点"扩展到"工具调用"层，MCP 交互首次纳入统一管控</li>
-      <li>数据摄取正在从 CDC 依赖中解耦，查询式连接器让更多源系统免配置接入</li>
-      <li>中国云厂商开始以"开放湖仓方案"品牌化输出，湖仓架构竞争进入方案层面</li>
+      <li>动态表管道从"全量重算"走向"主键驱动增量"，数据刷新成本结构开始改变</li>
+      <li>非结构化文档解析进入生产可用阶段，数据平台的数据源边界持续外扩</li>
+      <li>平台可观测性正在从外挂工具回归平台原生能力，日志治理与数据治理开始统一</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Databricks 在一天内同时推进 Agent 治理层（AI Gateway 管控 MCP）和数据摄取层（无 CDC 查询连接器）的能力扩展，体现了数据平台从"存算分析"向"全栈可治理平台"演进的加速态势。阿里云以 OpenLake 品牌进入全球湖仓市场，标志着中国云厂商数据平台竞争从单品走向方案化。
+      <strong>总判断：</strong>Snowflake 和 Databricks 在同一天各自强化了数据管道的不同环节——Snowflake 通过动态表主键打通增量刷新链路降低计算成本，Databricks 将非结构化文档解析和平台日志纳入 Unity Catalog 统一管理。数据平台的竞争焦点正从"新功能发布"转向"已有能力的生产化精细打磨"。
     </div>
   </div>
 
@@ -189,24 +179,13 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks AI Gateway 扩展至 MCP 服务器治理，Agent 工具调用首次纳入统一访问控制和审计（Beta）</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/blog/ai-gateway-governance-layer-agentic-ai" target="_blank">Databricks Blog - Expanding Agent Governance with Unity AI Gateway</a></div>
+      <h3>1. Snowflake 动态表主键支持正式发布（GA）：全量刷新动态表下游首次可增量处理</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-04-16-dynamic-table-primary-keys" target="_blank">Snowflake Release Notes - Apr 16, 2026</a></div>
       <div class="body">
-        <p>Databricks 于 4 月 15 日发布 Unity AI Gateway 的重要扩展：AI Gateway 现可对工作区中所有 MCP（Model Context Protocol）服务器交互实施细粒度访问控制、使用监控和活动审计。核心能力包括：代理用户执行（On-Behalf-Of）确保 Agent 以请求者真实权限访问外部系统；PII 检测脱敏、提示注入防护、数据泄露防护等护栏（Guardrails）扩展到 MCP 调用；所有调用日志写入 Delta 表由 Unity Catalog 权限控制。</p>
+        <p>Snowflake 于 4 月 16 日正式发布动态表主键支持。核心能力包括三项：基表定义的主键（通过 RELY 属性自动传递给下游动态表）、查询派生的主键（从 GROUP BY 或 QUALIFY ROW_NUMBER() 自动推导唯一性约束），以及最关键的——增量刷新模式的动态表现在可以读取全量刷新模式的上游动态表，前提是上游表有系统派生主键。</p>
       </div>
       <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是业界首次将 MCP 工具调用纳入企业级数据平台治理框架。Agent 不再是治理盲区——每次工具调用都有身份、权限、审计记录。对于正在部署 AI Agent 的企业而言，这解决了一个关键问题：如何确保 Agent 对外部系统的操作受到与人类用户相同的权限约束，而不是通过共享服务账户绕过治理。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. 阿里云发布 OpenLake 开放数据与 AI 架构，四大湖仓蓝图覆盖批处理、实时、企业级和 AI 原生场景</h3>
-      <div class="source">来源：<a href="https://www.alibabacloud.com/blog/meet-openlake-the-high-performance-cost-effective-data-lakehouse-alternative-for-big-data-%26-ai_603032" target="_blank">Alibaba Cloud Blog - Meet OpenLake</a></div>
-      <div class="body">
-        <p>阿里云于 4 月 15 日发布 OpenLake——下一代开放数据与 AI 架构，通过 Data Lake Formation (DLF) 的 Omni Catalog 提供跨 Iceberg/Hudi/Paimon 的统一元数据管理。方案包含四大架构蓝图：批处理湖仓（Spark + StarRocks）、实时流式湖仓（Flink + Hologres）、企业级云原生湖仓（MaxCompute + Hologres）和 AI 原生向量湖仓（Spark + Milvus）。落地案例显示总成本降低 38%-50%，查询性能提升 300%。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是中国云厂商首次以统一品牌和方案化形式向全球市场输出湖仓架构能力。OpenLake 明确对标 Databricks Lakehouse、Snowflake、AWS Redshift+Glue 等竞品方案，且在 TPC-DS 100TB 基准中声称性价比领先。Omni Catalog 的多格式统一管理思路与 Databricks Unity Catalog、Snowflake Polaris 形成三足鼎立，标志着开放表格式的竞争已从引擎层上升到方案层。
+        <strong>为什么重要：</strong>动态表是 Snowflake 数据管道的核心编排机制，但此前全量刷新表与增量刷新表之间存在断层——下游要么也全量刷新（成本高），要么无法消费上游变更（功能受限）。主键支持打通了这一链路，意味着包含 INSERT OVERWRITE 等常见模式的上游表也能被下游增量消费。对于中大型数据管道而言，这直接影响刷新频率与计算成本的权衡。
       </div>
     </div>
   </div>
@@ -219,24 +198,24 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks Lakeflow Connect 查询型连接器进入 Public Preview：无需 CDC 即可从关系数据库摄取数据</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks on AWS Release Notes - April 2026</a></div>
+      <h3>1. Databricks ai_parse_document 正式发布（GA）：非结构化文档解析函数进入生产可用</h3>
+      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/april" target="_blank">Azure Databricks Release Notes - April 2026</a></div>
       <div class="body">
-        <p>4 月 15 日，Databricks Lakeflow Connect 新增查询型连接器（Query-based Connectors），通过游标列直接查询源数据库摄取数据，无需配置 CDC 或摄取网关。支持 Oracle、Teradata、SQL Server、MySQL、MariaDB、PostgreSQL 以及通过 Lakehouse Federation 外部目录摄取的所有数据源。</p>
+        <p>Databricks 于 4 月 16 日将 ai_parse_document 函数从 Beta 升级为 GA。该函数可从 PDF、图片、Word、PowerPoint 等非结构化文档中解析结构化内容，支持最大 500 页 / 100 MB 的文档，并将在启用合规安全配置文件的工作区中默认可用。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>传统数据摄取严重依赖源端 CDC 配置——对 DBA 权限要求高、运维复杂、部分遗留系统不支持。查询型连接器通过游标列增量查询绕过了 CDC 依赖，大幅降低了接入门槛。对于数据工程团队而言，这意味着可以更快地将 Oracle/Teradata 等传统数据库接入 Lakehouse。
+        <strong>对数据平台的影响：</strong>非结构化数据处理一直是数据平台的能力缺口——文档解析通常需要外接 OCR 服务或第三方工具链。ai_parse_document GA 意味着 Databricks 将文档智能解析作为平台原生 SQL 函数提供，企业可以在数据管道中直接用 SQL 调用文档解析，无需维护独立的解析服务。这进一步扩展了 Lakehouse 的数据源边界，从结构化/半结构化延伸到非结构化文档。
       </div>
     </div>
 
     <div class="item">
-      <h3>2. Databricks Sample Data Explorer with Genie Code 正式发布（GA）：自然语言探查 Unity Catalog 表数据</h3>
-      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/april" target="_blank">Azure Databricks Release Notes - April 2026</a></div>
+      <h3>2. Databricks 计算日志交付到 Unity Catalog Volumes 正式发布（GA）</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks on AWS Release Notes - April 2026</a></div>
       <div class="body">
-        <p>4 月 15 日，Sample Data Explorer with Genie Code 正式 GA。用户可对 Unity Catalog 中的任意表使用自然语言提问，Genie Code 自动生成 SQL 查询并返回数据结果，降低了非技术用户探查数据的门槛。</p>
+        <p>Databricks 于 4 月 16 日将经典通用计算和作业计算的 Spark 驱动程序、Worker 和事件日志交付到 Unity Catalog Volumes 的功能正式 GA，并将其定位为推荐的日志存储方式。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>自然语言数据探查从"概念演示"进入"生产可用"阶段。GA 意味着企业可以在生产工作流中依赖此功能，让业务分析师直接与 Unity Catalog 数据交互，减少对数据团队的即席查询请求。这是 AI 赋能数据民主化的又一落地步骤。
+        <strong>对数据平台的影响：</strong>计算日志从独立存储路径迁移到 Unity Catalog Volumes，意味着日志数据开始接受与业务数据相同的权限控制和治理规则。这不是简单的存储路径变更——当日志进入 Unity Catalog 体系，就可以被数据平台的查询引擎、治理策略和审计流程统一管理。平台可观测性从"外挂工具"回归"平台原生能力"的趋势在加速。
       </div>
     </div>
   </div>
@@ -247,7 +226,7 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <p class="empty-note">本期窗口内（04-15 08:00 ~ 04-16 08:00 CST）未发现符合准入标准的机构研究报告或关键人物原始观点。</p>
+    <p class="empty-note">本期窗口内（04-16 08:00 ~ 04-17 08:00 CST）未发现符合准入标准的机构研究报告或关键人物原始观点。</p>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -256,7 +235,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-note">本期窗口内（04-15~04-16）未发现符合准入标准的数据平台领域投融资、财报或收购兼并事件。</p>
+    <p class="empty-note">本期窗口内（04-16 ~ 04-17）未发现符合准入标准的数据平台领域投融资、财报或收购兼并事件。</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -267,27 +246,27 @@
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-track">跟踪</span>Databricks AI Gateway 治理体系成型：从 LLM 端点 → 编码代理 → MCP 服务器的三层覆盖</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/blog/ai-gateway-governance-layer-agentic-ai" target="_blank">Databricks Blog - Expanding Agent Governance with Unity AI Gateway</a></div>
+      <h3>1. 【跟踪】Databricks 与 Snowflake 同日发布增量处理与治理能力强化：平台竞争进入"精细打磨"阶段</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks AWS Release Notes</a> / <a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank">Snowflake Release Notes</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>Databricks 将 AI Gateway 重命名为 Unity AI Gateway 并扩展至 MCP 治理，标志着其 Agent 治理体系已形成三层覆盖：LLM 端点（已 GA）、编码代理（已 GA）、MCP 服务器（Beta）。这一架构方向与此前开放格式路径分化趋势形成呼应——Databricks 的策略不仅是开放数据格式，更是将治理触角延伸到 Agent 与外部系统的每个交互点。</p>
-        <p><strong>需要等待什么信号确认：</strong>MCP 治理从 Beta 到 GA 的时间表；Snowflake Cortex 或 Google Cloud Vertex AI 是否推出类似的 Agent 工具调用治理框架。</p>
+        <p>4 月 16 日，Databricks 和 Snowflake 同日分别推出了面向数据管道效率和平台治理的多项 GA 功能。Databricks 侧重将非结构化数据和计算日志纳入 Unity Catalog 统一管理，Snowflake 侧重打通动态表全量/增量刷新链路。两者的方向高度一致：不是发布全新产品线，而是将已有能力从 Preview 推向 GA，补齐生产化短板。这表明在经历了 FabCon/GTC 大周和 Iceberg Summit 后，两大平台进入了"功能精细打磨期"。</p>
+        <p><strong>需要等待什么信号确认：</strong>是否会在 Data + AI Summit（6 月）和 Snowflake Summit 之前出现新一轮重大产品发布；当前的 GA 密集期是否标志着平台基础能力已趋于成熟。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-track">跟踪</span>开放湖仓方案竞争进入品牌化阶段：阿里云 OpenLake vs Databricks Lakehouse vs Snowflake</h3>
-      <div class="source">来源：<a href="https://www.alibabacloud.com/blog/meet-openlake-the-high-performance-cost-effective-data-lakehouse-alternative-for-big-data-%26-ai_603032" target="_blank">Alibaba Cloud Blog - Meet OpenLake</a></div>
+      <h3>2. 【预告】Snowflake AI Pulse 04-21 将展示 Intelligence / Cortex Code / Cortex Agents 三大方向</h3>
+      <div class="source">来源：<a href="https://www.snowflake.com/en/ai-pulse/april-2026/" target="_blank">Snowflake AI Pulse April 2026</a></div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>阿里云以 OpenLake 品牌进入全球湖仓方案竞争，明确列出 Databricks Lakehouse、Snowflake、AWS Redshift+Glue 等作为对标对象。这不是单一产品发布，而是将 EMR Serverless Spark、DLF、StarRocks、Hologres、MaxCompute、Milvus 等产品线整合为统一方案输出。如果这一策略在海外市场获得牵引力，将是中国云厂商数据平台首次在方案层面形成全球竞争力。</p>
-        <p><strong>需要等待什么信号确认：</strong>OpenLake 在海外客户中的实际采用案例和定价策略；Databricks/Snowflake 是否因此调整其在亚太市场的竞争策略。</p>
+        <p>Snowflake 将在 4 月 21 日的月度 AI Pulse 活动中展示三大方向：Snowflake Intelligence（面向业务用户的 Agentic 统一平台）、Cortex Code（面向开发者的数据生态探索工具）和 Cortex Agents（加速 Agent 端到端开发）。结合 04-15 发布的 AI Agent 友好文档，Snowflake 在 Agent 生态建设上的节奏正在加快。</p>
+        <p><strong>需要等待什么信号确认：</strong>AI Pulse 是否会发布新的 GA 功能或重大 Preview；Snowflake Intelligence 相对于 Cortex Analyst 的定位差异是否明确。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-04-16 08:00</p>
+    <p>信息截至北京时间 2026-04-17 08:00</p>
   </div>
 
 </div>
