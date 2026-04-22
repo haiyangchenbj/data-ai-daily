@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-21</title>
+<title>Data+AI 全球日报 | 2026-04-22</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -28,8 +28,6 @@
     padding: 20px;
   }
   .container { max-width: 900px; margin: 0 auto; }
-
-  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -40,8 +38,6 @@
   }
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
-
-  /* Summary Box */
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -62,8 +58,6 @@
     color: var(--primary);
     font-weight: 500;
   }
-
-  /* Section */
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -96,8 +90,6 @@
   .badge-d { background: var(--teal); }
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
-
-  /* Item */
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -125,37 +117,18 @@
     font-size: 13px;
     color: #1a56db;
   }
-
-  /* Empty section note */
   .empty-note {
     font-size: 14px;
     color: var(--text-secondary);
     font-style: italic;
-    padding: 8px 0;
+    padding: 12px 0;
   }
-
-  /* Watchlist tag */
-  .watch-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 6px;
-  }
-  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
-  .tag-downgraded { background: #fff3e0; color: #e65100; }
-  .tag-followup { background: #f3e5f5; color: #7b1fa2; }
-
-  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
     font-size: 12px;
     color: var(--text-secondary);
   }
-
-  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -169,18 +142,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-21 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-04-22 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据平台的敏感数据治理正在从人工标注走向 AI 自动分类，治理自动化进入生产阶段</li>
-      <li>AI 安全护栏从实验性功能变为生产级基础设施，数据平台开始内建 AI 输出可信度保障</li>
-      <li>双平台同日将治理能力推向 GA，数据平台竞争的纵深战场已从计算性能转向信任与合规</li>
+      <li>数据平台正在从分析工具升级为企业 Agent 的统一控制平面</li>
+      <li>AI 编码代理开始主动连接竞品数据系统，平台边界正在被打破</li>
+      <li>国内 Agent 治理从概念进入可量化的测评落地阶段</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Databricks 和 Snowflake 在同一天分别将数据分类和 AI 护栏推向 GA，看似巧合，实则揭示了数据平台演进的共同方向：当 AI 成为平台核心能力后，"如何让 AI 可信"和"如何用 AI 管数据"成为比性能更紧迫的工程命题。治理自动化和 AI 安全正在成为平台竞争的新基础设施层。
+      <strong>总判断：</strong>Snowflake 以一次发布同时覆盖业务用户（Intelligence）和开发者（Cortex Code），并主动连接 Databricks、AWS Glue 等竞品数据源，标志着数据平台竞争从功能比拼转向「谁能成为企业 Agent 化的控制平面」。
     </div>
   </div>
 
@@ -192,25 +165,12 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks Data Classification 正式 GA：AI 自动分类敏感数据进入生产</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks on AWS Release Notes</a> / <a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/april" target="_blank">Azure Databricks Release Notes</a> / <a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/april" target="_blank">Databricks on GCP Release Notes</a></div>
+      <h3>1. Snowflake 大幅扩展 Intelligence + Cortex Code，定位「Agentic Enterprise 控制平面」</h3>
+      <div class="source">来源：<a href="https://www.morningstar.com/news/business-wire/20260421788290/snowflake-expands-snowflake-intelligence-and-cortex-code-to-power-the-control-plane-for-the-agentic-enterprise" target="_blank">Business Wire 官方新闻稿</a> / <a href="https://siliconangle.com/2026/04/21/snowflake-targets-agentic-enterprise-unified-control-plane-ai-data/" target="_blank">SiliconANGLE</a></div>
       <div class="body">
-        <p>Databricks 于 4 月 20 日将 Data Classification 功能从 Public Preview 推向 GA，跨 AWS、Azure、GCP 三个云平台同步发布。该功能使用 Agentic AI 系统自动扫描 Unity Catalog 中的表，识别并标记敏感数据（覆盖 PII、GDPR、HIPAA、DPDPA 等合规框架）。系统支持智能增量扫描（新表/新列 24 小时内自动分类）、自动标记（元存储级或目录级配置）、以及基于分类结果的 ABAC 策略自动生成。</p>
+        <p>Snowflake 于 04-21 发布两大产品线重大更新。<strong>Snowflake Intelligence</strong> 升级为个人工作代理，新增 MCP 连接器（Gmail/Jira/Salesforce/Slack）、iOS 应用、深度研究和持续个性化学习能力；<strong>Cortex Code</strong> 从 AI 编码助手扩展为完整的 AI 构建层，关键突破是新增对 <strong>AWS Glue、Databricks、PostgreSQL</strong> 等外部数据系统的支持，同时发布 VS Code 扩展、Claude Code 插件以及 Python/TypeScript SDK。超过 9,100 家客户每周使用 Snowflake AI 产品，50%+ 客户已采用 Cortex Code。</p>
       </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>敏感数据分类此前是数据治理中最耗人力的环节。Databricks 用 Agentic AI + Unity Catalog 元数据的组合，将分类从"人工审查"变为"AI 自动执行 + 人工审核例外"，实质性降低了合规治理落地门槛。从 Public Preview 到 GA 意味着该方案已在生产环境验证过可靠性。这是 Databricks 治理层"Governed Tags（04-02 GA）→ Data Classification（04-20 GA）"连续落地的第二步，敏感数据治理正在从手动标签走向 AI 自动闭环。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. Snowflake Cortex AI Guardrails 正式 GA：AI 内容安全护栏进入生产</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/new-features" target="_blank">Snowflake Release Notes - New Features</a></div>
-      <div class="body">
-        <p>Snowflake 于 4 月 20 日将 Cortex AI Guardrails 从 Preview 推向 GA。该功能为 Snowflake Cortex AI 平台提供内容安全防护层，基于 Meta Llama Guard 系列模型，通过 <code>SNOWFLAKE.CORTEX.GUARD()</code> SQL 函数对 LLM 输入和输出进行安全检测与分类，识别并过滤有害内容（暴力、仇恨言论、自残、不当内容等类别），返回安全/不安全的判断结果。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>随着 Snowflake 在 Cortex AI 上密集投入，平台上运行的 AI 工作负载正在快速增长。Guardrails GA 意味着企业现在可以在生产环境中对 Cortex AI 的每次调用都内建安全检查——这对金融、医疗、政府等受监管行业的采用至关重要。Guardrails 作为 SQL 原生函数嵌入平台，使 AI 安全不再是应用层的额外工作，而是数据平台基础设施的一部分。结合今天 Databricks 的 Data Classification GA，两大平台正在同步构建"可信 AI"的基础设施层。
-      </div>
+      <div class="impact">💡 这是数据平台首次以「控制平面」定位覆盖业务用户和开发者双端，且主动连接竞品数据源（Databricks/AWS Glue），意味着平台竞争逻辑从「让用户把数据搬进来」转向「无论数据在哪，都通过我来编排 Agent」。MCP/ACP 双协议支持进一步强化了互操作性叙事。</div>
     </div>
   </div>
 
@@ -220,7 +180,24 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-    <p class="empty-note">本期窗口内（04-20 08:00 ~ 04-21 08:00 CST）除 A 板块两项 GA 发布外，Databricks 同日发布了 7 个 Runtime 版本的维护更新（Bug 修复/安全补丁/性能改进），属常规维护级别，不单独列入。无其他符合准入标准的产品发布。</p>
+
+    <div class="item">
+      <h3>1. Databricks AI Runtime 新增 1xH100 加速器支持（Beta）</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks Release Notes - April 2026</a></div>
+      <div class="body">
+        <p>Databricks 于 04-21 发布 AI Runtime 对 1xH100 单卡加速器的 Beta 支持，降低了 GPU 训练/推理的入门门槛。此前 AI Runtime 仅支持多卡 GPU 配置。</p>
+      </div>
+      <div class="impact">💡 单卡 H100 支持使中小规模深度学习工作负载无需预留多卡集群，Serverless GPU 的可及性进一步降低。这是 Databricks 将 GPU 训练从基础设施工程推向按需服务的持续动作。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. Oracle AI Data Platform Workbench 发布目录级治理与访问控制模型</h3>
+      <div class="source">来源：<a href="https://blogs.oracle.com/ai-data-platform/catalog-governance-and-access-control-in-oracle-ai-data-platform-workbench" target="_blank">Oracle AI Data Platform 官方博客</a></div>
+      <div class="body">
+        <p>Oracle 于 04-21 发布博客详解 AI Data Platform Workbench 的目录治理架构：以 Catalog 为主治理边界，实现目录/Schema/表三层精细权限控制，支持基于 Delta Sharing 的安全数据共享，核心设计是将数据访问与工作空间协作解耦。</p>
+      </div>
+      <div class="impact">💡 Oracle 在 AI Data Platform 上复刻了 Databricks Unity Catalog 和 Snowflake Horizon 的治理路线（目录级治理+开放共享协议），三大平台在治理架构上趋同。差异化战线正在从「有没有治理」转向「治理能否覆盖 Agent 场景」。</div>
+    </div>
   </div>
 
   <!-- Section C: Views & Research -->
@@ -229,7 +206,15 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <p class="empty-note">本期窗口内未发现符合准入标准的机构研究或关键人物原始观点。</p>
+
+    <div class="item">
+      <h3>1. 中国信通院启动「可信技能（Skills）治理」首批测试评估</h3>
+      <div class="source">来源：<a href="https://wap.cj.sina.cn/pc/7x24/4829653" target="_blank">中国信通院 / 新浪财经 7×24</a></div>
+      <div class="body">
+        <p>中国信通院于 04-21 正式启动首批可信技能（Skills）治理测试评估，聚焦 Agent 技能的三大问题——执行可信性不足、调用过程不可控、合规安全不可靠。测试体系覆盖 3 大类、15 个指标、70+ 细分项，首批方向包括 Skills 治理、Skills 库治理和智能体 Skills 治理，预计 7 月发布结果。</p>
+      </div>
+      <div class="impact">💡 数据平台正在成为 Agent 技能的核心执行环境（Databricks Agent Bricks、Snowflake Cortex Agents 等），信通院此举意味着国内 Agent 生态即将进入标准化合规阶段。数据平台厂商如果要进入国内 Agent 市场的企业客户端，Skills 治理合规将成为准入前提。</div>
+    </div>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -238,7 +223,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-note">本期窗口内未发现符合准入标准的数据平台领域投融资、财报或收购兼并事件。</p>
+    <p class="empty-note">本日窗口内无符合准入标准的投融资、财报、IPO 或收购兼并事件。</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -249,27 +234,27 @@
     </div>
 
     <div class="item">
-      <h3><span class="watch-tag tag-upcoming">预告</span> Snowflake AI Pulse 04-21 首场直播：Intelligence / Cortex Code / Cortex Agents 三线演示</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/en/ai-pulse/april-2026/" target="_blank">Snowflake AI Pulse - April 2026</a></div>
+      <h3>1. 【跟踪】Snowflake 与 Databricks 的 Agent 控制平面路线分化</h3>
+      <div class="source">来源：<a href="https://siliconangle.com/2026/04/21/snowflake-targets-agentic-enterprise-unified-control-plane-ai-data/" target="_blank">SiliconANGLE</a> / 综合近期日报追踪</div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>Snowflake 在今天（4 月 21 日）1:00 PM PT 举办 AI Pulse 月度系列的首场直播，将现场演示 Snowflake Intelligence（面向业务用户的 Agentic 统一平台）、Cortex Code（开发者数据探索工具）和 Cortex Agents（端到端 Agent 开发加速）。结合今日 Cortex AI Guardrails GA 以及近期 Agent Skills（Preview）、MCP Connectors（Limited Access）密集发布，Snowflake 的 Agent 生态正在快速成型。</p>
-        <p><strong>需要等待什么信号确认：</strong>直播中是否有新的 GA/Preview 功能发布；Intelligence 与 Cortex Analyst 的定位差异是否明确；MCP Connectors 是否从 Limited Access 扩大。</p>
+        <p><strong>为什么值得继续看：</strong>Snowflake 04-21 首次明确提出「Agentic Enterprise Control Plane」定位，并通过 Cortex Code 主动连接 Databricks 数据源。而 Databricks 的 Agent Bricks 平台走开放框架+自有治理路线。两者在 Agent 层面的竞争从「各建围墙」转向「谁能成为超级连接器」。</p>
+        <p><strong>需要等待什么信号确认：</strong>Cortex Code 连接 Databricks 数据源的功能是否进入 GA 及实际使用深度；Databricks 是否在 Agent Bricks 中增加 Snowflake 数据连接。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watch-tag tag-followup">跟踪</span> Databricks 治理自动化三连发：从 Governed Tags 到 Data Classification，下一步是什么？</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks Release Notes - April 2026</a> / <a href="https://docs.databricks.com/aws/en/data-governance/unity-catalog/data-classification" target="_blank">Data Classification 文档</a></div>
+      <h3>2. 【跟踪】数据平台治理架构三方趋同（Databricks/Snowflake/Oracle）</h3>
+      <div class="source">来源：综合 Oracle 04-21 博客 / Databricks Unity Catalog / Snowflake Horizon</div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>4 月份 Databricks 在治理层连续推出三项 GA：Governed Tags（04-02）、Catalog/Schema 存储位置管理（04-17）、Data Classification（04-20）。三项串联形成清晰路径：先定义标签体系 → 再控制物理存储位置 → 最后用 AI 自动填充分类标签。Unity Catalog 正在从"元数据注册中心"演进为"自动化治理引擎"。</p>
-        <p><strong>需要等待什么信号确认：</strong>是否出现基于分类结果的自动化策略推荐功能；用户社区对 AI 分类准确率的反馈。</p>
+        <p><strong>为什么值得继续看：</strong>Oracle AI Data Platform Workbench 的目录级治理+Delta Sharing 架构与 Databricks Unity Catalog 高度相似，Snowflake Horizon 也在同一方向推进。三大平台在治理层趋同意味着企业选型将更多依赖上层能力差异（Agent 编排、开发者体验、生态连接），治理本身正在标准化。</p>
+        <p><strong>需要等待什么信号确认：</strong>Oracle AIDP Workbench 何时 GA 及实际客户采用反馈；三方在 Agent 治理（而非数据治理）层面的差异化是否拉开。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-04-21 08:00</p>
+    <p>信息截至北京时间 2026-04-22 08:00</p>
   </div>
 
 </div>
