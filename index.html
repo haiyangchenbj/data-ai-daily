@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-04-23</title>
+<title>Data+AI 全球日报 | 2026-04-24</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -156,17 +156,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-04-23 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-04-24 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
-    <h2>🔥 今日最重要的2个变化</h2>
+    <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据治理正在从平台内建能力演变为跨平台双向流动的独立基础设施层</li>
-      <li>无代码数据准备工具开始嵌入 AI 原生能力，分析师与工程师的边界在模糊</li>
+      <li>数据平台正式从"数据仓库"重新定位为"AI 推理基础设施"</li>
+      <li>跨云零拷贝数据访问打破存储锁定，竞争焦点转向上下文层</li>
+      <li>实时分析厂商加速嵌入湖仓生态，独立部署模式让位于平台原生集成</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>两件事指向同一方向：数据平台的价值正从「存算能力」向「上下文丰富度」迁移——治理语义能跨平台流动、数据准备能用自然语言驱动，谁先做到谁就掌握 AI 就绪性的入口。
+      <strong>总判断：</strong>数据平台被重新定义为 Agent 的"行动系统"，跨云零拷贝联邦让数据留在原地、推理跑在别处。竞争焦点从存算层上移到上下文与推理层——谁能最快将原始数据转化为 Agent 可操作的业务语义，谁就拿到控制权。
     </div>
   </div>
 
@@ -176,14 +177,15 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
+
     <div class="item">
-      <h3>1. Google Cloud × Collibra 深化合作：双向元数据集成进入 Public Preview</h3>
-      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/google-cloud-and-collibra-deepen-partnership-to-bring-business-context-and-semantics-directly-to-knowledge-catalog-302749065.html" target="_blank">PR Newswire 官方新闻稿</a> / <a href="https://www.collibra.com/company/newsroom/press-releases/google-cloud-and-collibra-deepen-partnership" target="_blank">Collibra 官方新闻</a></div>
+      <h3>1. Google Cloud 发布 Agentic Data Cloud：跨云 Lakehouse + Knowledge Catalog + Data Agent Kit</h3>
+      <div class="source">来源：<a href="https://cloud.google.com/blog/products/data-analytics/whats-new-in-the-agentic-data-cloud" target="_blank">Google Cloud Blog — What's New in the Agentic Data Cloud</a></div>
       <div class="body">
-        <p>Google Cloud 与 Collibra 于 04-22 宣布扩展战略合作伙伴关系，聚焦开放湖仓环境中的数据治理。核心发布是 Collibra 与 Google Cloud Dataplex 的双向集成（Public Preview）：出站方向——Collibra 中定义的业务上下文、数据血缘、质量和治理策略原生流入 Dataplex；入站方向——Dataplex 的技术元数据和发现洞察自动回传至 Collibra，确保企业记录系统实时更新。联合客户在 Google Cloud Knowledge Catalog 中即可获得统一的数据发现、语义和合规能力。</p>
+        <p>Google Cloud 在 Next '26 Day 1 keynote 上发布 Agentic Data Cloud，包含三大支柱：（1）<strong>Knowledge Catalog</strong>（由 Dataplex 升级而来）——自动通过 Gemini 为数据资产添加业务上下文，支持访问控制感知搜索；（2）<strong>跨云 Lakehouse</strong>——基于 Apache Iceberg REST Catalog 和 Cross-Cloud Interconnect 实现零拷贝访问 AWS S3 / Azure ADLS 数据，支持与 Databricks Unity Catalog、Snowflake Polaris、AWS Glue 的双向联邦（Preview）；（3）<strong>Data Agent Kit</strong>（Preview）——可移植的技能/工具/插件套件，集成 VS Code、Gemini CLI、Claude Code 等 IDE，自动选择 dbt/Spark/Airflow 生成生产级代码。</p>
       </div>
       <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是主流云平台首次与独立治理厂商实现生产级双向元数据同步。此前各平台的治理能力（Unity Catalog / Horizon / Dataplex）均以内建为主，Collibra 的跨平台定位意味着治理上下文不再被锁定在单一平台内。对多云/开放湖仓客户而言，业务含义可以跟随数据跨平台流动，这改变了治理从「平台附属品」到「独立基础设施层」的定位。
+        <strong>为什么对数据平台重要：</strong>这是第一次有超大规模云厂商明确将数据平台重新定位为 AI Agent 的"行动系统"（System of Action）。跨云零拷贝联邦直接冲击存储锁定逻辑——企业数据可以留在 AWS/Azure，但推理和上下文层跑在 Google。BigQuery 从数据仓库变成了"推理平面"，竞争焦点从存算能力上移到谁能最快将原始数据转化为 Agent 可操作的业务上下文。
       </div>
     </div>
   </div>
@@ -194,14 +196,37 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
+
     <div class="item">
-      <h3>1. Databricks Lakeflow Designer 进入 Public Preview：可视化无代码数据准备 + AI 原生</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/april" target="_blank">Databricks Release Notes - April 2026</a> / <a href="https://docs.databricks.com/aws/en/designer/what-is-lakeflow-designer" target="_blank">Lakeflow Designer 文档</a></div>
+      <h3>1. ClickHouse 大幅扩展与 Google Cloud 战略合作：Lakehouse 原生集成 + BYOC + Axion 迁移</h3>
+      <div class="source">来源：<a href="https://clickhouse.com/blog/clickhouse-expands-strategic-collaboration-with-google-cloud" target="_blank">ClickHouse Blog</a></div>
       <div class="body">
-        <p>Databricks 于 04-22 正式将 Lakeflow Designer 推入 Public Preview。这是一个面向分析师的可视化画布工具，支持拖放式 DAG 编排（Filter / Join / Aggregate / Reshape 等算子）、Excel/CSV 文件直接拖入画布、逐步预览中间结果，以及关键差异化——内置 Genie Code 自然语言驱动的转换生成，所有交互均为 Agentic 模式并利用 Databricks 平台上下文。所有可视化转换有底层代码支撑，可迁移至生产环境。</p>
+        <p>ClickHouse 在 Google Next '26 上宣布四项里程碑：（1）与 Google Cloud Lakehouse 原生集成，支持对 Lakehouse 托管表的亚秒级查询、无需数据复制；（2）BYOC 正式登陆 Google Cloud，用户可在自有 VPC 中运行 ClickHouse Cloud；（3）迁移至 Google Axion 处理器（Arm 架构），查询速度提升 30-55%、计算积分消耗减少约 15%；（4）ClickHouse MCP Server 与 Google Antigravity IDE 集成。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>Lakeflow Designer 补齐了 Databricks 在「非工程师用户」群体的数据准备入口。与 Microsoft Fabric Dataflows、Informatica IDMC 等竞品不同，Designer 从设计之初就嵌入 AI（Genie Code），将自然语言作为一等公民接口。这意味着数据准备的门槛从「会写 SQL/Python」降到「会描述需求」，平台用户基数有望进一步向业务分析师扩展。
+        <strong>对数据平台的影响：</strong>独立分析引擎厂商正从"独立部署"模式快速转向"平台原生嵌入"——ClickHouse 同时拿到 Lakehouse 数据通路和 BYOC 合规能力，意味着实时分析不再是独立基础设施，而是湖仓生态的原生组件。Axion 迁移则验证了 Arm 架构在分析工作负载上的成本优势。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>2. Google Cloud Data Engineering Agent 和 Data Science Agent 进入 GA</h3>
+      <div class="source">来源：<a href="https://cloud.google.com/blog/products/data-analytics/whats-new-in-the-agentic-data-cloud" target="_blank">Google Cloud Blog</a></div>
+      <div class="body">
+        <p>Google Cloud 宣布 Data Engineering Agent（从零构建复杂管道转换并执行治理规则）和 Data Science Agent（自动化模型全生命周期）正式进入 GA。同步发布的 Database Observability Agent（Preview）提供 7×24 基础设施守护和自动根因诊断。MCP 支持已覆盖 BigQuery、Spanner（Preview）、AlloyDB、Cloud SQL（GA）和 Looker（Preview）。</p>
+      </div>
+      <div class="impact">
+        <strong>对数据平台的影响：</strong>数据工程和数据科学 Agent 进入 GA 标志着"Agent 做数据工作"从概念验证进入生产就绪状态。MCP 的全面覆盖意味着 Google 数据栈的每个组件都可以作为 Agent 的工具被调用——数据平台正在变成 Agent 的工具箱而不仅是存储和计算资源。
+      </div>
+    </div>
+
+    <div class="item">
+      <h3>3. Databricks Delta Sharing ABAC 策略变更生效</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/whats-coming" target="_blank">Databricks Release Notes — What's coming</a></div>
+      <div class="body">
+        <p>自 2026 年 4 月 23 日起，通过 Delta Sharing 共享引用 ABAC 保护表的视图时，共享所有者必须豁免于底层表的 ABAC 策略（此前要求的是接收方豁免）。这一变更强化了数据提供方的治理责任，确保跨组织数据共享中的属性级访问控制更精确。</p>
+      </div>
+      <div class="impact">
+        <strong>对数据平台的影响：</strong>ABAC 在跨组织数据共享场景中的治理职责从接收方转移到提供方，反映了行业共识：数据治理的第一责任人应是数据所有者而非消费者。这对企业间数据产品交易的合规架构有直接影响。
       </div>
     </div>
   </div>
@@ -212,7 +237,7 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <p class="empty-note">本日窗口内无符合准入标准的机构研究或人物观点。</p>
+    <p class="empty-note">本期窗口内无符合准入标准的机构研究或原始观点。</p>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -221,7 +246,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-note">本日窗口内无符合准入标准的投融资、财报、IPO 或收购兼并事件。</p>
+    <p class="empty-note">本期窗口内无符合准入标准的数据平台领域投融资或公司事件。</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -230,31 +255,29 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
+
     <div class="item">
-      <h3>1. 【跟踪】数据治理从平台内建向跨平台互操作演进</h3>
-      <div class="source">来源：综合 <a href="https://www.prnewswire.com/news-releases/google-cloud-and-collibra-deepen-partnership-to-bring-business-context-and-semantics-directly-to-knowledge-catalog-302749065.html" target="_blank">Google Cloud × Collibra 04-22 公告</a> / Databricks Unity Catalog / Snowflake Horizon / Oracle AIDP Workbench</div>
+      <h3>1. 【跟踪】Google Cloud Agentic Data Cloud 后续落地观察</h3>
+      <div class="source">来源：<a href="https://cloud.google.com/blog/products/data-analytics/whats-new-in-the-agentic-data-cloud" target="_blank">Google Cloud Blog</a></div>
       <div class="body">
-        <p>Google Cloud 与 Collibra 的双向集成标志着治理上下文开始跨平台流动。此前 Databricks（Unity Catalog）、Snowflake（Horizon）、Oracle（AIDP Workbench）均在强化平台内建治理，走的是「治理跟着平台走」的路线。Collibra 作为独立治理厂商打通 Dataplex 双向通道，意味着第三条路线出现：「治理独立于任何单一平台」。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>双向集成从 Public Preview 到 GA 的时间线；Collibra 是否在 Data Summit 或 Snowflake Summit 上宣布与 Databricks/Snowflake 的类似集成；企业客户在多云治理场景的实际部署反馈。
+        <p><strong>为什么值得继续看：</strong>跨云 Lakehouse 和 Knowledge Catalog 目前均为 Preview 状态，生产环境的跨云查询延迟、Iceberg 双向联邦的数据一致性保证、以及定价模型尚未公布。Google 能否在 Databricks 和 Snowflake 已深度布局的企业中实现"推理层卡位"，取决于 GA 后的实际性能和成本表现。</p>
+        <p><strong>需要等待什么信号确认：</strong>跨云 Lakehouse GA 时间表、跨云查询延迟基准测试结果、Knowledge Catalog 自动富化的准确率实测数据、定价模型发布。</p>
       </div>
     </div>
+
     <div class="item">
-      <h3>2. 【跟踪】Google Cloud Next 2026 数据平台相关发布预期</h3>
-      <div class="source">来源：<a href="https://cloud.withgoogle.com/next" target="_blank">Google Cloud Next 2026</a> / Collibra 04-22 新闻稿提及</div>
+      <h3>2. 【跟踪】三大平台 Agent 数据架构路线分化加速</h3>
+      <div class="source">来源：综合 Google Cloud Next '26 公告 + Databricks / Snowflake 近期发布</div>
       <div class="body">
-        <p>Collibra 04-22 新闻稿明确提及 Google Cloud Next 2026 展位演示，暗示 Google Cloud 在 Next 大会期间可能有更多数据平台相关发布（BigQuery / Dataplex / Knowledge Catalog 升级）。作为三大云厂商年度旗舰大会，Next 往往是 Google Cloud 数据平台战略更新的集中释放窗口。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>Google Cloud Next 2026 正式议程和 Keynote 中的数据平台发布；BigQuery 是否有架构级更新；Dataplex 治理能力是否进一步扩展。
+        <p><strong>为什么值得继续看：</strong>Google 走"跨云推理平面"（数据在哪不重要，上下文在我这里），Databricks 走"开放写入控制平面"（Unity Catalog 为中心的治理+共享），Snowflake 走"平台内聚控制平面"（Intelligence + Cortex 全栈内建）。三种路线的分化在 Google Cloud Next 后进一步清晰化，直接影响企业多云数据架构的选型决策。</p>
+        <p><strong>需要等待什么信号确认：</strong>Google Cloud 跨云 Lakehouse 的大型企业生产案例、Snowflake 对 Google 联邦读取的响应策略、Databricks 是否在 Data+AI Summit（06月）进一步强化开放写入叙事。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-04-23 08:00</p>
+    <p>信息截至北京时间 2026-04-24 08:00</p>
   </div>
 
 </div>
