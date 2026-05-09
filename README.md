@@ -22,16 +22,39 @@
 
 ## 📅 月报
 
+<!-- MONTHLY_START -->
 | 月份 | 链接 |
 |------|------|
+| 2026-04 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-04.html) |
 | 2026-03 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-03.html) |
+<!-- MONTHLY_END -->
 
 ---
 
 ## 📚 历史日报归档
 
+<!-- DAILY_START -->
 | 日期 | 链接 |
 |------|------|
+| 2026-05-08 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-05-08.html) |
+| 2026-05-07 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-05-07.html) |
+| 2026-04-28 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-28.html) |
+| 2026-04-27 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-27.html) |
+| 2026-04-24 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-24.html) |
+| 2026-04-23 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-23.html) |
+| 2026-04-22 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-22.html) |
+| 2026-04-21 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-21.html) |
+| 2026-04-20 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-20.html) |
+| 2026-04-17 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-17.html) |
+| 2026-04-16 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-16.html) |
+| 2026-04-15 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-15.html) |
+| 2026-04-14 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-14.html) |
+| 2026-04-13 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-13.html) |
+| 2026-04-10 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-10.html) |
+| 2026-04-09 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-09.html) |
+| 2026-04-08 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-08.html) |
+| 2026-04-07 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-07.html) |
+| 2026-04-03 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-03.html) |
 | 2026-04-02 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-02.html) |
 | 2026-04-01 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-04-01.html) |
 | 2026-03-31 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-03-31.html) |
@@ -51,6 +74,7 @@
 | 2026-03-11 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-03-11.html) |
 | 2026-03-10 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-03-10.html) |
 | 2026-03-09 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-03-09.html) |
+<!-- DAILY_END -->
 
 ---
 
