@@ -170,10 +170,10 @@
     <ol>
       <li>中国科技巨头 AI 基础设施投入加速追赶，地缘政治正重塑芯片供应链结构</li>
       <li>模型推理正在从自建工程转变为平台化服务，数据平台的边界进一步扩展</li>
-      <li>AI Agent 在真实企业数据上的推理准确率远未达标，数据质量仍是核心瓶颈</li>
+      <li>AI Agent 在真实企业文档上的推理准确率刚突破 50%，距企业自动化仍有距离</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>当全球 CSP 以近 $1 万亿级别押注 AI 基础设施时，数据平台正在被拉入两个新战场——向上承接推理服务的平台化需求，向下提供 Agent 可信赖的企业数据上下文——而当前 Agent 在真实文档上不足 45% 的准确率说明这条路还很长。
+      <strong>总判断：</strong>当全球 CSP 以近 $1 万亿级别押注 AI 基础设施时，数据平台正在被拉入两个新战场——向上承接推理服务的平台化需求，向下提供 Agent 可信赖的企业数据上下文——而最强模型在企业文档基准上刚突破 50% 准确率的现实说明这条路还很长。
     </div>
   </div>
 
@@ -219,12 +219,12 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks OfficeQA：企业文档推理基准测试揭示当前最强 AI Agent 准确率不足 45%</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/research/databricks-ai-research" target="_blank">Databricks Research — May 8, 2026</a></div>
+      <h3>1. Databricks OfficeQA / OfficeQA Pro：企业文档推理基准暴露 Agent 可靠性短板</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/officeqa" target="_blank">Databricks OfficeQA Blog — Dec 9, 2025</a> / <a href="https://arxiv.org/abs/2503.06445" target="_blank">OfficeQA Pro Paper — Mar 9, 2026</a> / <a href="https://www.databricks.com/blog/building-accurate-data-agents" target="_blank">Genie Data Agent 方法论 — May 8, 2026</a></div>
       <div class="body">
-        <p>Databricks 发布 OfficeQA 开源基准测试，使用美国财政部公报（89K+ 页扫描 PDF，含 2600 万+ 数值和复杂嵌套表格）评估 AI Agent 在真实企业文档上的推理能力。结果显示：当前最强模型准确率不足 45%，最难子集跌破 25%。Databricks 与 OpenAI 合作的 GPT-5.5 在该基准上将错误率降低近一半，但仍未达到人类水平。</p>
+        <p>Databricks 推出 OfficeQA / OfficeQA Pro，用美国财政部公报构造企业文档推理基准。该语料包含约 89,000 页 Treasury Bulletins，涉及复杂表格、扫描 PDF、图表、跨文档检索和高精度计算。原始 OfficeQA 发布时，前沿 Agent 即使获得 PDF 语料，全量准确率仍低于 45%，最难子集低于 25%；后续 GPT-5.5 在 OfficeQA Pro 的端到端 Agent Harness 上提升到 52.63%，较 GPT-5.4 明显进步，但距离企业可放心自动化仍有很大空间。5 月 8 日 Databricks 进一步发布 Genie / Data Agent 方法文章，将 OfficeQA 揭示的难点推进到工程方案层面——提出 Specialized Knowledge Search、Parallel Thinking、Multi-LLM 三条路线。</p>
       </div>
-      <div class="impact">💡 OfficeQA 填补了"学术基准 ≠ 企业就绪"的评测盲区。对数据平台厂商而言，这意味着 Agent 在结构化 + 非结构化混合数据上的推理能力远未成熟——企业 RAG 和数据 Agent 的可靠性问题仍是核心瓶颈，数据平台需要在数据质量、Schema 管理和上下文提供层面持续投入。</div>
+      <div class="impact">💡 OfficeQA 系列填补了"学术基准 ≠ 企业就绪"的评测盲区。对数据平台厂商而言，这意味着 Agent 在结构化 + 非结构化混合数据上的推理能力远未成熟——企业 RAG 和数据 Agent 的可靠性问题仍是核心瓶颈，数据平台需要在数据质量、Schema 管理和上下文提供层面持续投入。</div>
     </div>
   </div>
 
