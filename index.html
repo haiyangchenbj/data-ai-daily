@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-12</title>
+<title>Data+AI 全球日报 | 2026-05-13</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -117,6 +117,7 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .body p { margin-bottom: 8px; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -126,25 +127,25 @@
     color: #1a56db;
   }
 
-  /* Tags */
-  .downgrade-tag {
+  /* Watchlist tag */
+  .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
     margin-right: 6px;
-    background: #fff3e0;
-    color: #e65100;
   }
+  .tag-downgrade { background: #fff3e0; color: #e65100; }
+  .tag-track { background: #e8f5e9; color: #2e7d32; }
+  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
 
-  /* Empty section notice */
-  .empty-notice {
-    text-align: center;
-    padding: 24px;
+  /* Empty section */
+  .empty-note {
     color: var(--text-secondary);
-    font-size: 14px;
     font-style: italic;
+    font-size: 14px;
+    padding: 8px 0;
   }
 
   /* Footer */
@@ -169,18 +170,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-12 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-05-13 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>开源分析引擎继续在 SQL 兼容性和溢出容错方向补齐短板</li>
-      <li>跨平台 Iceberg 目录互操作从概念走向工程级可用</li>
-      <li>数据工程正在被 Agent 化重新定义，编排层成为入口</li>
+      <li>ERP 巨头正在把数据平台能力内化为 AI Agent 的底座</li>
+      <li>数据连接层从闭源驱动走向开源化，降低平台锁定风险</li>
+      <li>AI 治理从合规文档向自动化证据链体系演进</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>上周末至今窗口内一手发布稀疏，但近期密集落地的三个信号方向清晰：分析引擎继续追求 SQL 全兼容以降低迁移门槛，Iceberg 目录协议成为跨厂商互操作的实际连接层，数据工程 Agent 从演示走向面向 Airflow/Spark 的生产级嵌入。
+      <strong>总判断：</strong>SAP Sapphire 2026 释放的核心信号不是 Agent 数量，而是数据统一层（Business Data Cloud + 零拷贝联邦查询）成为自治企业的真正基础设施。同日 Databricks 将 JDBC 驱动全面开源，连接层的透明化正在成为平台竞争的新维度。
     </div>
   </div>
 
@@ -190,8 +191,16 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-    <div class="empty-notice">
-      ⚠️ 本期 24 小时窗口内无满足 A 板块准入标准的一手重大发布。相关内容降级至 Watchlist。
+
+    <div class="item">
+      <h3>1. SAP Sapphire 2026 发布「自治企业」战略，Business AI Platform 统一数据与 AI 底座</h3>
+      <div class="source">来源：<a href="https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise" target="_blank">SAP News</a></div>
+      <div class="body">
+        <p>SAP 在 Sapphire 2026 大会上发布「自治企业」战略，核心是将 SAP Business Technology Platform、Business Data Cloud 和 Business AI 合并为统一的 SAP Business AI Platform。同时宣布与 AWS 建立 Amazon Athena 与 Business Data Cloud 的双向零拷贝数据共享，与 Google Cloud、Microsoft 实现 Joule Agent 双向互操作，并推出 Knowledge Graph 为 Agent 提供结构化业务语境。</p>
+      </div>
+      <div class="impact">
+        <strong>为什么对数据平台重要：</strong>这是 SAP 首次将数据平台能力（Business Data Cloud）与 AI 运行时合并为单一平台，并通过零拷贝联邦查询消除数据复制瓶颈。SAP 管理着全球约 87% 的商业交易数据，其数据平台战略的方向直接影响企业数据栈的架构选择。Athena 零拷贝集成意味着 SAP+非 SAP 数据的联邦分析不再需要 ETL 中间层。
+      </div>
     </div>
   </div>
 
@@ -203,13 +212,13 @@
     </div>
 
     <div class="item">
-      <h3>Elastic 发布 Jina v5 Omni 多模态嵌入模型：单索引统一处理文本/图像/视频/音频</h3>
-      <div class="source">来源：<a href="https://www.elastic.co/search-labs/blog/jina-embeddings-v5-omni-all-media-one-index" target="_blank">Elasticsearch Labs (2026-05-11)</a></div>
+      <h3>1. Databricks 开源 JDBC 驱动重大升级：性能提升 30%，新增 Arrow 传输与异步执行</h3>
+      <div class="source">来源：<a href="https://www.databricks.com/blog/faster-queries-and-new-capabilities-open-source-databricks-jdbc-driver" target="_blank">Databricks Blog</a></div>
       <div class="body">
-        <p>Elastic 正式发布 jina-embeddings-v5-omni 模型系列，支持将文本、图像、视频和音频统一嵌入到单一 Elasticsearch 索引中进行跨媒体查询。该模型支持近100种语言，提供 small（1.66B参数）和 nano（1.004B参数）两个版本，并支持可截断嵌入和二进制量化（最多节省93%存储空间）。这标志着向量数据库向多模态统一检索迈出关键一步。</p>
+        <p>Databricks 发布开源 JDBC 驱动 3.x 系列的重大更新（Apache 2.0 许可），大型结果集检索性能提升最高 30%。新增 JDK 16+ 原生 Arrow 数据传输、异步执行接口、流式 Volume 数据摄入（免本地暂存）、多语句事务支持、Unity Catalog 指标视图访问、地理空间数据类型和查询标签等能力。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>企业可用文本查询图像/视频内容，或反向查询，打破媒体类型孤岛。多模态数据不再需要独立处理管道，统一索引降低架构复杂度，为 Agent 提供跨媒体上下文能力。
+        <strong>对数据平台的影响：</strong>JDBC 是企业 BI 工具、ETL 管道和应用连接数据平台的核心通道。Databricks 将其完全开源并大幅增强，一方面降低了第三方工具的集成门槛，另一方面通过 Arrow 传输和异步执行提升了数据密集型工作负载的效率。多语句事务支持补齐了 Lakehouse 在交易性场景的短板。
       </div>
     </div>
   </div>
@@ -220,9 +229,7 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <div class="empty-notice">
-      本期窗口内无合格条目。
-    </div>
+    <p class="empty-note">本期窗口内无合格条目</p>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -231,9 +238,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <div class="empty-notice">
-      本期窗口内无合格条目。
-    </div>
+    <p class="empty-note">本期窗口内无合格条目</p>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -244,43 +249,42 @@
     </div>
 
     <div class="item">
-      <h3><span class="downgrade-tag">降级</span>ClickHouse 26.4 发布：SQL 兼容性与容错能力双升级</h3>
-      <div class="source">来源：<a href="https://clickhouse.com/blog/clickhouse-release-26-04" target="_blank">ClickHouse Blog (2026-05-08)</a></div>
+      <h3><span class="watchlist-tag tag-downgrade">降级</span>1. Alation 发布 AI Governance 产品，构建企业 AI 合规证据链体系</h3>
+      <div class="source">来源：<a href="https://www.alation.com/news-and-press/alation-announces-new-ai-governance-offering/" target="_blank">Alation News</a></div>
       <div class="body">
-        <p>26.4 包含 39 项新特性与 45 项性能优化，重点包括 Join 操作自动溢出到磁盘（避免 OOM）、Arrow Flight SQL 支持（高性能数据接入）、更快的 Count Distinct 以及更多 SQL 标准兼容特性。这些改进持续缩小 ClickHouse 与传统数仓的功能差距，降低企业迁移门槛。</p>
+        <p>Alation 在 Gartner Data & Analytics Summit（伦敦）发布 AI Governance 产品，包含 AI 资产注册表、自动化模型卡、基于法规的审批流程（支持 EU AI Act / NIST AI RMF / ISO 42001）、法规注册表和高管合规仪表盘五大能力模块。这是数据目录厂商首次推出完整的 AI 治理产品线，标志着 AI 治理从手动文档阶段进入自动化证据链管理阶段。</p>
       </div>
       <div class="impact">
-        <strong>需要等待什么信号确认：</strong>后续 ClickHouse Cloud 跟进部署时间及企业客户采纳反馈。
+        <strong>需要等待什么信号确认：</strong>产品 GA 时间、实际企业部署案例和与现有数据目录产品的集成深度。
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="downgrade-tag">降级</span>Oracle ADB 通过 Snowflake Horizon Catalog 直读 Iceberg 表实现跨平台分析</h3>
-      <div class="source">来源：<a href="https://blogs.oracle.com/database/oracle-adb-snowflake-horizoncatalog-iceberg-no-etl" target="_blank">Oracle Database Blog (2026-05-08)</a></div>
+      <h3><span class="watchlist-tag tag-track">跟踪</span>2. SAP 三连收购（Dremio + Reltio + Prior Labs）持续重塑数据平台版图</h3>
+      <div class="source">来源：<a href="https://news.sap.com/2026/05/sap-to-acquire-dremio-unify-sap-and-non-sap-data-power-agentic-ai/" target="_blank">SAP News</a></div>
       <div class="body">
-        <p>Oracle Autonomous AI Database 通过 Iceberg REST Catalog API 动态连接 Snowflake Horizon Catalog，无需数据移动即可查询 Snowflake 管理的 Iceberg 表。这标志着 Iceberg 目录协议已成为跨厂商数据互操作的工程级连接层，而非仅是开放格式愿景。</p>
+        <p>SAP 于 5 月初密集宣布收购开放数据湖仓平台 Dremio（基于 Apache Iceberg/Arrow）、主数据管理厂商 Reltio 和表格基础模型公司 Prior Labs。Dremio 收购尤其值得关注——SAP 明确承诺继续投入 Iceberg 和 Arrow 开源生态，且 Dremio 的联邦查询引擎将补强 Business Data Cloud 的非 SAP 数据覆盖能力。</p>
       </div>
       <div class="impact">
-        <strong>需要等待什么信号确认：</strong>性能基准测试数据、企业生产环境采纳案例。
+        <strong>需要等待什么信号确认：</strong>监管审批进展（预计 Q3 2026 完成）、Dremio 与 SAP Business Data Cloud 的整合路线图、对 Iceberg/Arrow 社区贡献的实际兑现。
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="downgrade-tag">降级</span>Astronomer 发布 Otto：面向 Apache Airflow 的数据工程 Agent</h3>
-      <div class="source">来源：<a href="https://www.computerweekly.com/blog/CW-Developer-Network/Astronomer-Otto-A-data-engineering-agent-built-for-Apache-Airflow" target="_blank">Computer Weekly (2026-05-09)</a></div>
+      <h3><span class="watchlist-tag tag-upcoming">预告</span>3. Apache Iceberg 1.11.0 进入 RC 投票阶段</h3>
+      <div class="source">来源：<a href="https://www.mail-archive.com/dev@iceberg.apache.org/msg13483.html" target="_blank">Apache Iceberg Dev 邮件列表</a></div>
       <div class="body">
-        <p>Otto 是首个深度绑定 Airflow 生态的数据工程 Agent，具备环境感知能力，可自主执行 DAG 构建、故障排查、版本升级规划等任务。相比通用 AI 编码助手，Otto 基于 Astronomer 多年积累的兼容性矩阵和故障签名库，代表数据编排层 Agent 化的生产级尝试。</p>
+        <p>Apache Iceberg 1.11.0 RC1 已于 5 月初进入社区投票，包含 Flink 纳秒精度支持等新特性。作为当前数据湖仓生态的核心表格式，每个新版本的特性方向都直接影响引擎兼容性和平台选型。</p>
       </div>
       <div class="impact">
-        <strong>需要等待什么信号确认：</strong>GA 时间、定价模式、与 Astro 平台的集成深度。
+        <strong>需要等待什么信号确认：</strong>投票结果和正式 release 日期。
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-05-12 08:00</p>
-    <p style="margin-top: 8px; font-style: italic;">本期说明：24 小时窗口（2026-05-11 08:00 ~ 2026-05-12 08:00）内数据平台领域无重大一手发布，<br>上述 3 条均为窗口前 2-3 日内的高价值信息，按降级规则收录于 Watchlist。</p>
+    <p>信息截至北京时间 2026-05-13 08:00</p>
   </div>
 
 </div>
