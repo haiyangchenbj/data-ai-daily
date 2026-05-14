@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-13</title>
+<title>Data+AI 全球日报 | 2026-05-14</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -29,7 +29,6 @@
   }
   .container { max-width: 900px; margin: 0 auto; }
 
-  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -41,7 +40,6 @@
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
 
-  /* Summary Box */
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -63,7 +61,6 @@
     font-weight: 500;
   }
 
-  /* Section */
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -97,7 +94,6 @@
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
 
-  /* Item */
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -117,7 +113,6 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
-  .item .body p { margin-bottom: 8px; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -127,7 +122,14 @@
     color: #1a56db;
   }
 
-  /* Watchlist tag */
+  .empty-section {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-style: italic;
+  }
+
   .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -136,19 +138,10 @@
     font-weight: 600;
     margin-right: 6px;
   }
-  .tag-downgrade { background: #fff3e0; color: #e65100; }
-  .tag-track { background: #e8f5e9; color: #2e7d32; }
-  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
+  .tag-upcoming { background: #fff3e0; color: #e65100; }
+  .tag-downgrade { background: #f3e5f5; color: #7b1fa2; }
+  .tag-followup { background: #e8f5e9; color: #2e7d32; }
 
-  /* Empty section */
-  .empty-note {
-    color: var(--text-secondary);
-    font-style: italic;
-    font-size: 14px;
-    padding: 8px 0;
-  }
-
-  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
@@ -156,7 +149,6 @@
     color: var(--text-secondary);
   }
 
-  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -170,18 +162,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-13 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-05-14 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>ERP 巨头正在把数据平台能力内化为 AI Agent 的底座</li>
-      <li>数据连接层从闭源驱动走向开源化，降低平台锁定风险</li>
-      <li>AI 治理从合规文档向自动化证据链体系演进</li>
+      <li>Agent 基础设施正在从应用层下沉到专用数据层，可观测性催生新的数据库品类</li>
+      <li>数据治理从被动审计走向主动权限洞察，敏感数据可见性成为平台标配</li>
+      <li>国内大数据平台标准化进入实质阶段，行业组织与云厂商联合定义 Data+AI 融合架构</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>SAP Sapphire 2026 释放的核心信号不是 Agent 数量，而是数据统一层（Business Data Cloud + 零拷贝联邦查询）成为自治企业的真正基础设施。同日 Databricks 将 JDBC 驱动全面开源，连接层的透明化正在成为平台竞争的新维度。
+      <strong>总判断：</strong>Agent 生态的数据层需求正在催生新的数据库和可观测性基础设施，与此同时，数据治理能力正从合规附件升级为平台核心竞争力——无论中美，治理的精细化和自动化都在加速落地。
     </div>
   </div>
 
@@ -193,14 +185,30 @@
     </div>
 
     <div class="item">
-      <h3>1. SAP Sapphire 2026 发布「自治企业」战略，Business AI Platform 统一数据与 AI 底座</h3>
-      <div class="source">来源：<a href="https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise" target="_blank">SAP News</a></div>
+      <h3>1. LangChain 发布 SmithDB：首个面向 Agent 可观测性的专用分布式数据库</h3>
+      <div class="source">来源：<a href="https://www.langchain.com/blog" target="_blank">LangChain Blog</a> / <a href="https://www.aiexpertmagazine.com/interrupt-2026-langchain-everything-you-need-to-know/" target="_blank">Interrupt 2026 大会</a></div>
       <div class="body">
-        <p>SAP 在 Sapphire 2026 大会上发布「自治企业」战略，核心是将 SAP Business Technology Platform、Business Data Cloud 和 Business AI 合并为统一的 SAP Business AI Platform。同时宣布与 AWS 建立 Amazon Athena 与 Business Data Cloud 的双向零拷贝数据共享，与 Google Cloud、Microsoft 实现 Joule Agent 双向互操作，并推出 Knowledge Graph 为 Agent 提供结构化业务语境。</p>
+        <p>LangChain 在 Interrupt 2026 大会（5月13-14日，旧金山）上发布 SmithDB，这是一个用 Rust 构建、基于 Apache DataFusion 和 Vortex 的分布式数据库，专门为 Agent 可观测性场景设计。SmithDB 作为 LangSmith 平台的数据层，解决了 Agent 运行时产生的大规模追踪数据的存储、查询和分析问题。同日还发布了 LangSmith Engine 和 LangSmith Context Hub。</p>
       </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是 SAP 首次将数据平台能力（Business Data Cloud）与 AI 运行时合并为单一平台，并通过零拷贝联邦查询消除数据复制瓶颈。SAP 管理着全球约 87% 的商业交易数据，其数据平台战略的方向直接影响企业数据栈的架构选择。Athena 零拷贝集成意味着 SAP+非 SAP 数据的联邦分析不再需要 ETL 中间层。
+      <div class="impact">💡 Agent 可观测性正在从通用日志/APM 工具中独立出来，催生专用数据基础设施。SmithDB 选择 DataFusion + Vortex 的列式存储架构而非传统 OLAP，说明 Agent trace 数据的查询模式（高基数、深嵌套、跨 session）需要新的存储和计算引擎。这对数据平台厂商是一个信号：Agent 数据管理可能是下一个需要专门解决方案的领域。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. Snowflake 推出敏感数据权限报告（Public Preview）：数据治理从分类走向权限可见性</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-05-13-sensitive-data-entitlement-report-preview" target="_blank">Snowflake Release Notes 2026-05-13</a></div>
+      <div class="body">
+        <p>Snowflake 发布 Sensitive Data Entitlement Report（公开预览），允许管理员生成报告查看哪些用户角色拥有对敏感数据表的访问权限。该功能将数据分类结果（哪些列包含敏感数据）与访问控制（谁能看到这些数据）关联起来，生成一张权限-敏感数据交叉视图。</p>
       </div>
+      <div class="impact">💡 数据治理的核心痛点正在从"发现敏感数据在哪里"演进到"谁能访问敏感数据"。这是 Snowflake 将 Horizon（治理框架）从被动分类推向主动权限洞察的关键一步。对于受监管行业（金融、医疗），这类功能将从"锦上添花"变为平台选型的硬性门槛。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. 腾讯云 TBDS × 信通院 CCSA TC601 联合发布《大数据平台在 Data+AI 时代下的融合创新》报告</h3>
+      <div class="source">来源：<a href="https://cloud.tencent.com/developer/article/2668017" target="_blank">腾讯云开发者社区</a></div>
+      <div class="body">
+        <p>腾讯云与中国通信标准化协会大数据技术标准推进委员会（CCSA TC601）联合发布报告，系统梳理了大数据平台在 Data+AI 时代的融合创新路径。报告以腾讯云 TBDS 三层融合架构（全栈一体底座、全域资源中枢、数智协同开发）为实践案例，覆盖统一元数据（MetaLake）、异构算力调度（OneKubernetes + qGPU）、向量计算融合（Vecturbo）等关键技术方向。关键指标：存储节省 50-80%、资源利用率从 &lt;15% 提升至 50-70%、开发周期缩短 50%。</p>
+      </div>
+      <div class="impact">💡 这是国内首个由行业标准组织与头部云厂商联合定义 Data+AI 融合架构参考框架的正式发布。报告将"Data for AI + AI for Data"双轮驱动从概念落实为可量化的技术架构，标志着国内大数据平台标准化从讨论进入实质输出阶段。</div>
     </div>
   </div>
 
@@ -212,33 +220,40 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks 开源 JDBC 驱动重大升级：性能提升 30%，新增 Arrow 传输与异步执行</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/blog/faster-queries-and-new-capabilities-open-source-databricks-jdbc-driver" target="_blank">Databricks Blog</a></div>
+      <h3>1. Snowflake Cortex AI 函数支持细粒度权限控制（Preview）</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/all-release-notes" target="_blank">Snowflake Release Notes 2026-05-13</a></div>
       <div class="body">
-        <p>Databricks 发布开源 JDBC 驱动 3.x 系列的重大更新（Apache 2.0 许可），大型结果集检索性能提升最高 30%。新增 JDK 16+ 原生 Arrow 数据传输、异步执行接口、流式 Volume 数据摄入（免本地暂存）、多语句事务支持、Unity Catalog 指标视图访问、地理空间数据类型和查询标签等能力。</p>
+        <p>Snowflake 新增 <code>USE AI FUNCTION</code> 细粒度权限，管理员可按函数级别控制角色对 Cortex AI Functions 的调用权限，替代此前"全有或全无"的 <code>USE AI FUNCTIONS</code> 权限。</p>
       </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>JDBC 是企业 BI 工具、ETL 管道和应用连接数据平台的核心通道。Databricks 将其完全开源并大幅增强，一方面降低了第三方工具的集成门槛，另一方面通过 Arrow 传输和异步执行提升了数据密集型工作负载的效率。多语句事务支持补齐了 Lakehouse 在交易性场景的短板。
+      <div class="impact">💡 AI 函数的精细化权限管理是数据平台将 AI 能力纳入企业治理体系的关键一步。当 AI 函数成本和安全风险差异显著时（如 LLM 推理 vs 嵌入生成），按函数授权比按角色授权更贴近企业的实际管控需求。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. Databricks ai_parse_document 在合规安全配置工作区默认可用</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes May 2026</a></div>
+      <div class="body">
+        <p>Databricks 的 <code>ai_parse_document</code> 函数现已在启用合规安全配置（HIPAA、PCI-DSS、FedRAMP Moderate 等）的工作区默认可用。该函数可从 PDF、图片、Word、PowerPoint 等非结构化文档中解析结构化内容。</p>
       </div>
+      <div class="impact">💡 非结构化文档解析进入合规场景（医疗、金融、政府），意味着 Databricks 正在将 AI 数据处理能力从实验性功能推向受监管行业的生产使用。这降低了合规行业采用 AI 增强数据管道的门槛。</div>
     </div>
   </div>
 
-  <!-- Section C: Views & Research -->
+  <!-- Section C: 观点与洞察 -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
-      <h2>Views & Research</h2>
+      <h2>观点与洞察</h2>
     </div>
-    <p class="empty-note">本期窗口内无合格条目</p>
+    <div class="empty-section">今日窗口内无符合准入标准的高价值观点或正式研究发布</div>
   </div>
 
-  <!-- Section D: Capital & Corporate -->
+  <!-- Section D: 投融资 -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
-      <h2>Capital & Corporate</h2>
+      <h2>投融资</h2>
     </div>
-    <p class="empty-note">本期窗口内无合格条目</p>
+    <div class="empty-section">今日窗口内无符合准入标准的投融资/财报/IPO/收购兼并事件</div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -249,42 +264,33 @@
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span>1. Alation 发布 AI Governance 产品，构建企业 AI 合规证据链体系</h3>
-      <div class="source">来源：<a href="https://www.alation.com/news-and-press/alation-announces-new-ai-governance-offering/" target="_blank">Alation News</a></div>
+      <h3><span class="watchlist-tag tag-upcoming">预告</span>LangChain Interrupt 2026 大会持续进行（5/13-14），更多 Agent 基础设施发布待跟踪</h3>
+      <div class="source">来源：<a href="https://www.aiexpertmagazine.com/interrupt-2026-langchain-everything-you-need-to-know/" target="_blank">Interrupt 2026</a></div>
       <div class="body">
-        <p>Alation 在 Gartner Data & Analytics Summit（伦敦）发布 AI Governance 产品，包含 AI 资产注册表、自动化模型卡、基于法规的审批流程（支持 EU AI Act / NIST AI RMF / ISO 42001）、法规注册表和高管合规仪表盘五大能力模块。这是数据目录厂商首次推出完整的 AI 治理产品线，标志着 AI 治理从手动文档阶段进入自动化证据链管理阶段。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>产品 GA 时间、实际企业部署案例和与现有数据目录产品的集成深度。
+        <p>Interrupt 2026 是目前 Agent 生态最集中的技术发布窗口。Day 1 已发布 SmithDB、LangSmith Engine、Context Hub 三款产品。Day 2（5/14）可能有更多关于 LangGraph、Agent 编排和数据管道的发布，值得在下期日报跟进。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-track">跟踪</span>2. SAP 三连收购（Dremio + Reltio + Prior Labs）持续重塑数据平台版图</h3>
-      <div class="source">来源：<a href="https://news.sap.com/2026/05/sap-to-acquire-dremio-unify-sap-and-non-sap-data-power-agentic-ai/" target="_blank">SAP News</a></div>
+      <h3><span class="watchlist-tag tag-downgrade">降级</span>dbt Cloud 五月批量更新：Cost Insights Beta、Fusion Release Tracks、Native Private Packages GA</h3>
+      <div class="source">来源：<a href="https://docs.getdbt.com/docs/dbt-cloud/cloud-changelog" target="_blank">dbt Release Notes</a></div>
       <div class="body">
-        <p>SAP 于 5 月初密集宣布收购开放数据湖仓平台 Dremio（基于 Apache Iceberg/Arrow）、主数据管理厂商 Reltio 和表格基础模型公司 Prior Labs。Dremio 收购尤其值得关注——SAP 明确承诺继续投入 Iceberg 和 Arrow 开源生态，且 Dremio 的联邦查询引擎将补强 Business Data Cloud 的非 SAP 数据覆盖能力。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>监管审批进展（预计 Q3 2026 完成）、Dremio 与 SAP Business Data Cloud 的整合路线图、对 Iceberg/Arrow 社区贡献的实际兑现。
+        <p>dbt Cloud 五月更新包含多项重要功能——Cost Insights（Beta）首次让用户在 dbt 平台内看到仓库计算成本估算和 state-aware 编排节省；Fusion Release Tracks 开始分阶段推出意味着 Fusion 引擎进入规模化交付阶段；Native Private Packages GA 解决了企业级代码复用的关键痛点。降级原因：月度更新无具体发布日期。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-upcoming">预告</span>3. Apache Iceberg 1.11.0 进入 RC 投票阶段</h3>
-      <div class="source">来源：<a href="https://www.mail-archive.com/dev@iceberg.apache.org/msg13483.html" target="_blank">Apache Iceberg Dev 邮件列表</a></div>
+      <h3><span class="watchlist-tag tag-downgrade">降级</span>Microsoft Purview 数据质量三项功能 GA：可配置阈值、独立扫描、增量扫描</h3>
+      <div class="source">来源：<a href="https://learn.microsoft.com/ar-sa/purview/whats-new" target="_blank">Microsoft Purview What's New</a></div>
       <div class="body">
-        <p>Apache Iceberg 1.11.0 RC1 已于 5 月初进入社区投票，包含 Flink 纳秒精度支持等新特性。作为当前数据湖仓生态的核心表格式，每个新版本的特性方向都直接影响引擎兼容性和平台选型。</p>
-      </div>
-      <div class="impact">
-        <strong>需要等待什么信号确认：</strong>投票结果和正式 release 日期。
+        <p>Microsoft Purview 在五月将三项数据质量功能推向 GA：可配置数据质量阈值（按规则和数据资产分别设定最低质量分数）、独立数据资产质量扫描（不再需要先关联数据产品）、增量质量扫描（基于时间过滤的高效扫描）。降级原因：月度更新无精确发布日期。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-05-13 08:00</p>
+    <p>Data+AI 全球日报 v4.2</p>
+    <p>信息截至北京时间 2026-05-14 08:00</p>
   </div>
 
 </div>
