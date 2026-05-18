@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-14</title>
+<title>Data+AI 全球日报 | 2026-05-18（含周末）</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -28,7 +28,6 @@
     padding: 20px;
   }
   .container { max-width: 900px; margin: 0 auto; }
-
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -39,7 +38,6 @@
   }
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
-
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -60,7 +58,6 @@
     color: var(--primary);
     font-weight: 500;
   }
-
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -93,7 +90,6 @@
   .badge-d { background: var(--teal); }
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
-
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -121,15 +117,6 @@
     font-size: 13px;
     color: #1a56db;
   }
-
-  .empty-section {
-    text-align: center;
-    padding: 20px;
-    color: var(--text-secondary);
-    font-size: 14px;
-    font-style: italic;
-  }
-
   .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -138,17 +125,22 @@
     font-weight: 600;
     margin-right: 6px;
   }
-  .tag-upcoming { background: #fff3e0; color: #e65100; }
-  .tag-downgrade { background: #f3e5f5; color: #7b1fa2; }
-  .tag-followup { background: #e8f5e9; color: #2e7d32; }
-
+  .tag-upcoming { background: #e3f2fd; color: #1565c0; }
+  .tag-downgraded { background: #fff3e0; color: #e65100; }
+  .tag-followup { background: #f3e5f5; color: #7b1fa2; }
+  .empty-section {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 14px;
+  }
   .footer {
     text-align: center;
     padding: 20px;
     font-size: 12px;
     color: var(--text-secondary);
   }
-
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -162,18 +154,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-14 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-05-18（含周末） · 时效窗口 05-15 08:00 ~ 05-18 08:00 CST</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>Agent 基础设施正在从应用层下沉到专用数据层，可观测性催生新的数据库品类</li>
-      <li>数据治理从被动审计走向主动权限洞察，敏感数据可见性成为平台标配</li>
-      <li>AI 能力进入合规行业数据管道，非结构化文档解析和 AI 函数权限管理同步落地</li>
+      <li>数据管道的输出端正在从封闭的 Delta 表扩展到任意外部系统</li>
+      <li>列级数据血缘从分析型数据库延伸到了 Spark 集群处理链路</li>
+      <li>数据平台的 AI 能力开始嵌入治理和安全层，而非仅停留在查询层</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Agent 生态的数据层需求正在催生新的数据库和可观测性基础设施，与此同时，数据治理能力正从合规附件升级为平台核心竞争力——Snowflake 和 Databricks 同日推进的治理增强说明这已不是差异化卖点，而是平台底线。
+      <strong>总判断：</strong>数据平台本周集中补齐"最后一英里"能力——不论是管道输出到外部系统、血缘追踪到列级粒度，还是 AI 安全护栏的正式落地，方向一致：让数据平台从分析工具演进为企业数据操作系统的核心基础设施。
     </div>
   </div>
 
@@ -185,21 +177,30 @@
     </div>
 
     <div class="item">
-      <h3>1. LangChain 发布 SmithDB：首个面向 Agent 可观测性的专用分布式数据库</h3>
-      <div class="source">来源：<a href="https://www.langchain.com/blog" target="_blank">LangChain Blog</a> / <a href="https://www.aiexpertmagazine.com/interrupt-2026-langchain-everything-you-need-to-know/" target="_blank">Interrupt 2026 大会</a></div>
+      <h3>1. Databricks Lakeflow Spark Declarative Pipelines Sinks 正式 GA</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes - May 2026</a></div>
       <div class="body">
-        <p>LangChain 在 Interrupt 2026 大会（5月13-14日，旧金山）上发布 SmithDB，这是一个用 Rust 构建、基于 Apache DataFusion 和 Vortex 的分布式数据库，专门为 Agent 可观测性场景设计。SmithDB 作为 LangSmith 平台的数据层，解决了 Agent 运行时产生的大规模追踪数据的存储、查询和分析问题。同日还发布了 LangSmith Engine 和 LangSmith Context Hub。</p>
+        <p>Lakeflow Spark Declarative Pipelines 的 sink API 正式 GA，支持将管道转换后的数据写入 Unity Catalog 外部表、Apache Kafka、Azure Event Hubs 以及自定义 Python 数据源等外部目标。此前管道输出默认仅限 Delta 表。</p>
       </div>
-      <div class="impact">💡 Agent 可观测性正在从通用日志/APM 工具中独立出来，催生专用数据基础设施。SmithDB 选择 DataFusion + Vortex 的列式存储架构而非传统 OLAP，说明 Agent trace 数据的查询模式（高基数、深嵌套、跨 session）需要新的存储和计算引擎。这对数据平台厂商是一个信号：Agent 数据管理可能是下一个需要专门解决方案的领域。</div>
+      <div class="impact">💡 消除了 Databricks ETL 管道与外部操作系统之间的"最后一英里"断裂。企业不再需要在管道下游额外搭建 reverse ETL 或事件分发层，数据工程的端到端自动化程度显著提升。</div>
     </div>
 
     <div class="item">
-      <h3>2. Snowflake 推出敏感数据权限报告（Public Preview）：数据治理从分类走向权限可见性</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-05-13-sensitive-data-entitlement-report-preview" target="_blank">Snowflake Release Notes 2026-05-13</a></div>
+      <h3>2. Google Cloud Knowledge Catalog 列级血缘 for Dataproc 正式 GA</h3>
+      <div class="source">来源：<a href="https://cloud.google.com/dataplex/docs/release-notes/" target="_blank">Google Cloud Knowledge Catalog Release Notes</a></div>
       <div class="body">
-        <p>Snowflake 发布 Sensitive Data Entitlement Report（公开预览），允许管理员生成报告查看哪些用户角色拥有对敏感数据表的访问权限。该功能将数据分类结果（哪些列包含敏感数据）与访问控制（谁能看到这些数据）关联起来，生成一张权限-敏感数据交叉视图。</p>
+        <p>Knowledge Catalog（原 Dataplex）的列级血缘能力正式 GA，覆盖 Dataproc 集群和 Serverless for Apache Spark 处理的 BigQuery、BigLake 外部表及 Cloud Storage 数据流。同步更新的 Data Lineage API 支持多源多目标搜索和 Dataflow 来源标记。</p>
       </div>
-      <div class="impact">💡 数据治理的核心痛点正在从"发现敏感数据在哪里"演进到"谁能访问敏感数据"。这是 Snowflake 将 Horizon（治理框架）从被动分类推向主动权限洞察的关键一步。对于受监管行业（金融、医疗），这类功能将从"锦上添花"变为平台选型的硬性门槛。</div>
+      <div class="impact">💡 列级血缘是 AI 时代数据治理的刚需——当 Agent 自主访问数据时，精确追踪每一列的来源和变换链路是建立信任的前提。Google Cloud 率先在 Spark 处理层面实现这一能力的 GA。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. Snowflake Snowpark Container Services ARM 实例 GA + Cortex AI Guardrails GA</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/new-features" target="_blank">Snowflake Release Notes</a></div>
+      <div class="body">
+        <p>Snowpark Container Services 新增 ARM 实例（GEN_ARM_G1）正式 GA，提供 1-28 vCPU 规格的通用 ARM 算力；同日 Cortex AI Guardrails 对 Snowflake Intelligence 和 Cortex Agents 全面 GA，为 AI 生成内容提供平台级安全护栏。</p>
+      </div>
+      <div class="impact">💡 ARM 实例为容器化数据工作负载提供更优性价比选项；Cortex AI Guardrails GA 意味着 Snowflake 在 AI 安全治理层面从"可选"升级为"内置"，是企业大规模部署 AI Agent 查询数据的关键信任基础。</div>
     </div>
   </div>
 
@@ -211,40 +212,49 @@
     </div>
 
     <div class="item">
-      <h3>1. Snowflake Cortex AI 函数支持细粒度权限控制（Preview）</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/all-release-notes" target="_blank">Snowflake Release Notes 2026-05-13</a></div>
+      <h3>1. Databricks Agent Bricks Supervisor Agent 支持 Vector Search Indexes 作为子 Agent 工具</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes - May 2026</a></div>
       <div class="body">
-        <p>Snowflake 新增 <code>USE AI FUNCTION</code> 细粒度权限，管理员可按函数级别控制角色对 Cortex AI Functions 的调用权限，替代此前"全有或全无"的 <code>USE AI FUNCTIONS</code> 权限。</p>
+        <p>Supervisor Agent 现可将 Vector Search indexes 注册为子 Agent 工具，多 Agent 协同系统可直接利用向量检索能力完成语义搜索任务，无需手动搭建 retrieval 逻辑。</p>
       </div>
-      <div class="impact">💡 AI 函数的精细化权限管理是数据平台将 AI 能力纳入企业治理体系的关键一步。当 AI 函数成本和安全风险差异显著时（如 LLM 推理 vs 嵌入生成），按函数授权比按角色授权更贴近企业的实际管控需求。</div>
+      <div class="impact">💡 降低了在 Databricks 平台上构建 RAG 和多 Agent 数据应用的工程复杂度，向量检索从独立服务变为 Agent 编排框架的一等公民。</div>
     </div>
 
     <div class="item">
-      <h3>2. Databricks ai_parse_document 在合规安全配置工作区默认可用</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes May 2026</a></div>
+      <h3>2. Databricks SQL Alerts GA + SQL Alert Task in Lakeflow Jobs Public Preview</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes - May 2026</a></div>
       <div class="body">
-        <p>Databricks 的 <code>ai_parse_document</code> 函数现已在启用合规安全配置（HIPAA、PCI-DSS、FedRAMP Moderate 等）的工作区默认可用。该函数可从 PDF、图片、Word、PowerPoint 等非结构化文档中解析结构化内容。</p>
+        <p>Databricks SQL Alerts 最新版本正式 GA，新增 Markdown 编辑器自定义通知模板；Lakeflow Jobs 中的 SQL Alert Task 进入 Public Preview，可将 SQL 告警评估嵌入工作流并根据结果分支执行下游任务。</p>
       </div>
-      <div class="impact">💡 非结构化文档解析进入合规场景（医疗、金融、政府），意味着 Databricks 正在将 AI 数据处理能力从实验性功能推向受监管行业的生产使用。这降低了合规行业采用 AI 增强数据管道的门槛。</div>
+      <div class="impact">💡 数据质量监控从被动查询变为主动嵌入管道的自动化行为，实现"数据异常→告警→自动响应"的闭环。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. Snowflake AI_CLASSIFY 支持文档分类（Public Preview）</h3>
+      <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/new-features" target="_blank">Snowflake Release Notes</a></div>
+      <div class="body">
+        <p>Snowflake 内置 AI 函数 AI_CLASSIFY 新增文档分类能力（Public Preview），可直接在 SQL 查询中对非结构化文档进行分类处理。</p>
+      </div>
+      <div class="impact">💡 非结构化数据的分类和标注能力直接嵌入 SQL 层，降低了企业将文档数据纳入结构化治理体系的门槛。</div>
     </div>
   </div>
 
-  <!-- Section C: 观点与洞察 -->
+  <!-- Section C: Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
-      <h2>观点与洞察</h2>
+      <h2>Views & Research</h2>
     </div>
-    <div class="empty-section">今日窗口内无符合准入标准的高价值观点或正式研究发布</div>
+    <div class="empty-section">本期窗口内未发现符合准入标准的机构报告或关键人物原始观点。</div>
   </div>
 
-  <!-- Section D: 投融资 -->
+  <!-- Section D: Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
-      <h2>投融资</h2>
+      <h2>Capital & Corporate</h2>
     </div>
-    <div class="empty-section">今日窗口内无符合准入标准的投融资/财报/IPO/收购兼并事件</div>
+    <div class="empty-section">本期窗口内未发现与数据平台直接相关的合格投融资/财报事件。</div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -255,33 +265,36 @@
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-upcoming">预告</span>LangChain Interrupt 2026 大会持续进行（5/13-14），更多 Agent 基础设施发布待跟踪</h3>
-      <div class="source">来源：<a href="https://www.aiexpertmagazine.com/interrupt-2026-langchain-everything-you-need-to-know/" target="_blank">Interrupt 2026</a></div>
+      <h3><span class="watchlist-tag tag-upcoming">预告</span>Apache Iceberg 1.11.0 RC4 投票通过，正式发布在即</h3>
+      <div class="source">来源：<a href="https://www.mail-archive.com/dev@iceberg.apache.org/msg13595.html" target="_blank">Apache Iceberg dev 邮件列表</a></div>
       <div class="body">
-        <p>Interrupt 2026 是目前 Agent 生态最集中的技术发布窗口。Day 1 已发布 SmithDB、LangSmith Engine、Context Hub 三款产品。Day 2（5/14）可能有更多关于 LangGraph、Agent 编排和数据管道的发布，值得在下期日报跟进。</p>
+        <p><strong>为什么值得继续看：</strong>Iceberg 1.11 是 Iceberg v3 格式的首个完整特性版本——新增实验性 Variant type、纳秒精度时间戳、行级血缘等能力，对 Trino 481 已实现的 v3 写入支持形成完整生态闭环。</p>
+        <p><strong>需要等待什么信号确认：</strong>正式 release 公告（PMC 已有足够 binding +1，预计数日内发布）。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span>dbt Cloud 五月批量更新：Cost Insights Beta、Fusion Release Tracks、Native Private Packages GA</h3>
-      <div class="source">来源：<a href="https://docs.getdbt.com/docs/dbt-cloud/cloud-changelog" target="_blank">dbt Release Notes</a></div>
+      <h3><span class="watchlist-tag tag-downgraded">降级</span>Fivetran 宣布接管 Great Expectations 开源社区</h3>
+      <div class="source">来源：<a href="https://www.fivetran.com/fr/press/fivetran-to-become-steward-of-the-great-expectations-open-source-community-and-gx-core-project" target="_blank">Fivetran Press Release (05-13)</a></div>
       <div class="body">
-        <p>dbt Cloud 五月更新包含多项重要功能——Cost Insights（Beta）首次让用户在 dbt 平台内看到仓库计算成本估算和 state-aware 编排节省；Fusion Release Tracks 开始分阶段推出意味着 Fusion 引擎进入规模化交付阶段；Native Private Packages GA 解决了企业级代码复用的关键痛点。降级原因：月度更新无具体发布日期。</p>
+        <p><strong>为什么值得继续看：</strong>GX Core 是最广泛使用的开源数据质量框架之一，Fivetran 接管意味着数据质量验证将更紧密地嵌入 Fivetran+dbt 的数据基础设施栈。这延续了 Fivetran/dbt 合并后"Open Data Infrastructure"战略的执行。</p>
+        <p><strong>需要等待什么信号确认：</strong>协议正式完成后的治理结构和路线图变化。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="watchlist-tag tag-downgrade">降级</span>Microsoft Purview 数据质量三项功能 GA：可配置阈值、独立扫描、增量扫描</h3>
-      <div class="source">来源：<a href="https://learn.microsoft.com/ar-sa/purview/whats-new" target="_blank">Microsoft Purview What's New</a></div>
+      <h3><span class="watchlist-tag tag-upcoming">预告</span>Databricks Lakebase 全面迁移至 Autoscaling 平台（6 月启动）</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/whats-coming" target="_blank">Databricks What's Coming</a></div>
       <div class="body">
-        <p>Microsoft Purview 在五月将三项数据质量功能推向 GA：可配置数据质量阈值（按规则和数据资产分别设定最低质量分数）、独立数据资产质量扫描（不再需要先关联数据产品）、增量质量扫描（基于时间过滤的高效扫描）。降级原因：月度更新无精确发布日期。</p>
+        <p><strong>为什么值得继续看：</strong>所有 Lakebase Provisioned 实例将在 6 月起自动升级至 Autoscaling 平台，获得弹性伸缩、缩容到零、数据库分支等能力。这标志着 Databricks OLTP 层从固定资源模式全面转向 Serverless 弹性模式。</p>
+        <p><strong>需要等待什么信号确认：</strong>6 月正式升级通知和定价影响。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
     <p>Data+AI 全球日报 v4.2</p>
-    <p>信息截至北京时间 2026-05-14 08:00</p>
+    <p>信息截至北京时间 2026-05-18 08:00</p>
   </div>
 
 </div>
