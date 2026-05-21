@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-20</title>
+<title>Data+AI 全球日报 | 2026-05-21</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -118,23 +118,21 @@
     font-size: 13px;
     color: #1a56db;
   }
-  .funding-tag {
+  .empty-section {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+  .watchlist-tag {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
     margin-right: 6px;
-  }
-  .tag-funding { background: #fce4ec; color: #c62828; }
-  .tag-earnings { background: #e3f2fd; color: #1565c0; }
-  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
-  .tag-ma { background: #e8f5e9; color: #2e7d32; }
-  .empty-section {
-    color: var(--text-secondary);
-    font-style: italic;
-    font-size: 14px;
-    padding: 12px 0;
+    background: #fff3e0;
+    color: #e65100;
   }
   .footer {
     text-align: center;
@@ -155,18 +153,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-20 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-05-21 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>流处理平台加速进入声明式工程时代，dbt 成为跨引擎的统一编排标准</li>
-      <li>数据平台厂商集体向 Agent 原生架构转型，自然语言成为新的操作面</li>
-      <li>私有部署重回战略焦点，数据主权成为 AI 落地的硬性前置条件</li>
+      <li>数据管理正在从平台绑定走向无头服务，任何 Agent 均可按需调用</li>
+      <li>中国数据基础设施进入"赋能 AI"制度化推进阶段</li>
+      <li>头部云厂商开始从"为人服务"全面转向"为 Agent 服务"的全栈重构</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>数据平台正在从"工具组合"走向"Agent 可操作的统一平面"，流处理和分析引擎的接口标准化（dbt/MCP）是基础设施层的关键转折——谁先完成这一层抽象，谁就握住了 AI 工作流的入口。
+      <strong>总判断：</strong>数据管理层正经历架构范式转移——从嵌入式、平台绑定模式转向无头化、MCP 原生的服务化交付。这一变化将使 AI Agent 成为数据管理能力的第一消费者，从根本上改变数据平台的集成模式和治理边界。
     </div>
   </div>
 
@@ -178,30 +176,33 @@
     </div>
 
     <div class="item">
-      <h3>1. Confluent Q2 2026 发布集：dbt adapter for Flink GA + AI 开发者工具全面可用</h3>
-      <div class="source">来源：<a href="https://www.confluent.io/press-release/build-and-secure-real-time-ai" target="_blank">Confluent Press Release</a> / <a href="https://www.confluent.io/blog/2026-q2-confluent-cloud-launch/" target="_blank">Confluent Blog</a></div>
+      <h3>1. Informatica World 2026 发布 Headless IDMC —— 数据管理首次实现跨平台无头化 MCP 交付</h3>
+      <div class="source">来源：<a href="https://www.salesforce.com/news/linked-content/informatica-brings-headless-data-management-lakebase-connectivity-golden-record-publishing-and-unity-catalog-tag-extraction-to-the-databricks-platform">Informatica/Salesforce 官方新闻稿</a> / <a href="https://siliconangle.com/2026/05/20/informatica-expands-agentic-ai-strategy-headless-data-services-unified-agent-governance">SiliconANGLE</a></div>
       <div class="body">
-        <p>Confluent 在 Current London 大会上宣布多项 GA：开源 dbt adapter 将 Flink SQL 纳入 dbt 工作流，Managed MCP Server + Agent Skills 让 AI 编码助手直接操作流平台，Streaming Agents 和 Real-Time Context Engine 正式可用。同步发布 Confluent Private Cloud（CPC），基准测试显示同等负载下 broker 数量减少 73%。</p>
+        <p>Informatica（Salesforce 旗下）在 Informatica World 2026 大会上宣布将整个 IDMC（智能数据管理云）以无头（Headless）模式开放，通过原生 MCP（Model Context Protocol）服务器同时接入 Databricks Agent Bricks、Snowflake Cortex AI、Microsoft Foundry 和 AWS Agent Registry。这是数据管理行业首次实现"一次构建、全平台 Agent 可调用"的架构。</p>
+        <p>同步发布：Snowflake Managed Iceberg Tables 元数据扫描 GA、Snowflake 行级访问策略 GA、Databricks Unity Catalog 标签提取、Lakebase 专用连接器（10月GA）。</p>
       </div>
-      <div class="impact">💡 dbt 成为横跨批处理（Snowflake/Databricks/BigQuery）和流处理（Flink）的统一编排框架，企业数据工程团队可以用同一套 CI/CD 管理全部管道。MCP Server 的 GA 标志着 AI Agent 直接操作流基础设施从概念走向生产。</div>
+      <div class="impact">数据管理从"人操作 GUI"转向"Agent 通过 MCP 调用微服务"，意味着数据质量、治理和集成不再是独立的平台功能，而变成了可被任意 AI Agent 按需消费的标准化服务。这将加速企业 Agent 落地中的数据信任问题解决，同时对传统"平台锁定"式数据治理工具形成竞争压力。</div>
     </div>
 
     <div class="item">
-      <h3>2. Snowflake dbt Projects 重大更新：列级血缘 + dbt Fusion 引擎 + Cortex Code</h3>
-      <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/2026/other/2026-05-19-dbt-projects-on-snowflake-updates" target="_blank">Snowflake Release Notes</a></div>
+      <h3>2. 国家数据局印发《2026年数字经济发展工作要点》——"数据赋能 AI"六大专项行动启动</h3>
+      <div class="source">来源：<a href="https://paper.people.com.cn/rmrb/pc/content/202605/21/content_30158117.html">人民日报 2026-05-21</a> / <a href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&t=1779194492811&item_id=1909454344712238793">央视新闻</a> / <a href="https://www.ce.cn/cysc/newmain/yc/jsxw/202605/t20260520_2977434.shtml">经济参考报</a></div>
       <div class="body">
-        <p>05-19 发布的更新包括：DAG 可视化新增列级血缘（基于 Horizon Catalog 元数据）、集成 Rust 重写的 dbt Fusion 引擎（无额外许可费）、多版本 dbt 支持（Core 1.9.4/1.10.15/Fusion 2.0.0-preview）、Cortex Code 全生命周期支持 dbt 工作流（生成/测试/调试/文档）。</p>
+        <p>国家数据局于 5 月 19 日正式印发《2026年数字经济发展工作要点》，8 大任务中专设"强化数据赋能人工智能发展"板块，提出六大专项行动（强基扩容、应用赋能、提质增效、管理服务、价值释放、标注攻坚），目标形成满足"AI 就绪度"要求的标杆性高质量数据集。</p>
+        <p>同时提出加快全国统一数据产权登记制度、推进数据基础设施建设、推进数字经济促进法立法。</p>
       </div>
-      <div class="impact">💡 Snowflake 将 dbt 的编译和执行运行时深度嵌入平台，列级血缘让数据治理颗粒度达到字段级别，Fusion 引擎的免费内置消除了企业采用高性能 dbt 运行时的成本门槛。</div>
+      <div class="impact">这是国家层面首次将"数据赋能 AI"作为年度工作要点的独立板块，标志着高质量数据集从企业自发探索进入制度化推进阶段。对数据平台厂商而言，"AI 就绪度"标准化将直接影响产品的数据质量能力门槛和合规要求。</div>
     </div>
 
     <div class="item">
-      <h3>3. 腾讯云正式发布大数据智能体工作台 DataBuddy</h3>
-      <div class="source">来源：<a href="https://cloud.it168.com/a2026/0519/6929/000006929691.shtml" target="_blank">IT168</a> / <a href="https://new.qq.com/rain/a/20260519A0940200" target="_blank">钛媒体</a></div>
+      <h3>3. 2026 阿里云峰会：宣布面向 Agent 时代全栈架构重构，AI 收入占比首破 30%</h3>
+      <div class="source">来源：<a href="https://www.stcn.com/article/detail/3918851.html">证券时报 2026-05-20</a> / <a href="https://emh5wap.eastmoney.com/Info/Detail/202605203743816821">北京商报/东方财富</a></div>
       <div class="body">
-        <p>05-19 正式发布。基于 WorkBuddy 同源 Agent 底层能力，用户通过自然语言对话即可完成数据接入、开发、治理、分析全链路任务。搭载于 Wedata 数据智能平台，原生连接 DLC 数据湖计算引擎。采用分层 Agent 协作架构（Harness AI），将 1-2 周数仓建设周期压缩至小时级。</p>
+        <p>5 月 20 日阿里云峰会上，阿里云宣布完成"芯片—Agentic Cloud—模型—推理"全栈 Agent 化升级。核心发布包括：面向 Agent 的 AI 产品官网"千问云"、搭载自研 AI 芯片真武 M890 的 128 卡超节点服务器（支持万亿参数模型单节点运行）、旗舰模型 Qwen3.7-Max。</p>
+        <p>阿里云资深副总裁刘伟光表示"云在 AI 时代的作用从支持训练转变为承载海量 Agent 应用"。一周前阿里财报显示 AI 收入占外部收入已首次突破 30%，预计未来一年超 50%。</p>
       </div>
-      <div class="impact">💡 国内云厂商首个以 Agent 原生模式交付的全链路数据工作台，从"UI 驱动多页面操作"转向"对话驱动全链路自动化"，代表了数据平台交互范式的代际变化。</div>
+      <div class="impact">当云的第一消费者从人变为 Agent，数据平台的接口模式、并发设计和治理逻辑都需要重构。阿里云"Agentic Cloud"概念的提出，标志着头部云厂商正将整个基础设施（含数据服务）重新围绕 Agent 调用模式设计。对于在阿里云生态上运行数据平台的企业，这意味着架构适配窗口已经打开。</div>
     </div>
   </div>
 
@@ -213,22 +214,15 @@
     </div>
 
     <div class="item">
-      <h3>1. Teradata 发布 Teradata Factory：融合 EDW/Lakehouse/AI 的私有部署一体机</h3>
-      <div class="source">来源：<a href="https://finance.yahoo.com/sectors/technology/articles/teradata-delivers-autonomous-knowledge-data-191500808.html" target="_blank">PR Newswire via Yahoo Finance</a></div>
+      <h3>1. Apache Iceberg V4 规范投票加速推进——相对路径和内容统计两项提案同步投票</h3>
+      <div class="source">来源：<a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-may-13-20-2026-17a4">Apache Data Lakehouse Weekly May 13-20</a></div>
       <div class="body">
-        <p>05-19 宣布，基于 Dell Technologies 企业计算和存储构建，将完整 Teradata 软件栈（含 AI Studio）整合到单一管理面，支持 EDW、Lakehouse 和 AI 工作负载。支持 Apache Iceberg、Delta Lake 和 S3 兼容对象存储。预计 Q3 2026 可用。</p>
+        <p>Iceberg V4 规范进入实质性推进阶段：Daniel Weeks 发起相对路径提案投票（允许表在不同 bucket/region/存储后端间迁移而无需重写 manifest），Eduard Tudenhöfner 发起内容统计表示提案投票（优化查询规划器剪枝效率）。两项投票在社区获得广泛参与。</p>
+        <p>同期，Iceberg 1.11.0 RC4 投票通过（从 RC1 到 RC4 经历一个月），1.10.2 补丁版本正式发布。</p>
       </div>
-      <div class="impact">💡 在公有云经济性受到 GPU 推理和持续计算挑战的背景下，Teradata 押注"数据平台 + AI 平台一体化私有部署"，瞄准受监管行业的数据主权需求。</div>
+      <div class="impact">相对路径对跨云迁移和灾难恢复意义重大；内容统计直接影响查询成本。V4 不再是远期设计，具体特性已进入投票阶段，引擎和存储厂商需要提前评估兼容性影响。</div>
     </div>
 
-    <div class="item">
-      <h3>2. Confluent Private Cloud 发布：73% 更少 Broker + 集中策略治理</h3>
-      <div class="source">来源：<a href="https://www.confluent.io/blog/" target="_blank">Confluent Blog</a></div>
-      <div class="body">
-        <p>Confluent Private Cloud（CPC）是面向私有基础设施的新软件包，提供增强型 broker（最高 10x 吞吐提升）和新 Gateway（网络隔离 + 集中策略执行）。基准测试证实同等负载下 broker 数量减少 73%，大幅降低 TCO。</p>
-      </div>
-      <div class="impact">💡 流处理的私有部署选项成熟度大幅提升，对于需要数据主权但又想获得云级敏捷性的组织而言，CPC 填补了 Confluent Platform 与 Confluent Cloud 之间的能力鸿沟。</div>
-    </div>
   </div>
 
   <!-- Section C: Views & Research -->
@@ -239,12 +233,12 @@
     </div>
 
     <div class="item">
-      <h3>1. Omdia：2025 中国 AI 云市场 567 亿元，首次定义 AI IaaS + MaaS 双轨框架</h3>
-      <div class="source">来源：<a href="https://new.qq.com/rain/a/20260519A04RUN00" target="_blank">每经/格隆汇</a></div>
+      <h3>1. 国家数据局：首次以年度工作要点明确"AI 就绪度"数据集标准方向</h3>
+      <div class="source">来源：<a href="https://zsj.nmg.gov.cn/xwzx/sznmg/202605/t20260520_2905378.html">国家数据局《2026年数字经济发展工作要点》全文</a></div>
       <div class="body">
-        <p>Omdia 05-19 发布《中国AI云市场份额2025》，将 AI 云首次系统拆分为 AI IaaS（占 69%）和 MaaS（占 31%，含 MPS 模型生产+MCS 模型消费）。阿里云以 38.1% 份额居首，火山引擎 20.4% 居二，百度云/腾讯云/天翼云列三至五。市场总规模达 567 亿元人民币。</p>
+        <p><strong>核心观点：</strong>《工作要点》提出"形成一批满足 AI 就绪度要求、有效训练先进模型、切实解决行业难题的标杆性高质量数据集"——这是国家级文件首次使用"AI 就绪度"这一概念对数据集质量提出明确要求。</p>
       </div>
-      <div class="impact">💡 首个将 MaaS 进一步拆为"模型生产"和"模型消费"的市场框架。对数据平台厂商意味着：数据平台与 AI IaaS 的集成深度（训练数据管理、特征工程、推理数据流）直接决定在 AI 云市场的定位。</div>
+      <div class="impact">"AI 就绪度"作为政策导向的质量标准，将倒逼数据平台产品在数据质量评估、标注管理、数据集版本控制等能力上进行升级。对于面向政企客户的数据平台厂商，这可能成为新的功能差异化方向。</div>
     </div>
   </div>
 
@@ -254,7 +248,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <p class="empty-section">本日无符合准入标准的事件。</p>
+    <div class="empty-section">当日无符合准入标准的投融资/财报事件。</div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -265,36 +259,45 @@
     </div>
 
     <div class="item">
-      <h3>1. 【跟踪】Google-Blackstone 筹备 $5B AI 云基础设施合资公司</h3>
-      <div class="source">来源：<a href="https://www.nextmsc.com/news/google-blackstone-ai-cloud-industry-update-and-growth" target="_blank">Reuters via NextMSC</a></div>
+      <h3><span class="watchlist-tag">跟踪</span>腾讯云宣布 Agent 全链路融合创新基础设施升级</h3>
+      <div class="source">来源：<a href="https://new.qq.com/rain/a/20260521A01S8Q00">腾讯云官方消息 2026-05-20</a></div>
       <div class="body">
-        <p>报道称双方正筹备一家聚焦 TPU 计算的 AI 云基础设施公司，目标 500MW 数据中心容量。若落地，将是 hyperscaler + PE 联合扩产 AI 基础设施的标志性事件。</p>
-        <p><strong>需要等待：</strong>正式公告、公司实体注册、CEO 任命确认（目前仅 Reuters 报道）。</p>
+        <p><strong>为什么值得继续看：</strong>腾讯云 5 月 20 日宣布面向 Agent 时代完成"芯片适配—算力—模型—安全—应用"全链路融合创新基础设施升级，但未披露具体数据平台产品更新细节。据报道将在下月围绕 Agent 上线新品。</p>
+        <p><strong>需要等待什么信号确认：</strong>具体数据平台产品是否有面向 Agent 场景的架构更新或新功能发布。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3>2. 【跟踪】Apache Iceberg 1.11.0 RC1 投票进行中</h3>
-      <div class="source">来源：<a href="https://www.mail-archive.com/dev@iceberg.apache.org/msg13497.html" target="_blank">Apache Iceberg Dev Mailing List</a></div>
+      <h3><span class="watchlist-tag">跟踪</span>Informatica Headless IDMC 全平台 GA 路线图</h3>
+      <div class="source">来源：<a href="https://www.morningstar.com/news/business-wire/20260520652470/informatica-from-salesforce-delivers-the-trusted-data-foundation-every-ai-agent-needs-now-across-every-surface-every-platform-everywhere">Business Wire / Informatica World 2026</a></div>
       <div class="body">
-        <p>RC1 于 05-07 发起投票，包含 Iceberg v3 Variant 类型支持、Spark shredded variant 写入等重要特性。社区讨论中存在关于部分特性未回移到旧引擎版本的争议。</p>
-        <p><strong>需要等待：</strong>投票结果、是否需要 RC2、正式 release 公告。</p>
+        <p><strong>为什么值得继续看：</strong>Headless IDMC MCP 集成目前处于 Private Preview，GA 计划在 2026 夏季。Lakebase 连接器和 MDM Extension for Databricks 计划 10 月发布。这些能力的正式上线将验证"无头数据管理"在生产环境的实际可行性。</p>
+        <p><strong>需要等待什么信号确认：</strong>夏季 GA 发布公告、首批生产客户案例。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3>3. 【降级】阳狮集团 $22 亿收购 LiveRamp 数据协作平台</h3>
-      <div class="source">来源：<a href="https://news.10jqka.com.cn/20260518/c676763298.shtml" target="_blank">同花顺财经</a></div>
+      <h3><span class="watchlist-tag">降级</span>Databricks 五月更新：Container Services Beta、Lakeflow Designer 全量开放</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may">Databricks Release Notes May 2026</a></div>
       <div class="body">
-        <p>LiveRamp 连接 25000+ 发布商域名和 500+ 技术伙伴，是全球最大的数据协作/数据清洁室基础设施之一。收购将改变营销数据生态的格局，间接影响企业第一方数据治理和激活架构。</p>
-        <p><strong>需要等待：</strong>监管审批进展、收购后 LiveRamp 产品独立性。</p>
+        <p><strong>为什么值得继续看：</strong>5/19 发布的批量更新包括 Container Services Beta（支持自定义 Docker 镜像）、Lakeflow Designer 全量默认开放（含用户自定义操作符 Public Preview）、Declarative Pipelines Sinks GA。因发布日期略早于本期窗口起点，按时效性规则降级收录。</p>
+        <p><strong>需要等待什么信号确认：</strong>Container Services Beta 是否推进至 GA；Lakeflow Designer 用户自定义操作符的生产反馈。</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <h3><span class="watchlist-tag">降级</span>Apache Iceberg 1.11.0 正式发布在即</h3>
+      <div class="source">来源：<a href="https://www.mail-archive.com/dev@iceberg.apache.org/msg13499.html">Apache Iceberg Dev List</a></div>
+      <div class="body">
+        <p><strong>为什么值得继续看：</strong>RC4 已获足够 binding +1 投票，正式发布预计数日内完成。1.11.0 包含 Spark Variant Shredding、Flink 纳秒精度支持等重要特性。从 RC1 到 RC4 历时一个月反映了此版本的复杂性。</p>
+        <p><strong>需要等待什么信号确认：</strong>正式 release 公告。</p>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <p>Data+AI 全球日报 v4.2</p>
-    <p>信息截至北京时间 2026-05-20 08:00</p>
+    <p>Powered by Data+AI Daily Brief v4.2</p>
+    <p>信息截至北京时间 2026-05-21 08:00</p>
   </div>
 
 </div>
