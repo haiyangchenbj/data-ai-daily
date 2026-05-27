@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-26</title>
+<title>Data+AI 全球日报 | 2026-05-27</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -117,6 +117,9 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .body p { margin-bottom: 8px; }
+  .item .body ul { padding-left: 18px; margin-bottom: 8px; }
+  .item .body li { margin-bottom: 4px; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -126,6 +129,7 @@
     color: #1a56db;
   }
 
+  /* 投融资特殊样式 */
   .funding-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -135,12 +139,35 @@
     margin-right: 6px;
   }
   .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
 
-  .empty-note {
-    color: var(--text-secondary);
-    font-style: italic;
+  .funding-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 14px;
-    padding: 12px 0;
+    margin-top: 8px;
+  }
+  .funding-table th, .funding-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+  }
+  .funding-table th {
+    font-weight: 600;
+    color: var(--text-secondary);
+    width: 80px;
+  }
+
+  /* Note */
+  .editor-note {
+    background: #fffde7;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #5d4037;
   }
 
   /* Footer */
@@ -151,6 +178,7 @@
     color: var(--text-secondary);
   }
 
+  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -164,18 +192,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-26 (周二) · 信息窗口 05-25 08:00 ~ 05-26 08:00 CST</div>
+    <div class="date">2026-05-27（周三） · 信息窗口 2026-05-26 08:00 ~ 2026-05-27 08:00 CST</div>
   </div>
 
   <div class="summary-box">
-    <h2>🔥 今日最重要的3个变化</h2>
+    <h2>🔥 今日最重要的 3 个变化</h2>
     <ol>
-      <li>dbt 发布 May 2026 月度更新：Developer Agent 进入 Preview（自然语言驱动模型构建）、Fusion Release Tracks GA、新 Semantic Layer YAML 规范大幅简化语义层定义</li>
-      <li>Snowflake Accelerate 2026 Japan 今日开幕：三菱电机展示 Cortex Search 零调优 RAG（设计文档问答系统构建从数月缩短至数日）</li>
-      <li>Acceldata 发布自治数据平台并宣告"后 Lakehouse 时代"——xLake 推理引擎 GA + MCP 协议原生支持 Agent 访问企业数据</li>
+      <li>OpenRouter 完成 $113M Series B，Snowflake/Databricks/MongoDB Ventures 齐投——数据平台厂商以战略投资"站队"AI 推理路由层</li>
+      <li>Databricks Genie Code Agent 模式在合规工作区默认启用，数据分析进入"单 prompt 多步自动执行"阶段</li>
+      <li>Snowflake 今日盘后发布 Q1 FY2027 财报，市场关注 AI 工作负载对消费量增速的拉动效果</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>周一信号主要来自工具链能力提升而非基础设施架构变化。dbt Developer Agent 让语义层和管道定义进入 AI 辅助生成阶段；Acceldata 的"后 Lakehouse"核心判断——Agent 需要联邦化数据访问而非全部搬进单一湖仓——与行业趋势一致。
+      <strong>总判断：</strong>数据平台头部厂商同时以"战略投资"和"产品 Agent 化"两条路径争夺 AI 推理生态入口，推理路由/编排层正成为新的平台级基础设施。
     </div>
   </div>
 
@@ -185,7 +213,26 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-    <p class="empty-note">本期 A 板块留空。24h 窗口内无达到 Top Signal 级别（行业结构性变化/重大首发产品 GA）的事件。</p>
+    <div class="item">
+      <h3>OpenRouter $113M Series B：数据平台巨头集体押注 AI 推理路由层</h3>
+      <div class="source">Business Wire · 2026-05-26 ｜ 信息置信度 Level A</div>
+      <div class="body">
+        <p>AI 推理路由平台 OpenRouter 宣布完成 $113M Series B，由 Alphabet 旗下成长基金 CapitalG 领投。战略投资方阵容空前：</p>
+        <ul>
+          <li><strong>NVentures</strong>（NVIDIA 风投部门）</li>
+          <li><strong>Snowflake Ventures</strong></li>
+          <li><strong>Databricks Ventures</strong></li>
+          <li><strong>MongoDB Ventures</strong></li>
+          <li><strong>ServiceNow Ventures</strong></li>
+          <li><strong>Andreessen Horowitz</strong></li>
+          <li><strong>Menlo Ventures</strong></li>
+        </ul>
+        <p>核心指标：平台周吞吐量 25 万亿 token（月约 100 万亿），较半年前增长 5 倍；接入 400+ 模型（Anthropic/Google/OpenAI/xAI/DeepSeek），服务 800 万+用户。估值约 $1.3B。</p>
+      </div>
+      <div class="impact">
+        <strong>So What：</strong>当 Snowflake、Databricks、MongoDB 三家数据平台厂商同时以战略投资方式出现在同一轮融资中，推理路由/编排层被视为连接"数据"与"AI 消费"的关键中间件。对数据平台而言，谁控制推理流量的分发和治理，谁就拥有下一代 data-to-insight 通路的定价权。
+      </div>
+    </div>
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -194,57 +241,46 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-
     <div class="item">
-      <h3>1. dbt May 2026 月度发布：Developer Agent Preview + Fusion Release Tracks GA + 新语义层规范</h3>
-      <div class="source">来源：<a href="https://docs.getdbt.com/docs/dbt-versions/dbt-cloud-release-notes">dbt 官方发布说明</a></div>
+      <h3>Databricks Genie Code Agent 模式默认启用（合规工作区）</h3>
+      <div class="source">Databricks Release Notes · 2026-05-25 ｜ 信息置信度 Level A</div>
       <div class="body">
-        <p>dbt 发布 May 2026 月度更新合集：① <strong>Developer Agent（Preview）</strong>——用自然语言构建或重构模型、生成 SQL/测试/文档/语义模型；② <strong>Fusion Release Tracks GA</strong>——Nightly/Stable/Extended/Fallback 四级发布节奏，新项目默认 Fusion Stable；③ <strong>新 Semantic Layer YAML 规范</strong>——语义模型嵌入模型 YAML 条目，measures 重命名为 simple metrics，常用选项提升为顶层 key；④ <strong>Cost Insights（Public Beta）</strong>——估算 warehouse 计算成本；⑤ <strong>Fusion 引擎新增 DuckDB/Spark 3.0 Beta 适配</strong>。</p>
+        <p>Genie Code 的 Agent 模式现已对启用合规安全配置（Compliance Security Profile）的工作区默认可用，覆盖 HIPAA、PCI-DSS 和 FedRAMP Moderate 控制标准的环境。Agent 模式核心能力：</p>
+        <ul>
+          <li>从单个自然语言提示出发，自动执行多步操作</li>
+          <li>自动检索相关数据资产</li>
+          <li>生成并运行代码</li>
+          <li>自动修复错误</li>
+          <li>输出可视化结果</li>
+        </ul>
       </div>
-      <div class="impact">Developer Agent 标志着 dbt 从手动编写转换逻辑向 AI 辅助生成数据管道的模式迁移。新语义层规范的简化使 LLM 更容易生成符合规范的语义模型定义。</div>
-    </div>
-
-    <div class="item">
-      <h3>2. Snowflake Accelerate 2026 Japan 开幕：制造/金融行业 AI 落地案例集中展示</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/accelerate/japan/">Snowflake 官网</a></div>
-      <div class="body">
-        <p>Snowflake Accelerate 2026 Japan（5/26-29）今日开幕，覆盖制造/汽车、零售/运输、金融、科技四个行业赛道。Day 1 亮点：① <strong>DENSO 数据基盤演化</strong>——从 on-prem 到 Snowflake 的全社 DX 基盤；② <strong>三菱电机零调优 RAG</strong>——通过 Cortex Search 将技术设计文档 RAG 构建从数月缩短至数日，IT 未经验者短期内构建生产级系统；③ 金融庁那須翔讨论 AI 治理讨论纸 1.1 改订背景。</p>
+      <div class="impact">
+        <strong>So What：</strong>数据分析从"一问一答"升级为"一问多步自动完成"，且率先在监管敏感行业（医疗/金融/政府）落地。Databricks 将 Agent 模式视为企业级标准能力而非实验性功能，对同类产品形成定义性压力。
       </div>
-      <div class="impact">三菱电机的"零调优 RAG"案例值得关注——如果模式可复制，意味着 AI-augmented knowledge base 的部署门槛正在被平台能力拉平。</div>
     </div>
   </div>
 
-  <!-- Section C: 观点与洞察 -->
-  <div class="section">
-    <div class="section-header">
-      <span class="badge badge-c">C</span>
-      <h2>观点与洞察</h2>
-    </div>
-
-    <div class="item">
-      <h3>1. Acceldata 发布自治数据与 AI 平台，CEO 宣告"后 Lakehouse 时代"</h3>
-      <div class="source">来源：<a href="https://en.wedoany.com/shortnews/175174.html">Wedoany 2026-05-25</a> / Informatica World 2026 (Las Vegas, 5/19)</div>
-      <div class="body">
-        <p>数据可观测性厂商 Acceldata 在 Informatica World 2026 发布：① <strong>xLake 推理引擎 GA</strong>——支持跨多云/本地的统一推理调度；② <strong>Agentic Data Management</strong>——自治 Agent 自动检测异常/诊断根因/执行修复；③ <strong>MCP 协议原生支持</strong>——MCP 兼容 Agent 可标准化访问企业数据。CEO Rohit Choudhary 核心判断："Lakehouse 将孤岛从多处搬到单一云内，并未消除。AI Agent 需要直接访问分散在多云/主权环境的数据。"</p>
-      </div>
-      <div class="impact">"后 Lakehouse"作为营销口号有简化之嫌，但核心论点——Agent 需要联邦化数据访问——与 Gartner 5 月伦敦 D&A Summit 强调的"context as critical infrastructure"方向一致。客户含 DBS Bank/Walmart-owned PhonePe/Qualcomm。</div>
-    </div>
-  </div>
-
-  <!-- Section D: 投融资 -->
+  <!-- Section D: Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
-      <h2>投融资</h2>
+      <h2>Capital & Corporate</h2>
     </div>
-
     <div class="item">
-      <h3>1. Moment $78M B 轮：前 Citadel 量化交易员打造的 AI 交易自动化平台</h3>
-      <div class="source"><span class="funding-tag tag-funding">融资</span>来源：<a href="https://www.theblockbeats.info/flash/346771">Bloomberg via BlockBeats 2026-05-20</a></div>
+      <h3><span class="funding-tag tag-funding">融资</span>OpenRouter $113M Series B — AI 推理路由</h3>
+      <div class="source">Business Wire · 2026-05-26</div>
       <div class="body">
-        <p>金融科技公司 Moment 完成 $78M B 轮融资，Index Ventures 领投，a16z 和 Avra 跟投。前 Citadel Securities 量化交易员创立，核心产品为 AI 驱动的固定收益与股票交易自动化系统。已签下 Edward Jones、LPL Financial、Hightower Advisors 等大型财富管理合作伙伴。上轮（2025.7）$36M，一年内融资额翻倍。</p>
+        <table class="funding-table">
+          <tr><th>轮次</th><td>Series B</td></tr>
+          <tr><th>金额</th><td>$113M</td></tr>
+          <tr><th>估值</th><td>~$1.3B</td></tr>
+          <tr><th>领投</th><td>CapitalG（Alphabet）</td></tr>
+          <tr><th>战投</th><td>Snowflake Ventures, Databricks Ventures, MongoDB Ventures, NVentures (NVIDIA), ServiceNow Ventures</td></tr>
+          <tr><th>财务</th><td>a16z, Menlo Ventures</td></tr>
+          <tr><th>用途</th><td>推理路由基础设施扩展</td></tr>
+        </table>
+        <p style="margin-top:10px;font-size:13px;color:#5f6368;">（与 A 板块第 1 条为同一事件，此处补充结构化融资信息）</p>
       </div>
-      <div class="impact">AI 交易基础设施需求从量化机构向主流资管扩散——客户是管理万亿美元资产的传统财富管理巨头，而非加密原生机构。</div>
     </div>
   </div>
 
@@ -254,29 +290,33 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
-
     <div class="item">
-      <h3>1. 国家数据局印发《2026年数字经济发展工作要点》：强化数据赋能 AI</h3>
-      <div class="source">来源：<a href="https://cpc.people.com.cn/n1/2026/0521/c64387-40724476.html">人民日报 2026-05-21</a> / <a href="https://www.nda.gov.cn/sjj/swdt/mtsy/0523/20260523215954623606433_pc.html">央视 2026-05-23</a></div>
+      <h3><span class="funding-tag tag-earnings">财报</span>Snowflake Q1 FY2027 财报今日盘后发布</h3>
       <div class="body">
-        <p>八大重点任务第三项"强化数据赋能人工智能发展"提出六大专项行动。两批先行先试已覆盖 15 行业/43 城市/1.9 万生态主体/3.8 万数据产品/270+ 应用场景，技术路线含隐私计算/区块链/可信数据空间/数据编织/数据网格/本体论。</p>
+        <p>Snowflake 将于美东时间 5月27日下午 2 点（北京时间 5月28日凌晨 2 点）公布截至 2026年4月30日的 Q1 FY2027 财报。市场一致预期：营收约 $13.2 亿（YoY +31%），调整后 EPS 约 $0.32。</p>
+        <p><strong>关注重点：</strong>AI 工作负载（Cortex/Snowpark）对产品营收增速的贡献比例、NRR 是否维持 125%+、Summit 26（6/1-4）前的产品预告信号。</p>
       </div>
-      <div class="impact">数据基础设施从试点进入规模化验证。对数据平台厂商而言，合规能力和政务数据对接将成为国内市场差异化因素。</div>
     </div>
-
     <div class="item">
-      <h3>2. AI 基础设施投融资月度速览：2026年5月 $364B / 347 笔</h3>
-      <div class="source">来源：<a href="https://inforcapital.com/blog/2026-05-23-ai-startups-raised-364-billion-this-month-heres-where-the-capital-went/">InforCapital 2026-05-23</a></div>
+      <h3>Snowflake Summit 26（6月1-4日，旧金山）</h3>
       <div class="body">
-        <p>5 月 AI 创业投融资：347 笔/$364B，AI Vertical Platforms 180 笔领跑，AI Agents 独立品类达 113 笔。Seed 轮均值 ~$10M，Series A 均值 $233M。美国 42%/UK 39 笔/中国 35 笔。</p>
+        <p>Anthropic CEO Daniela Amodei 受邀参加主题演讲。Snowflake 已预告将展示 Intelligence 和 Cortex Code 在 Agentic Enterprise 场景的扩展。6 月初将是 Data+AI 领域密集发布期（叠加 Databricks Data+AI Summit 紧随其后）。</p>
       </div>
-      <div class="impact">AI Agent 两年前几乎不存在，现已成为独立资本品类（113 笔/月），印证 Agent 化不只是产品功能演进而是催生了独立创业生态层。</div>
+    </div>
+    <div class="item">
+      <h3>Confluent Platform 8.2 + dbt Adapter for Flink（5月19日 Current London）</h3>
+      <div class="body">
+        <p>上周在 Current London 发布的重要更新：Queues for Kafka（原生队列语义）、Flink SQL GA、dbt adapter for Confluent Flink、Materialized Tables GA。dbt adapter 尤其值得关注——流批一体的 dbt 工作流覆盖从仓库延伸到实时流处理。</p>
+      </div>
     </div>
   </div>
 
+  <div class="editor-note">
+    📌 <strong>编辑说明：</strong>本期窗口覆盖周一晚至周二早间（5月26日周一为美国阵亡将士纪念日，美股休市），数据平台领域新产品发布和重大新闻较少。核心条目集中在资本市场（OpenRouter 融资）和产品 Agent 化进展（Databricks Genie Code）。
+  </div>
+
   <div class="footer">
-    <p>Data+AI 全球日报 · 第 26 期</p>
-    <p>信息截至北京时间 2026-05-26 08:00</p>
+    <p>Data+AI 全球日报 v4.2 · 信息截至北京时间 2026-05-27 08:00</p>
   </div>
 
 </div>
