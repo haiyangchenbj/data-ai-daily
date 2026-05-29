@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-28</title>
+<title>Data+AI 全球日报 | 2026-05-29</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -29,6 +29,7 @@
   }
   .container { max-width: 900px; margin: 0 auto; }
 
+  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -40,6 +41,7 @@
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
 
+  /* Summary Box */
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -61,6 +63,7 @@
     font-weight: 500;
   }
 
+  /* Section */
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -94,6 +97,7 @@
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
 
+  /* Item */
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -113,7 +117,8 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
-  .item .body p { margin-bottom: 8px; }
+  .item .body ul { padding-left: 18px; margin: 8px 0; }
+  .item .body li { margin-bottom: 4px; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -123,6 +128,7 @@
     color: #1a56db;
   }
 
+  /* 投融资特殊样式 */
   .funding-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -135,17 +141,8 @@
   .tag-earnings { background: #e3f2fd; color: #1565c0; }
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
   .tag-ma { background: #e8f5e9; color: #2e7d32; }
-  .tag-upcoming { background: #fff3e0; color: #e65100; }
-  .tag-downgraded { background: #f5f5f5; color: #616161; }
-  .tag-followup { background: #e0f7fa; color: #006064; }
 
-  .empty-note {
-    color: var(--text-secondary);
-    font-style: italic;
-    font-size: 14px;
-    padding: 8px 0;
-  }
-
+  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
@@ -153,6 +150,7 @@
     color: var(--text-secondary);
   }
 
+  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -166,18 +164,18 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-28 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-05-29 周五 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>AI 数据云的"基础+智能体+算力"三件套同日落地，Snowflake 押注重于历次任何一次</li>
-      <li>数据平台厂商正用十年期算力承诺锁定云上 AI 工作负载，竞争从产品转向基础设施合约</li>
-      <li>智能体进入企业前线后，治理与身份控制成为下一个被收购的关键能力层</li>
+      <li><strong>Starburst 发布 Enterprise Intelligence Platform + AIDA GA</strong> — 联邦查询引擎正式转型"企业智能平台"，AI Agent AIDA 进入正式可用，引入企业上下文层减少 AI 幻觉，同步发布 Managed Icehouse 和 BYOC。</li>
+      <li><strong>OpenRouter 完成 $113M B 轮（$1.3B 估值）</strong> — CapitalG 领投，五家数据/AI 平台 Ventures 联合跟投；周处理 25 万亿 token，多模型路由成为独立基础设施品类。</li>
+      <li><strong>Daloopa 完成 $47M C 轮</strong> — 金融 AI 数据基础设施，MCP 连接器打通主流 AI 工具，结构化数据让 Agent 准确率最高提升 71pp。</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Snowflake 一日内同时释放财报、$60亿 AWS 算力承诺与 MCP 治理收购，背后是数据平台争夺 Agentic Enterprise 控制平面的关键节奏——单纯卖数据底座已不足以构建 moat，深度算力绑定+智能体动作治理才是下半场壁垒。
+      <strong>总判断：</strong>Starburst 从联邦查询工具升级为 AI Native 企业智能平台，是本日数据平台领域最重大战略事件。资本持续涌入推理路由（OpenRouter）和垂直数据层（Daloopa），"模型够强、数据不行"的行业共识正兑现为投资逻辑。
     </div>
   </div>
 
@@ -189,16 +187,22 @@
     </div>
 
     <div class="item">
-      <h3>1. Snowflake 同日释放三连击：Q1 FY27 财报超预期 + 收购 Natoma + 与 AWS 签 $60 亿五年算力协议</h3>
-      <div class="source">来源：<a href="https://investors.snowflake.com/news/news-details/2026/Snowflake-Reports-Financial-Results-for-the-First-Quarter-of-Fiscal-2027/default.aspx" target="_blank">Snowflake Q1 FY27 Results</a> · <a href="https://www.snowflake.com/en/blog/snowflake-acquire-natoma-governed-agentic-access" target="_blank">Snowflake-Natoma Acquisition Blog</a> · <a href="https://press.aboutamazon.com/2026/5/snowflake-expands-aws-collaboration-with-6b-commitment-to-accelerate-enterprise-agentic-ai-adoption" target="_blank">AWS-Snowflake $6B SCA</a></div>
+      <h3>Starburst 发布 Enterprise Intelligence Platform：AIDA GA + 企业上下文层 + Managed Icehouse</h3>
+      <div class="source">来源：<a href="https://www.starburst.io/press-releases/starburst-unveils-enterprise-intelligence-platform-giving-enterprises-a-faster-path-to-trusted-ai/" target="_blank">Starburst 官方新闻稿</a>（2026-05-28）</div>
       <div class="body">
-        <p>Snowflake 5/27 盘后同时发布三项重大公告：（1）FY27 Q1 产品收入 $13.34 亿同比 +34%、NRR 126%、$1M+ 客户达 779 家，全年产品收入指引上调至 $58.4 亿（+31%）；（2）签署收购企业级 MCP 平台 Natoma 的最终协议，将其身份治理与特权访问能力整合进 AI Data Cloud，让 Cortex Agents/Snowflake Intelligence/Cortex Code 通过统一 MCP 网关安全连接 Slack、Gmail、CRM、Jira 等企业系统；（3）与 AWS 签署多年期战略合作协议，承诺五年内在 AWS Graviton 算力与 AI GPU 上投入 $60 亿（Snowflake 史上最大基础设施承诺）。盘后股价一度暴涨 37%。</p>
+        <p>在年度 AI+Datanova 大会上，Starburst 宣布产品定位从联邦查询引擎升级为 Enterprise Intelligence Platform，核心发布：</p>
+        <ul>
+          <li><strong>AIDA GA</strong>：AI 助手正式可用，支持自然语言查询分布式数据、生成可视化、通过 MCP 连接第三方工具触发工作流。交付方式覆盖 Galaxy（云托管）和 SEP 480 LTS（自管理）。</li>
+          <li><strong>企业上下文层</strong>：从 Collibra/Tableau 等工具抽取元数据和语义关系为图结构，让 AI 理解"同一指标在不同部门的真实含义"。</li>
+          <li><strong>AI-Ready Data Products</strong>：Data Products as Code（Preview）+ Automatic Metadata Enrichment（GA）。</li>
+          <li><strong>Managed Icehouse</strong>：Icehouse Ingest（批流摄取）+ LakeOps（自动表压缩/快照清理/查询调优）。</li>
+          <li><strong>BYOC 部署</strong>：客户自管理基础设施，面向金融/医疗合规场景。</li>
+        </ul>
       </div>
       <div class="impact">
-        <strong>为什么对数据平台重要：</strong>三件事必须放在一起看。财报证明 Snowflake 的"AI 拉动核心数据平台"叙事已被收入数据验证（Cortex Code 已渗透 7100+ 账户、Snowflake Intelligence 账户环比翻倍）；Natoma 收购填补的是 Agentic Enterprise 最后的治理短板——MCP 网关层的身份与策略控制；$60 亿 Graviton+GPU 承诺则把 AI 工作负载的算力供给在合约层面绑死在 AWS 上。这是一次完整的"AI Data Cloud 操作系统"叙事兑现：上层 Agent + 中层数据治理 + 底层算力锁定。Databricks 此前的 GTC 节奏被打乱，下周 Snowflake Summit 26 将进入更激进的产品推介窗口。
+        <strong>So What：</strong>Starburst 的转型路径——从"跨源查询"到"企业智能平台"——与 Databricks/Snowflake 的 AI 平台化趋势一致，但差异化押注"数据不动、语义统一"。AIDA 通过 MCP 实现 Agent 互操作的设计值得关注：它不只是 text-to-SQL chatbot，而是能触发外部系统操作的 Agentic 控制面。
       </div>
     </div>
-
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -209,16 +213,23 @@
     </div>
 
     <div class="item">
-      <h3>1. Databricks 上线 Google Drive 托管摄取连接器 Beta + Serverless Notebook 全局超时管控</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/may" target="_blank">Databricks May 2026 Release Notes</a></div>
+      <h3>Microsoft Fabric May 2026 更新：OneLake Security GA + Data Warehouse Monitor Preview</h3>
+      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/fabric/get-started/whats-new" target="_blank">Microsoft Fabric What's New</a>（2026-05 月度更新）</div>
       <div class="body">
-        <p>Databricks 5/27 在 Lakeflow Connect 中发布 Google Drive 托管摄取连接器 Beta 版，支持非结构化文件（二进制）与结构化文件（CSV/JSON/XML/Excel/Parquet/Avro/ORC）从 Google Drive 直接摄入 Delta 表，并支持文件元数据摄取。同日，工作区管理员获得 Serverless Notebook 默认执行超时配置入口（默认 2.5 小时），替代此前需要逐 notebook 手动 override 的方式，可在 Settings > Compute 集中调整以减少 Serverless 失控开销。</p>
+        <p>Fabric 五月 GA/Preview 要点：</p>
+        <ul>
+          <li><strong>OneLake Security GA + Data Access Roles GA</strong>：细粒度访问控制正式可用，支持文件夹/行/列级安全策略。</li>
+          <li><strong>OneLake Catalog in Microsoft Foundry GA</strong>：目录原生嵌入 Foundry 平台。</li>
+          <li><strong>Data Warehouse Monitor（Preview）</strong>：运行时监控仪表盘。</li>
+          <li><strong>Configurable Data Retention（Preview）</strong>：可配置数据保留策略。</li>
+          <li><strong>Resource Profiles in Data Engineering（Preview）</strong>：自定义 Spark 资源配置。</li>
+        </ul>
+        <p>此外，Microsoft 明确 Fabric Data Warehouse 作为 Synapse Dedicated SQL Pool 现代化路径，以及 dbt + Fabric 战略合作持续推进。</p>
       </div>
       <div class="impact">
-        <strong>对数据平台的影响：</strong>Lakeflow Connect 在 5 月密集补齐了 Google Drive、HubSpot（GA）、Outlook、GitHub、Smartsheet 等 SaaS 与协作类源连接器矩阵，意图明显——把企业非结构化协作数据（邮件、文档、表单）作为 Agentic AI 的上下文池统一收编进 Lakehouse，与 Snowflake 通过 Natoma 收购走的是不同路径但同一目标。Serverless Notebook 全局超时设置则是 FinOps 的小但重要的能力，工程团队今后可以在租户层面统一约束 AI 时代下不可控的探索性算力消耗。
+        <strong>So What：</strong>OneLake Security GA 标志着 Fabric 在企业级治理能力上补齐最后一块拼图。对于仍在犹豫 P-SKU 向 F-SKU 迁移的企业，本月 GA 的安全/治理能力使迁移可行性显著提升。
       </div>
     </div>
-
   </div>
 
   <!-- Section C: Views & Research -->
@@ -229,16 +240,19 @@
     </div>
 
     <div class="item">
-      <h3>1. Snowflake 用户实测：Adaptive Compute 在稳定 ETL 负载上反而劣于调优后的 Standard Warehouse</h3>
-      <div class="source">来源：<a href="https://dev.to/swaroop_krishna_e2f4b83b2/evaluating-adaptive-warehouses-for-etl-why-we-reverted-to-standard-239f" target="_blank">Evaluating Adaptive Warehouses for ETL: Why We Reverted to Standard (dev.to)</a></div>
+      <h3>The Futurum Group：企业 AI 规模化瓶颈在数据治理而非模型</h3>
+      <div class="source">来源：<a href="https://www.starburst.io/press-releases/starburst-unveils-enterprise-intelligence-platform-giving-enterprises-a-faster-path-to-trusted-ai/" target="_blank">Starburst 新闻稿引述</a>（2026-05-28）</div>
       <div class="body">
-        <p><strong>核心观点：</strong>Snowflake 用户在 5/12-5/27 周期中将白银层 ETL Warehouse（约 2000 查询/日、负载稳定可预测）从 Standard 切换至预览版的 Adaptive Compute 模式，16 天后回退。实测数据：排队率从 ~0% 升至 3.4% 仍在攀升、P95 耗时从 14.1s 升至 20.4s、单查询 credits 从 0.0071 升至 0.0093（贵 31%）、平均排队时长从 3.3ms 升至 1543ms。作者结论：Adaptive Compute 设计假设是应对突发不可预测负载（dashboard、ad-hoc 分析），对节奏稳定的生产 ETL 管道反而是劣化方案，QUERY_THROUGHPUT_MULTIPLIER 锁在 3 倍这一限制成为关键瓶颈。</p>
+        <p>The Futurum Group VP &amp; Practice Lead Brad Shimmin 评论指出：</p>
+        <blockquote style="border-left: 3px solid #dadce0; padding-left: 12px; margin: 10px 0; color: #5f6368; font-style: italic;">
+          "Enterprises are realizing that scaling AI depends less on the models and more on access to trusted, governed data across complex hybrid environments. The industry is shifting toward architectures that reduce data movement while preserving governance and business context."
+        </blockquote>
+        <p>Mavvrik 2025 研究数据佐证：84% 的企业报告 AI 成本侵蚀毛利超 6%，原因不在于 AI 不工作，而在于底层数据碎片化导致信任缺失。</p>
       </div>
       <div class="impact">
-        <strong>映射到数据平台的判断：</strong>这是一线工程团队对 Snowflake 推力旗舰算力新模型的少见公开打脸。说明两件事：（1）"AI 时代下一代弹性算力"的市场叙事和具体工作负载之间存在显著 gap，预览版本不应直接上生产 ETL；（2）数据平台的算力定价模型从"按 size 买"转向"按 query 买"是趋势，但在稳定批处理场景的成本表现仍未跑赢传统模式——结合 Snowflake 此次 $60 亿 AWS 承诺中"延展 Graviton 价格性能优势"的表述，平台方仍在向用户兑现传统按规格买算力的性价比承诺。CIO 在评估"Adaptive/Serverless"类新算力产品时需要按工作负载类型分别建模，不要一刀切迁移。
+        <strong>So What：</strong>"模型够强、数据不行"正从行业直觉变为量化共识。数据平台竞争焦点从"谁的模型更快"转向"谁能统一语义、减少数据移动"——这正是 Starburst/Databricks Unity Catalog/Microsoft OneLake 的共同方向。
       </div>
     </div>
-
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -249,12 +263,40 @@
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-earnings">财报发布</span>Snowflake Q1 FY27 财报已合并至 A 板块</h3>
+      <h3><span class="funding-tag tag-funding">投融资</span>OpenRouter 完成 $113M B 轮，估值 $1.3B</h3>
+      <div class="source">来源：<a href="https://openrouter.ai/announcements/series-b" target="_blank">OpenRouter 官方公告</a>（2026-05-28）</div>
       <div class="body">
-        <p>Snowflake Q1 FY27 财报（产品收入 $13.34 亿同比 +34%、全年指引上调至 $58.4 亿）与 Natoma 收购、AWS $60 亿合作同日发布且互为支撑，作为整体 Top Signal 处理，此处不重复展开。详见 A 板块第 1 条。</p>
+        <ul>
+          <li><strong>轮次：</strong>Series B</li>
+          <li><strong>金额：</strong>$113M</li>
+          <li><strong>领投：</strong>CapitalG（Alphabet 旗下成长基金）</li>
+          <li><strong>跟投：</strong>NVentures、ServiceNow Ventures、MongoDB Ventures、Snowflake Ventures、Databricks Ventures、AMP PBC、Pace Capital</li>
+          <li><strong>现有投资人：</strong>a16z、Menlo Ventures</li>
+          <li><strong>估值：</strong>~$1.3B</li>
+          <li><strong>业务数据：</strong>周处理 25 万亿 token（6 个月前 5 万亿，5x 增长）；400+ 模型、800 万+ 开发者</li>
+        </ul>
+      </div>
+      <div class="impact">
+        <strong>So What：</strong>多模型推理路由从开发者工具演化为企业级基础设施。CapitalG + 五家数据/AI 平台 Ventures 联合跟投的罕见组合，表明大厂认可"模型网关"作为独立中间层的长期价值。
       </div>
     </div>
 
+    <div class="item">
+      <h3><span class="funding-tag tag-funding">投融资</span>Daloopa 完成 $47M C 轮融资</h3>
+      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/daloopa-raises-47-million-series-c-to-power-the-data-layer-behind-ai-driven-finance-302784528.html" target="_blank">PR Newswire</a>（2026-05-28）</div>
+      <div class="body">
+        <ul>
+          <li><strong>轮次：</strong>Series C</li>
+          <li><strong>金额：</strong>$47M</li>
+          <li><strong>领投：</strong>Brighton Park Capital</li>
+          <li><strong>跟投：</strong>Squarepoint Capital、Touring Capital、Nexus Venture Partners</li>
+          <li><strong>亮点：</strong>覆盖 5,500+ 全球上市公司结构化数据；MCP 连接器接入 ChatGPT/Claude/Perplexity/Rogo；Benchmark 显示 AI Agent 准确率最高提升 71pp；新推 Partner API + Snowflake/Databricks/S3 云原生交付</li>
+        </ul>
+      </div>
+      <div class="impact">
+        <strong>So What：</strong>Daloopa 证明金融垂直领域"AI 瓶颈是数据质量"尤为尖锐。MCP 连接器让结构化数据直接进入主流 AI 工具，是数据产品从"下载 Excel"到"Agent-ready API"的范式转移。
+      </div>
+    </div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -265,37 +307,24 @@
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-upcoming">预告</span>Snowflake Summit 26 将于 6/1-4 旧金山举办，Anthropic CEO Daniela Amodei 出席</h3>
-      <div class="source">来源：<a href="https://investors.snowflake.com/news/news-details/2026/Snowflake-Makes-AI-Real-for-Businesses-at-Snowflake-Summit-26-Featuring-Anthropic's-Daniela-Amodei-and-Other-Industry-Leaders/default.aspx" target="_blank">Snowflake Summit 26</a></div>
+      <h3>Snowflake Summit 26 即将召开（6/1-4，旧金山）</h3>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>紧接今日三连击之后的产品发布主舞台，Snowflake CEO Sridhar Ramaswamy 已暗示 "More to share at Snowflake Summit 26"。Natoma 集成路线图、Cortex Code 跨平台扩展、Snowflake Intelligence 移动端 + Deep Research GA 时点都很可能在 Summit 上明确。Anthropic 出席亦预示 Claude 与 Snowflake 数据生态的深度合作可能官宣。</p>
-        <p><strong>需要等待什么信号确认：</strong>6/1 主题演讲实录、Cortex 系列产品的 GA 时间表、Natoma 收购完成节点（受常规交割条件约束）。</p>
+        <p>Snowflake 年度开发者大会将于 6 月 1-4 日在旧金山举行，紧接上周超预期 Q1 FY27 财报。预计发布 AI/ML 平台新功能、Iceberg 深度集成进展、Natoma 收购后 Agent 产品路线图。建议持续关注。</p>
       </div>
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-followup">跟踪</span>国家数据局 5/27 启动 2026 年"数据要素×"大赛 + 深入推进数字中国建设专题研究班开班</h3>
-      <div class="source">来源：<a href="https://www.nda.gov.cn/" target="_blank">国家数据局官网</a></div>
+      <h3>Core42 获 HSBC $550M 结构化贸易融资扩展 AI 基础设施</h3>
+      <div class="source">来源：<a href="https://www.core42.ai/resources/news/core42-raises-usd-550-million-from-hsbc-to-scale-global-ai-infrastructure" target="_blank">Core42 官方</a>（2026-05-21 公告）</div>
       <div class="body">
-        <p><strong>为什么值得继续看：</strong>2026 年是《"数据要素×"三年行动计划（2024-2026）》收官年，本届大赛的赛道设置与重点方向将折射出政策侧对数据要素价值释放的最后一公里期望。同日开班的"深入推进数字中国建设专题研究班"在深圳举办，国家数据局局长刘烈宏出席，是政策推进节点性信号。</p>
-        <p><strong>需要等待什么信号确认：</strong>大赛具体赛道方向公告、专题研究班的政策文件输出、行业高质量数据集建设实施方案是否近期落地（征求意见稿已结束）。</p>
+        <p>UAE 主权 AI 基础设施运营商 Core42（G42 旗下）通过 HSBC 两笔非稀释融资（$240M 2月 + $310M 5月）共获 $5.5 亿，用于加速美国和欧洲 AI 云/算力部署。代表 AI 基础设施融资模式创新——用结构化贸易金融替代股权稀释，以长期合约需求作为信用支撑。</p>
       </div>
     </div>
-
-    <div class="item">
-      <h3><span class="funding-tag tag-downgraded">降级</span>USEReady 发布 SemaBridge：跨 BI 平台与 Snowflake/Databricks/Fabric 的语义互操作层</h3>
-      <div class="source">来源：<a href="https://www.einpresswire.com/article/915430518/useready-launches-semabridge-to-unify-business-semantics-across-snowflake-power-bi-and-enterprise-ai" target="_blank">USEReady SemaBridge Launch (EIN Presswire)</a></div>
-      <div class="body">
-        <p><strong>为什么值得继续看：</strong>SemaBridge 直接命中"语义漂移"问题——同一指标在 Power BI、Tableau、Cortex Analyst、Snowflake Semantic Views 中给出不同值，是 AI Agent 落地企业数据栈的高频卡点。方向价值高，但目前仅有厂商发布稿、缺第三方验证与企业实际部署案例。</p>
-        <p><strong>需要等待什么信号确认：</strong>Snowflake Summit 26 期间是否有联合发布、首批典型客户落地案例、与 Databricks Unity Catalog/Microsoft Fabric 的实际兼容深度。</p>
-      </div>
-    </div>
-
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-05-28 08:00</p>
+    <p>信息截至北京时间 2026-05-29 08:00</p>
   </div>
 
 </div>
