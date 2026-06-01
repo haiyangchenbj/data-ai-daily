@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data+AI 全球日报 | 2026-06-01</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --border: #dadce0;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+    --teal: #00897b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 32px 40px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+  }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .header .date { font-size: 14px; opacity: 0.85; }
+  .summary-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-size: 15px; }
+  .summary-box .verdict {
+    background: var(--primary-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+  .badge-a { background: var(--accent); }
+  .badge-b { background: var(--primary); }
+  .badge-c { background: var(--green); }
+  .badge-d { background: var(--teal); }
+  .badge-e { background: var(--orange); }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+  .item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .item .source {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .item .source a { color: var(--primary); text-decoration: none; }
+  .item .source a:hover { text-decoration: underline; }
+  .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .impact {
+    background: #f0f7ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #1a56db;
+  }
+  .funding-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section, .summary-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Data+AI 全球日报</h1>
+    <div class="date">2026-06-01 周一 · 信息窗口 72 小时（05-29 ~ 06-01）</div>
+  </div>
+
+  <div class="summary-box">
+    <h2>今日最重要的 3 个变化</h2>
+    <ol>
+      <li>Anthropic 完成创纪录融资，估值逼近万亿美元，AI 公司估值天花板被彻底改写</li>
+      <li>ClickHouse 年收入三倍增长并发布智能体分析产品，数据基础设施进入 AI 原生时代</li>
+      <li>国家大基金首次跨界领投 DeepSeek，中国 AI 模型层获得国家级资本背书</li>
+    </ol>
+    <div class="verdict">
+      <strong>总判断：</strong>AI 基础设施层的资本密度和产品成熟度同步跃升，数据平台从"服务AI"转向"内嵌AI"，头部玩家估值正以季度为单位翻倍，行业进入产业化加速的临界点。
+    </div>
+  </div>
+
+  <!-- Section A -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals</h2>
+    </div>
+
+    <div class="item">
+      <h3>1. Anthropic 完成 $650 亿 H 轮融资，估值 $9650 亿超越 OpenAI</h3>
+      <div class="source"><a href="https://www.stcn.com/article/detail/3933448.html">界面新闻</a> / <a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
+      <div class="body">Anthropic 5 月 28 日完成 H 轮 650 亿美元融资，投后估值 9650 亿美元，超越 OpenAI 成全球最贵 AI 公司。Altimeter/Dragoneer/Greenoaks/红杉领投，三星/SK 海力士/美光作为"战略基础设施合作伙伴"首次同时参投。年化收入突破 470 亿美元，预计 Q2 首次季度盈利。</div>
+      <div class="impact">采购格局：AI 模型估值触达万亿，存储/算力供应链与模型层深度绑定，企业需评估供应商长期算力保障能力。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. DeepSeek 首轮融资接近尾声：国家大基金领投，投前估值 $450 亿</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-28/doc-inhzmpqs0165713.shtml">财经杂志/新浪财经</a></div>
+      <div class="body">国家集成电路产业投资基金领投 DeepSeek 首轮融资，规模约 700 亿元，投前估值 450 亿美元。这是国家大基金 12 年来首次跨界投资纯大模型公司，标志政策资金从硬件制造延伸至模型与应用端。创始人梁文锋拟个人出资最高 200 亿元。</div>
+      <div class="impact">采购格局：国资入场意味着 DeepSeek 将获国产算力优先适配资源，对国内大模型供应商格局产生结构性影响。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. Google Cloud 为 BigQuery 引入跨引擎 Apache Iceberg 支持（预览）</h3>
+      <div class="source"><a href="https://www.infoq.com/news/2026/05/google-cross-engine-iceberg/">InfoQ</a> / <a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud</a></div>
+      <div class="body">Google 在 Iceberg Summit / Next '26 发布 BigQuery 跨引擎 Iceberg 预览：无服务器 REST Catalog 让 BigQuery/Spark/Flink/Trino 读写同一表；跨云查询 AWS/Azure/Databricks/Snowflake 目录；托管元数据与自动维护；统一权限；ObjectRefs 融合结构化+非结构化数据用于 AI 工作流。</div>
+      <div class="impact">架构：Iceberg 开放互操作进入"托管控制平面"竞争阶段，Lakehouse 选型从格式标准化推进到 Catalog 平台锁定的新博弈。</div>
+    </div>
+  </div>
+
+  <!-- Section B -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-b">B</span>
+      <h2>Product & Tech</h2>
+    </div>
+
+    <div class="item">
+      <h3>1. ClickHouse Open House 2026：ARR 突破 $2.5 亿，发布 Claude 驱动的 ClickHouse Agents</h3>
+      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a> / <a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
+      <div class="body">ClickHouse 5/27 公布 ARR 超 $2.5 亿（3x YoY）、客户 4000+。发布 ClickHouse Agents（Claude 驱动全托管智能体分析）、Managed Postgres 公测、全文搜索 GA、自动查询优化。客户含 Anthropic/Meta/Capital One/Tesla/Visa/Shopify。</div>
+      <div class="impact">性能/工程效率：OLAP 层原生集成 LLM 智能体，从"被查询"到"主动分析"的范式转变。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. ClickHouse 发布 CostBench：云数仓成本-性能开放基准</h3>
+      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a></div>
+      <div class="body">CostBench 按各厂商真实计费模型计算相同分析负载的每查询成本，覆盖 ClickHouse/Snowflake/Databricks/BigQuery/Redshift。ClickHouse 声称是唯一全量级"快且低成本"象限系统，领先最近竞品 23x。方法论与交互式浏览器已开放。</div>
+      <div class="impact">成本：为企业提供标准化云数仓 TCO 比较框架；厂商自建基准存在偏向，需关注独立验证。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. ClickHouse Cloud 五月更新：Python Client v1.0 + ClickStack SQL 告警</h3>
+      <div class="source"><a href="https://clickhouse.com/docs/whats-new/cloud">ClickHouse Changelog</a></div>
+      <div class="body">Python Client v1.0：原生异步客户端、SQLAlchemy 一等公民支持、Python 3.14 free-threading 实验支持。ClickStack 支持 SQL 原生图表与告警（窗口函数/CTE/异常检测）。组织消费告警 GA、Kafka ClickPipes Protobuf、新增 AWS 墨西哥 + Azure 澳东区域。</div>
+      <div class="impact">工程效率：异步+free-threading 对 AI 工作流集成（Pandas/PyArrow/Polars）意义重大。</div>
+    </div>
+
+    <div class="item">
+      <h3>4. Google Lakehouse for Iceberg 新增 Spark/Hive 与 Runtime Catalog 集成</h3>
+      <div class="source"><a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud Release Notes</a></div>
+      <div class="body">5/26 发布：Apache Spark 和 Hive 可使用 Lakehouse Runtime Catalog（原 BigLake Metastore）作为无服务器中心元数据层，实现 Spark+Hive+BigQuery 三引擎统一 Catalog 的无缝数据共享。</div>
+      <div class="impact">架构：补齐 Google Lakehouse 在 Hadoop 生态兼容性上的短板，降低存量 Hive 用户迁移摩擦。</div>
+    </div>
+  </div>
+
+  <!-- Section C -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research</h2>
+    </div>
+
+    <div class="item">
+      <h3>1. Dan Ives（Wedbush）：AI 行情仅是开端，数据层公司将成下一波受益者</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经/财联社</a></div>
+      <div class="body">Dan Ives 5/29 评论：AI 浪潮才刚开始，看好"第二三四层受益者"——数据层公司 Snowflake/Datadog/InnoData。预测纳指 2027 可望 30000 点。称 SpaceX/Anthropic/OpenAI 为"第四次工业革命三大支柱"。但 Zacks 首席策略师警告 IPO 潮或为市场顶部信号。</div>
+      <div class="impact">采购格局：分析师共识从模型公司扩展到数据基础设施，暗示企业数据平台支出将持续增长。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. 沙利文/业内：AI 产业进入"资本军备竞赛"，纯烧钱项目被摒弃</h3>
+      <div class="source"><a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
+      <div class="body">沙利文中国总监李庆：AI 行业进入资本军备竞赛，算力卡位/技术迭代/人才争夺均需持续大额投入，"不具备资本耐力和算力储备的玩家很容易被出清。"资本关注点从参数规模和概念叙事转向商业化落地能力。</div>
+      <div class="impact">治理：企业 AI 战略需评估供应商的资本持续性，避免押注无法持续投入的二线模型公司。</div>
+    </div>
+  </div>
+
+  <!-- Section D -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate</h2>
+    </div>
+
+    <div class="item">
+      <h3><span class="funding-tag tag-funding">投融资</span>1. Anthropic H 轮参投方全景：存储三巨头首次联合入局</h3>
+      <div class="source"><a href="https://www.163.com/dy/article/KU4A69ED0511838M.html">芯智讯</a></div>
+      <div class="body">投资方四层生态：顶级 VC/PE（Altimeter/Dragoneer/红杉/Coatue/GIC/黑石/淡马锡）；AWS $50 亿（承诺 $250 亿换 10 年 $1000 亿云消费）；存储三巨头绑定 HBM 供应；Google/Broadcom 5GW TPU 数据中心 + SpaceX GPU 算力。</div>
+    </div>
+
+    <div class="item">
+      <h3><span class="funding-tag tag-ipo">IPO</span>2. ClickHouse $150 亿估值冲刺 IPO：前 Snowflake IR 任 CFO</h3>
+      <div class="source"><a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
+      <div class="body">1 月 Series D $4 亿（Dragoneer 领投），估值 $150 亿（60x ARR）。聘 Snowflake 前 IR Jimmy Sexton 任 CFO。已完成 6 起收购含 Langfuse。与 SpaceX/OpenAI/Anthropic 共列科技 IPO 窗口候选。</div>
+    </div>
+  </div>
+
+  <!-- Section E -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-e">E</span>
+      <h2>Watchlist</h2>
+    </div>
+
+    <div class="item">
+      <h3>1.【预告】Snowflake Summit 26 今日开幕：主题"Making AI Real"</h3>
+      <div class="source"><a href="https://www.snowflake.com/en/">Snowflake.com</a></div>
+      <div class="body">6/1-4 旧金山。Opening Keynote 今日 5pm PDT，Snowflake CEO + Anthropic 联创共同出场。预计发布 SnowWork GA、新 Cortex 模型集成和智能体编排、Marketplace 扩展。Dan Ives 特别点名 Snowflake 为 AI 支出核心受益者。</div>
+    </div>
+
+    <div class="item">
+      <h3>2.【跟踪】科技 IPO 窗口开启：SpaceX 6/12 上市，OpenAI/Anthropic 年内跟进</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经</a></div>
+      <div class="body">SpaceX 6/12 纳斯达克 IPO（~$1.75 万亿），可能成史上最大 IPO。OpenAI/Anthropic 计划年内上市。Dan Ives 称三家为"第四次工业革命支柱"。Zacks 策略师警告可能是市场顶部信号。</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Powered by Data+AI Daily Brief v4.3</p>
+    <p>信息截至北京时间 2026-06-01 08:00</p>
+  </div>
+
+</div>
+</body>
+</html>
