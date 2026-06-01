@@ -36,6 +36,7 @@
 <!-- DAILY_START -->
 | 日期 | 链接 |
 |------|------|
+| 2026-06-01 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-06-01.html) |
 | 2026-05-29 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-05-29.html) |
 | 2026-05-28 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-05-28.html) |
 | 2026-05-27 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-05-27.html) |
@@ -94,7 +95,7 @@
 
 ## ⚙️ 系统架构
 
-- **引擎版本**: v4.2
+- **引擎版本**: v4.3
 - **工作流**: AI 搜索 → 撰写 → 审核 → 发布
 - **推送渠道**: 企业微信 + GitHub Pages
 - **发布时间**: 周一至周五，09:30 生成，10:00 推送 (UTC+8)
