@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-01</title>
+<title>Data+AI 全球日报 | 2026-06-01（含周末）</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -126,7 +126,9 @@
     margin-right: 6px;
   }
   .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
   .footer {
     text-align: center;
     padding: 20px;
@@ -145,23 +147,23 @@
 <div class="container">
 
   <div class="header">
-    <h1>Data+AI 全球日报</h1>
-    <div class="date">2026-06-01 周一 · 信息窗口 72 小时（05-29 ~ 06-01）</div>
+    <h1>📊 Data+AI 全球日报</h1>
+    <div class="date">2026-06-01（含周末）· 信息窗口 05-29 ~ 06-01</div>
   </div>
 
   <div class="summary-box">
-    <h2>今日最重要的 3 个变化</h2>
+    <h2>🔥 今日最重要的3点</h2>
     <ol>
-      <li>Anthropic 完成创纪录融资，估值逼近万亿美元，AI 公司估值天花板被彻底改写</li>
-      <li>ClickHouse 年收入三倍增长并发布智能体分析产品，数据基础设施进入 AI 原生时代</li>
-      <li>国家大基金首次跨界领投 DeepSeek，中国 AI 模型层获得国家级资本背书</li>
+      <li>数据平台核心厂商财报验证 AI 正从讲故事阶段进入可量化的消费增长</li>
+      <li>开放表格式的治理权争夺进入跨云阶段，Catalog 层成为新锁定点</li>
+      <li>中国大模型公司集体冲刺资本市场，国家资本首次直接下注纯模型层</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>AI 基础设施层的资本密度和产品成熟度同步跃升，数据平台从"服务AI"转向"内嵌AI"，头部玩家估值正以季度为单位翻倍，行业进入产业化加速的临界点。
+      <strong>总判断：</strong>本周数据平台行业呈现"上下游同时加速"态势——上游 AI 模型层的巨额融资将推动算力和存储需求爆发，下游数据平台层则通过跨引擎治理和 Agent 原生能力争夺企业数据入口，采购决策正从"选引擎"转向"选治理中台"。
     </div>
   </div>
 
-  <!-- Section A -->
+  <!-- Section A: Top Signals -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-a">A</span>
@@ -169,28 +171,34 @@
     </div>
 
     <div class="item">
-      <h3>1. Anthropic 完成 $650 亿 H 轮融资，估值 $9650 亿超越 OpenAI</h3>
-      <div class="source"><a href="https://www.stcn.com/article/detail/3933448.html">界面新闻</a> / <a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
-      <div class="body">Anthropic 5 月 28 日完成 H 轮 650 亿美元融资，投后估值 9650 亿美元，超越 OpenAI 成全球最贵 AI 公司。Altimeter/Dragoneer/Greenoaks/红杉领投，三星/SK 海力士/美光作为"战略基础设施合作伙伴"首次同时参投。年化收入突破 470 亿美元，预计 Q2 首次季度盈利。</div>
-      <div class="impact">采购格局：AI 模型估值触达万亿，存储/算力供应链与模型层深度绑定，企业需评估供应商长期算力保障能力。</div>
+      <h3>1. Snowflake Q1 FY27 产品收入同比增长 34%，签约 AWS $60 亿协议并收购 MCP 平台 Natoma</h3>
+      <div class="source">来源：<a href="https://investors.snowflake.com/news/news-details/2026/Snowflake-Reports-Financial-Results-for-the-First-Quarter-of-Fiscal-2027/default.aspx" target="_blank">Snowflake Investor Relations</a></div>
+      <div class="body">
+        <p>Snowflake 2027 财年 Q1（截至 2026-04-30）总营收 $13.9 亿（+33%），产品收入 $13.3 亿（+34%），创历史最强环比美元增量。RPO $92.1 亿（+38%），NRR 126%，百万美元客户 779 家（+29%）。全年产品收入指引从 $56.6 亿上调至 $58.4 亿。与 AWS 签署五年 $60 亿战略协议（含 Graviton 与 AI GPU 集成），签署收购企业 MCP 平台 Natoma 最终协议。盘后股价飙涨约 37%。</p>
+      </div>
+      <div class="impact">💡 产品收入加速且 RPO 增速高于收入增速，证明 AI workload 正在转化为有粘性的数据平台消费承诺。$60 亿 AWS 协议锁定算力-存储深度绑定路径；Natoma 收购标志 MCP 协议从开发者工具向企业 Agent 治理层渗透。</div>
     </div>
 
     <div class="item">
-      <h3>2. DeepSeek 首轮融资接近尾声：国家大基金领投，投前估值 $450 亿</h3>
-      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-28/doc-inhzmpqs0165713.shtml">财经杂志/新浪财经</a></div>
-      <div class="body">国家集成电路产业投资基金领投 DeepSeek 首轮融资，规模约 700 亿元，投前估值 450 亿美元。这是国家大基金 12 年来首次跨界投资纯大模型公司，标志政策资金从硬件制造延伸至模型与应用端。创始人梁文锋拟个人出资最高 200 亿元。</div>
-      <div class="impact">采购格局：国资入场意味着 DeepSeek 将获国产算力优先适配资源，对国内大模型供应商格局产生结构性影响。</div>
+      <h3>2. Anthropic 完成 $650 亿 H 轮融资，投后估值 $9650 亿超越 OpenAI</h3>
+      <div class="source">来源：<a href="https://www.anthropic.com/news/series-h" target="_blank">Anthropic 官方新闻稿</a></div>
+      <div class="body">
+        <p>Anthropic 5 月 28 日宣布完成 $650 亿 H 轮融资，由 Altimeter Capital、Dragoneer、Greenoaks 和红杉资本领投，投后估值 $9650 亿。年化收入突破 $470 亿。同时签署与 Amazon 5GW 新容量、Google+Broadcom 5GW TPU 容量协议。存储三巨头美光、三星、SK 海力士作为战略伙伴参投。</p>
+      </div>
+      <div class="impact">💡 $470 亿 ARR 意味着 Claude 正嵌入企业核心工作流，10GW 算力协议推动对 HBM、高性能存储和数据管道的天量需求。存储巨头入股标志 AI 模型层与数据基础设施供应链深度耦合。</div>
     </div>
 
     <div class="item">
-      <h3>3. Google Cloud 为 BigQuery 引入跨引擎 Apache Iceberg 支持（预览）</h3>
-      <div class="source"><a href="https://www.infoq.com/news/2026/05/google-cross-engine-iceberg/">InfoQ</a> / <a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud</a></div>
-      <div class="body">Google 在 Iceberg Summit / Next '26 发布 BigQuery 跨引擎 Iceberg 预览：无服务器 REST Catalog 让 BigQuery/Spark/Flink/Trino 读写同一表；跨云查询 AWS/Azure/Databricks/Snowflake 目录；托管元数据与自动维护；统一权限；ObjectRefs 融合结构化+非结构化数据用于 AI 工作流。</div>
-      <div class="impact">架构：Iceberg 开放互操作进入"托管控制平面"竞争阶段，Lakehouse 选型从格式标准化推进到 Catalog 平台锁定的新博弈。</div>
+      <h3>3. Google Cloud 预览 BigQuery 跨引擎 Apache Iceberg 支持，统一治理跨云 Lakehouse</h3>
+      <div class="source">来源：<a href="https://finance.sina.com.cn/wm/2026-05-31/doc-inhztyms6452694.shtml" target="_blank">Google Cloud Blog / InfoQ 报道</a></div>
+      <div class="body">
+        <p>Google Cloud 5 月 31 日正式预览 BigQuery 跨引擎 Iceberg 支持：同一 Iceberg 表可由 BigQuery、Spark、Flink、Trino 等多引擎直接读写无需复制数据。核心能力包括托管元数据与自动表维护、跨 AWS/Azure/Databricks/Snowflake 的 Catalog 查询、统一 IAM 权限管控、ObjectRefs 多模态数据引用。</p>
+      </div>
+      <div class="impact">💡 Google 将 BigQuery 从"分析引擎"重新定位为"跨云 Lakehouse 治理中台"。Catalog 和元数据管理成为新锁定层——"谁管 Catalog 谁掌握入口"的竞争格局正在 Google/Databricks Unity/Snowflake Polaris 三方间形成。</div>
     </div>
   </div>
 
-  <!-- Section B -->
+  <!-- Section B: Product & Tech -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-b">B</span>
@@ -198,57 +206,38 @@
     </div>
 
     <div class="item">
-      <h3>1. ClickHouse Open House 2026：ARR 突破 $2.5 亿，发布 Claude 驱动的 ClickHouse Agents</h3>
-      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a> / <a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
-      <div class="body">ClickHouse 5/27 公布 ARR 超 $2.5 亿（3x YoY）、客户 4000+。发布 ClickHouse Agents（Claude 驱动全托管智能体分析）、Managed Postgres 公测、全文搜索 GA、自动查询优化。客户含 Anthropic/Meta/Capital One/Tesla/Visa/Shopify。</div>
-      <div class="impact">性能/工程效率：OLAP 层原生集成 LLM 智能体，从"被查询"到"主动分析"的范式转变。</div>
+      <h3>1. 腾讯云数据库面向 Agent 全面升级：发布 Agent Memory、DatabaseClaw，TDSQL-B 架构级重构</h3>
+      <div class="source">来源：<a href="https://www.163.com/dy/article/KU62G6DU0514R9OJ.html" target="_blank">环球网 / 腾讯云官方</a></div>
+      <div class="body">
+        <p>5 月 29 日，腾讯云宣布数据库产品体系面向 Agent 场景全面升级。核心发布：(1) Agent Memory——三层记忆服务（短期压缩/长期沉淀/团队记忆），任务成功率+30%，最高节省 60% Token 成本，开源一周获 4000+ Stars；(2) DatabaseClaw——基于 OpenClaw 的数据库 AI Agent，覆盖 14 款产品 1600 API；(3) TDSQL-B 架构级重构，统一事务/向量/全文/图计算四引擎；(4) TDSQL-C 引入数据库 Branch 能力，1TB 秒级分叉。</p>
+      </div>
+      <div class="impact">💡 腾讯云将数据库从"被动存储"重新定位为"Agent 原生数据底座"。Agent Memory "团队记忆"概念在业内属首批产品化落地；TDSQL-B 四引擎统一对标多模数据库趋势，Database Branch 对标 Neon/PlanetScale。</div>
     </div>
 
     <div class="item">
-      <h3>2. ClickHouse 发布 CostBench：云数仓成本-性能开放基准</h3>
-      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a></div>
-      <div class="body">CostBench 按各厂商真实计费模型计算相同分析负载的每查询成本，覆盖 ClickHouse/Snowflake/Databricks/BigQuery/Redshift。ClickHouse 声称是唯一全量级"快且低成本"象限系统，领先最近竞品 23x。方法论与交互式浏览器已开放。</div>
-      <div class="impact">成本：为企业提供标准化云数仓 TCO 比较框架；厂商自建基准存在偏向，需关注独立验证。</div>
-    </div>
-
-    <div class="item">
-      <h3>3. ClickHouse Cloud 五月更新：Python Client v1.0 + ClickStack SQL 告警</h3>
-      <div class="source"><a href="https://clickhouse.com/docs/whats-new/cloud">ClickHouse Changelog</a></div>
-      <div class="body">Python Client v1.0：原生异步客户端、SQLAlchemy 一等公民支持、Python 3.14 free-threading 实验支持。ClickStack 支持 SQL 原生图表与告警（窗口函数/CTE/异常检测）。组织消费告警 GA、Kafka ClickPipes Protobuf、新增 AWS 墨西哥 + Azure 澳东区域。</div>
-      <div class="impact">工程效率：异步+free-threading 对 AI 工作流集成（Pandas/PyArrow/Polars）意义重大。</div>
-    </div>
-
-    <div class="item">
-      <h3>4. Google Lakehouse for Iceberg 新增 Spark/Hive 与 Runtime Catalog 集成</h3>
-      <div class="source"><a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud Release Notes</a></div>
-      <div class="body">5/26 发布：Apache Spark 和 Hive 可使用 Lakehouse Runtime Catalog（原 BigLake Metastore）作为无服务器中心元数据层，实现 Spark+Hive+BigQuery 三引擎统一 Catalog 的无缝数据共享。</div>
-      <div class="impact">架构：补齐 Google Lakehouse 在 Hadoop 生态兼容性上的短板，降低存量 Hive 用户迁移摩擦。</div>
+      <h3>2. Databricks Lakeflow Real-Time Mode 进入 Public Preview：端到端延迟低至 5ms</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes</a></div>
+      <div class="body">
+        <p>5 月 27 日，Databricks 宣布 Lakeflow Spark Declarative Pipelines 的 Real-Time Mode 进入 Public Preview。该模式可实现端到端延迟低至 5 毫秒，适用于欺诈检测、实时个性化、即时决策等场景。使用新增的 update_flow 装饰器，支持 update output mode 和无需 watermark 的有状态聚合。</p>
+      </div>
+      <div class="impact">💡 Databricks 在流批一体架构中补齐"极低延迟"短板。5ms 延迟直接对标 Flink 核心优势场景，Spark 生态用户无需独立流引擎即可覆盖实时决策类 workload。</div>
     </div>
   </div>
 
-  <!-- Section C -->
+  <!-- Section C: Views & Research -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-
     <div class="item">
-      <h3>1. Dan Ives（Wedbush）：AI 行情仅是开端，数据层公司将成下一波受益者</h3>
-      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经/财联社</a></div>
-      <div class="body">Dan Ives 5/29 评论：AI 浪潮才刚开始，看好"第二三四层受益者"——数据层公司 Snowflake/Datadog/InnoData。预测纳指 2027 可望 30000 点。称 SpaceX/Anthropic/OpenAI 为"第四次工业革命三大支柱"。但 Zacks 首席策略师警告 IPO 潮或为市场顶部信号。</div>
-      <div class="impact">采购格局：分析师共识从模型公司扩展到数据基础设施，暗示企业数据平台支出将持续增长。</div>
-    </div>
-
-    <div class="item">
-      <h3>2. 沙利文/业内：AI 产业进入"资本军备竞赛"，纯烧钱项目被摒弃</h3>
-      <div class="source"><a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
-      <div class="body">沙利文中国总监李庆：AI 行业进入资本军备竞赛，算力卡位/技术迭代/人才争夺均需持续大额投入，"不具备资本耐力和算力储备的玩家很容易被出清。"资本关注点从参数规模和概念叙事转向商业化落地能力。</div>
-      <div class="impact">治理：企业 AI 战略需评估供应商的资本持续性，避免押注无法持续投入的二线模型公司。</div>
+      <div class="body" style="color: var(--text-secondary); font-style: italic;">
+        今日无合格信息。窗口内未发现符合准入标准的一手分析师观点或机构研究报告发布。
+      </div>
     </div>
   </div>
 
-  <!-- Section D -->
+  <!-- Section D: Capital & Corporate -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
@@ -256,19 +245,27 @@
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-funding">投融资</span>1. Anthropic H 轮参投方全景：存储三巨头首次联合入局</h3>
-      <div class="source"><a href="https://www.163.com/dy/article/KU4A69ED0511838M.html">芯智讯</a></div>
-      <div class="body">投资方四层生态：顶级 VC/PE（Altimeter/Dragoneer/红杉/Coatue/GIC/黑石/淡马锡）；AWS $50 亿（承诺 $250 亿换 10 年 $1000 亿云消费）；存储三巨头绑定 HBM 供应；Google/Broadcom 5GW TPU 数据中心 + SpaceX GPU 算力。</div>
+      <h3><span class="funding-tag tag-funding">投融资</span>1. DeepSeek 首轮融资接近尾声：国家大基金领投，投前估值 $450 亿</h3>
+      <div class="source">来源：<a href="https://k.sina.com.cn/article_5953190046_162d6789e0670383qo.html" target="_blank">《财经》杂志</a></div>
+      <div class="body">
+        <p><strong>核心数据：</strong>融资规模约 ¥700 亿（≈$100 亿），投前估值 $450 亿（一个月前为 $200 亿），国家集成电路产业投资基金领投。</p>
+        <p>DeepSeek 成立三年首次对外融资，也是国家大基金 12 年来首次跨界投资纯大模型公司。5 月底融资名单基本敲定。创始人梁文锋表示将继续专注开源模型和 AGI 研究。若完成将成中国 AI 大模型史上首轮融资规模最大的公司。</p>
+      </div>
+      <div class="impact">💡 国家资本从芯片制造端延伸至模型应用端，形成"芯片→模型→应用"全栈布局。DeepSeek 适配国产昇腾芯片，规模化部署将拉动国产算力-存储-数据管道上下游需求。</div>
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-ipo">IPO</span>2. ClickHouse $150 亿估值冲刺 IPO：前 Snowflake IR 任 CFO</h3>
-      <div class="source"><a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
-      <div class="body">1 月 Series D $4 亿（Dragoneer 领投），估值 $150 亿（60x ARR）。聘 Snowflake 前 IR Jimmy Sexton 任 CFO。已完成 6 起收购含 Langfuse。与 SpaceX/OpenAI/Anthropic 共列科技 IPO 窗口候选。</div>
+      <h3><span class="funding-tag tag-ipo">IPO</span>2. MiniMax 与智谱双双启动 A 股科创板 IPO 辅导，冲刺"A+H"双平台</h3>
+      <div class="source">来源：<a href="https://www.cnfin.com/gs-lb/detail/20260530/4419645_1.html" target="_blank">新华财经</a></div>
+      <div class="body">
+        <p><strong>核心数据：</strong>MiniMax 5/29 与中信证券签署辅导协议，港股市值 HK$2635 亿；智谱 2 月聘国泰海通+中金推进辅导（已完成第四期），港股市值超 HK$7000 亿。</p>
+        <p>今年 1 月相继登陆港股后，两家头部大模型公司同步推进 A 股上市。"A+H"布局可对接国内算力、数据、应用生态及政策红利。</p>
+      </div>
+      <div class="impact">💡 大模型厂商加速资本化意味着 AI 基础设施采购规模将进一步扩大。A 股上市后获国内产业资本加持，有望加速国产数据平台生态适配与绑定。</div>
     </div>
   </div>
 
-  <!-- Section E -->
+  <!-- Section E: Watchlist -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-e">E</span>
@@ -276,15 +273,21 @@
     </div>
 
     <div class="item">
-      <h3>1.【预告】Snowflake Summit 26 今日开幕：主题"Making AI Real"</h3>
-      <div class="source"><a href="https://www.snowflake.com/en/">Snowflake.com</a></div>
-      <div class="body">6/1-4 旧金山。Opening Keynote 今日 5pm PDT，Snowflake CEO + Anthropic 联创共同出场。预计发布 SnowWork GA、新 Cortex 模型集成和智能体编排、Marketplace 扩展。Dan Ives 特别点名 Snowflake 为 AI 支出核心受益者。</div>
+      <h3>1. 【跟踪】Databricks Cross-engine ABAC：外部引擎访问 Unity Catalog 表可强制行列级权限</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/may" target="_blank">Databricks Release Notes</a></div>
+      <div class="body">
+        <p><strong>为什么值得继续看：</strong>5 月 28 日 Databricks 宣布 Cross-engine ABAC Beta——外部引擎读取 Unity Catalog 管理的 Delta/Iceberg 表时可服务端强制属性级访问控制、行过滤和列掩码。Unity Catalog 正从"Databricks 内部治理"向"跨引擎通用治理层"扩展。</p>
+        <p><strong>需要等待的信号：</strong>Beta 转 GA 时间、外部引擎范围是否扩展到 Snowflake/BigQuery、性能开销 benchmark。</p>
+      </div>
     </div>
 
     <div class="item">
-      <h3>2.【跟踪】科技 IPO 窗口开启：SpaceX 6/12 上市，OpenAI/Anthropic 年内跟进</h3>
-      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经</a></div>
-      <div class="body">SpaceX 6/12 纳斯达克 IPO（~$1.75 万亿），可能成史上最大 IPO。OpenAI/Anthropic 计划年内上市。Dan Ives 称三家为"第四次工业革命支柱"。Zacks 策略师警告可能是市场顶部信号。</div>
+      <h3>2. 【跟踪】ClickHouse ARR 突破 $2.5 亿，估值 $150 亿，正在准备 IPO</h3>
+      <div class="source">来源：业内报道综合</div>
+      <div class="body">
+        <p><strong>为什么值得继续看：</strong>ClickHouse 近期被多家媒体报道 ARR 突破 $2.5 亿，估值约 $150 亿，正在为 IPO 做准备。作为实时分析引擎领域核心玩家，上市将对 OLAP 市场格局和估值基准产生直接影响。</p>
+        <p><strong>需要等待的信号：</strong>IPO 路径（直接上市 vs 传统 IPO）、S-1 中云原生 vs 自部署收入拆分、客户集中度等关键指标披露。</p>
+      </div>
     </div>
   </div>
 
