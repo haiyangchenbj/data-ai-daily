@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-05-29</title>
+<title>Data+AI 全球日报 | 2026-06-01</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -28,8 +28,6 @@
     padding: 20px;
   }
   .container { max-width: 900px; margin: 0 auto; }
-
-  /* Header */
   .header {
     background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
     color: white;
@@ -40,8 +38,6 @@
   }
   .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
   .header .date { font-size: 14px; opacity: 0.85; }
-
-  /* Summary Box */
   .summary-box {
     background: var(--card-bg);
     border-left: 4px solid var(--accent);
@@ -62,8 +58,6 @@
     color: var(--primary);
     font-weight: 500;
   }
-
-  /* Section */
   .section {
     background: var(--card-bg);
     border-radius: 12px;
@@ -96,8 +90,6 @@
   .badge-d { background: var(--teal); }
   .badge-e { background: var(--orange); }
   .section-header h2 { font-size: 18px; font-weight: 600; }
-
-  /* Item */
   .item {
     padding: 16px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -117,8 +109,6 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
-  .item .body ul { padding-left: 18px; margin: 8px 0; }
-  .item .body li { margin-bottom: 4px; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -127,8 +117,6 @@
     font-size: 13px;
     color: #1a56db;
   }
-
-  /* 投融资特殊样式 */
   .funding-tag {
     display: inline-block;
     padding: 2px 8px;
@@ -138,19 +126,13 @@
     margin-right: 6px;
   }
   .tag-funding { background: #fce4ec; color: #c62828; }
-  .tag-earnings { background: #e3f2fd; color: #1565c0; }
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
-  .tag-ma { background: #e8f5e9; color: #2e7d32; }
-
-  /* Footer */
   .footer {
     text-align: center;
     padding: 20px;
     font-size: 12px;
     color: var(--text-secondary);
   }
-
-  /* Responsive */
   @media (max-width: 640px) {
     body { padding: 12px; }
     .header { padding: 24px; }
@@ -163,23 +145,23 @@
 <div class="container">
 
   <div class="header">
-    <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-05-29 周五 · 严格只包含过去24小时信息</div>
+    <h1>Data+AI 全球日报</h1>
+    <div class="date">2026-06-01 周一 · 信息窗口 72 小时（05-29 ~ 06-01）</div>
   </div>
 
   <div class="summary-box">
-    <h2>🔥 今日最重要的3个变化</h2>
+    <h2>今日最重要的 3 个变化</h2>
     <ol>
-      <li><strong>Starburst 发布 Enterprise Intelligence Platform + AIDA GA</strong> — 联邦查询引擎正式转型"企业智能平台"，AI Agent AIDA 进入正式可用，引入企业上下文层减少 AI 幻觉，同步发布 Managed Icehouse 和 BYOC。</li>
-      <li><strong>OpenRouter 完成 $113M B 轮（$1.3B 估值）</strong> — CapitalG 领投，五家数据/AI 平台 Ventures 联合跟投；周处理 25 万亿 token，多模型路由成为独立基础设施品类。</li>
-      <li><strong>Daloopa 完成 $47M C 轮</strong> — 金融 AI 数据基础设施，MCP 连接器打通主流 AI 工具，结构化数据让 Agent 准确率最高提升 71pp。</li>
+      <li>Anthropic 完成创纪录融资，估值逼近万亿美元，AI 公司估值天花板被彻底改写</li>
+      <li>ClickHouse 年收入三倍增长并发布智能体分析产品，数据基础设施进入 AI 原生时代</li>
+      <li>国家大基金首次跨界领投 DeepSeek，中国 AI 模型层获得国家级资本背书</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Starburst 从联邦查询工具升级为 AI Native 企业智能平台，是本日数据平台领域最重大战略事件。资本持续涌入推理路由（OpenRouter）和垂直数据层（Daloopa），"模型够强、数据不行"的行业共识正兑现为投资逻辑。
+      <strong>总判断：</strong>AI 基础设施层的资本密度和产品成熟度同步跃升，数据平台从"服务AI"转向"内嵌AI"，头部玩家估值正以季度为单位翻倍，行业进入产业化加速的临界点。
     </div>
   </div>
 
-  <!-- Section A: Top Signals -->
+  <!-- Section A -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-a">A</span>
@@ -187,25 +169,28 @@
     </div>
 
     <div class="item">
-      <h3>Starburst 发布 Enterprise Intelligence Platform：AIDA GA + 企业上下文层 + Managed Icehouse</h3>
-      <div class="source">来源：<a href="https://www.starburst.io/press-releases/starburst-unveils-enterprise-intelligence-platform-giving-enterprises-a-faster-path-to-trusted-ai/" target="_blank">Starburst 官方新闻稿</a>（2026-05-28）</div>
-      <div class="body">
-        <p>在年度 AI+Datanova 大会上，Starburst 宣布产品定位从联邦查询引擎升级为 Enterprise Intelligence Platform，核心发布：</p>
-        <ul>
-          <li><strong>AIDA GA</strong>：AI 助手正式可用，支持自然语言查询分布式数据、生成可视化、通过 MCP 连接第三方工具触发工作流。交付方式覆盖 Galaxy（云托管）和 SEP 480 LTS（自管理）。</li>
-          <li><strong>企业上下文层</strong>：从 Collibra/Tableau 等工具抽取元数据和语义关系为图结构，让 AI 理解"同一指标在不同部门的真实含义"。</li>
-          <li><strong>AI-Ready Data Products</strong>：Data Products as Code（Preview）+ Automatic Metadata Enrichment（GA）。</li>
-          <li><strong>Managed Icehouse</strong>：Icehouse Ingest（批流摄取）+ LakeOps（自动表压缩/快照清理/查询调优）。</li>
-          <li><strong>BYOC 部署</strong>：客户自管理基础设施，面向金融/医疗合规场景。</li>
-        </ul>
-      </div>
-      <div class="impact">
-        <strong>So What：</strong>Starburst 的转型路径——从"跨源查询"到"企业智能平台"——与 Databricks/Snowflake 的 AI 平台化趋势一致，但差异化押注"数据不动、语义统一"。AIDA 通过 MCP 实现 Agent 互操作的设计值得关注：它不只是 text-to-SQL chatbot，而是能触发外部系统操作的 Agentic 控制面。
-      </div>
+      <h3>1. Anthropic 完成 $650 亿 H 轮融资，估值 $9650 亿超越 OpenAI</h3>
+      <div class="source"><a href="https://www.stcn.com/article/detail/3933448.html">界面新闻</a> / <a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
+      <div class="body">Anthropic 5 月 28 日完成 H 轮 650 亿美元融资，投后估值 9650 亿美元，超越 OpenAI 成全球最贵 AI 公司。Altimeter/Dragoneer/Greenoaks/红杉领投，三星/SK 海力士/美光作为"战略基础设施合作伙伴"首次同时参投。年化收入突破 470 亿美元，预计 Q2 首次季度盈利。</div>
+      <div class="impact">采购格局：AI 模型估值触达万亿，存储/算力供应链与模型层深度绑定，企业需评估供应商长期算力保障能力。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. DeepSeek 首轮融资接近尾声：国家大基金领投，投前估值 $450 亿</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-28/doc-inhzmpqs0165713.shtml">财经杂志/新浪财经</a></div>
+      <div class="body">国家集成电路产业投资基金领投 DeepSeek 首轮融资，规模约 700 亿元，投前估值 450 亿美元。这是国家大基金 12 年来首次跨界投资纯大模型公司，标志政策资金从硬件制造延伸至模型与应用端。创始人梁文锋拟个人出资最高 200 亿元。</div>
+      <div class="impact">采购格局：国资入场意味着 DeepSeek 将获国产算力优先适配资源，对国内大模型供应商格局产生结构性影响。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. Google Cloud 为 BigQuery 引入跨引擎 Apache Iceberg 支持（预览）</h3>
+      <div class="source"><a href="https://www.infoq.com/news/2026/05/google-cross-engine-iceberg/">InfoQ</a> / <a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud</a></div>
+      <div class="body">Google 在 Iceberg Summit / Next '26 发布 BigQuery 跨引擎 Iceberg 预览：无服务器 REST Catalog 让 BigQuery/Spark/Flink/Trino 读写同一表；跨云查询 AWS/Azure/Databricks/Snowflake 目录；托管元数据与自动维护；统一权限；ObjectRefs 融合结构化+非结构化数据用于 AI 工作流。</div>
+      <div class="impact">架构：Iceberg 开放互操作进入"托管控制平面"竞争阶段，Lakehouse 选型从格式标准化推进到 Catalog 平台锁定的新博弈。</div>
     </div>
   </div>
 
-  <!-- Section B: Product & Tech -->
+  <!-- Section B -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-b">B</span>
@@ -213,26 +198,35 @@
     </div>
 
     <div class="item">
-      <h3>Microsoft Fabric May 2026 更新：OneLake Security GA + Data Warehouse Monitor Preview</h3>
-      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/fabric/get-started/whats-new" target="_blank">Microsoft Fabric What's New</a>（2026-05 月度更新）</div>
-      <div class="body">
-        <p>Fabric 五月 GA/Preview 要点：</p>
-        <ul>
-          <li><strong>OneLake Security GA + Data Access Roles GA</strong>：细粒度访问控制正式可用，支持文件夹/行/列级安全策略。</li>
-          <li><strong>OneLake Catalog in Microsoft Foundry GA</strong>：目录原生嵌入 Foundry 平台。</li>
-          <li><strong>Data Warehouse Monitor（Preview）</strong>：运行时监控仪表盘。</li>
-          <li><strong>Configurable Data Retention（Preview）</strong>：可配置数据保留策略。</li>
-          <li><strong>Resource Profiles in Data Engineering（Preview）</strong>：自定义 Spark 资源配置。</li>
-        </ul>
-        <p>此外，Microsoft 明确 Fabric Data Warehouse 作为 Synapse Dedicated SQL Pool 现代化路径，以及 dbt + Fabric 战略合作持续推进。</p>
-      </div>
-      <div class="impact">
-        <strong>So What：</strong>OneLake Security GA 标志着 Fabric 在企业级治理能力上补齐最后一块拼图。对于仍在犹豫 P-SKU 向 F-SKU 迁移的企业，本月 GA 的安全/治理能力使迁移可行性显著提升。
-      </div>
+      <h3>1. ClickHouse Open House 2026：ARR 突破 $2.5 亿，发布 Claude 驱动的 ClickHouse Agents</h3>
+      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a> / <a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
+      <div class="body">ClickHouse 5/27 公布 ARR 超 $2.5 亿（3x YoY）、客户 4000+。发布 ClickHouse Agents（Claude 驱动全托管智能体分析）、Managed Postgres 公测、全文搜索 GA、自动查询优化。客户含 Anthropic/Meta/Capital One/Tesla/Visa/Shopify。</div>
+      <div class="impact">性能/工程效率：OLAP 层原生集成 LLM 智能体，从"被查询"到"主动分析"的范式转变。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. ClickHouse 发布 CostBench：云数仓成本-性能开放基准</h3>
+      <div class="source"><a href="https://clickhouse.com/blog/clickhouse-tops-250m-arr-and-4000-customers">ClickHouse Blog</a></div>
+      <div class="body">CostBench 按各厂商真实计费模型计算相同分析负载的每查询成本，覆盖 ClickHouse/Snowflake/Databricks/BigQuery/Redshift。ClickHouse 声称是唯一全量级"快且低成本"象限系统，领先最近竞品 23x。方法论与交互式浏览器已开放。</div>
+      <div class="impact">成本：为企业提供标准化云数仓 TCO 比较框架；厂商自建基准存在偏向，需关注独立验证。</div>
+    </div>
+
+    <div class="item">
+      <h3>3. ClickHouse Cloud 五月更新：Python Client v1.0 + ClickStack SQL 告警</h3>
+      <div class="source"><a href="https://clickhouse.com/docs/whats-new/cloud">ClickHouse Changelog</a></div>
+      <div class="body">Python Client v1.0：原生异步客户端、SQLAlchemy 一等公民支持、Python 3.14 free-threading 实验支持。ClickStack 支持 SQL 原生图表与告警（窗口函数/CTE/异常检测）。组织消费告警 GA、Kafka ClickPipes Protobuf、新增 AWS 墨西哥 + Azure 澳东区域。</div>
+      <div class="impact">工程效率：异步+free-threading 对 AI 工作流集成（Pandas/PyArrow/Polars）意义重大。</div>
+    </div>
+
+    <div class="item">
+      <h3>4. Google Lakehouse for Iceberg 新增 Spark/Hive 与 Runtime Catalog 集成</h3>
+      <div class="source"><a href="https://docs.cloud.google.com/lakehouse/docs/release-notes">Google Cloud Release Notes</a></div>
+      <div class="body">5/26 发布：Apache Spark 和 Hive 可使用 Lakehouse Runtime Catalog（原 BigLake Metastore）作为无服务器中心元数据层，实现 Spark+Hive+BigQuery 三引擎统一 Catalog 的无缝数据共享。</div>
+      <div class="impact">架构：补齐 Google Lakehouse 在 Hadoop 生态兼容性上的短板，降低存量 Hive 用户迁移摩擦。</div>
     </div>
   </div>
 
-  <!-- Section C: Views & Research -->
+  <!-- Section C -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
@@ -240,22 +234,21 @@
     </div>
 
     <div class="item">
-      <h3>The Futurum Group：企业 AI 规模化瓶颈在数据治理而非模型</h3>
-      <div class="source">来源：<a href="https://www.starburst.io/press-releases/starburst-unveils-enterprise-intelligence-platform-giving-enterprises-a-faster-path-to-trusted-ai/" target="_blank">Starburst 新闻稿引述</a>（2026-05-28）</div>
-      <div class="body">
-        <p>The Futurum Group VP &amp; Practice Lead Brad Shimmin 评论指出：</p>
-        <blockquote style="border-left: 3px solid #dadce0; padding-left: 12px; margin: 10px 0; color: #5f6368; font-style: italic;">
-          "Enterprises are realizing that scaling AI depends less on the models and more on access to trusted, governed data across complex hybrid environments. The industry is shifting toward architectures that reduce data movement while preserving governance and business context."
-        </blockquote>
-        <p>Mavvrik 2025 研究数据佐证：84% 的企业报告 AI 成本侵蚀毛利超 6%，原因不在于 AI 不工作，而在于底层数据碎片化导致信任缺失。</p>
-      </div>
-      <div class="impact">
-        <strong>So What：</strong>"模型够强、数据不行"正从行业直觉变为量化共识。数据平台竞争焦点从"谁的模型更快"转向"谁能统一语义、减少数据移动"——这正是 Starburst/Databricks Unity Catalog/Microsoft OneLake 的共同方向。
-      </div>
+      <h3>1. Dan Ives（Wedbush）：AI 行情仅是开端，数据层公司将成下一波受益者</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经/财联社</a></div>
+      <div class="body">Dan Ives 5/29 评论：AI 浪潮才刚开始，看好"第二三四层受益者"——数据层公司 Snowflake/Datadog/InnoData。预测纳指 2027 可望 30000 点。称 SpaceX/Anthropic/OpenAI 为"第四次工业革命三大支柱"。但 Zacks 首席策略师警告 IPO 潮或为市场顶部信号。</div>
+      <div class="impact">采购格局：分析师共识从模型公司扩展到数据基础设施，暗示企业数据平台支出将持续增长。</div>
+    </div>
+
+    <div class="item">
+      <h3>2. 沙利文/业内：AI 产业进入"资本军备竞赛"，纯烧钱项目被摒弃</h3>
+      <div class="source"><a href="https://news.qq.com/rain/a/20260529A06UEV00">财联社</a></div>
+      <div class="body">沙利文中国总监李庆：AI 行业进入资本军备竞赛，算力卡位/技术迭代/人才争夺均需持续大额投入，"不具备资本耐力和算力储备的玩家很容易被出清。"资本关注点从参数规模和概念叙事转向商业化落地能力。</div>
+      <div class="impact">治理：企业 AI 战略需评估供应商的资本持续性，避免押注无法持续投入的二线模型公司。</div>
     </div>
   </div>
 
-  <!-- Section D: Capital & Corporate -->
+  <!-- Section D -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-d">D</span>
@@ -263,43 +256,19 @@
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-funding">投融资</span>OpenRouter 完成 $113M B 轮，估值 $1.3B</h3>
-      <div class="source">来源：<a href="https://openrouter.ai/announcements/series-b" target="_blank">OpenRouter 官方公告</a>（2026-05-28）</div>
-      <div class="body">
-        <ul>
-          <li><strong>轮次：</strong>Series B</li>
-          <li><strong>金额：</strong>$113M</li>
-          <li><strong>领投：</strong>CapitalG（Alphabet 旗下成长基金）</li>
-          <li><strong>跟投：</strong>NVentures、ServiceNow Ventures、MongoDB Ventures、Snowflake Ventures、Databricks Ventures、AMP PBC、Pace Capital</li>
-          <li><strong>现有投资人：</strong>a16z、Menlo Ventures</li>
-          <li><strong>估值：</strong>~$1.3B</li>
-          <li><strong>业务数据：</strong>周处理 25 万亿 token（6 个月前 5 万亿，5x 增长）；400+ 模型、800 万+ 开发者</li>
-        </ul>
-      </div>
-      <div class="impact">
-        <strong>So What：</strong>多模型推理路由从开发者工具演化为企业级基础设施。CapitalG + 五家数据/AI 平台 Ventures 联合跟投的罕见组合，表明大厂认可"模型网关"作为独立中间层的长期价值。
-      </div>
+      <h3><span class="funding-tag tag-funding">投融资</span>1. Anthropic H 轮参投方全景：存储三巨头首次联合入局</h3>
+      <div class="source"><a href="https://www.163.com/dy/article/KU4A69ED0511838M.html">芯智讯</a></div>
+      <div class="body">投资方四层生态：顶级 VC/PE（Altimeter/Dragoneer/红杉/Coatue/GIC/黑石/淡马锡）；AWS $50 亿（承诺 $250 亿换 10 年 $1000 亿云消费）；存储三巨头绑定 HBM 供应；Google/Broadcom 5GW TPU 数据中心 + SpaceX GPU 算力。</div>
     </div>
 
     <div class="item">
-      <h3><span class="funding-tag tag-funding">投融资</span>Daloopa 完成 $47M C 轮融资</h3>
-      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/daloopa-raises-47-million-series-c-to-power-the-data-layer-behind-ai-driven-finance-302784528.html" target="_blank">PR Newswire</a>（2026-05-28）</div>
-      <div class="body">
-        <ul>
-          <li><strong>轮次：</strong>Series C</li>
-          <li><strong>金额：</strong>$47M</li>
-          <li><strong>领投：</strong>Brighton Park Capital</li>
-          <li><strong>跟投：</strong>Squarepoint Capital、Touring Capital、Nexus Venture Partners</li>
-          <li><strong>亮点：</strong>覆盖 5,500+ 全球上市公司结构化数据；MCP 连接器接入 ChatGPT/Claude/Perplexity/Rogo；Benchmark 显示 AI Agent 准确率最高提升 71pp；新推 Partner API + Snowflake/Databricks/S3 云原生交付</li>
-        </ul>
-      </div>
-      <div class="impact">
-        <strong>So What：</strong>Daloopa 证明金融垂直领域"AI 瓶颈是数据质量"尤为尖锐。MCP 连接器让结构化数据直接进入主流 AI 工具，是数据产品从"下载 Excel"到"Agent-ready API"的范式转移。
-      </div>
+      <h3><span class="funding-tag tag-ipo">IPO</span>2. ClickHouse $150 亿估值冲刺 IPO：前 Snowflake IR 任 CFO</h3>
+      <div class="source"><a href="https://techcrunch.com/2026/05/27/clickhouse-triples-annualized-revenue-to-250m-charting-a-path-toward-an-ipo">TechCrunch</a></div>
+      <div class="body">1 月 Series D $4 亿（Dragoneer 领投），估值 $150 亿（60x ARR）。聘 Snowflake 前 IR Jimmy Sexton 任 CFO。已完成 6 起收购含 Langfuse。与 SpaceX/OpenAI/Anthropic 共列科技 IPO 窗口候选。</div>
     </div>
   </div>
 
-  <!-- Section E: Watchlist -->
+  <!-- Section E -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-e">E</span>
@@ -307,24 +276,21 @@
     </div>
 
     <div class="item">
-      <h3>Snowflake Summit 26 即将召开（6/1-4，旧金山）</h3>
-      <div class="body">
-        <p>Snowflake 年度开发者大会将于 6 月 1-4 日在旧金山举行，紧接上周超预期 Q1 FY27 财报。预计发布 AI/ML 平台新功能、Iceberg 深度集成进展、Natoma 收购后 Agent 产品路线图。建议持续关注。</p>
-      </div>
+      <h3>1.【预告】Snowflake Summit 26 今日开幕：主题"Making AI Real"</h3>
+      <div class="source"><a href="https://www.snowflake.com/en/">Snowflake.com</a></div>
+      <div class="body">6/1-4 旧金山。Opening Keynote 今日 5pm PDT，Snowflake CEO + Anthropic 联创共同出场。预计发布 SnowWork GA、新 Cortex 模型集成和智能体编排、Marketplace 扩展。Dan Ives 特别点名 Snowflake 为 AI 支出核心受益者。</div>
     </div>
 
     <div class="item">
-      <h3>Core42 获 HSBC $550M 结构化贸易融资扩展 AI 基础设施</h3>
-      <div class="source">来源：<a href="https://www.core42.ai/resources/news/core42-raises-usd-550-million-from-hsbc-to-scale-global-ai-infrastructure" target="_blank">Core42 官方</a>（2026-05-21 公告）</div>
-      <div class="body">
-        <p>UAE 主权 AI 基础设施运营商 Core42（G42 旗下）通过 HSBC 两笔非稀释融资（$240M 2月 + $310M 5月）共获 $5.5 亿，用于加速美国和欧洲 AI 云/算力部署。代表 AI 基础设施融资模式创新——用结构化贸易金融替代股权稀释，以长期合约需求作为信用支撑。</p>
-      </div>
+      <h3>2.【跟踪】科技 IPO 窗口开启：SpaceX 6/12 上市，OpenAI/Anthropic 年内跟进</h3>
+      <div class="source"><a href="https://finance.sina.com.cn/roll/2026-05-29/doc-inhzqtzh0724106.shtml">新浪财经</a></div>
+      <div class="body">SpaceX 6/12 纳斯达克 IPO（~$1.75 万亿），可能成史上最大 IPO。OpenAI/Anthropic 计划年内上市。Dan Ives 称三家为"第四次工业革命支柱"。Zacks 策略师警告可能是市场顶部信号。</div>
     </div>
   </div>
 
   <div class="footer">
-    <p>Powered by Data+AI Daily Brief v4.2</p>
-    <p>信息截至北京时间 2026-05-29 08:00</p>
+    <p>Powered by Data+AI Daily Brief v4.3</p>
+    <p>信息截至北京时间 2026-06-01 08:00</p>
   </div>
 
 </div>
