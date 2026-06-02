@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data+AI 全球日报 | 2026-06-02</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --border: #dadce0;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+    --teal: #00897b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 32px 40px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+  }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .header .date { font-size: 14px; opacity: 0.85; }
+  .summary-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-size: 15px; }
+  .summary-box .verdict {
+    background: var(--primary-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+  .badge-a { background: var(--accent); }
+  .badge-b { background: var(--primary); }
+  .badge-c { background: var(--green); }
+  .badge-d { background: var(--teal); }
+  .badge-e { background: var(--orange); }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+  .item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .impact {
+    background: #f0f7ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #1a56db;
+  }
+  .funding-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section, .summary-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>📊 Data+AI 全球日报</h1>
+    <div class="date">2026-06-02（周二）· 窗口 06-01 08:00 ~ 06-02 08:00 CST</div>
+  </div>
+
+  <div class="summary-box">
+    <h2>🔥 今日最重要的3个变化</h2>
+    <ol>
+      <li>数据平台正在从"AI Ready"迈向"Agentic AI 原生"</li>
+      <li>MCP 治理层成为企业数据厂商争夺的新高地</li>
+      <li>欧洲主权算力投资规模已进入百亿美元量级</li>
+    </ol>
+    <div class="verdict">
+      <strong>总判断：</strong>Snowflake Summit 26 开幕叠加腾讯云数据库 Agent 化升级，标志着数据平台向 Agentic AI 控制平面演进已成中美共识；SoftBank 砸 €45B 法国 AI 数据中心则揭示算力基建竞赛从美国溢出到欧洲主权云市场。
+    </div>
+  </div>
+
+  <!-- Section A: Top Signals -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals</h2>
+    </div>
+    <div class="item">
+      <h3>1. Snowflake Summit 26 开幕：Openflow + Adaptive Compute + Cortex AISQL + Intelligence 全面发布</h3>
+      <div class="body">
+        <p>Snowflake 在旧金山 Moscone Center 启动年度最大用户大会（20000+ 与会者），CEO Sridhar Ramaswamy 与 Anthropic 联合创始人 Daniela Amodei 对话 Opening Keynote。本届主题"Making AI Real for Business"，正式发布的产品组合包括：Snowflake Openflow（基于 Apache NiFi 的云原生数据集成平台，350+ 连接器）、Adaptive Compute（自动路由查询到合适计算资源）、Cortex AISQL（SQL 原生 AI 操作符，30-70% 性能提升）、Snowflake Intelligence（企业级自然语言智能体）。同期宣布收购 MCP 治理平台 Natoma 和 $6B AWS 五年算力承诺。</p>
+      </div>
+      <div class="impact">💡 Snowflake 以 Agentic Enterprise 为旗帜，将数据平台重新定义为 AI 控制平面——管治不止于数据资产，更延伸至 AI Agent 的操作与工作流。</div>
+    </div>
+    <div class="item">
+      <h3>2. 腾讯云数据库面向 Agent 场景全面升级，发布 AgentMemory 与 DatabaseClaw</h3>
+      <div class="body">
+        <p>腾讯云宣布数据库产品体系面向 Agent 应用、AI 编程、智能运维三大场景全面升级，发布 AgentMemory（Agent 记忆存储）和 DatabaseClaw（Agent 原生数据库工具）两款新产品。升级覆盖 TDSQL 自研产品家族，核心技术创新包括数据库分支、海量多租户、多模混合检索、开放存储架构等十余项。腾讯云副总裁王义成表示"数据库正在迈向 AI 原生的 3.0 时代"。相关能力已在元宝等内部 AI 产品规模应用。</p>
+      </div>
+      <div class="impact">💡 腾讯云将 Agent 视为数据库的"新用户"，重新设计产品体系——这与 Snowflake 的 Agentic Enterprise 定位形成中美对称叙事。</div>
+    </div>
+    <div class="item">
+      <h3>3. SoftBank 承诺在法国投资 €45B（最高 €75B）建设 AI 数据中心</h3>
+      <div class="body">
+        <p>在 Choose France 峰会上，SoftBank CEO 孙正义宣布将在法国上法兰西大区投资 €45B（潜力达 €75B），建设总计 3.1GW 的 AI 数据中心集群，目标 2031 年完成。这是法国有史以来最大的外商直接投资承诺。</p>
+      </div>
+      <div class="impact">💡 SoftBank 此举将法国推上欧洲 AI 基建第一梯队，同时反映全球超大规模算力需求已超出美国本土供给能力。</div>
+    </div>
+  </div>
+
+  <!-- Section B: Product & Tech -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-b">B</span>
+      <h2>Product & Tech</h2>
+    </div>
+    <div class="item">
+      <h3>4. Snowflake Openflow 正式发布：基于 Apache NiFi 的云原生数据集成平台</h3>
+      <div class="body">
+        <p>Openflow 内置于 Snowflake AI Data Cloud，提供 350+ 连接器（数据库 CDC、SaaS、Kafka/Kinesis、SharePoint/Slack 等非结构化源），支持 5GB/s 流式摄入吞吐。核心价值在于将数据集成从外部工具链内化为平台一等公民，并支持非结构化数据"Ready for Chat"直接供 AI 使用。Snowflake 将相关改进贡献回 NiFi 开源社区。</p>
+      </div>
+      <div class="impact">💡 Openflow 补全了 Snowflake 长期缺失的原生数据集成能力，直接挑战 Fivetran/Airbyte 等独立 ELT 厂商。</div>
+    </div>
+    <div class="item">
+      <h3>5. Snowflake Adaptive Compute：取消手动 Warehouse Sizing，平台自动路由查询</h3>
+      <div class="body">
+        <p>Adaptive Compute 是全新 warehouse 类型，由平台根据查询计划自动选择合适计算资源，用户仅需设置"每小时最大 credit"和"单语句最大 warehouse 尺寸"两个上限。消除了传统 XS-2XL T-shirt 选型的运维负担。Pfizer 等客户已进入 Private Preview。</p>
+      </div>
+      <div class="impact">💡 Serverless 思路向数仓深水区推进；但业界分析指出首版可能不会自动降低成本——Snowflake 的消费模型激励与成本优化存在内在张力。</div>
+    </div>
+    <div class="item">
+      <h3>6. Databricks Enzyme 获 SIGMOD 2026 Honorable Mention：规模化增量视图维护引擎</h3>
+      <div class="body">
+        <p>Databricks 在 Bangalore 举办的 SIGMOD 2026 上展示 Enzyme——为 Spark Declarative Pipelines 构建的增量视图维护（IVM）引擎。Enzyme 支持 Join、Window Functions、Python MV 和 LLM 函数调用的增量刷新，在生产环境累计每日减少数十亿 CPU 秒。同期发表的 VLDB 2026 论文覆盖 Spark Structured Streaming 十年架构演进。</p>
+      </div>
+      <div class="impact">💡 Enzyme 将 IVM 从查询加速扩展到 ETL 全链路，验证了"声明式数据工程"路线在 Databricks 的工程落地成熟度。</div>
+    </div>
+    <div class="item">
+      <h3>7. Microsoft Fabric Data Factory 将 Mapping Data Flows 引入 Fabric（June 2026 GA）</h3>
+      <div class="body">
+        <p>Microsoft 宣布在 2026 年 6 月将 Azure Data Factory 的 Mapping Data Flows 引入 Fabric Data Factory，实现 Spark 级数据集成原生运行。同步 GA 的还有 Copy Job CDC、Pipeline Expression Copilot、AI-powered Transform 等能力。dbt jobs 增加 GitHub 集成和公共包支持。</p>
+      </div>
+      <div class="impact">💡 Fabric 的数据集成能力终于补齐 ADF 遗留资产，与 Snowflake Openflow 形成对标——两大阵营同期强化原生集成。</div>
+    </div>
+  </div>
+
+  <!-- Section C: Views & Research -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research</h2>
+    </div>
+    <div class="item">
+      <h3>8. Snowflake 收购 Natoma：MCP 治理成为 Agentic Enterprise 关键基础设施</h3>
+      <div class="body">
+        <p><span class="funding-tag tag-ma">收购兼并</span>Snowflake 于 5 月 27 日宣布收购 MCP 平台 Natoma（交易金额未披露），在 Summit 26 开幕周正式展示其战略意图。HFS Research CEO Phil Fersht 评价："MCP 正成为企业智能体的连接组织，但没有身份、策略和可审计性，它将成为影子 AI 风险。"Constellation Research 分析师 Michael Ni 认为："能够管理 Agent、上下文和自主行动的平台将赢得智能体时代。"</p>
+      </div>
+      <div class="impact">💡 MCP 治理层（Governed MCP）正从开源协议演变为企业级商业产品——谁控制 Agent 的权限边界，谁就掌握 Agentic AI 时代的数据入口。</div>
+    </div>
+    <div class="item">
+      <h3>9. Databricks Lakebase 强制迁移至 Autoscaling 架构（June 2026 启动）</h3>
+      <div class="body">
+        <p>Databricks 宣布从 6 月开始将所有 Lakebase Provisioned 实例自动升级至 Autoscaling 平台（基于 PostgreSQL 17），引入 Scale-to-Zero、数据库分支、Lakehouse Sync 等新能力。计算粒度从 16GB/CU 细化至 2GB/CU，endpoint 从全局切换至区域格式。</p>
+      </div>
+      <div class="impact">💡 Databricks 将 OLTP 负载从固定容量推向弹性消费模型——与 Snowflake Postgres GA 形成直接竞争，OLTP+OLAP 统一平台之战正式打响。</div>
+    </div>
+  </div>
+
+  <!-- Section D: Capital & Corporate -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate</h2>
+    </div>
+    <div class="item">
+      <h3>10. <span class="funding-tag tag-funding">投融资</span>VAST 完成 A+/A++ 两轮融资近 $2 亿</h3>
+      <div class="body">
+        <p>通用人工智能公司 VAST 宣布完成 A+及 A++ 两轮融资合计近 2 亿美元，由渶策资本、国寿长三角科创基金领投，荣耀产业基金、深创投等参投。此前 3 月已完成 $5000 万 A 轮（阿里/恒旭领投）。A 轮系列累计近 $2.5 亿，巩固其在中国通用 AI 领域领先地位。</p>
+      </div>
+      <div class="impact">💡 VAST 半年内完成三轮融资 $2.5 亿，国资+产业+财务资本全覆盖——中国 AGI 赛道资本密度仍在加速。</div>
+    </div>
+    <div class="item">
+      <h3>11. <span class="funding-tag tag-funding">投融资</span>核数聚完成数千万元 A 轮融资</h3>
+      <div class="body">
+        <p>AI 数据资源及服务提供商核数聚完成数千万元 A 轮融资，由善达投资领投，吴中金控/吴中融玥跟投。公司深耕多模态数据采集、AI 预处理、模型训练适配与自动化数据工程，服务 AI 企业及科研机构。</p>
+      </div>
+      <div class="impact">💡 AI 数据标注/工程赛道持续获得资本关注——在大模型竞争从模型层下沉到数据层的趋势下，数据服务商是关键基础设施。</div>
+    </div>
+  </div>
+
+  <!-- Section E: Watchlist -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-e">E</span>
+      <h2>Watchlist</h2>
+    </div>
+    <div class="item">
+      <h3>12. <span class="funding-tag tag-earnings">财报发布</span>Snowflake FY27 Q1：营收 $13.9 亿（+33%），AI 编程工具客户翻倍至 7100 家</h3>
+      <div class="body">
+        <p>Snowflake 5 月 27 日公布 FY27 Q1 业绩：总营收 $13.9 亿（同比+33%），产品营收 $13.3 亿（+34%），均超预期。全年产品营收指引上调至 $58.4 亿。AI 辅助编程工具客户数从上季翻倍至 7100 家，百万美元客户新增 46 家（同比 +77%）。盘后股价暴涨 37%。</p>
+      </div>
+    </div>
+    <div class="item">
+      <h3>13. Snowflake Summit 26 Platform Keynote 预告：June 2 将发布更多产品细节</h3>
+      <div class="body">
+        <p>Platform Keynote 由联合创始人 Benoit Dageville 和 EVP Christian Kleinerman 主讲，预计正式公布 Openflow、Adaptive Compute 等产品的技术细节和客户案例（Thomson Reuters/Under Armour）。Builder Keynote（June 3）将展示 Agent 构建实战 demo。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Powered by Data+AI Daily Brief v4.3</p>
+    <p>信息截至北京时间 2026-06-02 08:00</p>
+  </div>
+
+</div>
+</body>
+</html>
