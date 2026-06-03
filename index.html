@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-02</title>
+<title>Data+AI 全球日报 | 2026-06-03</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -113,6 +113,8 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .body p { margin-bottom: 8px; }
+  .item .body p:last-child { margin-bottom: 0; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -120,14 +122,6 @@
     margin-top: 10px;
     font-size: 13px;
     color: #1a56db;
-  }
-  .item .watch-signal {
-    background: #fff8e1;
-    padding: 10px 14px;
-    border-radius: 8px;
-    margin-top: 10px;
-    font-size: 13px;
-    color: #8a6d1f;
   }
 
   .funding-tag {
@@ -142,7 +136,16 @@
   .tag-earnings { background: #e3f2fd; color: #1565c0; }
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
   .tag-ma { background: #e8f5e9; color: #2e7d32; }
-  .tag-watch { background: #fff3e0; color: #e65100; }
+  .tag-preview { background: #fff3e0; color: #e65100; }
+  .tag-downgraded { background: #f5f5f5; color: #616161; }
+  .tag-tracking { background: #e8eaf6; color: #3f51b5; }
+
+  .empty-notice {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
 
   .footer {
     text-align: center;
@@ -164,18 +167,18 @@
 
   <div class="header">
     <h1>Data+AI 全球日报</h1>
-    <div class="date">2026-06-02（周二） · 严格只包含过去24小时信息</div>
+    <div class="date">2026-06-03 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>今日最重要的3点</h2>
     <ol>
-      <li>数据平台正在从"AI Ready"迈向"Agentic AI 原生"</li>
-      <li>AI 基础设施竞赛从美国溢出到欧洲主权云市场</li>
-      <li>开放多引擎架构与自适应算力成为平台差异化新维度</li>
+      <li>开放表格式正从兼容性目标升级为数据平台互操作的核心协议</li>
+      <li>AI Agent 的数据访问治理从事后审计走向会话级实时边界控制</li>
+      <li>企业 SaaS 数据与云平台的零拷贝集成成为跨云架构新标配</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>数据平台向 Agentic AI 控制平面演进已成中美共识，AI 基础设施竞赛正从美国溢出到欧洲主权云市场。
+      <strong>总判断：</strong>数据平台竞争正从引擎性能转向开放生态与 Agent 就绪度，Snowflake 以 Iceberg v3 + Polaris 回应不锁定诉求，Immuta 与 Workday-AWS 分别定义了 Agent 治理和跨云集成标准。
     </div>
   </div>
 
@@ -184,23 +187,32 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
+
     <div class="item">
-      <h3>Snowflake Summit 26 开幕：四大发布标志数据平台全面转向 Agentic 原生</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/summit/">Snowflake Summit</a></div>
-      <div class="body">Snowflake Summit 26 于旧金山开幕，Opening Keynote 集中发布四大产品：Openflow（开放多引擎数据治理框架）、Adaptive Compute（AI 自适应算力调度引擎）、Cortex AISQL（自然语言查询平台）以及 Snowflake Intelligence（企业级 Agent 平台）。四大发布共同指向同一战略方向——将数据平台从被动查询引擎升级为主动理解业务意图、自主执行数据任务的 Agentic 控制平面。</div>
-      <div class="impact">这是主流云数据厂商首次将"Agentic Enterprise"作为产品矩阵核心叙事，意味着数据平台竞争进入新阶段：不再是存储与查询性能比拼，而是谁能率先让数据平台成为企业 Agent 的可靠底座。Snowflake 的激进布局将迫使 Databricks、Google BigQuery、Microsoft Fabric 加速跟进。</div>
+      <h3>1. Snowflake 发布开放互操作框架：Iceberg v3 GA + Polaris 双向 Catalog + Horizon 统一治理</h3>
+      <div class="source">来源：<a href="https://www.snowflake.com/en/news/press-releases/snowflake-pioneers-new-open-framework-for-interoperable-enterprise-data-and-ai/">Snowflake 官方新闻稿</a></div>
+      <div class="body">
+        <p>Snowflake 在 Summit 26 Day 2 宣布以 Apache Iceberg v3 为核心构建完整的开放互操作栈。关键组件包括：Iceberg v3 正式可用（GA），支持更多数据类型、跨系统变更追踪与半结构化数据高性能处理；Snowflake Storage for Apache Iceberg Tables GA，为开放数据提供完全托管体验；Horizon Catalog（由 Apache Polaris 驱动）GA，实现跨 Snowflake、外部数据湖和开放系统的双向读写与统一治理。此外，外部引擎访问管理、Iceberg REST Scan Plan API 等进入预览，确保细粒度保护跨兼容引擎生效。</p>
+      </div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>这是主流云数据平台首次以完整产品栈级别拥抱开放表格式互操作，从存储层到目录层再到治理层全部打通。意味着企业可以在 Snowflake 内部和外部引擎之间共享一份实时、受治理的数据副本，无需移动或复制数据。对架构选型而言，"开放格式避免锁定"从口号变成了可落地的工程现实，将直接影响企业的多云策略和采购决策。</div>
     </div>
+
     <div class="item">
-      <h3>腾讯云数据库面向 Agent 场景全面升级</h3>
-      <div class="source">来源：<a href="https://www.cs.com.cn/ssgs/01/2026/06/01/detail_2026060110015383.html">中国证券报</a></div>
-      <div class="body">腾讯云数据库宣布面向 Agent 场景的全面升级，推出三大核心能力：AgentMemory（首个面向 Agent 的专属内存引擎，支持智能体上下文状态持久化）、DatabaseClaw（Agent 专用数据库操作工具链，实现自然语言到数据库操作的原子化调度）以及 TDSQL 的 Agent 场景性能优化。本次升级将腾讯云数据库从传统 OLTP/OLAP 引擎扩展为 Agent 原生数据基础设施。</div>
-      <div class="impact">这是国内云厂商首次将数据库产品从"支持 AI"升级为"为 AI Agent 原生设计"，与 Snowflake Summit 26 的 Agentic 战略形成中美呼应。AgentMemory 的推出意味着数据库开始承担 Agent 状态管理的角色，数据平台的边界正在向 Agent 运行时扩展。</div>
+      <h3>2. Immuta 联合 Snowflake 推出 Agentic Data Access：AI Agent 会话级数据访问治理</h3>
+      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/immuta-launches-new-agentic-data-access-capabilities-on-snowflake-ai-data-cloud-302788954.html">PR Newswire</a></div>
+      <div class="body">
+        <p>数据访问治理厂商 Immuta 在 Snowflake Summit 26 上发布三项由 Snowflake Cortex AI 驱动的新能力。Immuta Agentic Data Access 使 AI 代理通过自然语言与企业数据交互，Cortex 负责查询规划，Immuta 在会话级别强制执行访问边界，为每个代理交互分发唯一的临时角色，范围限定于授权用户的权限。Agent Principal Context 扩展 Snowflake 的代理主体上下文，治理 AI 代理对 Snowflake 外部数据的出站访问，采用零常驻权限的动态配置。Comply App 为 Horizon Catalog 提供自然语言合规查询界面。</p>
+      </div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>这是数据治理领域首个面向 AI Agent 时代设计的访问控制方案。传统的基于角色的静态权限模型无法应对 Agent 自主决策、多步骤推理、跨系统调用的场景。Immuta 的"会话级临时角色 + 双重身份审计追踪"架构，将治理粒度从"人能访问什么"推进到"Agent 在代表谁、能访问什么、每一步是否合规"。对数据平台而言，Agent 治理将成为与 Agent 能力同等重要的基础设施。</div>
     </div>
+
     <div class="item">
-      <h3>SoftBank 宣布 €45-75B 法国 AI 数据中心投资</h3>
-      <div class="source">来源：<a href="https://www.reuters.com/">Reuters</a></div>
-      <div class="body">在 Choose France Summit（6 月 1 日）上，SoftBank 集团宣布将在法国投资 €45 亿至 €75 亿欧元建设 AI 数据中心，法国总统马克龙亲自出席并背书。该投资将分阶段实施，首期集中在巴黎及周边区域，目标是建设欧洲最大的 AI 训练与推理基础设施集群之一，服务于欧洲本土 AI 企业和主权云需求。</div>
-      <div class="impact">这是欧洲 AI 基础设施单笔最大投资纪录，直接改变了全球数据平台部署的地理格局。此前 AI 算力基建高度集中在美国（NVDA 生态 + AWS/Azure/GCP），SoftBank 的法国投资意味着欧洲主权云市场正在加速形成独立供应链，数据平台的全球化部署策略需要重新评估合规、延迟和数据主权因素。</div>
+      <h3>3. Workday Data Cloud 与 AWS 深度集成：双向零拷贝 + Agent Gateway 跨云数据访问</h3>
+      <div class="source">来源：<a href="https://finviz.com/news/358965/workday-announces-workday-data-cloud-integration-with-aws-giving-developers-direct-access-to-workdays-governed-data-layer">PR Newswire via Finviz</a></div>
+      <div class="body">
+        <p>Workday 在 DevCon 大会宣布 Workday Data Cloud 将与 AWS 深度集成，开发者可从 AWS 工具和服务双向零拷贝访问 Workday 治理的 HR 与财务数据，无需构建自定义管道或复制数据。基于 Apache Iceberg 的 Workday Data Connect 提供预构建连接器；Workday Agent Gateway 使 AWS 上构建的 AI 代理能安全访问 Workday 的薪资、福利和财务数据，复用现有治理、权限和审计控制。Workday Data Lake、Data Connect 和 Live Data Query 已向早期采用者开放，AWS 集成功能将在未来几个季度通过早期访问计划逐步推出。</p>
+      </div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>这是企业 SaaS 数据与云数据平台深度集成的标志性案例。传统上，SaaS 数据通过 API 或 ETL 管道导出到数据仓库，存在延迟高、治理断裂、重复存储等问题。Workday 的"双向零拷贝 + 治理随行"模式意味着 SaaS 数据可以像云原生数据一样被直接查询和治理，AI 代理也能在保持合规的前提下实时访问业务上下文。对数据平台架构而言，SaaS 数据层与云数据平台的边界正在消融。</div>
     </div>
   </div>
 
@@ -209,29 +221,14 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
+
     <div class="item">
-      <h3>Snowflake Openflow 发布：开放多引擎数据治理框架</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/blog/">Snowflake Blog</a></div>
-      <div class="body">Snowflake Openflow 在 Summit 26 正式发布，是一个开放的多引擎数据治理框架，允许企业在 Snowflake 平台内统一管理 Iceberg、Delta Lake、Hudi 等多种开放表格式，同时保持统一的治理层（访问控制、血缘追踪、质量监控）。Openflow 不强制数据迁移，而是通过元数据联邦实现跨引擎治理。</div>
-      <div class="impact">这是 Snowflake 对"开放格式竞争"的正式回应。此前 Databricks 主导 Delta Lake 生态，Snowflake 押注 Iceberg，Openflow 的推出意味着 Snowflake 选择用"治理联邦"而非"格式统一"来解决问题，降低了企业多引擎并存时的治理复杂度，也可能削弱单一格式锁定效应。</div>
-    </div>
-    <div class="item">
-      <h3>Snowflake Adaptive Compute 与 Cortex AISQL 发布</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/blog/">Snowflake Blog</a></div>
-      <div class="body">Adaptive Compute 是 Snowflake 新推出的 AI 自适应算力调度引擎，可根据工作负载特性（批处理、交互查询、AI 推理）自动选择最优算力配置（CPU/GPU/专用加速器），实现资源利用率提升。Cortex AISQL 则是自然语言到 SQL 的生成与执行平台，支持复杂多表关联查询的自然语言描述，并内置结果可信度评估。</div>
-      <div class="impact">Adaptive Compute 将"AI 驱动的资源调度"从概念推向产品化，可能改变数据平台的成本模型（从预配实例转向按需自适应）。Cortex AISQL 则直接冲击传统 BI 工具和自然语言查询中间件市场，如果准确率足够高，可能压缩独立 NL2SQL 厂商的生存空间。</div>
-    </div>
-    <div class="item">
-      <h3>Databricks Enzyme 获 SIGMOD 2026 Honorable Mention</h3>
-      <div class="source">来源：<a href="https://sigmod2026.org/">SIGMOD 2026</a> / <a href="https://www.databricks.com/blog/">Databricks Blog</a></div>
-      <div class="body">Databricks 与斯坦福大学联合提交的论文《Enzyme: Incremental View Maintenance for Complex Analytical Queries》获得 SIGMOD 2026 Honorable Mention。Enzyme 是一种面向复杂分析查询的增量视图维护引擎，能够在源数据变化时以亚秒级延迟更新物化视图，同时支持窗口函数、嵌套子查询等复杂 SQL 特性，突破了传统 IVM 仅支持简单聚合的限制。</div>
-      <div class="impact">这是工业界查询优化器首次在 SIGMOD 获得高规格认可，意味着 Databricks 在查询引擎底层技术上的投入开始获得学术背书。Enzyme 若产品化，将显著降低实时数据管道中物化视图的维护成本，对需要低延迟分析的数据平台架构有直接影响。</div>
-    </div>
-    <div class="item">
-      <h3>Microsoft Fabric Data Factory 引入 Mapping Data Flows</h3>
-      <div class="source">来源：<a href="https://blog.fabric.microsoft.com/">Microsoft Fabric Blog</a></div>
-      <div class="body">Microsoft 宣布 Fabric Data Factory 正式引入 Mapping Data Flows（可视化 ETL 设计工具），支持无代码/低代码的数据转换管道设计，内置 300+ 数据转换操作和智能数据预览。该功能预计 6 月全面 GA，目前已对预览用户开放。Mapping Data Flows 此前是 Azure Data Factory 的核心功能，现在是首次深度集成到 Fabric 统一平台中。</div>
-      <div class="impact">这是微软将 Azure Data Factory 能力向 Fabric 迁移的关键一步，意味着 Fabric 的 ETL/ELT 能力正在补齐与独立数据集成工具的差距。对于已在使用 Azure 生态的企业，这降低了从 Azure Data Factory 向 Fabric 迁移的摩擦，可能加速 Fabric 的市场渗透。</div>
+      <h3>1. Collibra 扩展与 Snowflake 集成：Horizon Catalog 与 Cortex AI 双向语义治理</h3>
+      <div class="source">来源：<a href="https://finance.sina.cn/2026-06-03/detail-iniaaeze4470669.d.html">新浪财经</a></div>
+      <div class="body">
+        <p>数据治理厂商 Collibra 在 Snowflake Summit 26 上宣布扩大与 Snowflake 的集成，在 Snowflake AI Data Cloud 中提供可信业务上下文和语义一致性。Collibra 的企业上下文流入 Snowflake，实现跨 Horizon Catalog 和 Cortex AI 的双向集成，涵盖治理与策略增强、AI 语义增强、自动可追溯性、可扩展数据访问管理等方面。Collibra AI Command Center 为 Snowflake 上的自主 AI 提供控制层。此次集成已向部分共同客户提供预览版，计划 2026 年第三季度全面推出。</p>
+      </div>
+      <div class="impact"><strong>对数据平台的影响：</strong>数据目录与数据治理平台的深度集成，解决了 AI 时代"业务语义一致性"的核心难题。当 AI 代理查询数据时，如果不能理解企业特定的指标定义（如"毛利率"在该公司如何计算），就会做出错误决策。Collibra 的上下文层与 Snowflake 的计算层结合，使治理语义可以随数据一起被 Agent 理解和使用，是数据平台从"数据可用"走向"数据可信"的关键一步。</div>
     </div>
   </div>
 
@@ -240,12 +237,7 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <div class="item">
-      <h3>Snowflake 将 Agentic Enterprise 定位为数据平台控制平面</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/summit/">Snowflake Summit Keynote</a></div>
-      <div class="body">Snowflake CEO 在 Summit 26 Opening Keynote 中明确提出，数据平台的下一站不是"更快查询"或"更大规模"，而是成为企业 Agent 的"控制平面"（Control Plane）。这一定位将数据平台的竞争维度从基础设施性能转向 Agent 编排与可信数据供给能力。</div>
-      <div class="impact">如果"控制平面"定位成为行业共识，数据平台厂商的核心投资重点将从存储引擎和查询优化器，转向 Agent 状态管理、工具链编排（如 DatabaseClaw 类能力）、多模态数据理解和语义层构建。这对国内云厂商的产品路线有直接参考意义——腾讯云数据库的 AgentMemory 和 DatabaseClaw 正是同一方向的具体落地。</div>
-    </div>
+    <div class="empty-notice">今日无合格信息</div>
   </div>
 
   <div class="section">
@@ -253,18 +245,7 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <div class="item">
-      <h3><span class="funding-tag tag-funding">投融资</span>VAST 完成 A+/A++ 近 $2 亿融资</h3>
-      <div class="source">来源：<a href="https://www.businesswire.com/">Business Wire</a></div>
-      <div class="body"><strong>核心数据：</strong>近 $2 亿 A+/A++ 轮，估值未公开披露<br><br>通用 AI 基础设施公司 VAST 宣布完成 A+/A++ 轮合计近 $2 亿美元融资，投资方包括多家顶级风投。VAST 主打统一 AI 数据平台，提供面向大模型训练和推理的高性能数据存储与访问层，客户覆盖多家头部 AI 公司。</div>
-      <div class="impact">近 $2 亿融资规模在 A 轮阶段极为罕见，说明资本市场对"AI 原生数据基础设施"赛道的估值溢价极高。VAST 的核心叙事——为 AI 工作负载专门设计的数据平台——与 Snowflake/Databricks 的传统数据平台形成差异化竞争，可能催生新的细分赛道。</div>
-    </div>
-    <div class="item">
-      <h3><span class="funding-tag tag-funding">投融资</span>核数聚完成数千万元 A 轮融资</h3>
-      <div class="source">来源：<a href="https://36kr.com/">36氪</a></div>
-      <div class="body"><strong>核心数据：</strong>数千万元人民币 A 轮<br><br>AI 数据服务公司核数聚宣布完成数千万元 A 轮融资，专注为 AI 大模型提供高质量标注数据、合成数据和数据治理服务。核数聚的客户覆盖自动驾驶、金融和医疗等数据密集型行业，其核心能力包括多模态数据标注 pipeline 和自动化数据质量评估。</div>
-      <div class="impact">核数聚融资反映 AI 数据服务作为独立赛道的资本认可度在提升。随着大模型对高质量训练数据的需求激增，数据平台厂商需要考虑是否将数据准备/标注/质量评估能力纳入平台原生功能，还是通过生态合作补足。这可能成为数据平台产品边界扩展的新方向。</div>
-    </div>
+    <div class="empty-notice">今日无合格信息</div>
   </div>
 
   <div class="section">
@@ -272,23 +253,38 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
+
     <div class="item">
-      <h3><span class="funding-tag tag-watch">跟踪</span>Databricks Lakebase Provisioned 实例强制迁移至 Autoscaling</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/">Databricks Documentation</a></div>
-      <div class="body">Databricks 于 6 月启动 Lakebase Provisioned 实例向 Autoscaling 的强制迁移。这一变化直接影响使用 Lakebase 进行可预测工作负载（如固定 ETL 管道）的企业成本结构——Autoscaling 在突发负载下更省，但在稳定负载下可能更贵。迁移的强制性和时间表仍需观察。</div>
-      <div class="watch-signal"><strong>需要等待什么信号确认：</strong>Databricks 是否发布迁移成本计算器或提供 Provisioned 保留选项；首批迁移企业的实际成本变化反馈。</div>
+      <h3><span class="funding-tag tag-preview">预告</span>Snowflake Summit 26 Day 3 Builder Keynote</h3>
+      <div class="source">来源：<a href="https://www.snowflake.com/en/summit">Snowflake Summit 官网</a></div>
+      <div class="body">
+        <p>Day 3（June 3 PDT）的 Builder Keynote 将重点展示开发者如何在 Snowflake AI Data Cloud 上构建 AI 代理和应用，预计会有更多工程实践层面的发布和代码演示。</p>
+        <p><strong>需要等待什么信号确认：</strong>是否有新的开发者工具、SDK 或 Agent 框架发布；是否有具体的客户落地案例和性能数据。</p>
+      </div>
     </div>
+
     <div class="item">
-      <h3><span class="funding-tag tag-watch">跟踪</span>Microsoft Fabric Data Factory Mapping Data Flows 6 月 GA</h3>
-      <div class="source">来源：<a href="https://blog.fabric.microsoft.com/">Microsoft Fabric Blog</a></div>
-      <div class="body">Mapping Data Flows 在 Fabric 中的 GA 将是微软统一数据平台战略的关键里程碑。如果 GA 后功能完整度与 Azure Data Factory 原版本相当，将显著降低 ADF 用户向 Fabric 迁移的障碍，可能引发一波 Fabric 采用潮。</div>
-      <div class="watch-signal"><strong>需要等待什么信号确认：</strong>6 月 GA 的具体日期、功能完整度对比（与 ADF 原生版本）、早期用户的性能与稳定性反馈。</div>
+      <h3><span class="funding-tag tag-downgraded">降级</span>Databricks June 2026 产品更新：AI Search 与 Catalog Explorer 增强</h3>
+      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks Release Notes</a></div>
+      <div class="body">
+        <p>Vector Search 更名为 AI Search，支持无需向量或嵌入的全文搜索索引；Catalog Explorer 新增列热度（Column popularity）功能。两项更新均于 June 1 发布，在窗口边界外，但作为 Databricks 平台能力演进值得跟踪。</p>
+        <p><strong>需要等待什么信号确认：</strong>AI Search 的实际查询性能数据和客户采用情况；Column popularity 对数据治理工作流的实际影响。</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <h3><span class="funding-tag tag-tracking">跟踪</span>腾讯云 DeepSeek-V4 模型调用价格大幅下调</h3>
+      <div class="source">来源：<a href="https://www.stcn.com/article/detail/3940000.html">证券时报</a></div>
+      <div class="body">
+        <p>腾讯云 6 月 2 日公告自 6 月 3 日起 DeepSeek-V4 系列模型最高降价 97.5%，全面持平 DeepSeek 官方售价。虽然本质是 AI 模型定价而非数据平台核心事件，但可能引发中国 AI 云市场价格连锁反应，影响企业数据平台的 AI 功能成本结构。</p>
+        <p><strong>需要等待什么信号确认：</strong>阿里云、华为云等是否跟进降价；降价后的实际调用量增长数据；对数据平台集成 AI 能力的成本预算影响。</p>
+      </div>
     </div>
   </div>
 
   <div class="footer">
-    <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-06-02 08:00</p>
+    <p>Data+AI Daily Brief v4.3</p>
+    <p>信息截至北京时间 2026-06-03 08:00</p>
   </div>
 
 </div>
