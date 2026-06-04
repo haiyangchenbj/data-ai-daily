@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-03</title>
+<title>Data+AI 全球日报 | 2026-06-04</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -113,8 +113,6 @@
   .item .source a { color: var(--primary); text-decoration: none; }
   .item .source a:hover { text-decoration: underline; }
   .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
-  .item .body p { margin-bottom: 8px; }
-  .item .body p:last-child { margin-bottom: 0; }
   .item .impact {
     background: #f0f7ff;
     padding: 10px 14px;
@@ -136,16 +134,6 @@
   .tag-earnings { background: #e3f2fd; color: #1565c0; }
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
   .tag-ma { background: #e8f5e9; color: #2e7d32; }
-  .tag-preview { background: #fff3e0; color: #e65100; }
-  .tag-downgraded { background: #f5f5f5; color: #616161; }
-  .tag-tracking { background: #e8eaf6; color: #3f51b5; }
-
-  .empty-notice {
-    text-align: center;
-    padding: 24px;
-    color: var(--text-secondary);
-    font-size: 14px;
-  }
 
   .footer {
     text-align: center;
@@ -167,18 +155,18 @@
 
   <div class="header">
     <h1>Data+AI 全球日报</h1>
-    <div class="date">2026-06-03 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-06-04 · 严格只包含过去24小时信息</div>
   </div>
 
   <div class="summary-box">
     <h2>今日最重要的3点</h2>
     <ol>
-      <li>开放表格式正从兼容性目标升级为数据平台互操作的核心协议</li>
-      <li>AI Agent 的数据访问治理从事后审计走向会话级实时边界控制</li>
-      <li>企业 SaaS 数据与云平台的零拷贝集成成为跨云架构新标配</li>
+      <li>分析型数据库开始向 Agent 原生架构演进，查询引擎与 AI 能力深度耦合成为新方向</li>
+      <li>云厂商数据集成工具加速拥抱低代码 Spark 级数据工程，降低实时 AI 管道门槛</li>
+      <li>数据平台厂商正从"提供数据"转向"提供行动"，Agent 控制平面成为竞争焦点</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>数据平台竞争正从引擎性能转向开放生态与 Agent 就绪度，Snowflake 以 Iceberg v3 + Polaris 回应不锁定诉求，Immuta 与 Workday-AWS 分别定义了 Agent 治理和跨云集成标准。
+      <strong>总判断：</strong>数据平台正从"AI-Ready"迈向"Agent-Native"。ClickHouse、Microsoft、Snowflake 同日信号表明：查询引擎嵌入 Agent 能力、数据管道支持自主工作流、平台成为 Agent 控制平面，已成共识。
     </div>
   </div>
 
@@ -187,32 +175,23 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-
     <div class="item">
-      <h3>1. Snowflake 发布开放互操作框架：Iceberg v3 GA + Polaris 双向 Catalog + Horizon 统一治理</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/en/news/press-releases/snowflake-pioneers-new-open-framework-for-interoperable-enterprise-data-and-ai/">Snowflake 官方新闻稿</a></div>
-      <div class="body">
-        <p>Snowflake 在 Summit 26 Day 2 宣布以 Apache Iceberg v3 为核心构建完整的开放互操作栈。关键组件包括：Iceberg v3 正式可用（GA），支持更多数据类型、跨系统变更追踪与半结构化数据高性能处理；Snowflake Storage for Apache Iceberg Tables GA，为开放数据提供完全托管体验；Horizon Catalog（由 Apache Polaris 驱动）GA，实现跨 Snowflake、外部数据湖和开放系统的双向读写与统一治理。此外，外部引擎访问管理、Iceberg REST Scan Plan API 等进入预览，确保细粒度保护跨兼容引擎生效。</p>
-      </div>
-      <div class="impact"><strong>为什么对数据平台重要：</strong>这是主流云数据平台首次以完整产品栈级别拥抱开放表格式互操作，从存储层到目录层再到治理层全部打通。意味着企业可以在 Snowflake 内部和外部引擎之间共享一份实时、受治理的数据副本，无需移动或复制数据。对架构选型而言，"开放格式避免锁定"从口号变成了可落地的工程现实，将直接影响企业的多云策略和采购决策。</div>
+      <h3>1. ClickHouse Open House 2026：Agent、Postgres 与 Observability 三连发</h3>
+      <div class="source">来源：<a href="https://clickhouse.com/docs/whats-new/changelog/cloud" target="_blank">ClickHouse Cloud Changelog</a></div>
+      <div class="body">ClickHouse 在 6 月 3 日的 Open House 2026 活动中密集发布四项重大更新。ClickHouse Agents 进入 Public Beta，基于 Claude 提供对话式 schema-aware 分析，支持无代码 AgentBuilder、MCP 服务器插件和子代理工作流。ClickHouse Postgres 同步进入 Public Beta，在本地 NVMe 存储上提供托管 Postgres 服务，声称 TPS 较 AWS RDS 提升 5 倍以上，并通过原生 CDC 管道将数据实时同步至 ClickHouse。ClickStack Cloud 作为 serverless 可观测性平台启动 Private Preview，基于 OpenTelemetry 提供日志、指标和追踪的统一管理。</div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>ClickHouse 首次将 AI Agent 能力作为第一方功能嵌入分析数据库，标志着查询引擎与 AI 推理层开始深度融合。Postgres + ClickHouse 的托管组合则打通了 OLTP 到 OLAP 的实时链路，无需中间件。这两项变化共同指向一个趋势：分析型数据库正在从"被动响应查询"转向"主动理解业务并执行动作"。</div>
     </div>
-
     <div class="item">
-      <h3>2. Immuta 联合 Snowflake 推出 Agentic Data Access：AI Agent 会话级数据访问治理</h3>
-      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/immuta-launches-new-agentic-data-access-capabilities-on-snowflake-ai-data-cloud-302788954.html">PR Newswire</a></div>
-      <div class="body">
-        <p>数据访问治理厂商 Immuta 在 Snowflake Summit 26 上发布三项由 Snowflake Cortex AI 驱动的新能力。Immuta Agentic Data Access 使 AI 代理通过自然语言与企业数据交互，Cortex 负责查询规划，Immuta 在会话级别强制执行访问边界，为每个代理交互分发唯一的临时角色，范围限定于授权用户的权限。Agent Principal Context 扩展 Snowflake 的代理主体上下文，治理 AI 代理对 Snowflake 外部数据的出站访问，采用零常驻权限的动态配置。Comply App 为 Horizon Catalog 提供自然语言合规查询界面。</p>
-      </div>
-      <div class="impact"><strong>为什么对数据平台重要：</strong>这是数据治理领域首个面向 AI Agent 时代设计的访问控制方案。传统的基于角色的静态权限模型无法应对 Agent 自主决策、多步骤推理、跨系统调用的场景。Immuta 的"会话级临时角色 + 双重身份审计追踪"架构，将治理粒度从"人能访问什么"推进到"Agent 在代表谁、能访问什么、每一步是否合规"。对数据平台而言，Agent 治理将成为与 Agent 能力同等重要的基础设施。</div>
+      <h3>2. Microsoft Build 2026：Fabric Data Factory 引入 MDF Transform 与私有网络镜像</h3>
+      <div class="source">来源：<a href="https://community.fabric.microsoft.com/t5/Fabric-Updates-Blog/Build-2026-From-data-to-intelligence-Faster-with-Fabric-Data/ba-p/5191636" target="_blank">Microsoft Fabric Updates Blog</a></div>
+      <div class="body">Microsoft 在 Build 2026 大会上宣布 Fabric Data Factory 多项更新。Mapping Data Flows (MDF) Transform 将在 6 月 8 日当周进入 Dataflow Gen2，提供低代码 Spark 级数据工程体验。Secure ingestion into Fabric Data Warehouse with Copy job/activity 正式 GA，支持最严格网络拓扑下的工作空间私有链路。Mirroring with Workspace Private Link 进入 Preview，覆盖 Azure SQL DB、SQL Server、SAP Datasphere 和 SharePoint List。此外，Rayfin 开源 SDK 发布，支持将 Agent 构建的应用直接部署到 Fabric 平台作为受治理的生产后端。</div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>MDF Transform 进入 Dataflow Gen2 意味着微软将 Azure Data Factory 的核心能力下沉到 Fabric 的 SaaS 体验中，降低了大规模数据工程的入门门槛。Rayfin 的发布则表明微软正在构建 Agent 应用与数据平台之间的双向闭环：Agent 从 Fabric 取数据，应用产出的数据又回流到 Fabric。这一架构对数据平台的治理模型和实时性提出了新要求。</div>
     </div>
-
     <div class="item">
-      <h3>3. Workday Data Cloud 与 AWS 深度集成：双向零拷贝 + Agent Gateway 跨云数据访问</h3>
-      <div class="source">来源：<a href="https://finviz.com/news/358965/workday-announces-workday-data-cloud-integration-with-aws-giving-developers-direct-access-to-workdays-governed-data-layer">PR Newswire via Finviz</a></div>
-      <div class="body">
-        <p>Workday 在 DevCon 大会宣布 Workday Data Cloud 将与 AWS 深度集成，开发者可从 AWS 工具和服务双向零拷贝访问 Workday 治理的 HR 与财务数据，无需构建自定义管道或复制数据。基于 Apache Iceberg 的 Workday Data Connect 提供预构建连接器；Workday Agent Gateway 使 AWS 上构建的 AI 代理能安全访问 Workday 的薪资、福利和财务数据，复用现有治理、权限和审计控制。Workday Data Lake、Data Connect 和 Live Data Query 已向早期采用者开放，AWS 集成功能将在未来几个季度通过早期访问计划逐步推出。</p>
-      </div>
-      <div class="impact"><strong>为什么对数据平台重要：</strong>这是企业 SaaS 数据与云数据平台深度集成的标志性案例。传统上，SaaS 数据通过 API 或 ETL 管道导出到数据仓库，存在延迟高、治理断裂、重复存储等问题。Workday 的"双向零拷贝 + 治理随行"模式意味着 SaaS 数据可以像云原生数据一样被直接查询和治理，AI 代理也能在保持合规的前提下实时访问业务上下文。对数据平台架构而言，SaaS 数据层与云数据平台的边界正在消融。</div>
+      <h3>3. Snowflake Summit Day 3：CoWork 详细功能曝光，Cortex Training 首次亮相</h3>
+      <div class="source">来源：<a href="https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html" target="_blank">Snowflake 官方 / 163.com 报道</a></div>
+      <div class="body">Snowflake 在 Summit Day 3 期间披露了 CoWork（原 Snowflake Intelligence）的完整功能细节。CoWork 新增 Artifacts（可发布仪表盘）、Cortex Sense（为 Agent 提供共享业务上下文层）、User Skills（自动化工作流）、User Memory（个性化学习）和 Skill Catalog。Cortex Training 首次亮相，提供托管 GPU 环境供企业在 Snowflake 内定制基础模型。Snowflake 同时透露已有超过 13,900 家客户，其中 13,600 多个账户每周使用其 AI 产品。</div>
+      <div class="impact"><strong>为什么对数据平台重要：</strong>CoWork 的完整功能揭示了 Snowflake 对"Agentic Enterprise"的具体定义：不是单一 Chatbot，而是由共享上下文层（Cortex Sense）连接的可组合 Agent 网络。Cortex Training 则意味着 Snowflake 从"数据平台"向"模型训练平台"延伸，客户无需将敏感数据移出即可微调模型。这一组合使 Snowflake 成为同时覆盖数据、治理、模型训练和 Agent 部署的完整栈。</div>
     </div>
   </div>
 
@@ -221,14 +200,17 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-
     <div class="item">
-      <h3>1. Collibra 扩展与 Snowflake 集成：Horizon Catalog 与 Cortex AI 双向语义治理</h3>
-      <div class="source">来源：<a href="https://finance.sina.cn/2026-06-03/detail-iniaaeze4470669.d.html">新浪财经</a></div>
-      <div class="body">
-        <p>数据治理厂商 Collibra 在 Snowflake Summit 26 上宣布扩大与 Snowflake 的集成，在 Snowflake AI Data Cloud 中提供可信业务上下文和语义一致性。Collibra 的企业上下文流入 Snowflake，实现跨 Horizon Catalog 和 Cortex AI 的双向集成，涵盖治理与策略增强、AI 语义增强、自动可追溯性、可扩展数据访问管理等方面。Collibra AI Command Center 为 Snowflake 上的自主 AI 提供控制层。此次集成已向部分共同客户提供预览版，计划 2026 年第三季度全面推出。</p>
-      </div>
-      <div class="impact"><strong>对数据平台的影响：</strong>数据目录与数据治理平台的深度集成，解决了 AI 时代"业务语义一致性"的核心难题。当 AI 代理查询数据时，如果不能理解企业特定的指标定义（如"毛利率"在该公司如何计算），就会做出错误决策。Collibra 的上下文层与 Snowflake 的计算层结合，使治理语义可以随数据一起被 Agent 理解和使用，是数据平台从"数据可用"走向"数据可信"的关键一步。</div>
+      <h3>1. AWS SageMaker Unified Studio 新增 Notebook 调度和 Data Agent 对话历史</h3>
+      <div class="source">来源：<a href="https://docs.aws.amazon.com/sagemaker-unified-studio/latest/userguide/release-notes.html" target="_blank">AWS Release Notes</a></div>
+      <div class="body">AWS 于 6 月 3 日为 SageMaker Unified Studio 发布两项更新。Notebook scheduling 支持直接从笔记本界面调度、参数化和编排笔记本运行，无需外部编排基础设施，并支持多笔记本工作流链式执行。SageMaker Data Agent 新增 90 天对话历史保留功能，支持恢复之前的分析会话。</div>
+      <div class="impact"><strong>对数据平台的影响：</strong>Notebook scheduling 的引入降低了数据科学工作流自动化的门槛，使分析师可以直接将探索性分析转化为生产级定时任务。Data Agent 的对话历史则增强了可观测性和审计能力，对于受监管行业的 AI 辅助分析尤为重要。两者共同强化了 AWS 在"数据工程 + AI"一体化方面的竞争力。</div>
+    </div>
+    <div class="item">
+      <h3>2. NetApp 与 Cisco 扩展合作，将存储层纳入 SOAR 自动化响应</h3>
+      <div class="source">来源：<a href="https://s21.q4cdn.com/371534297/files/doc_news/NetApp-and-Cisco-Collaboration-Strengthens-Defense-in-Depth-for-Enterprise-Cyber-Resilience-2026.pdf" target="_blank">Business Wire</a></div>
+      <div class="body">NetApp 与 Cisco（通过 Splunk）于 6 月 3 日宣布扩展合作，发布 NetApp Splunk SOAR Playbook。该方案允许 Splunk SOAR 在检测到勒索软件威胁时，直接在 NetApp ONTAP 存储层执行自动化响应动作，包括阻断可疑用户、创建快照和下线数据卷，无需人工干预。</div>
+      <div class="impact"><strong>对数据平台的影响：</strong>这是数据基础设施与安全运营深度集成的典型案例。传统上，存储层是安全响应的盲区——检测到威胁后需要人工介入存储系统。将 SOAR 能力延伸到存储层意味着数据平台本身成为主动防御体系的一部分，这对金融、医疗等强合规行业的数据架构设计具有参考意义。</div>
     </div>
   </div>
 
@@ -237,7 +219,12 @@
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <div class="empty-notice">今日无合格信息</div>
+    <div class="item">
+      <h3>1. Gartner：2026 数据与分析十大预测</h3>
+      <div class="source">来源：<a href="https://www.gartner.com/cn/newsroom/press-releases/2026-da-top-predictions" target="_blank">Gartner 中国新闻室</a></div>
+      <div class="body"><strong>核心观点：</strong>Gartner 发布 2026 年及未来数据与分析领域十大预测。关键判断包括：到 2027 年末，GenAI 与 AI 智能体的应用将给主流生产力工具带来 30 年来首次真正挑战，引发价值 580 亿美元的市场格局重塑；到 2029 年，AI 智能体从物理环境产生的数据量预计将达到所有数字 AI 应用数据总和的 10 倍；到 2030 年，50% 的企业将使用自主 AI 智能体将治理政策转化为机器可验证的数据合约。</div>
+      <div class="impact"><strong>映射到数据平台的判断：</strong>Gartner 的预测明确了数据平台未来的两个核心命题：一是 Agent 产生的数据规模将远超人类产生的数据，平台必须为此设计新的存储、治理和实时处理架构；二是治理将从"人工制定规则"转向"机器自动执行合约"，这意味着数据平台需要内建策略引擎和自动化合规能力。对于当前正在规划 Agent-Ready 架构的企业，这些预测提供了 3-5 年的技术路线图参考。</div>
+    </div>
   </div>
 
   <div class="section">
@@ -245,7 +232,12 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <div class="empty-notice">今日无合格信息</div>
+    <div class="item">
+      <h3><span class="funding-tag tag-funding">投融资</span>Coralogix 完成 2 亿美元 F 轮融资，总融资达 5.5 亿美元</h3>
+      <div class="source">来源：<a href="https://coralogix.com/coralogix-raises-200m-to-scale-the-observability-backbone-for-the-age-of-ai/" target="_blank">Coralogix 官方博客</a></div>
+      <div class="body"><strong>核心数据：</strong>Series F 融资 2 亿美元，由 Advent 和 CPPIB 领投，Greenfield 和 Brighton Park Capital 跟投。总融资额达 5.5 亿美元。<br><br>Coralogix 于 6 月 3 日宣布完成 2 亿美元 F 轮融资。公司定位为"AI 时代的可观测性数据平台"，其流式引擎和 schema-free 架构支持全保真摄取和实时分析，内置 AI Agent Olly 可自动执行事件调查和根因分析。CEO Ariel Assaraf 表示，Coralogix 的架构在 Agent 时代"不需要重新定位，因为它就是为这个场景构建的"。</div>
+      <div class="impact"><strong>对数据平台的影响：</strong>Coralogix 的高估值反映了市场对"AI-Native 可观测性"的强烈需求。传统可观测性工具基于采样和仪表盘设计，难以应对 Agent 产生的大规模遥测数据。Coralogix 的全保真流式架构为数据平台领域提供了一个重要参照：当 AI 系统成为数据的主要消费者时，存储和查询架构需要从"人类可读"转向"机器优先"。</div>
+    </div>
   </div>
 
   <div class="section">
@@ -253,38 +245,21 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
-
     <div class="item">
-      <h3><span class="funding-tag tag-preview">预告</span>Snowflake Summit 26 Day 3 Builder Keynote</h3>
-      <div class="source">来源：<a href="https://www.snowflake.com/en/summit">Snowflake Summit 官网</a></div>
-      <div class="body">
-        <p>Day 3（June 3 PDT）的 Builder Keynote 将重点展示开发者如何在 Snowflake AI Data Cloud 上构建 AI 代理和应用，预计会有更多工程实践层面的发布和代码演示。</p>
-        <p><strong>需要等待什么信号确认：</strong>是否有新的开发者工具、SDK 或 Agent 框架发布；是否有具体的客户落地案例和性能数据。</p>
-      </div>
+      <h3><span class="funding-tag tag-ma">预告</span>腾讯云 6 月 5 日 AI 产业应用大会将发布 Agent Storage</h3>
+      <div class="source">来源：<a href="https://cloud.tencent.com/developer/article/2681637" target="_blank">腾讯云开发者社区</a></div>
+      <div class="body"><strong>为什么值得继续看：</strong>腾讯云将于 6 月 5 日在北京举办 2026 腾讯云 AI 产业应用大会，届时将发布面向 Agent 时代的全新存储产品矩阵"Agent Storage"。这是国内云厂商首次明确将存储产品定位为"Agent 时代的数据底座"，与今日 ClickHouse、Microsoft、Snowflake 的国际信号形成呼应。<br><br><strong>需要等待什么信号确认：</strong>需关注 Agent Storage 的具体技术架构（是否支持多模态数据统一存储、长短期记忆管理、与现有腾讯云数据产品的集成深度），以及定价模式和 GA 时间表。</div>
     </div>
-
     <div class="item">
-      <h3><span class="funding-tag tag-downgraded">降级</span>Databricks June 2026 产品更新：AI Search 与 Catalog Explorer 增强</h3>
-      <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks Release Notes</a></div>
-      <div class="body">
-        <p>Vector Search 更名为 AI Search，支持无需向量或嵌入的全文搜索索引；Catalog Explorer 新增列热度（Column popularity）功能。两项更新均于 June 1 发布，在窗口边界外，但作为 Databricks 平台能力演进值得跟踪。</p>
-        <p><strong>需要等待什么信号确认：</strong>AI Search 的实际查询性能数据和客户采用情况；Column popularity 对数据治理工作流的实际影响。</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <h3><span class="funding-tag tag-tracking">跟踪</span>腾讯云 DeepSeek-V4 模型调用价格大幅下调</h3>
-      <div class="source">来源：<a href="https://www.stcn.com/article/detail/3940000.html">证券时报</a></div>
-      <div class="body">
-        <p>腾讯云 6 月 2 日公告自 6 月 3 日起 DeepSeek-V4 系列模型最高降价 97.5%，全面持平 DeepSeek 官方售价。虽然本质是 AI 模型定价而非数据平台核心事件，但可能引发中国 AI 云市场价格连锁反应，影响企业数据平台的 AI 功能成本结构。</p>
-        <p><strong>需要等待什么信号确认：</strong>阿里云、华为云等是否跟进降价；降价后的实际调用量增长数据；对数据平台集成 AI 能力的成本预算影响。</p>
-      </div>
+      <h3><span class="funding-tag tag-ma">跟踪</span>SAP 收购 Dremio 和 Prior Labs 的后续整合进展</h3>
+      <div class="source">来源：<a href="https://staging.theoutpost.ai/news-story/sap-acquires-dremio-and-prior-labs-with-1-1-b-investment-to-advance-enterprise-ai-strategy-25094" target="_blank">The Outpost</a></div>
+      <div class="body"><strong>为什么值得继续看：</strong>SAP 近期宣布收购开放数据湖仓平台 Dremio 和表格基础模型公司 Prior Labs，总投资超 11 亿欧元。SAP Business Data Cloud 将原生支持 Apache Iceberg，并基于 Apache Polaris 构建通用开放目录。这是传统 ERP 巨头向开放数据平台转型的关键动作。<br><br><strong>需要等待什么信号确认：</strong>需跟踪收购完成后的产品整合时间表、Dremio 的 Agentic Lakehouse 与 SAP HANA Cloud 的融合路径，以及 Prior Labs 的 TabPFN 模型在 SAP 产品中的实际落地场景。</div>
     </div>
   </div>
 
   <div class="footer">
-    <p>Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-06-03 08:00</p>
+    <p>Powered by Data+AI Daily Brief v4.3</p>
+    <p>信息截至北京时间 2026-06-04 08:00</p>
   </div>
 
 </div>
