@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-05</title>
+<title>Data+AI 全球日报 | 2026-06-08</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -140,14 +140,6 @@
   .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
   .tag-ma { background: #e8f5e9; color: #2e7d32; }
 
-  /* Empty section note */
-  .empty-note {
-    font-size: 14px;
-    color: var(--text-secondary);
-    font-style: italic;
-    padding: 12px 0;
-  }
-
   /* Footer */
   .footer {
     text-align: center;
@@ -170,18 +162,20 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-06-05 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-06-08 · 严格只包含过去24小时信息</div>
   </div>
+
+  <!-- 根据实际日报内容填充以下模板 -->
 
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>AI Agent正在重塑数据库基础设施的估值逻辑，Postgres生态成为最大受益者</li>
-      <li>开放表格式互操作性进入生产级阶段，Catalog成为新的竞争焦点</li>
-      <li>数据平台与前沿模型厂商的深度融合正在加速，数据不出平台成为标配</li>
+      <li>开放表格式之争从格式对抗走向统一治理，Agent 跨系统数据访问的格式障碍正在消除</li>
+      <li>数据平台搜索能力从纯向量向混合语义+关键字演进，RAG 和 Agent 不再需要拼接多系统</li>
+      <li>中美头部云厂商同日向 Agent-Ready 数据基础设施对齐，Agent 正成为平台定义能力的核心用户</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Agentic基础设施正从概念验证快速进入资本密集期，数据平台厂商围绕开放表格式、AI治理和Agent运行时的三向布局，将在下半年决定企业AI数据栈的采购优先级。
+      <strong>总判断：</strong>Databricks 收购 Tabular 统一开放表格式，推出 AI Search 与 Lakebase；腾讯云发布 Agent-Ready 数据平台。中美厂商向 Agent 范式对齐，数据平台竞争进入 Agent-Native 阶段。
     </div>
   </div>
 
@@ -191,39 +185,21 @@
       <span class="badge badge-a">A</span>
       <h2>Top Signals</h2>
     </div>
-
     <div class="item">
-      <h3>1. Supabase $500M Series F估值$105亿，Agentic基础设施成为独立品类</h3>
-      <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/supabase-raises-500m-at-10-5b-to-accelerate-lead-in-agentic-infrastructure-302791787.html" target="_blank">PR Newswire</a></div>
-      <div class="body">
-        <p>Supabase宣布完成$500M Series F融资，投后估值$105亿，由GIC领投，Accel、Stripe、Salesforce Ventures等参投。距离去年10月$5B估值的Series E仅7个月，累计融资超$10亿。CEO Paul Copplestone披露，用户基数自E轮以来翻倍，数据库数量同比增长600%，Claude Code是今年最大贡献者，Agents现已部署平台上大多数数据库。同日发布Multigres预览版（开源Postgres水平扩展层）。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>Supabase的估值翻倍速度和Agent部署占比揭示了一个结构性转变：Postgres正在从传统关系型数据库重新定位为AI原生应用的默认基础设施。当Agents成为数据库的主要创建者，数据平台的用户画像、性能模型和治理逻辑都将发生根本变化。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. Databricks Unity Catalog Iceberg全面GA，开放湖仓互操作性达新里程碑</h3>
-      <div class="source">来源：<a href="https://www.databricks.com/blog/unity-catalog-and-next-era-apache-icebergtm" target="_blank">Databricks Blog</a></div>
-      <div class="body">
-        <p>Databricks宣布Unity Catalog中Managed Iceberg、Iceberg v3、Foreign Iceberg全面GA，同时推出Cross-engine ABAC（Beta）、Delta Sharing向Iceberg客户端开放共享（GA）、以及新增Google Cloud Lakehouse和Palantir的catalog federation连接器。Iceberg v3支持deletion vectors、VARIANT类型和row tracking，且适用于managed、foreign和UniForm-enabled表。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是目前业界最全面的Iceberg catalog能力集——从表管理、跨引擎治理到安全共享形成完整闭环。当Snowflake在Summit主打Iceberg互操作时，Databricks以Unity Catalog的"五维能力"（开放API、联邦、跨引擎治理、零拷贝共享、AI优化）回应，开放表格式的竞争已从"支持与否"进入"治理深度"阶段。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>3. Snowflake与Anthropic深化合作，Claude直接集成Cortex AI平台</h3>
-      <div class="source">来源：<a href="https://www.thelec.net/news/articleView.html?idxno=10984" target="_blank">TheLec</a></div>
-      <div class="body">
-        <p>Snowflake在Summit 26期间宣布与Anthropic扩大合作，Claude模型直接集成至Snowflake Cortex AI平台，实现数据不出平台即可调用前沿模型。Snowflake Intelligence个人工作Agent和Cortex Code编码Agent均基于Claude构建。Snowflake同时成为Anthropic Claude Marketplace六个首发合作伙伴之一，客户可将Anthropic现有承诺直接用于Snowflake AI服务。</p>
-      </div>
-      <div class="impact">
-        <strong>为什么对数据平台重要：</strong>这是"数据主权+前沿模型"组合的重要落地案例。企业AI adoption的最大障碍之一是敏感数据外泄风险，Snowflake通过将Claude引入自身治理边界，证明了数据平台可以既是存储层又是模型推理层。这种"平台内闭环"模式很可能成为受监管行业的默认架构。
-      </div>
-    </div>
+    <h3>Databricks 超 10 亿美元收购 Tabular，Iceberg 创始人团队加入意图统一开放表格式标准</h3>
+    <div class="source">来源：[TechTarget](https://www.techtarget.com/searchdatamanagement/news/366588032/Databricks-1B-plus-Tabular-acquisition-adds-Iceberg-support)、Databricks 官方博客、CNBC</div>
+    <div class="body"><b>摘要：</b> Databricks 于 6 月 4 日宣布以超 10 亿美元收购数据管理公司 Tabular，后者由 Apache Iceberg 项目创始人 Ryan Blue 和 Daniel Weeks 于 2021 年创立，累计融资 3700 万美元。收购完成后，Tabular 三位联合创始人将加入 Databricks，与 Databricks 共同承诺推动 Delta Lake 与 Iceberg 向统一开放标准演进。Databricks 同时表示将继续通过 UniForm（6 月 3 日 GA）维护 Delta Lake、Iceberg 和 Hudi 的三向兼容性。该交易预计于 Databricks 财年 Q2（7 月 31 日前）完成。<br><b>3点：</b><br>- 格式侧，Iceberg 核心创始人加入并承诺统一标准，意味着湖仓两大主流格式将从竞争走向融合，企业不再承担格式锁定风险<br>- 生态侧，Databricks 此前仅在 Delta Lake 社区有深度影响力，收购后在 Iceberg 社区也将获得同等话语权，对主要竞争对手构成直接压力<br>- 架构侧，统一开放表格式是 AI Agent 跨系统访问数据的前提条件，此举为 Agent 可自由遍历的数据层扫清格式障碍<br><b>So What：</b> 开放表格式的统一比任何单一产品发布都更具结构性意义——它消除了 Agent 时代数据互操作的最大摩擦点，也让"湖仓一体"从营销概念变为真正的工程现实。Snowflake 在 Summit 期间力推的 Iceberg 互操作战略，此刻面临 Databricks"以收购代竞争"的降维回应。</div>
+</div>
+<div class="item">
+    <h3>Databricks 双发 AI Search 品牌重塑与 Lakebase 统一治理，定义 Agent-Native 数据平台</h3>
+    <div class="source">来源：[Databricks 产品文档](https://docs.databricks.com/aws/pt/release-notes/product/2026/june)、[Databricks AI Search 产品页](https://www.databricks.com/en/product/machine-learning/vector-search)、[The Agent Times](https://theagenttimes.com/articles/databricks-launches-lakebase-to-unify-operational-and-analyt-0197b72c)</div>
+    <div class="body"><b>摘要：</b> Databricks 在 6 月 5 日同步推进两项重大产品升级：（1）Vector Search 正式更名为 AI Search，新增无需向量/嵌入的纯全文搜索索引能力，支持语义、关键字（BM25）和混合搜索统一 API；（2）Lakebase 正式发布，将运营数据库（operational databases）纳入 Unity Catalog 统一治理层，消除事务型系统与分析型系统之间的治理割裂，并演示了与 Spotify Backstage 开源开发者门户的集成。Databricks 6 月更新还包括：Managed SharePoint connector 支持结构化文件摄入（Beta）、Excel Add-in 支持回写数据到 Unity Catalog、Genie 预算管控、Full page Genie Code（Beta）等。<br><b>3点：</b><br>- 搜索侧，AI Search 从纯向量检索扩展为混合语义与关键字搜索，意味着 RAG 和 Agent 应用不再需要拼接多个搜索系统<br>- 治理侧，Lakebase 将运营数据库纳入统一治理层，使 Agent 在事务系统和分析系统之间穿梭时无需切换权限模型<br>- 产品侧，搜索升级、治理统一与 Tabular 收购形成完整叙事，正在构建 Agent 可以自主发现、访问、分析和操作数据的闭环环境<br><b>So What：</b> Databricks 本周的动作组合表明，数据平台竞争的下一个前沿不再是"谁能存储更多数据"，而是"谁能让 Agent 更高效地使用数据"。AI Search 解决"找得到"，Lakebase 解决"管得统一"，Tabular 解决"格式不卡"——三者叠加构成 Agent-Native 数据基础设施的完整拼图。</div>
+</div>
+<div class="item">
+    <h3>腾讯云面向 Agent 升级全栈数据平台：DataBuddy + WeData + AI 原生底座三层架构</h3>
+    <div class="source">来源：[腾讯新闻](https://new.qq.com/rain/a/20260605A079EL00)、[科创板日报](https://view.inews.qq.com/a/20260605A08FRL00)、[搜狐科技](https://www.sohu.com/a/1032791342_104421)</div>
+    <div class="body"><b>摘要：</b> 6 月 5 日，腾讯云在 AI 产业应用大会上宣布面向 Agent 升级全栈数据平台能力，构建三层架构：（1）智能入口 DataBuddy——生产级数据智能体，支持自然语言驱动数据建模、ETL 开发、任务编排、归因分析和报告生成，内测以来超 3000 家企业申请，可将重复开发工作量降低 80%；（2）统一控制面 WeData——一站式数据智能平台，提供统一元数据、语义层、编排和权限体系，自然语言转 SQL 准确率提升至 90% 以上；（3）AI 原生数据底座——从存储、计算引擎、系统到数据分析四层重构，自研 Meson 引擎 TPC-DS 性能提升 3.6 倍，Xpark 跨模态引擎推理吞吐提升 3 倍。同步升级 TBDS 私有化大数据平台面向政务金融场景。<br><b>3点：</b><br>- 用户侧，腾讯云明确将 Agent 定位为与人的并列使用者，平台设计从人操作工具转向人与 Agent 协同完成任务<br>- 语义侧，统一语义层将指标口径、业务术语沉淀为 Agent 可理解的资产，解决 Agent 调用数据时的理解断层问题<br>- 底座侧，存储、计算、数据与系统四层全面重构，表明这不是功能叠加而是面向 Agent 时代的范式跃迁<br><b>So What：</b> 腾讯云此次升级与 Databricks 本周动作形成中美市场的罕见共振——双方都意识到 Agent 不仅需要"能访问数据"，更需要"能理解数据语义"和"能在统一治理下操作数据"。WeData 的统一语义层和 Databricks 的 Lakebase 统一治理，分别从"语义理解"和"权限治理"两个维度回应同一命题。Agent-Native 数据基础设施的全球竞赛已正式开赛。<br>---</div>
+</div>
   </div>
 
   <!-- Section B: Product & Tech -->
@@ -232,48 +208,39 @@
       <span class="badge badge-b">B</span>
       <h2>Product & Tech</h2>
     </div>
-
     <div class="item">
-      <h3>1. Cloudera采用Apache Polaris并贡献Ranger授权插件</h3>
-      <div class="source">来源：<a href="https://aapnews.aap.com.au/aapreleases/globenewswire9731758" target="_blank">Globe Newswire</a></div>
-      <div class="body">
-        <p>Cloudera在Snowflake Summit 26上宣布采用Apache Polaris作为其开放数据湖仓架构的一部分，并向Polaris 1.5贡献Apache Ranger authorizer插件（Beta）。该集成使企业能够在分析和AI引擎之间安全访问和共享受治理数据，同时保持集中化治理和运营控制。Cloudera的Data Readiness Index 2026显示，79%的组织因无法跨环境访问100%所需数据而受阻。</p>
-      </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>Cloudera对Polaris的采纳标志着开放catalog标准正在获得传统Hadoop生态的认可。Ranger插件的贡献尤其重要——它填补了Polaris在企业级细粒度权限管理上的空白，使开放湖仓架构在受监管行业的可行性大幅提升。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>2. OneStream推出Snowflake连接器，财务智能直通数据云</h3>
-      <div class="source">来源：<a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-04/doc-iniafrts0471800.shtml" target="_blank">新浪财经</a></div>
-      <div class="body">
-        <p>OneStream在6月4日的世界巡回活动上发布全新Snowflake连接器，作为其连接中心框架的新增功能。该连接器将管控的财务背景信息引入Snowflake数据生态系统，确保AI和分析计划基于经过认证、符合财务标准的智能运行。OneStream研究显示，去年47%的高管用不准确或不完整数据做重大决策，62%从多个不协调系统获取AI数据。</p>
-      </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>这是SaaS财务规划与云数据平台深度集成的典型案例。OneStream的切入点揭示了企业AI落地的真实瓶颈：不是缺少模型，而是缺少"经过财务治理认证"的数据管道。FP&A（财务规划与分析）数据的质量和可信度，正成为企业级AI应用的前提条件。
-      </div>
-    </div>
-
-    <div class="item">
-      <h3>3. Databricks 6月产品更新：Excel回写、Genie Code自动审批</h3>
-      <div class="source">来源：<a href="https://learn.microsoft.com/en-us/azure/databricks/release-notes/product/2026/june" target="_blank">Microsoft Learn</a></div>
-      <div class="body">
-        <p>Azure Databricks 6月4日发布多项更新：Excel Add-in支持将数据从Microsoft Excel直接写回Unity Catalog表；Genie Code新增auto-approve模式，AI分类器自动审批工具动作；Genie产品将于7月6日转为按需计费模式，每人每月150 DBU免费额度。此外，AI Search（原Vector Search）6月1日更名，支持无需向量的全文检索索引。</p>
-      </div>
-      <div class="impact">
-        <strong>对数据平台的影响：</strong>Excel回写降低了业务用户参与数据治理的门槛，让"最后一英里"的数据修正不再需要工程师介入。Genie Code的auto-approve则反映了Agent权限模型的演进方向：从"每次确认"到"分级自动"，但Databricks明确标注这不是安全边界——显示了Agent治理仍处于探索期。
-      </div>
-    </div>
+    <h3>Databricks June 2026 多项产品更新</h3>
+    
+    <div class="body"><b>摘要：</b> Databricks 6 月产品更新密集发布：Managed SharePoint connector（Beta）新增 CSV/JSON/Excel/Parquet 等结构化文件摄入能力；Excel Add-in 支持从 Excel 直接回写数据到 Unity Catalog 表；Genie 产品将于 7 月 6 日转为按需付费，现支持设置预算和邮件告警；Full page Genie Code（Beta）提供多线程并行开发体验；External data access（Public Preview）允许外部 Delta/Iceberg 客户端通过 REST API 读取 streaming tables 和物化视图。<br><b>来源：</b> <a href="https://docs.databricks.com/aws/pt/release-notes/product/2026/june">Databricks 产品文档</a></div>
+</div>
+<div class="item">
+    <h3>AWS SageMaker Unified Studio 6 月更新：Data Agent 业务上下文集成与 Notebook 调度</h3>
+    <div class="source">来源：AWS 官方博客、AWS 产品文档</div>
+    <div class="body"><b>摘要：</b> AWS 于 6 月 3-4 日更新 SageMaker Unified Studio：Data Agent 新增业务上下文集成能力，可理解企业特定术语和业务流程；Notebook 新增定时调度功能，支持按 cron 表达式自动执行；对话历史管理增强，支持跨会话上下文保留。<br>---</div>
+</div>
   </div>
 
-  <!-- Section C: Views & Research -->
+  <!-- Section C: Views & Research (People & Views + Analyst Insights 合并) -->
   <div class="section">
     <div class="section-header">
       <span class="badge badge-c">C</span>
       <h2>Views & Research</h2>
     </div>
-    <div class="empty-note">今日无窗口内确认的合格分析师观点与研究。宁缺毋滥。</div>
+    <div class="item">
+    <h3>Constellation Research：Databricks 收购 Tabular 是"Snowflake Summit 聚光灯下的正面交锋"</h3>
+    
+    <div class="body"><b>摘要：</b> Constellation Research 分析师 Doug Henschen 评论称："The timing of this deal is obviously intended to grab some of the Snowflake Summit limelight but also to outdo its competitor on openness messaging with the suggestion that it will have huge influence over the future of the Iceberg standard." 他指出，Databricks 此前已通过 UniForm 实现 Delta Lake/Iceberg/Hudi 三向兼容，因此收购并不令人意外，但真正的意义在于"The deal brings Databricks depth and influence in the Iceberg community, whereas it previously only had depth and obvious influence over Delta Lake"。<br><b>来源：</b> <a href="https://www.techtarget.com/searchdatamanagement/news/366588032/Databricks-1B-plus-Tabular-acquisition-adds-Iceberg-support">TechTarget</a></div>
+</div>
+<div class="item">
+    <h3>Smart Chunks：Databricks AI Search 品牌重塑标志着"混合搜索成为准入门槛"</h3>
+    
+    <div class="body"><b>摘要：</b> Smart Chunks 分析指出，Databricks 更名 AI Search 反映了一个工程现实：生产级 AI Agent 和 Copilot 不生活在纯向量空间，它们需要"find me contracts mentioning ACME Corp signed after Q3 2025 that are semantically similar to this clause"这类混合查询。文章认为向量搜索是"为单一路况设计的跑车"，而 AI Search 是"能同时应对高速、城市和土路的跨界车"——因为真实检索工作流会在同一查询中混合所有三种需求。<br><b>来源：</b> <a href="https://smartchunks.com?p=51842/">Smart Chunks</a></div>
+</div>
+<div class="item">
+    <h3>The Agent Times：Lakebase 消除了 Agent 跨治理边界操作的"摩擦乘数"</h3>
+    <div class="source">来源：[The Agent Times](https://theagenttimes.com/articles/databricks-launches-lakebase-to-unify-operational-and-analyt-0197b72c)</div>
+    <div class="body"><b>摘要：</b> The Agent Times 分析指出，AI Agent 当前需要在运营数据库读取、分析仓库查询、事务系统回写之间穿梭，每次跨越都涉及独立的凭证链、API 接口和模式表示。Lakebase 通过 Unity Catalog 提供统一的权限和发现层，Agent 可在不切换治理上下文的情况下完成全链路操作。文章称"fragmented data governance is a friction multiplier"——每一个额外的权限边界都会增加延迟、故障模式和安全暴露面。<br>---</div>
+</div>
   </div>
 
   <!-- Section D: Capital & Corporate -->
@@ -282,7 +249,12 @@
       <span class="badge badge-d">D</span>
       <h2>Capital & Corporate</h2>
     </div>
-    <div class="empty-note">今日无独立于A板块的合格投融资事件。宁缺毋滥。</div>
+    <!-- 使用 funding-tag 类标注类型 -->
+    <!-- <span class="funding-tag tag-funding">投融资</span> -->
+    <!-- <span class="funding-tag tag-earnings">财报发布</span> -->
+    <!-- <span class="funding-tag tag-ipo">IPO</span> -->
+    <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
+    <div class="item"><div class="body">本期窗口内无新增数据平台核心投融资事件</div></div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -291,29 +263,26 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
-
     <div class="item">
-      <h3><span class="funding-tag tag-ma">降级</span> 国家数据局：2026年为"数据要素价值释放年"，将推出行业高质量数据集建设行动方案</h3>
-      <div class="source">来源：<a href="https://www.cs.com.cn/xwzx/01/2026/06/01/detail_2026060110015185.html" target="_blank">中国证券报</a></div>
-      <div class="body">
-        <p><strong>为什么值得继续看：</strong>国家数据局局长刘烈宏在5月31日世界智能产业博览会上明确，2026年将推出《关于推进行业高质量数据集建设行动的实施方案》，聚焦强基扩容、标注攻坚、提质增效等六大行动。工信部与国家数据局近期联合印发"模数共振"行动通知，目标到2026年底基本形成"数据-模型-场景应用"良性互促循环。</p>
-        <p><strong>需要等待什么信号确认：</strong>正式实施方案的发布时间表、首批试点行业名单、与现有数据平台厂商的具体合作机制。</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <h3><span class="funding-tag tag-ma">降级</span> Gartner：流程智能平台正成为企业AI落地的"新底座"</h3>
-      <div class="source">来源：<a href="https://www.163.com/dy/article/KUGDNPRP05381Q12.html" target="_blank">163.com</a></div>
-      <div class="body">
-        <p><strong>为什么值得继续看：</strong>Gartner 5月发布的《Magic Quadrant for Process Intelligence Platforms》将流程智能平台定义为融合开发与运行工具的软件方案，可为AI Agent提供运营上下文。报告判断流程挖掘正从单一分析工具走向企业运营控制塔，这一赛道正在从探索性细分领域变为主流企业技术。</p>
-        <p><strong>需要等待什么信号确认：</strong>流程智能平台与数据平台（Snowflake/Databricks/Fabric）的具体集成案例、中国市场的本土化落地进展、该MQ中厂商的后续生态合作动态。</p>
-      </div>
-    </div>
+    <h3>【跟踪】Azure HorizonDB 公共预览（Build 2026，6 月 2 日）</h3>
+    
+    <div class="body">Microsoft Build 2026 发布 HorizonDB 公共预览——面向 Agentic AI 的托管 PostgreSQL 数据库，内置 MCP Server、多 Agent 会话隔离和原生 Agent Memory 支持。上期未覆盖，持续跟踪其 GA 时间表和开发者反馈。</div>
+</div>
+<div class="item">
+    <h3>【跟踪】阿里云 OSS 向量 Bucket 6 月 10 日 GA</h3>
+    
+    <div class="body">阿里云 6 月 5 日公告对象存储 OSS 向量 Bucket 将于 6 月 10 日正式 GA，支持向量数据与对象数据统一存储，面向 RAG 和 Agent 场景。关注正式发布后的性能基准和定价策略。</div>
+</div>
+<div class="item">
+    <h3>【预告】Databricks Data+AI Summit 2026（6 月 10-13 日，旧金山）</h3>
+    
+    <div class="body">Databricks 年度大会将于 6 月 10 日开幕，预期将发布 Tabular 收购后的首个 Iceberg 统一路线图、Lakebase 深入技术解读、以及可能的 Lakebase 数据库全面上线计划。关注 Keynote 中 Agent-Native 产品矩阵的完整叙事。</div>
+</div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-06-05 08:00</p>
+    <p>信息截至北京时间 2026-06-08 08:00</p>
   </div>
 
 </div>
