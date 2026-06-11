@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-10</title>
+<title>Data+AI 全球日报 | 2026-06-11</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-06-10 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-06-11 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据库从为人设计转向为 Agent 设计，Agent-Native 数据库成为新品类</li>
-      <li>云存储从被动容器进化为 AI 原生底座，向量检索成存储第一方能力</li>
-      <li>芯片+网络+资本打包重塑 AI 基础设施融资，算力供给模式在重构</li>
+      <li>数据与AI资产的开放共享正从厂商协议走向基金会治理，跨平台互操作不再只是表格式的博弈</li>
+      <li>向量数据库正在从专用检索引擎升级为统一数据平台，湖原生存储成为AI数据闭环的基础设施锚点</li>
+      <li>数据基础设施各层同步为 Agent 时代做结构性准备，共享协议、存储生态和平台架构齐头演进</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>今日窗口信息密度极低，但两条新品发布共同指向一个方向：AI 基础设施正在从"适配 AI"走向"原生为 AI 设计"。数据库和存储层同步进化，Agent-Native 架构从应用层下沉到基础设施层。
+      <strong>总判断：</strong>数据共享标准正从厂商协议走向基金会治理，向量基础设施同步从检索引擎升级为湖原生统一平台。两项变化共同表明，Agent 时代的数据架构正在协议层到存储层系统性重构——开放的、治理中立的底座将成为默认选择。
     </div>
   </div>
 
@@ -186,14 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Tiger Data（TimescaleDB 团队）发布 Ghost，首个专为 AI Agent 设计的数据库服务正式面世</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://www.globenewswire.com/news-release/2026/06/09/3308882/0/en/Tiger-Data-Launches-Ghost-a-Purpose-Built-Database-Service-for-the-Agentic-Era.html">GlobeNewswire</a><br><b>摘要：</b> 6 月 9 日，TimescaleDB 背后的 Tiger Data 团队正式发布 Ghost——一个专门为 AI Agent 构建的 PostgreSQL 数据库服务。Ghost 提供不限量的隔离 Postgres 数据库、快速分支克隆、MCP 原生集成，支持按查询计费。核心设计哲学："Agent 需要的是为其工作方式设计的数据库，不是从人类工具改造而来的"。每个 Agent 任务对应一个隔离数据库，失败爆炸半径局限在单库而非共享环境。OpenRouter 已在实际使用中部署 Ghost。<br><b>为什么对数据平台重要：</b> Ghost 标志着"Agent-Native 数据库"作为一个独立品类的诞生。传统数据库以人类分析师为设计目标（连接池、权限模型、并发控制），而 Agent 的数据库需求完全不同：大量隔离沙箱、按任务生命周期创建/销毁、MCP 协议原生集成。Postgres 生态是这一趋势的先行者，Ghost 的发布可能引发数据库产品从"human-first"到"agent-first"的架构范式迁移。</div>
+    <h3>Databricks 将 Delta Sharing 捐赠给 Linux Foundation，升级为 OpenSharing 开放标准</h3>
+    <div class="source">来源：<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-announces-opensharing">Databricks Press Release</a> / <a href="https://www.prnewswire.com/news-releases/linux-foundation-announces-opensharing-project-to-standardize-ai-asset-and-data-exchange-302796802.html">Linux Foundation PR Newswire</a></div>
+    <div class="body"><b>摘要：</b> Databricks 于 6 月 10 日宣布将 Delta Sharing 协议升级为 OpenSharing，并正式捐赠给 Linux Foundation 作为独立开源项目。OpenSharing 是首个覆盖 Agent Skills、AI 模型和非结构化数据的开放共享协议，同时新增了对 Apache Iceberg IRC 客户端的支持，使 Iceberg 生态用户可以直接消费共享资产。同日，Databricks 还宣布与 MinIO（已 GA）、Everpure、Qumulo、VAST Data 等存储厂商建立 OpenSharing 存储生态，使本地部署数据无需迁移即可通过 Unity Catalog 安全访问。<br><b>为什么对数据平台重要：</b> Delta Sharing 此前是 Databricks 主导的开源协议，捐赠给 Linux Foundation 意味着数据与 AI 资产共享标准正式进入基金会治理时代。OpenSharing 是数据平台领域首个从"表格式互操作"扩展到"全 AI 栈资产互操作"的协议——不只是共享数据表，而是共享 Agent 技能、AI 模型和非结构化数据。此举直接回应了 Agent 时代跨平台协作的核心需求，同时通过支持 Iceberg IRC 客户端消解了 Delta Lake 和 Iceberg 生态之间的共享壁垒。存储生态的搭建则解决了一个长期痛点：本地数据上云的迁移成本与合规风险。</div>
 </div>
 <div class="item">
-    <h3>阿里云 OSS 向量 Bucket 正式商业化，对象存储进化为 AI 原生多模态统一存储底座</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://developer.aliyun.com/article/1739752">阿里云开发者社区</a><br><b>摘要：</b> 阿里云对象存储 OSS 向量 Bucket 于 6 月 10 日正式结束免费公测，启动商业化收费。向量 Bucket 支持万亿级向量存储与语义检索，相比传统方案成本降低 95%。随着 Table Bucket 的加入，OSS 已构建"对象 + 向量 + 表格"三合一产品家族——首个原生覆盖非结构化内容、高维语义索引与海量结构化元数据的多模态统一存储底座。已在全球 12 个地域开服，服务 AIGC 资产管理、AI 数据集管理、AI Agent 等场景。<br><b>为什么对数据平台重要：</b> 这是主流云厂商首次将向量存储作为对象存储的原生第一方能力正式商业化——不是外挂向量数据库，而是存储层原生集成。这意味着 AI 数据基础设施的"存储-检索"边界正在消融。对于企业数据平台，向量检索不再是独立选型决策，而是云存储的基础能力——这将深刻影响 Pinecone/Weaviate/Milvus 等独立向量数据库的市场空间，也改变了数据平台的架构设计假设。</div>
+    <h3>Zilliz 发布 Vector Lakebase，向量数据库升级为统一数据平台</h3>
+    <div class="source">来源：<a href="https://en.prnasia.com/releases/global/zilliz-launches-vector-lakebase-extending-the-world-s-most-adopted-vector-database-into-a-unified-data-platform-for-ai-536724.shtml">PR Newswire</a></div>
+    <div class="body"><b>摘要：</b> 全球最广泛采用的向量数据库 Milvus 母公司 Zilliz 于 6 月 10 日发布 Vector Lakebase Public Preview——将 Zilliz Cloud 从向量检索引擎升级为统一数据平台。Vector Lakebase 基于开源列式格式 Vortex 构建共享湖原生存储层，在单一数据底座上支持五大能力：分层实时检索（性能优先/容量优化/分层存储三档）、按需搜索（成本仅为 Serverless 方案的 1/15）、外部数据湖搜索（零拷贝支持 Iceberg/Parquet/Lance/Vortex）、全频谱 AI 搜索（向量+全文+JSON+地理空间混合检索）以及湖原生存储统一管理。<br><b>为什么对数据平台重要：</b> 这是向量数据库品类首次系统性向统一数据平台演进。Vector Lakebase 的核心命题——"同一份向量数据驱动生产查询、交互式发现和批量分析，无需拷贝或迁移"——直接回应了 AI 数据闭环的最大痛点：数据在检索、探索和训练三个环节之间反复拷贝带来的成本和延迟。在架构层面，基于 Vortex 的湖原生存储意味着向量数据和结构化数据可以在同一套开放格式上统一管理，这对 Agent 记忆系统和 RAG 管线的数据基础设施设计有直接影响。</div>
 </div>
   </div>
 
@@ -204,9 +204,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Microsoft Fabric Graph 正式 GA，图分析成为数据平台原生能力</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/mt-mt/fabric/fundamentals/whats-new">Microsoft Fabric 文档</a><br><b>摘要：</b> Microsoft Fabric 6 月更新中，Fabric Graph 正式 GA。该功能让用户直接在 Fabric 平台内建模、可视化和分析数据中的复杂关系，将图分析能力作为数据平台的一等公民而非外部工具集成。同期更新的数据平台相关功能还包括：SQL 分析端点 CI/CD 支持（Preview）、Fabric Warehouse 预/后部署脚本（Preview）、SQL 端点 30 秒数据新鲜度 SLO、Time Travel for SQL 端点等。<br><b>对数据平台的影响：</b> Fabric Graph GA 意味着图分析不再需要独立图数据库——数据平台原生支持关系建模和遍历查询。这与 Databricks 的 GraphFrames 和 Snowflake 尚未内建图能力形成差异化。SQL 端点 30 秒 SLO 和 Time Travel 则直接回应了数据平台在 AI Agent 场景中对数据新鲜度的刚性需求。</div>
+    <div class="body">今日无合格信息。窗口内无其他已正式发布且严格符合数据平台产品与技术准入标准的一手动态。</div>
 </div>
   </div>
 
@@ -219,7 +219,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日窗口内无合格的分析师一手观点或机构正式研究报告。</div>
+    <div class="body">今日无合格信息。窗口内无一手分析师观点或机构研究发布。</div>
 </div>
   </div>
 
@@ -234,11 +234,7 @@
     <!-- <span class="funding-tag tag-earnings">财报发布</span> -->
     <!-- <span class="funding-tag tag-ipo">IPO</span> -->
     <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
-    <div class="item">
-    <h3></h3>
-    
-    <div class="body">今日窗口内无数据平台核心投融资事件。Databricks 新一轮融资洽谈（$1650-1750 亿估值）已于上期（06-09）覆盖；Broadcom $35B AI XPV 平台融资偏 AI 基础设施，不满足数据平台 D 板块准入标准。</div>
-</div>
+    <div class="item"><div class="body">本期窗口内无新增数据平台核心投融资事件</div></div>
   </div>
 
   <!-- Section E: Watchlist -->
@@ -248,25 +244,25 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【预告】Databricks Genie 系列产品 7 月 6 日转为按量付费</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks 发布说明</a><br><b>为什么值得继续看：</b> Genie Spaces、Genie Code 等产品将于 7/6 从免费转为按 DBU 消耗付费，每用户每月 150 DBU 免费额度（约 $10.50）。计费模式转变将直接影响企业采用 Genie 的成本模型和规模决策，可能成为 Data+AI 平台从 seat-based 到 consumption-based 定价转型的风向标。<br><b>需要等待什么信号确认：</b> 首批企业客户的实际 DBU 消耗数据、是否存在预算超支案例、竞品是否跟进按量付费模式。</div>
+    <h3>【预告】SelectDB 联合阿里云、阶跃星辰发布"面向 Agent 的实时数据引擎"</h3>
+    <div class="source">来源：<a href="https://segmentfault.com/a/1190000047834309">SegmentFault</a></div>
+    <div class="body"><b>为什么值得继续看：</b> SelectDB（Apache Doris 商业化公司）将于 6 月 11 日 14:00 举办线上发布会，主题为"面向 Agent 的实时数据引擎"。发布会将首次解构 SelectDB/Doris 如何向 AI Agent 完成原生演进，并推出专为 Agent 时代打造的数据技术矩阵，覆盖多模态原生融合底座、数据工具链和全链路可观测治理平台。阿里云和阶跃星辰作为生态伙伴参与，暗示产品可能涉及云原生集成和大模型对接能力。<br><b>需要等待什么信号确认：</b> 发布会实际产品能力细节，特别是"Doris 面向 Agent 原生演进"的技术实现路径（是否包含 Agent Memory 引擎、多模态存储、实时推理集成等），以及生态伙伴合作深度（阿里云集成方式、阶跃星辰模型融合方案）。</div>
 </div>
 <div class="item">
-    <h3>【通告】Databricks Lakebase Provisioned 实例 6 月起强制迁移至 Autoscaling 架构</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://community.databricks.com/t5/lakebase-articles/databricks-lake-base-evolution-mandatory-shift-from-provisioned/td-p/157509">Databricks 社区</a><br><b>为什么值得继续看：</b> 所有遗留 Provisioned 实例将从 6 月起自动升级到弹性 Autoscaling 架构，涉及计算模型、存储、网络和 API 的全面变更。这是 Databricks Lakebase（原 OLTP 数据库）的一次底层架构重构，直接关系现有客户的迁移成本和业务连续性。<br><b>需要等待什么信号确认：</b> 首批自动迁移客户的实际 downtime 数据、计费变化幅度、是否有因迁移导致的性能回退案例。</div>
+    <h3>【降级】Upriver 获 $14M 种子轮，AI Agent 自主管理企业数据管道</h3>
+    <div class="source">来源：<a href="https://www.newswire.com/news/upriver-raises-14m-to-automate-the-enterprise-data-foundation-for-ai">Newswire</a></div>
+    <div class="body"><b>为什么值得继续看：</b> Upriver 构建了一个 AI-native 数据工程平台，通过 Agent 系统自动接管企业数据管道的质量检测、问题修复和持续维护，已与 Databricks 和 Snowflake 建立正式合作。Gartner 数据显示 38% 的技术领导者将数据质量问题列为 AI 项目失败的直接原因，Upriver 的 agentic 数据工程路线直接瞄准这一痛点。种子轮由 Valley Capital Partners 和 Hetz Ventures 领投，天使投资人包括 New Relic 创始人 Lew Cirne 和 Cyera 创始人。<br><b>需要等待什么信号确认：</b> 产品 GA 时间线和早期客户的实际采用效果（当前客户包括 Unity 和 DMGT）。Agentic 数据工程的可靠性验证——特别是在生产环境中自主修复数据管道是否会产生级联故障。</div>
 </div>
 <div class="item">
-    <h3>【跟踪】Broadcom 联合 Apollo/Blackstone 推出 $350 亿 AI XPV 平台</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://ir.apollo.com/news-events/press-releases/detail/629/apollo-leads-35-billion-capital-solution-for-broadcom-ai">Apollo 公告</a><br><b>为什么值得继续看：</b> 6 月 9 日，Broadcom 与 Apollo、Blackstone 宣布成立 AI XPV 平台，首期 $350 亿支持 Anthropic 超 1GW 算力扩张。虽然本身偏 AI 基础设施融资，但其"芯片+网络+数据中心+长期资本"打包模式可能对数据平台厂商的基础设施采购和融资方式产生溢出效应——如果这一模式被数据平台厂商采用，将改变硬件采购和资本支出的传统逻辑。<br><b>需要等待什么信号确认：</b> 是否有数据平台厂商（Databricks/Snowflake）采用类似融资结构；基础设施即服务的资本模式是否向数据平台层扩散。</div>
+    <h3>【跟踪】Databricks Workspace 权限模型即将结构性变更</h3>
+    <div class="source">来源：<a href="https://docs.databricks.com/aws/en/release-notes/whats-coming">Databricks What's Coming</a></div>
+    <div class="body"><b>为什么值得继续看：</b> Databricks 宣布将变更 Workspace 权限继承机制：从 6 月 15 日起开放 opt-in，9 月 14 日强制执行。新模型下新增用户不再自动继承 `users` 系统组的 Workspace Access 和 SQL Access 权限，需显式授权。这一变更将直接影响所有使用 Terraform、SCIM API 或自定义脚本管理 Databricks 权限的企业，且 `users` 和 `admins` 系统组不再支持嵌套。<br><b>需要等待什么信号确认：</b> Opt-in 开启后企业迁移的实际反馈，特别是自动化权限管理脚本的兼容性问题和 SCIM 同步对迁移克隆组的处理。这可能推动 Unity Catalog 权限管理的标准化实践。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-06-10 08:00</p>
+    <p>信息截至北京时间 2026-06-11 08:00</p>
   </div>
 
 </div>
