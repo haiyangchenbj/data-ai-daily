@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-06-15</title>
+<title>Data+AI 全球日报 | 2026-06-16</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-06-15 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-06-16 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>Agent 工程从单工具竞争进入系统化编排阶段，跨 Agent 组合与治理成为独立能力层</li>
-      <li>湖仓架构正在吸收专用数据引擎的核心能力，地理空间 SQL 不再需要独立数据库</li>
-      <li>企业级韧性从附加功能升级为平台标配，灾备与存储治理自动化成为核心竞争力</li>
+      <li>Agent 可观测性正从选配升级为数据平台治理的必选项</li>
+      <li>湖仓存算分离范式正在跨出结构化数据边界，进入非结构化日志搜索</li>
+      <li>AI 模型调用正从独立工具收敛为数据平台 SQL 的内置函数</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>Agent-Native 架构正从应用层向平台层渗透，数据平台竞争已从存算性能转向 Agent 时代的运行环境。跨 Agent 编排、能力融合和生产就绪成为本周的核心信号，今日开幕的 Data+AI Summit 预计将加速这一趋势。
+      <strong>总判断：</strong>数据平台正将 Agent 纳入基础设施级治理——从数据表到 Agent 行为的端到端可观测性首次打通。湖仓存算分离范式同时跨出结构化边界，进入非结构化日志搜索。两者指向同一方向：Agent 生产部署的治理与运维基础设施正在快速补齐。
     </div>
   </div>
 
@@ -186,19 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Databricks 开源 Omnigent：Agent 元排布框架诞生</h3>
+    <h3>DAIS 2026 Day 1——Agent 可观测性正式进入数据平台治理栈</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/blog/introducing-omnigent-meta-harness-combine-control-and-share-your-agents">Databricks Blog</a><br><b>摘要：</b> Databricks 以 Apache 2.0 协议开源 Omnigent——一个"元排布"框架，在 Claude Code、Codex、Pi 等终端编码 Agent 及 OpenAI Agents SDK 之上提供统一接口层。Omnigent 围绕三个核心能力设计：组合（一行代码切换底层 Agent）、管控（有状态的安全策略——如 Agent 安装 npm 包后拦截 git push、累计 LLM 费用超 $100 暂停运行）和协作（通过 URL 实时共享 Agent 会话）。框架内置 OS 沙箱 Omnibox，可拦截并转换网络请求以保护凭证。<br><b>为什么对数据平台重要：</b> 数据平台正在从服务人类分析师转向服务 Agent 集群。Omnigent 的跨 Agent 治理模式（成本限额、权限沙箱、动态安全策略）意味着数据平台的治理层未来需要提供 Agent 运行时级别的访问控制能力。Databricks 此举标志着数据平台厂商从"为 Agent 提供数据"进一步延伸到"为 Agent 提供运行环境"。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.globenewswire.com/news-release/2026/06/15/3311905/0/en/Monte-Carlo-Announces-Integration-with-Agent-Bricks-Bringing-Cohesive-Observability-to-Enterprise-AI-on-Databricks.html">Monte Carlo GlobeNewswire</a><br><b>摘要：</b> 在 Databricks Data + AI Summit 2026 开幕日，Monte Carlo 宣布成为 Agent Bricks 的首个可观测性启动合作伙伴。该集成将 Monte Carlo 的监控能力从 Delta Lake 表质量和 Lakeflow 管道健康，扩展到 Agent Bricks 层——覆盖 Agent 的工具调用、检索步骤、模型交互、编排工作流及数据输入，提供从原始数据到 Agent 决策的连续审计链路。<br><b>为什么对数据平台重要：</b> 这是数据平台治理栈首次将 Agent 行为层纳入统一的端到端可观测性框架。此前 Agent 在数据平台上是"信任黑箱"——数据团队能监控表的新鲜度、schema 漂移和管道异常，但无法追溯到某个 Agent 的错误推理是否源自数据层、模型层还是编排层。Monte Carlo 三层联动的可观测性（Delta Lake → Lakeflow → Agent Bricks）补齐了这个缺失的治理维度，使 Agent 生产部署具备与数据管道同等级别的运维可信度。</div>
 </div>
 <div class="item">
-    <h3>Databricks Spatial SQL GA：地理空间能力原生进入湖仓</h3>
+    <h3>Imply Lumi Loglake——湖仓架构扩展到非结构化日志搜索</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/blog/geospatial-unbounded-spatial-sql-ga-aibi-maps-delta-sharing-and-iceberg-v3">Databricks Blog</a><br><b>摘要：</b> Databricks Spatial SQL 正式 GA，引入 GEOMETRY 原生数据类型、90+ OGC 标准 ST_* 空间函数、AI/BI 仪表盘内置地图渲染。空间数据现已支持 Delta Sharing 跨组织共享和 Iceberg v3 表互操作。相比 Public Preview，布尔集合操作性能提升 2 倍，SpatialBench 查询整体提升 20% 至 15 倍。Databricks 承诺将 GEOMETRY/GEOGRAPHY 类型贡献至 Apache Spark 4.2（预计 2026 年夏季）。<br><b>为什么对数据平台重要：</b> 企业处理地理空间数据长期依赖"空间数据库 + 数仓 + 地图工具"的异构工具栈，Spatial SQL GA 将其统一到湖仓的同一治理框架下。湖仓架构正在系统性吸收专用数据引擎的核心能力，过去割裂的查询引擎品类边界进一步消解。</div>
-</div>
-<div class="item">
-    <h3>Databricks 企业级韧性三连发：灾备、合规与存储治理进入生产级</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks June 2026 Release Notes</a><br><b>摘要：</b> 6 月 12 日集中发布：Managed Disaster Recovery Public Preview（跨区域 Unity Catalog 元数据和托管表数据复制、故障切换稳定 URL）、Mission Critical 工作区附加组件 Public Preview（单费率解锁 DR + 增强安全合规 ESC）、Auto-TTL 自动行删除 GA（基于 DATE/TIMESTAMP 列自动清理 Delta/ Iceberg/Streaming 表数据）、分区表转 Liquid Clustering GA（ALTER TABLE 在线转换，最小化读写停机）。<br><b>为什么对数据平台重要：</b> 灾备、合规增强和存储生命周期自动化正在从自建运维能力变为平台原生功能。三线同步推进标志着 Databricks 系统性地瞄准受监管行业和关键任务负载——这些过去是传统数据仓库和大型机厂商的壁垒市场。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.morningstar.com/news/business-wire/20260615546672/imply-launches-lumi-loglake-to-bring-interactive-log-search-to-object-storage">Imply Business Wire</a><br><b>摘要：</b> Imply 在 DAIS 2026 期间发布 Lumi Loglake，支持在 AWS S3、Delta Lake 和 Apache Iceberg 等对象存储上直接对非结构化日志进行交互式搜索，无需预先定义 schema、建立数据目录或执行 rehydration 工作流。该方案基于 Apache Druid 引擎，将存算分离范式应用于非结构化可观测性数据，声称可降低软件成本 70%+、硬件成本 40%+。<br><b>为什么对数据平台重要：</b> Lumi Loglake 将湖仓存算分离范式首次系统性地推进到非结构化日志领域。可观测性和 SIEM 数据是 AI 时代增长最快的数据类别之一，传统方案要求先索引后查询，成本随数据量线性增长。Loglake 的"先搜索、后优化"模式让企业可以按查询量付费而非按存储量付费，对数据平台架构的启示在于：湖仓范式不应局限于结构化分析数据，非结构化可观测性数据同样是存算分离的天然适用场景。</div>
 </div>
   </div>
 
@@ -209,19 +204,19 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Snowflake Iceberg Azure ADLS Gen2 正式 GA：多云互操作补齐关键拼图</h3>
+    <h3>Databricks ai_query 正式 GA——通用 AI 函数使 SQL/Python 原生调用模型</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-06-12-iceberg-azure-dls-external-volumes-ga">Snowflake Release Notes</a><br><b>摘要：</b> Snowflake 宣布外部管理的 Apache Iceberg 表在 Azure Data Lake Storage Gen2 上正式 GA。用户可通过外部 Catalog 凭证或 External Volume 连接 Azure 存储，实现 Snowflake 与 Azure 上 Unity Catalog 等外部 Catalog 之间的 Iceberg 双向读写。<br><b>对数据平台的影响：</b> 继 AWS S3 之后，这是 Snowflake 开放互操作路线补齐 Azure 存储的关键一步。对于在 Azure 上部署 Databricks Unity Catalog 同时使用 Snowflake 的企业，多云 Iceberg 湖仓架构的完整读写路径现已打通。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks June 2026 Release Notes</a><br><b>摘要：</b> Databricks ai_query 函数于 6 月 15 日进入正式可用（GA）。该函数允许用户直接从 SQL 或 Python 中调用任何支持的 AI 模型，在湖仓环境中实现数据查询与 AI 推理的无缝融合，无需额外的 API 集成或中间层服务。<br><b>对数据平台的影响：</b> ai_query GA 标志着数据平台中的 AI 调用能力正在从外挂工具收敛为内置 SQL 原语。分析师和工程师可以在同一个查询中混合传统聚合与 LLM 推理，极大降低了 AI 能力嵌入数据管道的工程门槛。这种"AI 函数化"趋势将改变数据平台的产品形态——AI 不再是一个独立模块，而是 SQL 层的一个内置函数族。</div>
 </div>
 <div class="item">
-    <h3>Databricks AI Runtime CLI Beta：GPU 训练走向命令行与 CI/CD</h3>
+    <h3>Databricks Genie One 多项能力 GA + Genie Mobile 进入 Public Preview</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks June 2026 Release Notes</a><br><b>摘要：</b> Databricks 推出 AI Runtime CLI（`air`）Beta 版，允许从本地终端提交和管理 AI Runtime Serverless GPU 上的分布式训练任务，无需打开 Notebook。支持命令行交互式开发和生产级 CI/CD 集成。<br><b>对数据平台的影响：</b> GPU 训练工作负载从 Notebook/GUI 界面扩展到 CLI，使数据工程和 ML 工程团队能将模型训练纳入标准 DevOps 流水线，降低了 ML 基础设施与数据平台之间的工程摩擦。</div>
+    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/mt-mt/azure/databricks/ai-bi/release-notes/2026">Azure Databricks AI/BI Release Notes</a><br><b>摘要：</b> 6 月 15 日，Databricks Genie One 的 Chat 和 Documents 功能正式 GA——Chat 提供跨 Genie Spaces、仪表盘、查询和指标视图的统一自然语言问答界面；Documents 允许用户在对话中直接创建和分享文档。同日，Genie Mobile 应用进入 Public Preview，支持 iOS 和 Android。<br><b>对数据平台的影响：</b> Genie One Chat GA 标志着 Databricks 的自然语言分析能力从实验阶段进入生产就绪。Chat 将 BI 查询、仪表盘和文档整合在同一对话界面，降低了非技术用户的数据消费门槛。Mobile Preview 则首次将湖仓分析能力延伸到移动端，对需要随时访问数据的高管和一线运营人员具有直接实用价值。</div>
 </div>
 <div class="item">
-    <h3>Databricks ai_extract / ai_classify GA：AI 文档理解内建为 SQL 函数</h3>
+    <h3>Databricks Lakebase Postgres 登陆 GCP——Beta 版覆盖三大区域</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks June 2026 Release Notes</a><br><b>摘要：</b> Databricks 宣布 ai_extract（从文本和文档中提取结构化数据，支持嵌套对象、数组、类型验证、引文溯源和置信度评分）和 ai_classify（按自定义标签分类文本，新增多标签分类支持）正式 GA。两个函数均为 SQL 内建调用，无需部署独立 AI 服务。<br><b>对数据平台的影响：</b> AI 能力从外部模型 API 调用下沉为数据平台的 SQL 内建函数，意味着数据工程师可直接在数据管道中完成文档理解和自动分类，减少了对独立 AI 微服务和跨系统数据集成的依赖。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/june">Databricks GCP June 2026 Release Notes</a><br><b>摘要：</b> Databricks 于 6 月 15 日将 Lakebase Autoscaling（Serverless Postgres 数据库）的 Beta 版扩展至 Google Cloud Platform，首批支持 us-east4、us-central1 和 europe-west3 三个区域。Lakebase 提供自动扩缩容、缩容至零和数据库分支等能力。<br><b>对数据平台的影响：</b> Lakebase 在多云扩展上的进展——此前已支持 AWS 和 Azure，GCP Beta 的上线意味着 Databricks 的操作型数据库层即将覆盖三大云平台。对于采用 GCP 的企业而言，Lakebase 的 Postgres 兼容性意味着可以在湖仓统一治理框架下运行事务型工作负载，减少对独立 RDS/Cloud SQL 的依赖。</div>
 </div>
   </div>
 
@@ -232,9 +227,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3>InfoQ 分析：Snowflake Summit 揭示 Agentic Enterprise 的信任基础设施需求</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://finance.sina.com.cn/wm/2026-06-12/doc-iniccspq1857021.shtml">InfoQ</a><br><b>核心观点：</b> Snowflake Summit 2026 Platform Keynote 贯穿一条清晰主线——当 Agent 开始进入企业流程，平台必须同时解决数据、上下文、权限、治理和可审计性问题。Snowflake 联创 Benoit Dageville 现场表示"最好的 Agent 平台必须建立在最好的数据平台之上"，而 Horizon Context、Agent Identity 和 Data Movement Policy 的发布正是这一判断的产品化落地。<br><b>映射到数据平台的判断：</b> 企业 AI 的可信度最终要回到数据平台本身。Snowflake 构建的"Agent 控制平面"表明，数据平台的职责正在从存储和计算层扩展到 Agent 运行时的治理基础设施——语义一致性、身份认证和数据流转策略成为新必需品。</div>
+    <div class="body">今日无合格一手分析师观点或机构研究报告。</div>
 </div>
   </div>
 
@@ -252,7 +247,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日窗口中无符合准入标准的独立投融资事件。</div>
+    <div class="body">今日无合格数据平台投融资事件。</div>
 </div>
   </div>
 
@@ -263,25 +258,20 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【预告】Databricks Data + AI Summit 2026 今日开幕</h3>
+    <h3>【预告】DAIS 2026 Day 2 Keynote——预计 Ali Ghodsi + Greg Brockman 发布主要产品更新</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/dataaisummit">Databricks</a><br><b>为什么值得继续看：</b> 全球最大数据与 AI 会议，6/15-18 旧金山 Moscone Center，预计 30,000+ 现场参会者、800+ 场次。Keynote 阵容包括 Databricks 四位联创及 Satya Nadella（预录）、Greg Brockman（OpenAI）。历年 DAIS 均有重大产品发布，今年主题为"Build Apps and Agents That Work"。<br><b>需要等待什么信号确认：</b> 开幕式 Keynote 具体产品发布（北京时间 6/16 凌晨）；Lakebase、Genie、Unity Catalog、Agent Bricks 等核心产品是否有重大版本更新；是否发布新的开源项目或开放标准。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/dataaisummit">Databricks Data + AI Summit Agenda</a><br><b>为什么值得继续看：</b> DAIS 2026 的周二 Keynote（北京时间 6 月 17 日凌晨）被 Databricks 定位为"重大发布时刻"，Ali Ghodsi 和 OpenAI Greg Brockman 将同台。去年同场发布包括 Lakebase、Lakeflow、Agent Bricks 等平台级产品。Day 1 主要是生态伙伴集成和增量 GA/PP，Day 2 预计揭晓核心产品方向。<br><b>需要等待什么信号确认：</b> Keynote 结束后 Databricks 官方博客和新闻稿的正式发布内容。关注重点：Lakebase/Lakeflow 是否有架构级更新、Unity Catalog 治理能力是否扩展到 Agent 编排层、是否有新的开放标准倡议。</div>
 </div>
 <div class="item">
-    <h3>【降级】工信部发布 AI+信息通信三年实施意见，首次纳入网络智能体</h3>
+    <h3>【降级】Databricks OpenSharing 多项安全增强同日进入 Public Preview</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.cnr.cn/jingji/ycbd/20260610/t20260610_527655762.shtml">央广网</a><br><b>为什么值得继续看：</b> 6/10 发布超出本期时效窗口，但首次将"网络智能体""通感算智一体化"纳入国家级产业政策，提出到 2028 年形成 30+ 高价值典型场景、城域算力 1ms 时延圈覆盖率 ≥75%，对数据基础设施和算力网络布局有直接牵引作用。<br><b>需要等待什么信号确认：</b> 配套实施细则和资金安排；三大运营商和云厂商的具体落地动作；是否对数据平台厂商产生采购拉动。</div>
-</div>
-<div class="item">
-    <h3>【跟踪】Iceberg v3 多引擎生态扩展进度分化，Trino/DuckDB 支持仍待补课</h3>
-    
-    <div class="body"><b>来源：</b> 综合社区动态<br><b>为什么值得继续看：</b> Snowflake Summit 期间 Iceberg v3 正式 GA（6/2），Databricks 在 5/21 实现 Managed Iceberg + v3 全面 GA，Hudi 1.2.0 新增 Native Iceberg 格式支持。Iceberg v3 正从双雄独占快速扩展，但 Trino 和 DuckDB 的 v3 特性（Deletion Vectors、Variant 类型）支持进度不同步，是生态成熟度的关键瓶颈。<br><b>需要等待什么信号确认：</b> Trino Iceberg 连接器 v3 正式支持的版本号和时间窗口；DuckDB Iceberg 扩展对 v3 Deletion Vectors 和 Variant 类型的支持状态；Paimon 对 Iceberg v3 互操作的明确路线图。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/june">Databricks AWS June 2026 Release Notes</a><br><b>为什么值得继续看：</b> 6 月 15 日，Databricks OpenSharing 三项安全增强同日进入 Public Preview——跨监管域共享（支持 GovCloud/Azure China）、SecureConnect（防火墙后数据共享无需配置白名单）、OIDC 联邦支持 Iceberg REST Catalog 客户端。这三项功能均属增量增强，不像 OpenSharing 捐献给 Linux Foundation（6/10）那样具有方向性意义，因此降级收录。<br><b>需要等待什么信号确认：</b> 三项功能进入 GA 的时间，以及是否有实际跨监管域/防火墙后共享的客户案例。SecureConnect 对混合云和受监管行业客户的采购决策可能产生影响。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-06-15 08:00</p>
+    <p>信息截至北京时间 2026-06-16 08:00</p>
   </div>
 
 </div>
