@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-07-14</title>
+<title>Data+AI 全球日报 | 2026-07-15</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-07-14 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-07-15 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据平台可观测性从指标展示走向主动根因定位</li>
-      <li>开放表格式的操作性能力加速补齐企业级特性</li>
-      <li>国内数据湖平台加速融合AI训练推理能力</li>
+      <li>云数据库运维正在向声明式、幂等的IaC范式全面迁移</li>
+      <li>数据库开始以MCP接口原生暴露运维能力，向Agent开放编程</li>
+      <li>数据市场从买卖数据走向应用生态，SaaS集成成为平台竞争力</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>数据平台运维可观测性与开放格式治理同日推进，精细化运维和表格式成熟度在同步提升。国内厂商预告存算AI统一底座，Agent时代数据平台正从存算分离向计算范式融合演进。
+      <strong>总判断：</strong>数据平台基础设施管理在向声明式范式迁移，Snowflake 24类对象的声明式DDL补齐了IaC关键缺口。数据库以MCP工具形态向Agent开放，数据基础设施的可编程性边界在重新定义。夏季淡季信息底部延续。
     </div>
   </div>
 
@@ -199,14 +199,19 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Snowflake 动态 Iceberg 表克隆功能正式 GA</h3>
+    <h3>Snowflake CREATE OR ALTER 正式 GA，覆盖 24 种对象类型</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-07-13-dynamic-iceberg-table-clone">Snowflake 文档</a><br><b>摘要：</b> Snowflake 于 7 月 13 日正式发布动态 Iceberg 表克隆功能（GA），支持将动态 Iceberg 表克隆为新的动态 Iceberg 表或 Snowflake 管理的 Iceberg 表。此外，克隆数据库或 Schema 时，其中的动态 Iceberg 表现在也会被包含在克隆范围内，此前这些表会被静默跳过。<br><b>对数据平台的影响：</b> 动态 Iceberg 表的克隆能力补齐了开放格式在开发/测试环境复制、数据快照备份等场景中的操作缺口。此前动态 Iceberg 表在 Schema 级克隆中被跳过，限制了企业在 Iceberg 表上的 DevOps 流程。本次更新将 Snowflake 动态 Iceberg 表的运维能力拉升到与传统 Snowflake 表一致的水平。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-07-14-create-or-alter-ga">Snowflake 发布说明</a><br><b>摘要：</b> Snowflake 于 7 月 14 日正式发布 CREATE OR ALTER 语句的 GA 版本，覆盖 24 种对象类型，包括数据库、Schema、表、视图、函数、存储过程、管道、任务、通知集成等。该语法在对象不存在时自动创建，存在时则将其修改至与语句定义匹配，天然支持幂等执行。此前该语法仅支持部分对象类型的预览。<br><b>对数据平台的影响：</b> 声明式 DDL 补齐了 Snowflake 在 IaC 和 GitOps 工作流中的关键缺口。此前脚本需在 CREATE 和 ALTER 之间分支判断，不具备天然幂等性。24 种对象的覆盖度意味着 Snowflake 的大部分基础设施对象现已可通过 Terraform、Pulumi 等声明式工具链统一管理，显著降低 CI/CD 流水线中的数据平台配置漂移风险。</div>
 </div>
 <div class="item">
-    <h3>Databricks SQL 仓库活动详情功能正式 GA</h3>
+    <h3>Google Cloud Bigtable 原生暴露 MCP 工具，数据库成为 AI Agent 可编程接口</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/july#view-warehouse-activity-details-general-availability">Databricks 发布说明</a><br><b>摘要：</b> Databricks 于 7 月 13 日正式发布 SQL 仓库监控 UI 中的"活动详情"切换功能（GA）。该功能在运行集群图表中提供颜色编码标注，直观解释仓库保持活跃状态的原因，包括查询活动、正在获取的查询、打开会话和空闲状态。用户可悬停查看元数据，或点击获取活动筛选查询历史表。<br><b>对数据平台的影响：</b> SQL 仓库作为数据平台核心计算资源，其成本和利用率的透明化直接影响企业 FinOps 实践。此功能将仓库空闲原因从"黑盒猜测"变为可视化根因分析，有助于数据平台团队优化仓库配置、降低闲置成本。可观测性从"看发生了什么"升级为"理解为什么发生"，标志着数据平台管理精细化程度的提升。</div>
+    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/release-notes">Google Cloud 发布说明</a><br><b>摘要：</b> Google Cloud 于 7 月 14 日正式上线 Bigtable 的 MCP（Model Context Protocol）工具，AI Agent 可通过 list_hot_tablets 工具编程查询集群健康状态，识别资源密集型 Tablet 和过载节点 CPU。该功能为 GA 状态，标志着 Google 首次将数据库运维能力以 MCP 标准暴露给外部 AI Agent。<br><b>对数据平台的影响：</b> 数据库原生暴露 MCP 接口是基础设施"Agent 可编程性"的重要里程碑。此前 AI Agent 与数据库的交互主要依赖 SQL 查询或 API 封装，MCP 将数据库的运维和诊断能力标准化为 Agent 可直接调用的工具。这意味着数据平台的运维自动化正从"人写脚本"走向"Agent 自主诊断"，数据库不再是 AI 的数据源，而是 AI 可以编程交互的服务端点。</div>
+</div>
+<div class="item">
+    <h3>Snowflake Marketplace 推出集成式 SaaS 应用试用，统一发现、试用与购买</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-07-15-integrated-saas-listings-ga">Snowflake 发布说明</a><br><b>摘要：</b> Snowflake 于 7 月 15 日正式上线集成式 SaaS 列表功能（GA），用户可直接在 Marketplace 列表页启动 SaaS 应用的免费试用。该功能替代了此前通过 Partner Connect 提供的试用机制，将应用的发现、试用和购买统一在 Marketplace 内完成。无需管理员权限即可浏览列表，并支持通过 Marketplace Capacity Drawdown 使用已有的 Snowflake 容量承诺进行购买。<br><b>对数据平台的影响：</b> 集成式 SaaS 试用机制将 Snowflake Marketplace 从"数据产品商店"扩展为"数据+应用市场"。对于数据平台生态而言，这意味着 Snowflake 在向应用层渗透——第三方 SaaS 厂商直接在 Snowflake 客户的数据环境中运行，降低数据移动成本和合规风险。Marketplace 从纯数据交换平台演变为数据平台的 App Store，生态粘性进一步增强。</div>
 </div>
   </div>
 
@@ -248,15 +253,15 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【预告】腾讯云大数据预告国内首个 Spark+Ray 统一智能数据湖平台</h3>
+    <h3>【降级】Confluent Cloud Flink 扩展至 Azure 和 GCP 四个新区域</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://cloud.tencent.com/developer/article/2708037">腾讯云开发者社区</a><br><b>为什么值得继续看：</b> 腾讯云大数据宣布将于 7 月 25 日在 DataFun Agentic AI Summit 上正式发布智能数据湖计算 AI DLC——国内首个在同一平台上同时提供生产级 Spark + Ray 全托管服务的平台。一份算力将同时承载大数据处理与 AI 训练推理，统一数据和元数据管理，按量计费。这代表国内云厂商在"数据湖即AI计算底座"方向上的一次重要产品化尝试。<br><b>需要等待什么信号确认：</b> 7 月 25 日正式发布后的产品架构细节、引擎性能基准（TCRay/Xpark/Meson）、与现有 DLC 产品的兼容性和迁移路径、以及首批客户场景。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.confluent.io/cloud/current/release-notes/index.html">Confluent Cloud 发布说明</a><br><b>为什么值得继续看：</b> Confluent 于 7 月 14 日将 Flink 托管服务扩展至 Azure Italy North、Mexico Central、South Africa North 和 GCP Madrid 四个新区域，所有区域均同时支持公网和私网连接。Confluent 的 Flink 区域扩展速度反映其托管流计算在全球企业中的采用节奏，以及与传统云数仓（Snowflake/Databricks/BigQuery）的地理覆盖对齐程度。<br><b>需要等待什么信号确认：</b> 是否会有客户在新增区域上运行生产级 Flink 流处理和 Tableflow（Kafka → Iceberg/Delta Lake）工作负载，以及 Confluent 后续是否会公布 Flink 托管服务的独立营收数据。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-07-14 08:00</p>
+    <p>信息截至北京时间 2026-07-15 08:00</p>
   </div>
 
 </div>
