@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-07-24</title>
+<title>Data+AI 全球日报 | 2026-07-27</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-07-24 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-07-27 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>湖仓事务能力从单表走向多语句原子操作，一致性基础设施逼近成熟</li>
-      <li>半结构化数据在湖仓中成为一等公民，灵活模式不再以性能为代价</li>
-      <li>企业级数据治理正从静态权限向动态角色隔离演进</li>
+      <li>数据与AI平台从双集群走向统一计算底座，分离架构开始被打破</li>
+      <li>湖仓架构正从分析导向转向Agent原生运行基座</li>
+      <li>高质量数据集标准化加速从国家层面向省级实践落地</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>头部湖仓厂商同步补齐半结构化数据类型与跨表 ACID 事务两大能力缺口，使湖仓在数据类型覆盖和事务语义上进一步逼近传统关系型数据库，为 Agent 驱动的强一致性数据应用铺平底座。
+      <strong>总判断：</strong>国内数据平台正式进入Spark+Ray统一架构阶段，湖仓正从分析基础设施转向Agent运行基座，高质量数据集标准化从国家层面加速向省级落地。
     </div>
   </div>
 
@@ -186,14 +186,9 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Databricks VARIANT 数据类型与列式分解正式 GA</h3>
+    <h3>腾讯云发布智能数据湖计算平台AI DLC，首次实现Spark+Ray生产级统一</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/sk-sk/azure/databricks/release-notes/product/2026/july">Azure Databricks Release Notes</a><br><b>摘要：</b> Databricks 正式发布 VARIANT 数据类型及 Variant shredding 列式分解能力。VARIANT 专为半结构化数据设计，支持从 Kinesis、Event Hub、REST API 和 schemaless 数据库摄取 JSON 等灵活格式数据，同时通过自动列式分解实现接近结构化数据的查询性能。从 Databricks Runtime 17.3 起，新建含 VARIANT 列的表自动启用 shredding。<br><b>为什么对数据平台重要：</b> VARIANT GA 意味着湖仓在半结构化数据处理上不再需要在灵活性和性能之间二选一。传统做法是将 JSON 存为 STRING 后查询时解析（性能差），或预先 ETL 为固定 schema（灵活性差）。VARIANT + shredding 将 schema-on-read 优势工程化，降低了流式半结构化数据入湖的门槛，是湖仓对传统数仓在数据类型覆盖上的关键补齐。</div>
-</div>
-<div class="item">
-    <h3>Databricks Delta 表多语句事务正式 GA</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/sk-sk/azure/databricks/release-notes/product/2026/july">Azure Databricks Release Notes</a><br><b>摘要：</b> Databricks 正式发布 Unity Catalog 受管 Delta 表的多语句事务支持。开发者可使用 `BEGIN ATOMIC ... END` 或 `BEGIN TRANSACTION ... COMMIT` 语法，将跨表的多条 SQL 语句封装为单一原子事务。所有变更要么全部提交，要么全部回滚，确保跨操作的数据一致性。<br><b>为什么对数据平台重要：</b> 多语句事务 GA 补齐了湖仓在 ACID 事务语义上的关键缺口。此前 Delta Lake 仅支持单表级别的 ACID，跨表写入的一致性依赖应用层协调。多语句事务使湖仓在数据一致性保障上逼近传统关系型数据库，为金融、供应链等强一致性场景的湖仓原生化铺平道路。</div>
+    <div class="body"><b>来源：</b> <a href="https://cloud.tencent.com/developer/article/2708037">腾讯云开发者社区</a><br><b>摘要：</b> 7月25日，腾讯云在DataFun Agentic AI Summit上正式发布智能数据湖计算平台AI DLC，成为国内首个在同一平台上同时提供生产级Spark+Ray全托管服务的智能数据湖计算平台。平台搭载三大自研引擎（TCRay提供Ray全托管与GPU弹性调度、Xpark处理多模态数据、Meson提供C++原生加速），支持一份算力同时承载大数据处理与AI训练推理，统一数据、元数据与权限。据腾讯云大数据团队验证，统一平台将训练迭代周期从月级压缩至周级，运营成本降低约60%。<br><b>为什么对数据平台重要：</b> AI DLC的发布标志着国内数据平台从"数据平台+AI平台"的双集群分离模式正式走向统一架构。此前Spark跑CPU集群做ETL、Ray跑GPU集群做训练，数据在OSS/HDFS/Iceberg之间反复搬运——高达80%的GPU算力空闲等待数据加载。AI DLC让Spark与Ray共享同一份数据、算力与权限，零拷贝完成从数据处理到模型训练的全流程。这也是国内厂商首次推出对标Databricks Lakehouse AI路线的生产级产品，可能加速国内企业从双集群架构向统一数据底座迁移。</div>
 </div>
   </div>
 
@@ -204,9 +199,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3></h3>
+    <h3>阿里云Dataphin V6.2发布，新增Milvus向量数据源与多项实时集成增强</h3>
     
-    <div class="body">今日无符合准入标准的产品与技术动态。</div>
+    <div class="body"><b>来源：</b> <a href="https://help.aliyun.com/zh/dataphin/fullmanaged/product-overview/feature-update-dynamics-2026">阿里云Dataphin功能更新</a><br><b>摘要：</b> 阿里云Dataphin V6.2于7月26日在上海区域发布。新增Milvus 2.6.x向量数据源支持，并扩展Kafka输入组件支持JSON格式消息体解析；离线集成增加DataHub Blob类型主题支持，飞书多维表格批量写入扩展至1000条；数据质量规则新增超时自动终止与失败自动重试，元数据中心新增TDSQL for PostgreSQL和DataWorks采集源。<br><b>对数据平台的影响：</b> 新增Milvus向量数据源是此次更新的核心信号——数据平台开始将向量数据库作为标准数据源管理，这在Agent和RAG场景下意味着向量存储纳入了统一的数据治理和血缘体系。Kafka JSON消息体支持也降低了半结构化实时数据的接入门槛，配合质量规则的自动化增强，反映出数据平台在Agent场景下对实时性、向量化和自动化治理三个方向的同时投入。</div>
 </div>
   </div>
 
@@ -248,25 +243,20 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【降级】Databricks 基于角色的访问控制（RBAC）进入公开预览</h3>
+    <h3>【降级】山东省发布首批46个高质量数据集产品，445家数据企业入库</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/sk-sk/azure/databricks/release-notes/product/2026/july">Azure Databricks Release Notes</a><br><b>为什么值得继续看：</b> Databricks RBAC 允许用户在工作会话中临时套用特定角色权限，实现排他性数据访问——用户必须主动扮演角色才能触及敏感数据，防止跨项目、跨客户的数据混合。这是数据治理从"谁可以看什么"向"什么时候以什么身份看"的范式升级。<br><b>需要等待什么信号确认：</b> GA 时间表及与 Unity AI Gateway 的权限联动设计，特别是 Agent 场景下 RBAC 如何扩展到 MCP 服务和模型调用的运行时治理。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.toutiao.com/article/7666315247648637455/">山东发布</a><br><b>为什么值得继续看：</b> 7月24日山东省大数据局发布首批46个高质量数据集产品（覆盖城市治理、医疗健康、自然资源等领域）及445家首批入库数据企业，数据集已在国家数据集管理服务系统上线。这是国家数据局《数据产权登记工作指引》发布后首个省级大规模落地的数据集产品清单，标志着高质量数据集标准化从顶层设计进入地方实操阶段。<br><b>需要等待什么信号确认：</b> 其他省份是否跟进发布类似清单形成全国性数据集供给网络，以及数据集产品的定价、交易和质量评测机制是否配套建立。</div>
 </div>
 <div class="item">
-    <h3>【跟踪】Databricks 治理中心（Governance Hub）进入 Beta</h3>
+    <h3>【跟踪】Databricks工作区权限模型今日自动升级，精确授权替代继承式权限</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/sk-sk/azure/databricks/release-notes/product/2026/july">Azure Databricks Release Notes</a><br><b>为什么值得继续看：</b> Governance Hub 是 Databricks 在账户级提供的集中式治理监控界面，统一展示数据健康度、AI 使用与成本、成本驱动因素，并附优先级的洞察与建议。这标志着 Databricks 治理能力从功能级（Unity Catalog 权限）向平台级（跨工作区的用量与合规可视化）升级。<br><b>需要等待什么信号确认：</b> Beta 期用户反馈中是否出现"治理盲区"（如跨云、跨账户场景），以及正式 GA 时是否包含自动化策略推荐与执行能力。</div>
-</div>
-<div class="item">
-    <h3>【降级】Snowflake 支持单条 ALTER 语句刷新多个动态表</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/release-notes/new-features">Snowflake Release Notes</a><br><b>为什么值得继续看：</b> 7 月 22 日 Snowflake 支持在一条 ALTER 语句中同时刷新多个动态表，简化了 ETL 流水线中的表刷新编排。虽属体验优化，但动态表作为 Snowflake 流批一体数据管线的核心原语，其运维效率提升反映平台在声明式数据工程方向的持续投入。<br><b>需要等待什么信号确认：</b> Snowflake 是否会在后续版本中将多表刷新与 Dynamic Tables 的 Adaptive Refresh Mode 结合，实现声明式的表间依赖自动编排。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/security/auth/change-default-workspace-access">Databricks Docs</a><br><b>为什么值得继续看：</b> 7月27日起，Databricks对未主动opt-in/opt-out的工作区自动启用新权限模型——从此前"所有用户默认继承workspace access和SQL access"改为"显式逐用户授权"，并支持consumer-only用户角色。这是Databricks在数据治理粒度和安全合规方面的重大架构变更，影响所有使用SCIM/Terraform自动化管理权限的企业。<br><b>需要等待什么信号确认：</b> 9月14日全面强制执行后，企业用户是否遇到SCIM同步、CI/CD权限脚本的兼容性问题，以及consumer-only角色在Agent/Genie场景下的实际权限边界是否清晰。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-07-24 08:00</p>
+    <p>信息截至北京时间 2026-07-27 08:00</p>
   </div>
 
 </div>
