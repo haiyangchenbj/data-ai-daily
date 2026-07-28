@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-07-27</title>
+<title>Data+AI 全球日报 | 2026-07-28</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-07-27 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-07-28 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据与AI平台从双集群走向统一计算底座，分离架构开始被打破</li>
-      <li>湖仓架构正从分析导向转向Agent原生运行基座</li>
-      <li>高质量数据集标准化加速从国家层面向省级实践落地</li>
+      <li>Agent 与数据平台交互标准走向生产级，治理首次嵌入协议层</li>
+      <li>云数据库架构迭代进入商业化交付，价格竞争从资源层延伸到存储层</li>
+      <li>数据产业年度议程即将启动，数博会预告释放密集政策与产品信号</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>国内数据平台正式进入Spark+Ray统一架构阶段，湖仓正从分析基础设施转向Agent运行基座，高质量数据集标准化从国家层面加速向省级落地。
+      <strong>总判断：</strong>MCP 2026-07-28 规范完成从连接协议到生产级基础设施的转型，无状态核心+能力治理+全链路追踪三项变化直接回应企业 AI 规模化中的治理盲区。数据平台的 Agent 接入正从定制集成走向标准化，MCP 可能成为新一代生态入口。
     </div>
   </div>
 
@@ -186,9 +186,9 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>腾讯云发布智能数据湖计算平台AI DLC，首次实现Spark+Ray生产级统一</h3>
+    <h3>MCP 2026-07-28 规范正式发布：Agent 与数据平台交互接口完成生产级转型</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://cloud.tencent.com/developer/article/2708037">腾讯云开发者社区</a><br><b>摘要：</b> 7月25日，腾讯云在DataFun Agentic AI Summit上正式发布智能数据湖计算平台AI DLC，成为国内首个在同一平台上同时提供生产级Spark+Ray全托管服务的智能数据湖计算平台。平台搭载三大自研引擎（TCRay提供Ray全托管与GPU弹性调度、Xpark处理多模态数据、Meson提供C++原生加速），支持一份算力同时承载大数据处理与AI训练推理，统一数据、元数据与权限。据腾讯云大数据团队验证，统一平台将训练迭代周期从月级压缩至周级，运营成本降低约60%。<br><b>为什么对数据平台重要：</b> AI DLC的发布标志着国内数据平台从"数据平台+AI平台"的双集群分离模式正式走向统一架构。此前Spark跑CPU集群做ETL、Ray跑GPU集群做训练，数据在OSS/HDFS/Iceberg之间反复搬运——高达80%的GPU算力空闲等待数据加载。AI DLC让Spark与Ray共享同一份数据、算力与权限，零拷贝完成从数据处理到模型训练的全流程。这也是国内厂商首次推出对标Databricks Lakehouse AI路线的生产级产品，可能加速国内企业从双集群架构向统一数据底座迁移。</div>
+    <div class="body"><b>来源：</b> <a href="https://nomadx.ae/blog/mcp-2026-07-28-spec-what-changed/">MCP 2026-07-28 Spec Release Notes</a><br><b>摘要：</b> Model Context Protocol（MCP）2026-07-28 版本于今日正式发布，这是协议自 2025 年 11 月移交 Agentic AI Foundation（Linux Foundation 下设）后的首个完整规范周期，也是协议史上规模最大的修订。核心变化包括：取消会话绑定实现无状态核心架构、新增统一能力发现与治理语义、标准化全链路追踪（W3C Trace Context）、强化 OAuth/OIDC 授权体系、引入 MCP Apps 交互式界面，以及首个正式弃用策略。<br><b>为什么对数据平台重要：</b> MCP 是 AI Agent 调用数据平台工具（元数据查询、指标检索、治理化查询、数据新鲜度检查等）的主流标准接口。新规范的三项变化直接重塑数据平台的 Agent 接入架构：(1) 无状态核心使数据工具服务器可水平扩展，不再被会话绑定锁死在单实例；(2) 能力治理语义让平台侧可以限流、审计和缓存 Agent 的工具调用——这正是湖仓治理在 Agent 时代的落地形态；(3) 全链路追踪要求每次调用附带结构化来源信息，使 Agent 的数据操作可审计、可回溯，回应企业在 AI 规模化部署中的合规刚需。</div>
 </div>
   </div>
 
@@ -199,9 +199,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>阿里云Dataphin V6.2发布，新增Milvus向量数据源与多项实时集成增强</h3>
+    <h3>腾讯云 TDSQL-C MySQL 版架构 2.0 正式商业化</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://help.aliyun.com/zh/dataphin/fullmanaged/product-overview/feature-update-dynamics-2026">阿里云Dataphin功能更新</a><br><b>摘要：</b> 阿里云Dataphin V6.2于7月26日在上海区域发布。新增Milvus 2.6.x向量数据源支持，并扩展Kafka输入组件支持JSON格式消息体解析；离线集成增加DataHub Blob类型主题支持，飞书多维表格批量写入扩展至1000条；数据质量规则新增超时自动终止与失败自动重试，元数据中心新增TDSQL for PostgreSQL和DataWorks采集源。<br><b>对数据平台的影响：</b> 新增Milvus向量数据源是此次更新的核心信号——数据平台开始将向量数据库作为标准数据源管理，这在Agent和RAG场景下意味着向量存储纳入了统一的数据治理和血缘体系。Kafka JSON消息体支持也降低了半结构化实时数据的接入门槛，配合质量规则的自动化增强，反映出数据平台在Agent场景下对实时性、向量化和自动化治理三个方向的同时投入。</div>
+    <div class="body"><b>来源：</b> <a href="https://new.qq.com/rain/a/20260727A057A600">腾讯云公告</a><br><b>摘要：</b> 腾讯云公告，TDSQL-C MySQL 版产品架构 2.0 结束公测，自 2026 年 7 月 27 日起正式商业化计费。计费分为计算资源和存储资源两项，计算价格与架构 1.0 相同，存储价格低于架构 1.0。<br><b>对数据平台的影响：</b> 架构 2.0 商业化标志着腾讯云关系型数据库产品线完成架构代际切换，存储成本降低有利于客户在云原生数据库上承载更大规模数据工作负载。存储价格下探也进一步压缩了传统自建 MySQL 的成本优势空间。</div>
 </div>
   </div>
 
@@ -214,7 +214,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日无符合准入标准的机构观点或研究报告。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -232,7 +232,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日无符合准入标准的资本与公司事件。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -243,20 +243,20 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【降级】山东省发布首批46个高质量数据集产品，445家数据企业入库</h3>
+    <h3>【预告】2026 中国国际大数据产业博览会新闻发布会今日在京举行</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.toutiao.com/article/7666315247648637455/">山东发布</a><br><b>为什么值得继续看：</b> 7月24日山东省大数据局发布首批46个高质量数据集产品（覆盖城市治理、医疗健康、自然资源等领域）及445家首批入库数据企业，数据集已在国家数据集管理服务系统上线。这是国家数据局《数据产权登记工作指引》发布后首个省级大规模落地的数据集产品清单，标志着高质量数据集标准化从顶层设计进入地方实操阶段。<br><b>需要等待什么信号确认：</b> 其他省份是否跟进发布类似清单形成全国性数据集供给网络，以及数据集产品的定价、交易和质量评测机制是否配套建立。</div>
+    <div class="body"><b>来源：</b> <a href="https://dsj.guizhou.gov.cn/xwzx/snyw/202607/t20260727_90664745.html">贵州省大数据局公告</a><br><b>为什么值得继续看：</b> 国家数据局副局长余英、贵州省副省长罗强、贵阳市长王宏出席发布，国家数据局综合司司长主持。数博会是中国数据产业最重要的年度政策与产业风向标，发布内容将预示下半年数据要素市场、数据基础设施建设的政策走向和产业重点。<br><b>需要等待什么信号确认：</b> 关注大会主题设定、重点议程板块（是否新增 AI-native 数据基础设施、数据要素流通专题）、以及是否有重大政策文件在大会期间发布。</div>
 </div>
 <div class="item">
-    <h3>【跟踪】Databricks工作区权限模型今日自动升级，精确授权替代继承式权限</h3>
+    <h3>【降级】腾讯云数据万象 MetaInsight 智能检索计费大幅降价生效</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/security/auth/change-default-workspace-access">Databricks Docs</a><br><b>为什么值得继续看：</b> 7月27日起，Databricks对未主动opt-in/opt-out的工作区自动启用新权限模型——从此前"所有用户默认继承workspace access和SQL access"改为"显式逐用户授权"，并支持consumer-only用户角色。这是Databricks在数据治理粒度和安全合规方面的重大架构变更，影响所有使用SCIM/Terraform自动化管理权限的企业。<br><b>需要等待什么信号确认：</b> 9月14日全面强制执行后，企业用户是否遇到SCIM同步、CI/CD权限脚本的兼容性问题，以及consumer-only角色在Agent/Genie场景下的实际权限边界是否清晰。</div>
+    <div class="body"><b>来源：</b> <a href="https://wap.eastmoney.com/a/202607143805600524.html">财联社</a><br><b>为什么值得继续看：</b> 7 月 27 日起 MetaInsight 计费项命名规范调整并优化价格，幅度据称为"大幅降价"。MetaInsight 是腾讯云数据湖仓的智能检索组件，降价降低了企业使用数据智能检索的门槛，但本质是价格策略调整而非产品能力变化，降级收录。<br><b>需要等待什么信号确认：</b> 需关注降价后是否有配套的产品功能升级发布，以及阿里云、华为云等竞品是否跟进类似存储/检索服务的价格调整。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief v4.3</p>
-    <p>信息截至北京时间 2026-07-27 08:00</p>
+    <p>信息截至北京时间 2026-07-28 08:00</p>
   </div>
 
 </div>
