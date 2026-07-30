@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data+AI 全球日报 | 2026-07-30</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --border: #dadce0;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+    --teal: #00897b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 32px 40px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+  }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .header .date { font-size: 14px; opacity: 0.85; }
+
+  /* Summary Box */
+  .summary-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-size: 15px; }
+  .summary-box .verdict {
+    background: var(--primary-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  /* Section */
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+  .badge-a { background: var(--accent); }
+  .badge-b { background: var(--primary); }
+  .badge-c { background: var(--green); }
+  .badge-d { background: var(--teal); }
+  .badge-e { background: var(--orange); }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+
+  /* Item */
+  .item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .item .source {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .item .source a { color: var(--primary); text-decoration: none; }
+  .item .source a:hover { text-decoration: underline; }
+  .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .impact {
+    background: #f0f7ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #1a56db;
+  }
+
+  /* 投融资特殊样式 */
+  .funding-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
+  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section, .summary-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>📊 Data+AI 全球日报</h1>
+    <div class="date">2026-07-30 · 严格只包含过去24小时信息</div>
+  </div>
+
+  <!-- 根据实际日报内容填充以下模板 -->
+
+  <div class="summary-box">
+    <h2>🔥 今日最重要的3个变化</h2>
+    <ol>
+      <li>数据平台厂商加速从数据治理向Agent运行时治理延伸</li>
+      <li>可信数据空间从概念验证进入垂直行业场景试点阶段</li>
+      <li>国产数据库独立化提速，头部厂商首次寻求外部融资</li>
+    </ol>
+    <div class="verdict">
+      <strong>总判断：</strong>7月淡季末周方向信号密集。数据平台厂商率先将治理边界从数据层延伸到Agent运行时层，竞争焦点从数据控制面转向Agent控制面。国内，九部门可信数据空间试点将概念落地为行业政策工具，数据库头部厂商首轮融资验证了向AI数据平台转型的资本逻辑。
+    </div>
+  </div>
+
+  <!-- Section A: Top Signals -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals</h2>
+    </div>
+    <div class="item">
+    <h3>Snowflake发布Cortex AI Gateway：数据平台从数据治理向Agent运行时治理延伸</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.snowflake.com/en/news/press-releases/snowflake-advances-the-trusted-agentic-enterprise-era-with-unified-monitoring-and-cost-management/">Snowflake Press Release</a><br><b>摘要：</b> Snowflake于7月28日正式宣布Cortex AI Gateway，将Natoma收购（5月）的MCP平台能力整合进Snowflake平台，实现对第一方Agent（CoWork/CoCo）和第三方Agent（Claude Code/Cursor等）的统一治理。Cortex AI Gateway支持100+ MCP服务器接入，提供Agent身份认证、权限控制、活动审计、成本归因和模型路由等能力，同时宣布与1Password、Okta、SailPoint等六家安全厂商的第三方Agent访问集成。<br><b>为什么对数据平台重要：</b> 这是数据平台厂商首次以完整产品形态将治理边界从数据/模型层系统性延伸到Agent运行时层。Snowflake的定位从"AI Data Cloud"明确升级为"Agent互操作的控制面"——数据平台不再是Agent的下游数据源，而是Agent调度的"网关"。这一方向与Databricks的Unity AI Gateway形成直接对位，标志着Agent治理正在成为数据平台的新战略高地。</div>
+</div>
+<div class="item">
+    <h3>九部门联合印发科技金融数据开发利用通知，可信数据空间首次进入垂直行业试点</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://wap.eastmoney.com/a/202607293825432620.html">券商中国（东方财富）</a><br><b>摘要：</b> 人民银行等九部门7月29日联合印发《关于加强科技金融领域数据开发利用的通知》，发布《全国科技金融领域数据开发利用目录1.0》（涵盖企业名单/科创属性/投融资等8大类26个数据指标），明确将开展科技金融可信数据空间创新发展试点，鼓励地方建设省级配套信息设施、推广联合建模等数据融合模式。<br><b>为什么对数据平台重要：</b> 这是国家数据局成立后首次将"可信数据空间"概念嵌入跨部门垂直产业政策——此前可信数据空间更多停留在试点城市和通用框架层面。科技金融场景的高数据敏感性和跨部门协调需求使其成为可信数据空间落地的天然试验场，也将牵引底层数据基础设施（数据目录、隐私计算、联邦学习）的需求。</div>
+</div>
+  </div>
+
+  <!-- Section B: Product & Tech -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-b">B</span>
+      <h2>Product & Tech</h2>
+    </div>
+    <div class="item">
+    <h3>腾讯云发布CodeBuddy NPC：首次实现AI Native Git范式，Agent嵌入研发全流程</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L30F2V9T051180F7.html">智东西</a><br><b>摘要：</b> 腾讯云7月29日正式发布云端智能体CodeBuddy NPC，开发者可通过@方式向NPC派发任务，NPC自主完成问题调查、方案制定、代码开发与PR提交，并根据CI结果持续修复直到交付可验收成果。这是业内首个提出并落地AI Native Git范式的产品。<br><b>对数据平台的影响：</b> CodeBuddy NPC代表了一种Agent嵌入数据工程工作流的新范式——AI不再只是代码补全工具，而是作为"团队成员"参与完整的Pipeline开发流程。在数据平台领域，这对应着数据工程Agent（自动ETL开发、Pipeline修复、数据质量巡检）的产品化方向，与Databricks Genie Code和Snowflake CoCo形成不同侧重点的工程Agent竞争。</div>
+</div>
+  </div>
+
+  <!-- Section C: Views & Research (People & Views + Analyst Insights 合并) -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research</h2>
+    </div>
+    <div class="item">
+    <h3></h3>
+    
+    <div class="body">今日无合格信息。</div>
+</div>
+  </div>
+
+  <!-- Section D: Capital & Corporate -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate</h2>
+    </div>
+    <!-- 使用 funding-tag 类标注类型 -->
+    <!-- <span class="funding-tag tag-funding">投融资</span> -->
+    <!-- <span class="funding-tag tag-earnings">财报发布</span> -->
+    <!-- <span class="funding-tag tag-ipo">IPO</span> -->
+    <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
+    <div class="item">
+    <h3>【投融资】OceanBase启动A轮融资20-30亿元，年化收入14亿增速70%</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L30NB0N905198NMR.html">华尔街见闻</a><br><b>核心数据：</b> 目标融资规模20-30亿元人民币（首轮外部融资）；2026年年化收入超14亿元，同比增长约70%；数千家客户，覆盖金融/运营商/制造/零售等行业。<br><b>摘要：</b> 蚂蚁集团旗下分布式数据库OceanBase正在与投资者洽谈A轮融资，目标规模约20-30亿元，用于增强独立运营能力并加速向AI数据平台转型。这是OceanBase自2010年成立以来首次外部融资。公司目前年化收入超14亿元、增速70%，在IDC中国分布式数据库市场份额排名第一。OceanBase今年6月已发布湖库一体AI数据库，正在推进对视频等半结构化/非结构化数据的处理能力。<br><b>对数据平台的影响：</b> OceanBase融资是国产数据库走向独立运营和资本市场的标志性事件——蚂蚁集团数据业务的独立化趋势（继蚂蚁国际A轮融资后）进一步印证。70%的增速和14亿年化收入表明国产分布式数据库的商业化拐点已至，AI数据平台方向（湖库一体+多模态）成为估值叙事的核心驱动力。</div>
+</div>
+  </div>
+
+  <!-- Section E: Watchlist -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-e">E</span>
+      <h2>Watchlist</h2>
+    </div>
+    <div class="item">
+    <h3>【降级】Databricks Python UDTFs在Unity Catalog中正式GA</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://docs.databricks.com/aws/en/release-notes/product/2026/july">Databricks Release Notes</a><br><b>为什么值得继续看：</b> Databricks于7月28日（US时间）发布Python用户定义表函数（UDTFs）在Unity Catalog中正式GA，支持在SQL FROM子句中调用Python函数返回多行列结果，运行在Serverless/SQL Warehouse上。这是Unity Catalog从数据目录向"可治理计算"延伸的增量步骤。<br><b>需要等待什么信号确认：</b> UDTFs本身是常规功能补全，但若后续出现更多语言（Java/Scala UDTFs已于7/16 GA）+跨引擎支持的组合发布，则构成Unity Catalog作为"可编程治理层"的产品化加速信号。</div>
+</div>
+  </div>
+
+  <div class="footer">
+    <p>Powered by Data+AI Daily Brief</p>
+    <p>信息截至北京时间 2026-07-30 08:00</p>
+  </div>
+
+</div>
+</body>
+</html>
