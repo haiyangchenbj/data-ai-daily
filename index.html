@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-08-17</title>
+<title>Data+AI 全球日报 | 2026-08-18</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-08-17 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-08-18 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据库竞争焦点从存储性能转向为智能体提供上下文与记忆</li>
-      <li>数据平台工具链加速走向声明式与基础设施即代码</li>
-      <li>湖仓与数据库的可移植性正成为新的竞争卖点</li>
+      <li>单位推理成本下降，反而推高智能体工作流总成本</li>
+      <li>传统数据库厂商以多云消费模式争夺上云主动权</li>
+      <li>具身智能数据供给平台化，运营商与产业资本加速入场</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>这是夏季周末的稀薄窗口，窗口内信息虽少，但指向同一个方向：数据基础设施的竞争焦点正从「算力与存储规模」迁移到「能否为智能体提供可信上下文」。国产数据库厂商在这一迁移上的动作比国际厂商更密集，值得持续跟踪其分层产品化的落地节奏。
+      <strong>总判断：</strong>今日三大信号同指一个方向：数据平台竞争正从算得快转向算得省、算得可控。推理成本悖论让成本治理成刚需，多云消费模式挤压传统上云路径，具身数据平台化把数据要素从文本延伸向物理世界——数据基础设施价值正在被重新定价。
     </div>
   </div>
 
@@ -186,9 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>阿里云 PolarDB 推出 Agentic Database 形态，服务主体从人转向智能体</h3>
+    <h3>Gartner 发布"推理成本悖论"：Agent 工作流推理成本 2028 年前将增逾 5 倍</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://help.aliyun.com/zh/polardb/polardb-for-postgresql/what-is-polardb-postgresql-agentic-database">阿里云官方文档：什么是 PolarDB PostgreSQL Agentic Database</a><br><b>摘要：</b> PolarDB 推出面向海量 AI Agent 场景的 Agentic Database 新形态（公测），具备秒级拉起、秒级 Branch、Scale to Zero 弹性、基于 OSS 的低成本存储与面向 MCP 的 Agent Native 访问，服务主体从「人」转向「智能体」。阿里云同期在 8 月 15 日「Agentic DB Day」系统阐述 Agentic DB 三层架构：入口层 AIDBS 以自然语言调起数据库的使用、管理与开发；数据能力层 RDS ContextDB 沉淀业务知识资产、Tair 语义缓存按语义匹配历史提问直接返回；底座层 PolarDB LakeBase 提供可持久化工作空间、AnalyticDB AgenticLake 支撑全模态数据实时分析。<br><b>为什么对数据平台重要：</b> 阿里云把「数据库服务智能体」从单点能力打包为「入口—数据能力—底座」的成体系架构，明确数据库工作负载从确定性 SQL 扩展到多步推理与多智能体协作。这标志着国内头部云厂商的 Agentic DB 战略从概念进入分层产品化落地，竞争焦点从存储/计算性能转向智能体上下文、记忆与可审计执行。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028">Gartner Newsroom</a><br><b>摘要：</b> Gartner 8/17 发布预测，单个 Agentic 工作流的 AI 推理成本到 2028 年将增长 5 倍以上。分析师 Will Sommer 提出"推理悖论"：单位 token 成本持续下降，但更复杂的工作流消耗远超聊天机器人的 token 数量，导致总体成本不降反升——与基础聊天机器人相比，路由到 Agentic 推理模型至少让推理成本增加 5 倍。<br><b>为什么对数据平台重要：</b> 这一判断把"推理成本治理"从模型层议题上移到数据平台层：企业需要在平台内实现推理分层、多模型路由与编排，按任务复杂度动态匹配成本档位。对数据平台厂商而言，"帮客户省 token"正成为与"算得更快"并列的核心卖点，也是 Unity AI Gateway、Cortex 等 AI 网关产品的价值锚点。</div>
+</div>
+<div class="item">
+    <h3>Oracle AI Database@AWS 扩展至 22 个区域，ExaDB-XS 消费模式落地</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.techrepublic.com/article/news-oracle-ai-database-aws-exadata-22-regions/">TechRepublic</a><br><b>摘要：</b> Oracle 与 AWS 深化数据库合作，将 Exadata Database Service on Exascale Infrastructure（ExaDB-XS）扩展至亚太、欧洲和美洲的 22 个 AWS 区域。ExaDB-XS 采用按量计费，计算与存储可独立扩展，最低约 $0.336/ECPU/小时，并可经 AWS Marketplace 按 1 或 12 个月短期合约采购，替代此前 4 年、月付 $4,540 起的本地订阅。<br><b>为什么对数据平台重要：</b> Oracle 以"多云 + 消费化"重构传统数据库的上云路径，直接回应企业数据驻留、延迟与监管合规诉求。Exadata 从重资产许可走向按需计费，标志传统企业数据库巨头正用云原生弹性定价逻辑，与云厂商自有数据库在 AWS 平台上正面争夺迁移与现代化负载。</div>
 </div>
   </div>
 
@@ -199,14 +204,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>ClickHouse 将 ClickStack 可观测性资源纳入 Terraform Provider 管理</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://clickhouse.com/blog/clickstack-terraform-provider">ClickHouse Blog: Announcing support for ClickStack in the ClickHouse Terraform provider</a><br><b>摘要：</b> ClickHouse 官方 Terraform provider 自 v3.25 起（beta）支持 ClickStack 资源，覆盖自托管与 ClickHouse Cloud 两种部署形态。仪表盘、告警、数据源、保存的搜索、连接与 Webhook 等可观测性资源可纳入版本控制，走 terraform plan/apply 工作流。<br><b>对数据平台的影响：</b> 把可观测性配置纳入 IaC，意味着数据平台的可观测性基础设施从「UI 手工配置」走向「代码化、可评审、可回滚」，降低 staging/生产等多环境配置漂移，映射到工程效率维度。</div>
-</div>
-<div class="item">
-    <h3>云器 Lakehouse 完成全球 8 朵云与 3 种 CPU 架构适配</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://juejin.cn/post/7673490766201634831">云器科技（掘金官方账号）</a><br><b>摘要：</b> 云器 Lakehouse 完成国内外 8 朵主流云平台适配（国内阿里云、腾讯云、火山引擎、华为云、百度智能云；海外 AWS、Google Cloud、Microsoft Azure），并兼容 Intel、AMD、ARM 三种 CPU 架构。企业可按业务选择云，无需为使用数据平台迁就基础设施。<br><b>对数据平台的影响：</b> 中小湖仓厂商以「增量计算 + Single-Engine」架构实现多云与多芯片适配，降低企业数据平台对单一云厂商的绑定，映射到采购与市场格局维度，也代表国产湖仓出海的工程能力补课。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -235,9 +235,9 @@
     <!-- <span class="funding-tag tag-ipo">IPO</span> -->
     <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
     <div class="item">
-    <h3></h3>
+    <h3>【投融资】具身数据平台觅蜂科技完成数亿元融资，中国电信领投</h3>
     
-    <div class="body">今日无合格信息。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4HE9BS90512D3VJ.html">新京报贝壳财经</a><br><b>核心数据：</b> 数亿元融资，中国电信领投，张江集团跟投，红杉中国、元启创新等老股东追加；半年内三轮融资。<br><b>摘要：</b> 智元机器人孵化的"一站式物理 AI 数据服务平台"觅蜂科技 8/17 宣布完成新一轮数亿元融资。资金将用于建设具身智能数据平台型供给基础设施，扩大无本体采集硬件 MEgo 系列量产，加速千万小时级物理交互数据产能。IT 桔子数据显示，2026 上半年 25 家中国具身智能数据公司合计吸金超 170 亿元。<br><b>对数据平台的影响：</b> 具身智能数据的采集、治理、闭环评测正形成独立于互联网文本数据的新供给体系，并与运营商云网基础设施深度绑定（中国电信联合打造"云网+具身数据"方案）。这揭示数据要素竞争的下一战场正从语言数据向物理交互数据延伸。</div>
 </div>
   </div>
 
@@ -248,20 +248,20 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【降级】MongoDB Atlas 将运营数据库定位为智能体检索与内存层</h3>
+    <h3>【降级】矩阵起源入选 Gartner 数据管理 Coolest Vendor 并完成 A 轮融资</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://investors.mongodb.com/news-releases/news-release-details/mongodb-atlas-now-delivers-industry-leading-context-retrieval">MongoDB Newsroom（PRNewswire）</a><br><b>为什么值得继续看：</b> MongoDB 在 Build Fest 发布 Atlas Managed MCP Server（连接 Claude Code、Codex、Grok Build、Devin）、Voyage AI 自动化嵌入、voyage-code-4 代码检索模型与流处理向量检索，把运营数据库定位为智能体的内存与检索层。原始发布日期为 8 月 13 日美国时间，早于本期 72 小时窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 观察 Managed MCP Server 的实际采用量与「运营数据库即智能体内存层」定位是否被 Snowflake、Databricks 跟进，以及自动嵌入带来的检索成本是否可控。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4IDSQ1A0552YZST.html">数据猿</a><br><b>为什么值得继续看：</b> 矩阵起源（MatrixOrigin）入选 Gartner《数据管理领域最具创新力厂商》2026，成为四家入选厂商中唯一中国公司，其 MatrixOne Intelligence 将 HTAP、数据湖、内置 LLM 网关与 Agent Runtime 收敛于同一平台，并以"Git-for-Data"版本化机制支撑智能体上下文复现。Gartner 报告原始发布日期为 7/29，超出 24 小时窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 矩阵起源 A 轮融资的确切金额与估值、以及 Gartner 报告原文对其技术差异化定位的完整表述。</div>
 </div>
 <div class="item">
-    <h3>【降级】火山引擎发布 Data Agent「一客一策」与 AI 数据湖「AI 算子广场」</h3>
+    <h3>【预告】《数据智能体研究报告（2026）》征求意见稿发布</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.toutiao.com/article/7674028748894683671">码农财经（今日头条，转述火山引擎 FORCE Link 青岛站）</a><br><b>为什么值得继续看：</b> 火山引擎在 8 月 13 日 FORCE Link AI 创新巡展青岛站发布 Data Agent「一客一策」能力与 AI 数据湖「AI 算子广场」功能，是字节系押注 AI 数据基础设施的最新信号。原始发布日期 8 月 13 日，早于本期窗口，降级收录。<br><b>需要等待什么信号确认：</b> 等待火山引擎官方对「一客一策」「AI 算子广场」的正式产品文档与 GA 时间表，确认其与 DataLeap、Data Agent 产品线的整合路径。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.isc.org.cn/article/30075177847877632.html">中国互联网协会</a><br><b>为什么值得继续看：</b> 中国互联网协会联合信通院 8/17 发布《数据智能体研究报告（2026）》征求意见稿，首次系统性梳理数据采集、治理、分析、运营、合规、安全等 12 类数据智能体，并同步征集落地案例。这标志着"数据智能体（Data Agent）"作为独立赛道进入行业标准与研究视野。<br><b>需要等待什么信号确认：</b> 征求意见与案例征集 9/5 截止后正式版的发布，以及报告对数据智能体市场规模与分类标准的最终界定。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-08-17 08:00</p>
+    <p>信息截至北京时间 2026-08-18 08:00</p>
   </div>
 
 </div>
