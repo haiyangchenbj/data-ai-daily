@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-08-18</title>
+<title>Data+AI 全球日报 | 2026-08-19</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-08-18 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-08-19 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>单位推理成本下降，反而推高智能体工作流总成本</li>
-      <li>传统数据库厂商以多云消费模式争夺上云主动权</li>
-      <li>具身智能数据供给平台化，运营商与产业资本加速入场</li>
+      <li>模型选择从人工固定转向平台自动路由，AI 成本治理走向产品化</li>
+      <li>国产数据湖计算冲击世界纪录，Agent 负载倒逼底座性能升级</li>
+      <li>具身数据基础设施密集落地，数据要素竞争延伸向物理世界</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>今日三大信号同指一个方向：数据平台竞争正从算得快转向算得省、算得可控。推理成本悖论让成本治理成刚需，多云消费模式挤压传统上云路径，具身数据平台化把数据要素从文本延伸向物理世界——数据基础设施价值正在被重新定价。
+      <strong>总判断：</strong>数据平台竞争围绕 AI 成本与 Agent 底座两条线加速。动态模型路由把推理成本治理产品化，腾讯云以世界纪录证明国产湖仓竞争力，具身数据基础设施密集落地把数据要素战场延伸到物理世界。核心变量从算得快转向算得省、喂得饱。
     </div>
   </div>
 
@@ -186,14 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Gartner 发布"推理成本悖论"：Agent 工作流推理成本 2028 年前将增逾 5 倍</h3>
+    <h3>Snowflake 推出动态模型路由，把推理成本治理产品化</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028">Gartner Newsroom</a><br><b>摘要：</b> Gartner 8/17 发布预测，单个 Agentic 工作流的 AI 推理成本到 2028 年将增长 5 倍以上。分析师 Will Sommer 提出"推理悖论"：单位 token 成本持续下降，但更复杂的工作流消耗远超聊天机器人的 token 数量，导致总体成本不降反升——与基础聊天机器人相比，路由到 Agentic 推理模型至少让推理成本增加 5 倍。<br><b>为什么对数据平台重要：</b> 这一判断把"推理成本治理"从模型层议题上移到数据平台层：企业需要在平台内实现推理分层、多模型路由与编排，按任务复杂度动态匹配成本档位。对数据平台厂商而言，"帮客户省 token"正成为与"算得更快"并列的核心卖点，也是 Unity AI Gateway、Cortex 等 AI 网关产品的价值锚点。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.businesswire.com/news/home/20260818448905/en/">Business Wire</a><br><b>摘要：</b> Snowflake 8/18 在 Cortex AI Gateway 推出动态模型路由，按质量、成本、速度与客户偏好自动为每个任务选择模型：简单或重复任务路由到高效模型，需要深度推理的任务路由到前沿模型。能力集成进 Snowflake CoCo、CoWork 及第三方 AI Agent，并同步扩展开源模型 DeepSeek-V4-Flash 0731 与 GLM-5.3。内部测试中，用动态路由构建 dbt 流水线的 token 效率提升至 3 倍（同等质量），工程团队完成相同 PR 数则提升 25% token 效率。<br><b>为什么对数据平台重要：</b> 这是 Gartner「推理成本悖论」（昨日 A1）的直接产品回应——单位 token 降价不解决问题，按任务复杂度动态匹配模型档位才是成本治理的落点。模型路由从 OpenRouter、Databricks Smart Routing 的比拼，正在收口为数据平台 AI 网关的标配能力，与数据治理、访问控制绑定，成为「智能体底座」的核心组件。</div>
 </div>
 <div class="item">
-    <h3>Oracle AI Database@AWS 扩展至 22 个区域，ExaDB-XS 消费模式落地</h3>
+    <h3>腾讯云数据湖计算 DLC 刷新 TPC-DS 100TB 性能与性价比双世界纪录</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.techrepublic.com/article/news-oracle-ai-database-aws-exadata-22-regions/">TechRepublic</a><br><b>摘要：</b> Oracle 与 AWS 深化数据库合作，将 Exadata Database Service on Exascale Infrastructure（ExaDB-XS）扩展至亚太、欧洲和美洲的 22 个 AWS 区域。ExaDB-XS 采用按量计费，计算与存储可独立扩展，最低约 $0.336/ECPU/小时，并可经 AWS Marketplace 按 1 或 12 个月短期合约采购，替代此前 4 年、月付 $4,540 起的本地订阅。<br><b>为什么对数据平台重要：</b> Oracle 以"多云 + 消费化"重构传统数据库的上云路径，直接回应企业数据驻留、延迟与监管合规诉求。Exadata 从重资产许可走向按需计费，标志传统企业数据库巨头正用云原生弹性定价逻辑，与云厂商自有数据库在 AWS 平台上正面争夺迁移与现代化负载。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4L0ENRH05527PMU.html">IT时代网</a><br><b>摘要：</b> 据 TPC 官网 8/18 信息，腾讯云数据湖计算 DLC 刷新 TPC-DS 100TB 性能与性价比两项世界纪录：综合性能成绩 6.54 亿，接近此前最高纪录的 10 倍；单位性能成本降至 11.04 元，约为原来的六分之一。支撑成绩的引擎是腾讯内部天穹平台自研的统一计算引擎 SuperSQL，可统一调度批、流、CPU/GPU 及多模态数据。上月 DLC 升级为 AI DLC，把数据处理延伸到 AI 计算、模型训练、推理与 Agent 应用。<br><b>为什么对数据平台重要：</b> 这是国产数据湖计算在权威基准上首次同时登顶性能与性价比，且引擎为自研、非开源套壳。TPC-DS 的并发、混合负载与数据维护要求更贴近 Agent 时代的真实读写下探——Agent 对数据底座的高并发读取与持续更新，正在倒逼湖仓性能军备竞赛，SuperSQL 的统一计算底座路线成为国产厂商回应这一压力的代表路径。</div>
 </div>
   </div>
 
@@ -204,9 +204,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3></h3>
+    <h3>五一视界发布 AperData 具身数据底座与 AperOne 应用闭环平台</h3>
     
-    <div class="body">今日无合格信息。</div>
+    <div class="body"><b>来源：</b> <a href="https://view.inews.qq.com/a/20260819A0416A00">南方都市报</a><br><b>摘要：</b> 港股上市公司五一视界 8/18 发布 AperData 具身数据底座与 AperOne 具身应用闭环 OS 平台，针对具身智能「数据稀缺」与「容错率低」两大卡点，提供从采集、治理到部署的闭环方案，已与云深处、银河通用等头部厂商合作，预计年内实现千台级部署。<br><b>对数据平台的影响：</b> 具身数据底座正从创业公司（觅蜂科技等）向上市公司产品化延伸，与信通院训练场报告、觅蜂融资构成同一条「物理数据基础设施」叙事。数据采集、标注、评测的全链路工具化，正在把具身智能的数据供给从项目制服务变成可复制的平台能力。</div>
 </div>
   </div>
 
@@ -217,9 +217,14 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3></h3>
+    <h3>信通院发布《具身智能训练场研究报告（2026）》</h3>
     
-    <div class="body">今日无合格信息。</div>
+    <div class="body"><b>来源：</b> <a href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=10085519548013928598&channelId=1119">央视新闻</a><br><b>核心观点：</b> 信通院 8/18 发布报告显示，全国已建成启用超 70 家具身智能训练场，在建或规划 40 余家，形成长三角、京津冀、珠三角三大核心集群，覆盖过半省级行政区并向三线及以下城市延伸。配套的「具身智能数据集质量要求及评估方法」行业标准将于 11 月 1 日实施，以完整性、一致性、多样性、真实性、易用性、实用性、可扩展性、安全性八个维度评价数据质量。<br><b>映射到数据平台的判断：</b> 训练场被明确定位为「关键基础设施」，其核心产出是「大规模高质量数据产品」。这标志着具身智能的数据建设正式从规模导向转向质量导向，数据工程化流水线（采集→标注→处理→评测）成为训练场产能升级的关键支撑，也为数据平台厂商打开了具身数据治理与数据集交易的新增量市场。</div>
+</div>
+<div class="item">
+    <h3>国家数据局启动首批数据领域国际合作试点，落地 10 个地方</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a84d84706152">央视新闻</a><br><b>核心观点：</b> 国家数据局 8/18 在上合组织数字经济论坛新闻发布会上宣布，今年启动的数据领域国际合作试点首批落地上海、海南、福建福州/厦门/泉州、湖南长沙、广东广州/深圳/横琴、广西南宁等 10 个地方，各项试点工作正有序推进。<br><b>映射到数据平台的判断：</b> 数据领域国际合作试点把「数据要素跨境流通」从原则转向具体地理抓手，为跨境数据平台、数据托管与合规基础设施提供了政策接口。对数据平台厂商而言，试点城市的制度型开放是「数据出海」产品化的前提，也是国际数据服务竞争的新变量。</div>
 </div>
   </div>
 
@@ -235,9 +240,9 @@
     <!-- <span class="funding-tag tag-ipo">IPO</span> -->
     <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
     <div class="item">
-    <h3>【投融资】具身数据平台觅蜂科技完成数亿元融资，中国电信领投</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4HE9BS90512D3VJ.html">新京报贝壳财经</a><br><b>核心数据：</b> 数亿元融资，中国电信领投，张江集团跟投，红杉中国、元启创新等老股东追加；半年内三轮融资。<br><b>摘要：</b> 智元机器人孵化的"一站式物理 AI 数据服务平台"觅蜂科技 8/17 宣布完成新一轮数亿元融资。资金将用于建设具身智能数据平台型供给基础设施，扩大无本体采集硬件 MEgo 系列量产，加速千万小时级物理交互数据产能。IT 桔子数据显示，2026 上半年 25 家中国具身智能数据公司合计吸金超 170 亿元。<br><b>对数据平台的影响：</b> 具身智能数据的采集、治理、闭环评测正形成独立于互联网文本数据的新供给体系，并与运营商云网基础设施深度绑定（中国电信联合打造"云网+具身数据"方案）。这揭示数据要素竞争的下一战场正从语言数据向物理交互数据延伸。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -248,20 +253,15 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【降级】矩阵起源入选 Gartner 数据管理 Coolest Vendor 并完成 A 轮融资</h3>
+    <h3>【降级】华为发布 AI DC 数据基础设施全栈方案</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4IDSQ1A0552YZST.html">数据猿</a><br><b>为什么值得继续看：</b> 矩阵起源（MatrixOrigin）入选 Gartner《数据管理领域最具创新力厂商》2026，成为四家入选厂商中唯一中国公司，其 MatrixOne Intelligence 将 HTAP、数据湖、内置 LLM 网关与 Agent Runtime 收敛于同一平台，并以"Git-for-Data"版本化机制支撑智能体上下文复现。Gartner 报告原始发布日期为 7/29，超出 24 小时窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 矩阵起源 A 轮融资的确切金额与估值、以及 Gartner 报告原文对其技术差异化定位的完整表述。</div>
-</div>
-<div class="item">
-    <h3>【预告】《数据智能体研究报告（2026）》征求意见稿发布</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://www.isc.org.cn/article/30075177847877632.html">中国互联网协会</a><br><b>为什么值得继续看：</b> 中国互联网协会联合信通院 8/17 发布《数据智能体研究报告（2026）》征求意见稿，首次系统性梳理数据采集、治理、分析、运营、合规、安全等 12 类数据智能体，并同步征集落地案例。这标志着"数据智能体（Data Agent）"作为独立赛道进入行业标准与研究视野。<br><b>需要等待什么信号确认：</b> 征求意见与案例征集 9/5 截止后正式版的发布，以及报告对数据智能体市场规模与分类标准的最终界定。</div>
+    <div class="body"><b>来源：</b> <a href="https://weibo.com/ttarticle/p/show?id=2309405332854027976811">华为数据存储</a><br><b>为什么值得继续看：</b> 华为在 2026 华为数据存储用户精英论坛发布 AI DC 数据基础设施全栈方案，首创五层参考架构（数据湖、AI 数据平台、算力、模型、Agent 框架），配套业界首个面向超大规模数据中心、支持异构算力的上下文记忆存储 CMS（首 Token 时延降 90%、每 Token 成本降 30%）与「3+1」AI 数据平台（知识库+KV Cache 库+记忆库），并推出 DataMaster 存储运维智能体。因论坛于近日举办、原始发布日期早于本期 24 小时窗口，8/18 媒体集中扩散，故降级收录。<br><b>需要等待什么信号确认：</b> AI DC 五层架构的正式商用时间表，以及 CMS 上下文记忆存储在异构算力（NPU/GPU）上的落地客户与实测效果。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-08-18 08:00</p>
+    <p>信息截至北京时间 2026-08-19 08:00</p>
   </div>
 
 </div>
