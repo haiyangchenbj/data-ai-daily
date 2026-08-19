@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data+AI 全球日报 | 2026-08-19</title>
+<style>
+  :root {
+    --primary: #1a73e8;
+    --primary-light: #e8f0fe;
+    --accent: #ea4335;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #202124;
+    --text-secondary: #5f6368;
+    --border: #dadce0;
+    --green: #34a853;
+    --orange: #fbbc04;
+    --purple: #9334e6;
+    --teal: #00897b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 32px 40px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(26, 115, 232, 0.3);
+  }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .header .date { font-size: 14px; opacity: 0.85; }
+
+  /* Summary Box */
+  .summary-box {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .summary-box h2 { font-size: 18px; color: var(--accent); margin-bottom: 16px; }
+  .summary-box ol { padding-left: 20px; }
+  .summary-box li { margin-bottom: 8px; font-size: 15px; }
+  .summary-box .verdict {
+    background: var(--primary-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 500;
+  }
+
+  /* Section */
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-header .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+  }
+  .badge-a { background: var(--accent); }
+  .badge-b { background: var(--primary); }
+  .badge-c { background: var(--green); }
+  .badge-d { background: var(--teal); }
+  .badge-e { background: var(--orange); }
+  .section-header h2 { font-size: 18px; font-weight: 600; }
+
+  /* Item */
+  .item {
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .item:last-child { border-bottom: none; }
+  .item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .item .source {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .item .source a { color: var(--primary); text-decoration: none; }
+  .item .source a:hover { text-decoration: underline; }
+  .item .body { font-size: 14px; line-height: 1.7; color: #3c4043; }
+  .item .impact {
+    background: #f0f7ff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #1a56db;
+  }
+
+  /* 投融资特殊样式 */
+  .funding-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-funding { background: #fce4ec; color: #c62828; }
+  .tag-earnings { background: #e3f2fd; color: #1565c0; }
+  .tag-ipo { background: #f3e5f5; color: #7b1fa2; }
+  .tag-ma { background: #e8f5e9; color: #2e7d32; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .header { padding: 24px; }
+    .header h1 { font-size: 22px; }
+    .section, .summary-box { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>📊 Data+AI 全球日报</h1>
+    <div class="date">2026-08-19 · 严格只包含过去24小时信息</div>
+  </div>
+
+  <!-- 根据实际日报内容填充以下模板 -->
+
+  <div class="summary-box">
+    <h2>🔥 今日最重要的3个变化</h2>
+    <ol>
+      <li>模型选择从人工固定转向平台自动路由，AI 成本治理走向产品化</li>
+      <li>国产数据湖计算冲击世界纪录，Agent 负载倒逼底座性能升级</li>
+      <li>具身数据基础设施密集落地，数据要素竞争延伸向物理世界</li>
+    </ol>
+    <div class="verdict">
+      <strong>总判断：</strong>数据平台竞争围绕 AI 成本与 Agent 底座两条线加速。动态模型路由把推理成本治理产品化，腾讯云以世界纪录证明国产湖仓竞争力，具身数据基础设施密集落地把数据要素战场延伸到物理世界。核心变量从算得快转向算得省、喂得饱。
+    </div>
+  </div>
+
+  <!-- Section A: Top Signals -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-a">A</span>
+      <h2>Top Signals</h2>
+    </div>
+    <div class="item">
+    <h3>Snowflake 推出动态模型路由，把推理成本治理产品化</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.businesswire.com/news/home/20260818448905/en/">Business Wire</a><br><b>摘要：</b> Snowflake 8/18 在 Cortex AI Gateway 推出动态模型路由，按质量、成本、速度与客户偏好自动为每个任务选择模型：简单或重复任务路由到高效模型，需要深度推理的任务路由到前沿模型。能力集成进 Snowflake CoCo、CoWork 及第三方 AI Agent，并同步扩展开源模型 DeepSeek-V4-Flash 0731 与 GLM-5.3。内部测试中，用动态路由构建 dbt 流水线的 token 效率提升至 3 倍（同等质量），工程团队完成相同 PR 数则提升 25% token 效率。<br><b>为什么对数据平台重要：</b> 这是 Gartner「推理成本悖论」（昨日 A1）的直接产品回应——单位 token 降价不解决问题，按任务复杂度动态匹配模型档位才是成本治理的落点。模型路由从 OpenRouter、Databricks Smart Routing 的比拼，正在收口为数据平台 AI 网关的标配能力，与数据治理、访问控制绑定，成为「智能体底座」的核心组件。</div>
+</div>
+<div class="item">
+    <h3>腾讯云数据湖计算 DLC 刷新 TPC-DS 100TB 性能与性价比双世界纪录</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L4L0ENRH05527PMU.html">IT时代网</a><br><b>摘要：</b> 据 TPC 官网 8/18 信息，腾讯云数据湖计算 DLC 刷新 TPC-DS 100TB 性能与性价比两项世界纪录：综合性能成绩 6.54 亿，接近此前最高纪录的 10 倍；单位性能成本降至 11.04 元，约为原来的六分之一。支撑成绩的引擎是腾讯内部天穹平台自研的统一计算引擎 SuperSQL，可统一调度批、流、CPU/GPU 及多模态数据。上月 DLC 升级为 AI DLC，把数据处理延伸到 AI 计算、模型训练、推理与 Agent 应用。<br><b>为什么对数据平台重要：</b> 这是国产数据湖计算在权威基准上首次同时登顶性能与性价比，且引擎为自研、非开源套壳。TPC-DS 的并发、混合负载与数据维护要求更贴近 Agent 时代的真实读写下探——Agent 对数据底座的高并发读取与持续更新，正在倒逼湖仓性能军备竞赛，SuperSQL 的统一计算底座路线成为国产厂商回应这一压力的代表路径。</div>
+</div>
+  </div>
+
+  <!-- Section B: Product & Tech -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-b">B</span>
+      <h2>Product & Tech</h2>
+    </div>
+    <div class="item">
+    <h3>五一视界发布 AperData 具身数据底座与 AperOne 应用闭环平台</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://view.inews.qq.com/a/20260819A0416A00">南方都市报</a><br><b>摘要：</b> 港股上市公司五一视界 8/18 发布 AperData 具身数据底座与 AperOne 具身应用闭环 OS 平台，针对具身智能「数据稀缺」与「容错率低」两大卡点，提供从采集、治理到部署的闭环方案，已与云深处、银河通用等头部厂商合作，预计年内实现千台级部署。<br><b>对数据平台的影响：</b> 具身数据底座正从创业公司（觅蜂科技等）向上市公司产品化延伸，与信通院训练场报告、觅蜂融资构成同一条「物理数据基础设施」叙事。数据采集、标注、评测的全链路工具化，正在把具身智能的数据供给从项目制服务变成可复制的平台能力。</div>
+</div>
+  </div>
+
+  <!-- Section C: Views & Research (People & Views + Analyst Insights 合并) -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-c">C</span>
+      <h2>Views & Research</h2>
+    </div>
+    <div class="item">
+    <h3>信通院发布《具身智能训练场研究报告（2026）》</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://ysxw.cctv.cn/article.html?toc_style_id=feeds_default&item_id=10085519548013928598&channelId=1119">央视新闻</a><br><b>核心观点：</b> 信通院 8/18 发布报告显示，全国已建成启用超 70 家具身智能训练场，在建或规划 40 余家，形成长三角、京津冀、珠三角三大核心集群，覆盖过半省级行政区并向三线及以下城市延伸。配套的「具身智能数据集质量要求及评估方法」行业标准将于 11 月 1 日实施，以完整性、一致性、多样性、真实性、易用性、实用性、可扩展性、安全性八个维度评价数据质量。<br><b>映射到数据平台的判断：</b> 训练场被明确定位为「关键基础设施」，其核心产出是「大规模高质量数据产品」。这标志着具身智能的数据建设正式从规模导向转向质量导向，数据工程化流水线（采集→标注→处理→评测）成为训练场产能升级的关键支撑，也为数据平台厂商打开了具身数据治理与数据集交易的新增量市场。</div>
+</div>
+<div class="item">
+    <h3>国家数据局启动首批数据领域国际合作试点，落地 10 个地方</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_5606a84d84706152">央视新闻</a><br><b>核心观点：</b> 国家数据局 8/18 在上合组织数字经济论坛新闻发布会上宣布，今年启动的数据领域国际合作试点首批落地上海、海南、福建福州/厦门/泉州、湖南长沙、广东广州/深圳/横琴、广西南宁等 10 个地方，各项试点工作正有序推进。<br><b>映射到数据平台的判断：</b> 数据领域国际合作试点把「数据要素跨境流通」从原则转向具体地理抓手，为跨境数据平台、数据托管与合规基础设施提供了政策接口。对数据平台厂商而言，试点城市的制度型开放是「数据出海」产品化的前提，也是国际数据服务竞争的新变量。</div>
+</div>
+  </div>
+
+  <!-- Section D: Capital & Corporate -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-d">D</span>
+      <h2>Capital & Corporate</h2>
+    </div>
+    <!-- 使用 funding-tag 类标注类型 -->
+    <!-- <span class="funding-tag tag-funding">投融资</span> -->
+    <!-- <span class="funding-tag tag-earnings">财报发布</span> -->
+    <!-- <span class="funding-tag tag-ipo">IPO</span> -->
+    <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
+    <div class="item">
+    <h3></h3>
+    
+    <div class="body">今日无合格信息。</div>
+</div>
+  </div>
+
+  <!-- Section E: Watchlist -->
+  <div class="section">
+    <div class="section-header">
+      <span class="badge badge-e">E</span>
+      <h2>Watchlist</h2>
+    </div>
+    <div class="item">
+    <h3>【降级】华为发布 AI DC 数据基础设施全栈方案</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://weibo.com/ttarticle/p/show?id=2309405332854027976811">华为数据存储</a><br><b>为什么值得继续看：</b> 华为在 2026 华为数据存储用户精英论坛发布 AI DC 数据基础设施全栈方案，首创五层参考架构（数据湖、AI 数据平台、算力、模型、Agent 框架），配套业界首个面向超大规模数据中心、支持异构算力的上下文记忆存储 CMS（首 Token 时延降 90%、每 Token 成本降 30%）与「3+1」AI 数据平台（知识库+KV Cache 库+记忆库），并推出 DataMaster 存储运维智能体。因论坛于近日举办、原始发布日期早于本期 24 小时窗口，8/18 媒体集中扩散，故降级收录。<br><b>需要等待什么信号确认：</b> AI DC 五层架构的正式商用时间表，以及 CMS 上下文记忆存储在异构算力（NPU/GPU）上的落地客户与实测效果。</div>
+</div>
+  </div>
+
+  <div class="footer">
+    <p>Powered by Data+AI Daily Brief</p>
+    <p>信息截至北京时间 2026-08-19 08:00</p>
+  </div>
+
+</div>
+</body>
+</html>
