@@ -39,6 +39,7 @@
 <!-- DAILY_START -->
 | 日期 | 链接 |
 |------|------|
+| 2026-08-31 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-08-31.html) |
 | 2026-08-28 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-08-28.html) |
 | 2026-08-27 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-08-27.html) |
 | 2026-08-26 | [查看](https://haiyangchenbj.github.io/data-ai-daily/archive/2026-08-26.html) |
