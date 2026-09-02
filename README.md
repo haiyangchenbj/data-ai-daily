@@ -25,6 +25,7 @@
 <!-- MONTHLY_START -->
 | 月份 | 链接 |
 |------|------|
+| 2026-08 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-08.html) |
 | 2026-07 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-07.html) |
 | 2026-06 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-06.html) |
 | 2026-05 | [查看](https://haiyangchenbj.github.io/data-ai-daily/monthly/2026-05.html) |
