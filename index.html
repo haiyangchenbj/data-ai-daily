@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-09-09</title>
+<title>Data+AI 全球日报 | 2026-09-10</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-09-09 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-09-10 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据驻留与主权合规从可选项变成云数据库标配</li>
-      <li>现代数据栈核心层的重写进入发布冲刺阶段</li>
-      <li>数据存储与治理能力正在走向自主化</li>
+      <li>检索层从外挂服务变成数据平台内置能力</li>
+      <li>AI 数据复利循环正在重塑存储成本结构</li>
+      <li>数据基建融资向物理 AI 数据赛道外溢</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>本期没有颠覆性发布，但多条信号同向：云数据库把驻留与主权合规做成标配，开源数据栈重写收尾，存储治理自主化。数据平台的竞争重心正在从性能转向治理与合规，这将成为下一阶段采购与选型的关键变量。
+      <strong>总判断：</strong>本期信号密度偏低但方向清晰：数据平台竞争重心正从性能转向"谁更懂数据"。检索层被收编为平台内置能力，存储经济学因 AI 数据复利循环被重估，数据基建融资外溢到物理 AI 数据赛道。AI 正把数据平台从查询引擎推向数据价值操作系统。
     </div>
   </div>
 
@@ -186,14 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Google Cloud SQL 区域端点正式 GA，补齐数据驻留合规能力</h3>
+    <h3>Databricks 发布自适应检索模型，检索层从外挂能力变成平台内置件</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/sql/docs/mysql/release-notes">Google Cloud Cloud SQL 发布说明</a><br><b>摘要：</b> Google Cloud 宣布 Cloud SQL for MySQL 与 SQL Server 的区域端点（Regional Endpoints）正式 GA，可通过区域专属 URL 访问实例。网络流量与 TLS 终止均限定在实例所在区域，减少对全球前端基础设施的依赖。<br><b>为什么对数据平台重要：</b> 区域端点提供强区域隔离与区域内负载均衡，专为满足 ITAR、Assured Workloads 等数据驻留与主权标准设计。对受监管行业的数据平台而言，"数据不出区"从架构约束变为可配置能力，补齐了托管数据库的驻留合规拼图。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/blog/adaptive-instructed-retriever-frontier-quality-search-2x-lower-latency">Databricks 官方博客</a><br><b>摘要：</b> Databricks 发布 Adaptive Instructed-Retriever，一种小型自定义检索模型，在单一检索层内同时支持并行单步检索与顺序多步检索，由模型自适应决定每个请求需要多少步，证据足够时提前停止。官方称其检索质量追平 Claude Sonnet 5、GPT-5.6 Luna 与 DeepSeek-V4-Flash 等前沿模型，端到端延迟降低一半（以上为厂商自测，未经独立验证）。<br><b>为什么对数据平台重要：</b> 检索层是数据智能体的关键瓶颈——既要准又要快。Databricks 把它做成数据平台的内置可训练能力（用自有 AI Runtime 训练），意味着"怎么找数"从外挂 RAG 服务变成平台原生层，并服务 Genie Code、Genie One、Genie Agents 三个数据智能体产品线。数据平台厂商正在把 agentic 检索收编为平台能力，压缩点状检索方案商的空间。</div>
 </div>
 <div class="item">
-    <h3>dbt Core 2.0 发布第二个候选版本，Rust 重写临近 GA</h3>
+    <h3>IDC 白皮书：AI 数据复利循环正在重估存储成本结构</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://github.com/dbt-labs/dbt-core/releases/tag/v2.0.0-rc.2">dbt-labs/dbt-core v2.0.0-rc.2</a><br><b>摘要：</b> dbt Labs 发布 dbt Core 2.0.0-rc.2，这是 Rust 重写版（Fusion 引擎）的第二个候选版本，主要补充 ClickHouse 单元测试支持与 Databricks 视图修复等修复项。2.0 版以 Rust 引擎替换 Python 运行时，官方称大型项目解析速度显著提升。<br><b>为什么对数据平台重要：</b> dbt 是现代数据栈的核心转换层，其运行时从 Python 迁移到 Rust 是一次底层架构重构。候选版本连续发布意味着 2.0 正式版临近，数据团队需评估解析器语法收紧（未定义宏、缺失变量在解析期报错）对存量项目的影响。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.westerndigital.com/en-au/company/newsroom/press-releases/2026/2026-09-09-wd-new-research-reveals-the-reshaping-of-ai-infrastructure-economics-as-data-persists-and-compounds">西部数据新闻稿</a><br><b>摘要：</b> IDC 白皮书《Built for Scale: The Enduring Role of HDDs in the AI Era》（WD 赞助，763 名决策者调研）指出 AI 正创造"数据复利循环"：94.7% 的受访企业因 AI 存储更多数据，85.4% 报告数据湖增长，59.4% 认为 AI 生成数据（合成数据、推理输出、模型日志）是数据湖增长的首要驱动；74.3% 因 AI 延长数据保留期，75.9% 将冷数据重新在线以支撑 AI 负载。<br><b>为什么对数据平台重要：</b> 该研究把数据平台的成本维度重新放到台前——98.2% 的决策者把每 TB 的 TCO 列为重要考量，74.6% 的企业数据驻留在温、冷、冷门层。它揭示了一个市场转折：AI 基础设施的叙事正从"算力周期"转向"数据经济学"，数据持续生成、留存并复利增长，存储容量与取回速度成为决定 AI 能走多远的架构变量。注意该白皮书由存储厂商 WD 赞助，结论带厂商视角，需独立验证。</div>
 </div>
   </div>
 
@@ -204,9 +204,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Quantum 发布自主数据管理方案 ADM，主攻存储成本与治理</h3>
+    <h3>火山引擎 LAS 1.5.2 发版，多模态数据湖补强视频与空间感知算子</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.businesswire.com/news/home/20260908492194/en/">Quantum 新闻稿</a><br><b>摘要：</b> 存储与数据管理厂商 Quantum 发布 Autonomous Data Management（ADM），将数据智能与自动化策略驱动动作结合，通过提升主存储容量与可用性、精简备份与基础设施支出，降低非结构化数据的存储成本与风险。<br><b>对数据平台的影响：</b> ADM 面向 AI 数据湖与大规模非结构化数据场景，把"看清数据、按策略自动化处置"做成产品能力，映射到数据平台的成本与治理两个维度。对在自建存储上承载 AI 工作负载的企业，提供了一条降低存储 TCO、收紧数据风险的路径。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.volcengine.com/docs/6492/1554424">火山引擎功能发布记录</a><br><b>摘要：</b> 火山引擎 AI 数据湖服务 LAS 发布 1.5.2 版本，新增视频编辑增强版 2.0 算子（直通生成、关键帧编辑、换脸、主体替换、风格迁移），扩展视频精细理解预置模板（音频理解、语音转写、动作时序标注），新增手部 21 关键点与三维姿态估计的空间感知能力，并开放数据集标签管理 OpenAPI 与本地导出。<br><b>对数据平台的影响：</b> LAS 把多模态数据（视频、音频、空间感知）的处理算子持续下沉到数据湖服务层，AI 数据湖正从"存储+查询"走向"面向大模型的算子与数据工厂"。对需要多模态训练数据的团队，算子内置意味着更短的从原始素材到可用数据集的链路，映射到数据平台的工程效率维度。</div>
 </div>
   </div>
 
@@ -217,9 +217,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3>国家数据局局长刘烈宏：数据要素市场化与全国一体化数据市场加速</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.nda.gov.cn/sjj/jgsz/jld/llh/llhldhd/0908/20260908091721448477945_pc.html">国家数据局署名文章</a><br><b>核心观点：</b> 刘烈宏在署名文章中提出"十五五"期间推进数字中国建设的重点：加快全国一体化算力网与数据基础设施建设，健全数据产权登记体系，建设开放共享安全的全国一体化数据市场，深化"数据要素×"行动并建立全国数据资源"一本账"。<br><b>映射到数据平台的判断：</b> 政策方向明确指向数据基础设施与数据要素市场的制度化——数据产权登记、"一本账"、跨主体可信数据空间等，将直接决定企业数据平台的治理架构与合规投入重点，数据要素流通的制度成本有望下降。</div>
+    <div class="body">今日无合格信息。窗口内唯一机构研究（IDC 白皮书）已按"关键机构报告中的市场转折判断"升入 A 板块，其余无数据平台专项报告，不纳入。</div>
 </div>
   </div>
 
@@ -235,9 +235,9 @@
     <!-- <span class="funding-tag tag-ipo">IPO</span> -->
     <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
     <div class="item">
-    <h3></h3>
+    <h3>【投融资】无问智科完成数亿元 A 轮，加码物理 AI 数据基建</h3>
     
-    <div class="body">今日无合格信息。窗口内融资与收购事件多为数据中心、电力、电信等基础设施，未映射到数据平台六维，不纳入。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.163.com/dy/article/L6D28IEL0514R9OJ.html">环球网</a><br><b>核心数据：</b> 数亿元 A 轮融资，洪泰基金领投，洪山资本、中电数融、狮城资本跟投，架桥资本、力合金融等老股东超额追投；系年内第二笔大额融资。<br><b>摘要：</b> 无问智科定位物理 AI 数据基础设施，旗下"无垠"数据基座平台与"无穹"世界模拟器构成"世界模型×数据工厂×世界模拟器"体系，覆盖真实数据采集、自动化生产、世界重建与物理仿真。公司称已沉淀数十万小时真实物理交互数据、月度产能超 2 万小时，SimReady 资产构建时间从 3 天缩至 5 分钟。<br><b>对数据平台的影响：</b> 具身智能的数据瓶颈正催生独立的数据基础设施赛道，资本向"数据基座+世界模拟器"下注。这虽不在传统湖仓/数仓主线内，但标志数据基础设施的概念边界向物理 AI 数据外溢，对关注数据平台长期演进的方向有参照意义。</div>
 </div>
   </div>
 
@@ -247,16 +247,12 @@
       <span class="badge badge-e">E</span>
       <h2>Watchlist</h2>
     </div>
-    <div class="item">
-    <h3>【预告】DuckDB v2.0 Cyanoptera 定档 10 月下旬</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://duckdb.org/2026/09/02/try-duckdb-20-alpha">DuckDB 官方博客</a><br><b>为什么值得继续看：</b> DuckDB v2.0 已特性冻结并发布 alpha，官方预告 10 月下旬 GA，将带来 server mode（远程 SQL、多租户）、VARIANT 半结构化类型、原生触发器与异步 I/O 等架构级变更，把嵌入式分析引擎推向可远程部署形态。<br><b>需要等待什么信号确认：</b> v2.0 正式 GA 的准确日期，以及 server mode 与 VARIANT 在存储格式与解析器重构下的兼容性与迁移路径是否清晰。</div>
-</div>
+    <div class="item"><div class="body">本期窗口内无新增数据平台核心投融资事件</div></div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-09-09 08:00</p>
+    <p>信息截至北京时间 2026-09-10 08:00</p>
   </div>
 
 </div>
