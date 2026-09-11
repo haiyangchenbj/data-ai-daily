@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Snowflake World Tour 上海 2026 · 深度专题报告</title>
+<style>
+  :root {
+    --bg: #f5f7fb;
+    --bg-2: #eef1f7;
+    --card: #ffffff;
+    --card-2: #f4f7fe;
+    --stroke: #dce1eb;
+    --stroke-2: #c5ccda;
+    --text: #151a2e;
+    --text-2: #323a50;
+    --muted: #5e667a;
+    --faint: #8a92a8;
+    --accent: #1a5cdb;
+    --accent-2: #5080ff;
+    --warm: #c45f0a;
+    --green: #047857;
+    --violet: #6b3fa0;
+    --cyan: #0891b2;
+    --pink: #b91c6b;
+    --grad: linear-gradient(135deg, #1a5cdb, #6b3fa0);
+    --grad-soft: linear-gradient(135deg, rgba(26,92,219,.06), rgba(107,63,160,.06));
+    --radius: 14px;
+    --radius-sm: 10px;
+    --maxw: 1100px;
+    --nav-h: 60px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{color:var(--accent);text-decoration:none}
+
+  /* Nav */
+  .nav{
+    position: fixed; top:0; left:0; right:0; height:var(--nav-h);
+    background: rgba(255,255,255,.85); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--stroke);
+    display: flex; align-items: center; gap: 12px; padding: 0 20px; z-index: 100;
+  }
+  .nav .brand{font-weight:700;font-size:14px;color:var(--text);white-space:nowrap}
+  .nav .brand small{color:var(--muted);font-weight:400;font-size:12px}
+  .nav-links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{
+    font-size:12px;color:var(--muted);padding:6px 10px;border-radius:8px;
+    white-space:nowrap;transition:.2s;flex-shrink:0;
+  }
+  .nav-links a:hover{color:var(--text);background:var(--card-2)}
+  .nav-links a.active{color:var(--accent);background:rgba(37,99,235,.08);font-weight:600}
+
+  /* Container */
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* Hero - compact */
+  .hero{
+    padding: calc(var(--nav-h) + 28px) 0 24px;
+    text-align: center;
+    background: linear-gradient(180deg, #fff 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--stroke);
+  }
+  .hero h1{
+    font-size: clamp(24px,3.4vw,38px);font-weight:800;
+    letter-spacing:-.02em;line-height:1.18;
+    background: var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero .sub{
+    margin-top: 10px; color: var(--muted); font-size: .98rem;
+  }
+  .hero .meta{
+    margin-top: 6px; color: var(--faint); font-size: .82rem;
+  }
+
+  /* Section */
+  section{padding:52px 0 30px;scroll-margin-top:76px}
+  section+section{border-top:1px solid var(--stroke);margin-top:0}
+  .sec-head{margin-bottom:22px}
+  .sec-no{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.15em;margin-bottom:4px}
+  .sec-title{font-size:clamp(20px,2.8vw,30px);font-weight:700;line-height:1.25}
+  .sec-desc{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:720px}
+
+  /* ===== 阅读组件：判断句 / 要点行 / 限定条 / 引述块 ===== */
+
+  /* 条目卡片：观察、产品、买方共用骨架 */
+  .card{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);
+    padding:20px 24px;margin-bottom:12px;
+  }
+  .card-num{
+    font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.14em;margin-bottom:6px;
+  }
+  /* 判断句标题：可独立读懂 */
+  .card-h{
+    font-size:17px;font-weight:700;line-height:1.5;color:var(--text);
+    padding-left:13px;position:relative;margin-bottom:10px;
+  }
+  .card-h::before{
+    content:"";position:absolute;left:0;top:.24em;width:3px;height:1.02em;
+    background:var(--accent);border-radius:2px;
+  }
+  /* 导语：背景与事实，字重稍轻 */
+  .lead{font-size:14.5px;color:var(--text-2);line-height:1.85;margin-bottom:12px}
+  /* 要点行 */
+  .pts{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .pts li{
+    position:relative;padding-left:17px;font-size:14px;color:var(--text-2);line-height:1.8;
+  }
+  .pts li::before{
+    content:"";position:absolute;left:0;top:.66em;width:5px;height:5px;
+    border-radius:1px;background:var(--stroke-2);
+  }
+  .pts li.key::before{background:var(--accent)}
+  .pts li b,.pts li strong{color:var(--text);font-weight:600}
+  /* 数字强调 */
+  .num{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent)}
+  /* 限定条：边界、风险、caveat */
+  .lim{
+    margin-top:12px;background:var(--card-2);border:1px solid var(--stroke);
+    border-left:3px solid var(--warm);border-radius:var(--radius-sm);
+    padding:11px 15px;font-size:13px;color:var(--text-2);line-height:1.72;
+  }
+  .lim .lim-t{font-size:10.5px;font-weight:700;color:var(--warm);letter-spacing:.08em;display:block;margin-bottom:3px}
+  /* 引述块：承担判断的单句 */
+  .pull{
+    margin-top:12px;background:var(--grad-soft);border:1px solid var(--stroke);
+    border-left:3px solid var(--accent);border-radius:var(--radius-sm);
+    padding:12px 16px;font-size:14px;color:var(--text);line-height:1.78;font-weight:500;
+  }
+  .pull strong{color:var(--accent)}
+  .pull.pull-lead{margin-top:0;font-size:15px}
+  /* 独立判断行：不依附卡片的判断句 */
+  .judg{
+    font-size:15px;font-weight:700;color:var(--text);line-height:1.55;
+    padding-left:13px;position:relative;margin:22px 0 6px;
+  }
+  .judg::before{
+    content:"";position:absolute;left:0;top:.22em;width:3px;height:1.05em;
+    background:var(--accent);border-radius:2px;
+  }
+  /* 小字注释 */
+  .note{font-size:12.5px;color:var(--faint);line-height:1.68;margin-top:10px}
+  .note strong{color:var(--muted);font-weight:600}
+
+  /* 状态徽标 */
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+  .badge{
+    font-size:10.5px;font-weight:700;letter-spacing:.04em;
+    padding:2px 8px;border-radius:20px;border:1px solid var(--stroke);
+    color:var(--muted);background:var(--card-2);white-space:nowrap;
+  }
+  .badge.b-ga{color:var(--green);border-color:rgba(4,120,87,.28);background:rgba(4,120,87,.07)}
+  .badge.b-prev{color:var(--warm);border-color:rgba(196,95,10,.28);background:rgba(196,95,10,.07)}
+  .badge.b-arch{color:var(--violet);border-color:rgba(107,63,160,.28);background:rgba(107,63,160,.07)}
+
+  /* 流程条 */
+  .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
+  .flow-step{
+    font-size:12.5px;color:var(--text-2);background:var(--card-2);
+    border:1px solid var(--stroke);border-radius:6px;padding:6px 10px;line-height:1.5;
+  }
+  .flow-arrow{color:var(--stroke-2);font-size:12px}
+
+  /* 优势 / 风险 双列 */
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+  .swot-col{background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius-sm);padding:14px 18px}
+  .swot-col.pro{border-left:3px solid var(--green)}
+  .swot-col.con{border-left:3px solid var(--warm)}
+  .swot-h{font-size:11px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+  .swot-col.pro .swot-h{color:var(--green)}
+  .swot-col.con .swot-h{color:var(--warm)}
+  .swot ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+  .swot li{position:relative;padding-left:15px;font-size:13px;color:var(--text-2);line-height:1.65}
+  .swot li::before{content:"";position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:1px;background:var(--stroke-2)}
+
+  /* Verdict card */
+  .verdict{
+    background: var(--grad-soft);
+    border: 1px solid var(--stroke);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    margin-bottom: 16px;
+  }
+  .verdict p{font-size:15px;line-height:1.85;margin-bottom:10px}
+  .verdict p:last-child{margin-bottom:0}
+  .verdict strong{color:var(--accent)}
+
+  /* Fact strip */
+  .fact-strip{
+    display:flex;flex-wrap:wrap;gap:1px;margin-top:14px;
+    background:var(--stroke);border:1px solid var(--stroke);border-radius:var(--radius-sm);overflow:hidden;
+  }
+  .fact{
+    flex:1;min-width:150px;background:var(--card);padding:12px 16px;
+    display:flex;flex-direction:column;gap:3px;
+  }
+  .fact .fk{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.03em}
+  .fact .fv{font-size:13px;color:var(--text);font-weight:600}
+
+  /* Takeaways */
+  .takeaway-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;
+    margin-top:14px;
+  }
+  .takeaway{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius-sm);
+    padding:14px 16px;
+  }
+  .takeaway .tn{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:4px}
+  .takeaway p{font-size:13.5px;color:var(--text-2)}
+
+  /* Info box */
+  .info-box{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);
+    padding:20px 24px;margin-bottom:16px;
+  }
+  .info-box .label{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.08em;margin-bottom:8px}
+
+  details summary{font-size:13.5px;font-weight:600;color:var(--accent);cursor:pointer;padding:8px 0}
+  details summary:focus{outline:none}
+
+  /* Customer row */
+  .customer-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;
+    margin-top:14px;
+  }
+  .customer{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius-sm);
+    padding:16px 18px;transition:border-color .2s,box-shadow .2s;
+  }
+  .customer:hover{border-color:var(--accent-2);box-shadow:0 2px 12px rgba(26,92,219,.08)}
+  .customer .cname{font-weight:700;font-size:14px;margin-bottom:4px}
+  .customer .cindustry{font-size:11px;color:var(--muted);margin-bottom:8px}
+  .customer .ctext{font-size:13px;color:var(--text-2);line-height:1.65}
+  .customer .cdata{font-size:13px;color:var(--green);margin-top:9px;font-weight:600;line-height:1.6}
+
+  /* Competition */
+  .comp-row{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius);
+    padding:18px 22px;margin-bottom:12px;
+  }
+  .comp-row .cr-title{font-weight:700;font-size:15px;margin-bottom:8px}
+  .comp-row .cr-text{font-size:13.5px;color:var(--text-2);line-height:1.78}
+
+  /* Comparison table */
+  .cmp-wrap{overflow-x:auto;margin-top:12px}
+  .cmp-table{width:100%;border-collapse:collapse;font-size:13px;min-width:600px}
+  .cmp-table th{
+    background:var(--card-2);padding:10px 12px;text-align:left;border-bottom:2px solid var(--stroke);
+    font-weight:600;white-space:nowrap;color:var(--text-2);
+  }
+  .cmp-table td{padding:10px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);vertical-align:top}
+
+  /* Layer stack */
+  .layer-stack{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+  .layer{
+    background:var(--card);border:1px solid var(--stroke);border-left:3px solid var(--stroke-2);
+    border-radius:6px;padding:10px 14px;
+  }
+  .layer.active{border-left-color:var(--accent);background:var(--card-2)}
+  .layer .lname{font-weight:600;font-size:13.5px;margin-bottom:2px}
+  .layer .lplayers{font-size:12px;color:var(--muted)}
+  .layer .lbet{font-size:12px;color:var(--accent-2);margin-top:2px}
+
+  /* Question */
+  .q-item{
+    background:var(--card);border:1px solid var(--stroke);border-radius:var(--radius-sm);
+    padding:16px 18px;margin-bottom:10px;
+  }
+  .q-item .qnum{font-size:11px;font-weight:700;color:var(--warm);margin-bottom:5px}
+  .q-item .qh{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
+  .q-item p{font-size:13.5px;color:var(--text-2);line-height:1.72}
+
+  /* Buyer cards */
+  .buyer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-top:14px}
+  .buyer{
+    background:var(--card);border:1px solid var(--stroke);border-left:3px solid var(--accent);
+    border-radius:var(--radius-sm);padding:16px 18px;
+  }
+  .buyer .brole{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.06em;margin-bottom:9px}
+  .buyer .bjudg{
+    font-size:13.5px;color:var(--text);line-height:1.72;font-weight:500;
+    padding-bottom:9px;margin-bottom:9px;border-bottom:1px dashed var(--stroke);
+  }
+
+  /* Summary section */
+  .summary-hero{
+    background: var(--grad-soft);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius);
+    padding: 26px;
+    margin-top: 12px;
+  }
+  .summary-hero .big{
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--text-2);
+    margin-bottom: 14px;
+  }
+  .summary-hero .big strong{color: var(--accent)}
+  .judgment{
+    margin-top:14px;
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .judgment .j-item{
+    background: var(--card);
+    border: 1px solid var(--stroke);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+  }
+  .judgment .j-item .j-period{
+    font-size: 11px; font-weight: 700; color: var(--accent);
+    letter-spacing: .04em; margin-bottom: 8px;
+  }
+  .judgment .j-item p{font-size: 12.5px; color: var(--text-2); line-height: 1.65; margin-bottom:7px}
+  .judgment .j-item .pts{gap:7px}
+  .judgment .j-item .pts li{font-size:12.5px;line-height:1.65}
+  .spa{
+    margin-top:16px;background:var(--card);border:1px solid var(--accent);
+    border-radius:var(--radius-sm);padding:16px 18px;
+  }
+  .spa .spa-label{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.08em;margin-bottom:6px}
+  .spa p{font-size:13.5px;color:var(--text-2);line-height:1.72}
+
+  /* Footer */
+  footer{
+    text-align:center;padding:32px 20px;
+    color:var(--faint);font-size:.82rem;
+    border-top:1px solid var(--stroke);margin-top:48px;
+  }
+
+  /* Responsive */
+  @media(max-width:768px){
+    .nav-links a{padding:4px 6px;font-size:10.5px}
+    .nav .brand{font-size:12px}
+    .nav .brand small{display:none}
+    .takeaway-grid{grid-template-columns:1fr 1fr}
+    .cmp-table{font-size:12px;min-width:480px}
+    .judgment{grid-template-columns:1fr}
+    .swot{grid-template-columns:1fr}
+    .card{padding:16px 17px}
+    .card-h{font-size:15.5px}
+    .lead,.pts li{font-size:13.5px}
+  }
+
+  /* Scroll reveal */
+  .reveal{opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .4s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="brand">Snowflake World Tour 上海 2026 <small>· 深度专题报告</small></div>
+  <nav class="nav-links">
+    <a href="#judgment">判断</a>
+    <a href="#observations">观察</a>
+    <a href="#products">产品</a>
+    <a href="#cases">案例</a>
+    <a href="#competition">竞争</a>
+    <a href="#buyers">买方</a>
+    <a href="#industry">行业</a>
+    <a href="#summary">总结</a>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="container">
+    <h1>Snowflake World Tour 上海 2026<br/>全球能力落地中国，跨组织共享网络留在境外</h1>
+    <div class="sub">全球巡演首次落地中国 · Snowflake 中国区运营两周年 · 主题：Making AI Real for Business</div>
+    <div class="meta">2026年9月8日 · 上海 · Data+AI Daily Brief</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 01 核心判断 -->
+  <section id="judgment">
+    <div class="sec-head">
+      <div class="sec-no">01</div>
+      <h2 class="sec-title">核心判断</h2>
+    </div>
+
+    <div class="verdict reveal">
+      <p>Snowflake World Tour 上海站不是在发布面向中国市场的产品，而是在<strong>向一个特定客群投放一套已在全球验证过的叙事</strong>。这套叙事的核心是：企业 AI 的瓶颈不在模型，而在上下文；数据平台要从存储与查询层升级为<strong>智能体控制平面</strong>（Agentic Control Plane），把模型选择、身份、策略、成本收拢到同一层。</p>
+      <p>这个战略的前提是：<strong>模型是租来的，意义是自己的</strong>。前提在全球范围内成立，在中国市场同样成立，只是 Snowflake 在中国区只搬来了能力的载体，没有搬来让它最强的那个部分。</p>
+    </div>
+
+    <div class="takeaway-grid">
+      <div class="takeaway reveal"><div class="tn">01</div><p>中国区以<strong>授权运营 + 境内独立实例</strong>形态落地，与全球账户双向隔离</p></div>
+      <div class="takeaway reveal"><div class="tn">02</div><p>全球叙事<strong>完整平移</strong>，只有人物与案例做了本地化</p></div>
+      <div class="takeaway reveal"><div class="tn">03</div><p>实际客群是<strong>跨国公司在华机构与中国出海企业</strong></p></div>
+      <div class="takeaway reveal"><div class="tn">04</div><p>全球数据云最核心的<strong>跨组织共享网络</strong>在中国区没有对应形态</p></div>
+    </div>
+
+    <div class="fact-strip reveal">
+      <div class="fact"><span class="fk">大会</span><span class="fv">9/8 · 上海 · 全球巡演首次落地中国，中国区运营满两年</span></div>
+      <div class="fact"><span class="fk">上下文阶梯</span><span class="fv">24.1% → 47.1% → 86.3%</span></div>
+      <div class="fact"><span class="fk">单次提问成本</span><span class="fv">$1.76 → $0.59</span></div>
+      <div class="fact"><span class="fk">智能体产品</span><span class="fv">CoWork 5,000+ · CoCo 9,000+ 企业用户</span></div>
+      <div class="fact"><span class="fk">最新季度</span><span class="fv">营收 $15.5 亿 · 股价盘后 +20%</span></div>
+    </div>
+
+    <p class="note"><strong>数据来源说明：</strong>上下文准确率、成本降幅、客户规模与效率提升数字，全部来自 Snowflake 官方披露或其客户现场自述（vendor/customer-reported），未经独立基准测试验证。厂商未公布测试题集难度、数据规模与语义覆盖度，第三方无法复现。</p>
+  </section>
+
+  <!-- 02 具体观察 -->
+  <section id="observations">
+    <div class="sec-head">
+      <div class="sec-no">02</div>
+      <h2 class="sec-title">具体观察</h2>
+      <div class="sec-desc">从这场大会的呈现方式中提炼的五个判断</div>
+    </div>
+
+    <article class="card reveal">
+      <div class="card-num">观察 01</div>
+      <h3 class="card-h">被本地化的只有讲故事的人，不是数据的地基</h3>
+      <p class="lead">上海站的架构、术语、演示路径乃至准确性阶梯，与三个月前的全球大会高度一致；变化的是台上的面孔换成了中国区团队，案例换成了本地场景与国产模型。</p>
+      <ul class="pts">
+        <li>这种平移本身就是一个判断：<b>Snowflake 在中国不打算为本地需求重新设计产品</b>，而是把已经跑通的全球叙事，投给一群特定的人。</li>
+        <li>这决定了它在这里的竞争面貌：它服务的客群是那些本来就在用、或者打算用全球产品的企业，<b>与本地厂商的客群不重叠</b>。</li>
+        <li>反过来看，这也意味着中国区的产品演进节奏跟随全球，<b>不由本地需求独立驱动</b>。</li>
+      </ul>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">观察 02</div>
+      <h3 class="card-h">“数据云”这个品牌承诺在中国是打折兑现的</h3>
+      <p class="lead">全球范围内，Snowflake 最不容易被复制的能力不是存算分离，也不是 SQL 引擎的性能，而是跨组织的数据共享网络，一个组织把数据发布出去，另一个组织直接消费而不必复制一份。这套网络效应需要账户之间彼此可达。</p>
+      <ul class="pts">
+        <li>中国区是独立实例、独立域名、独立签约主体；<b>全球账户与中国账户互不访问</b>，数据市场在境内不开放。</li>
+        <li>Snowflake 全球业务中最能说明其网络效应的那个指标，<b>在中国区没有对应形态</b>。</li>
+      </ul>
+      <div class="pull">进入中国拿到的是一套强大的单点平台，付出的是网络效应缺失。这是一次能力与网络的置换，而不是一次区域扩张。</div>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">观察 03</div>
+      <h3 class="card-h">上下文之争的本质是“谁来定义企业的语言”，而定义权天然带着属地属性</h3>
+      <p class="lead">业务本体、语义视图这类东西的定义对象，是客户自己的业务规则：财年怎么切、快照表怎么读、哪些机会要从统计里剔除。这与平台注册在哪个区域无关，<b>却与谁来做定义这件事高度相关</b>。</p>
+      <ul class="pts">
+        <li>一家企业要在境内把这套东西建起来，干活的人得熟悉它所在行业的合规约束、报表习惯和系统格局。</li>
+        <li>Snowflake 把这一环交给了咨询与实施伙伴，这是务实的选择，也意味着产品价值的最后一公里由第三方兑现，<b>平台自身对交付质量的控制力相应减弱</b>。</li>
+      </ul>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">观察 04</div>
+      <h3 class="card-h">它在中国要面对的对手，不是它在全球的对手</h3>
+      <p class="lead">Snowflake 的全球竞争叙事建立在与 Databricks 的镜像对抗上，仓库对湖仓、治理对工程。这套对抗在中国基本不成立：Databricks 没有同等量级的本地落地。</p>
+      <ul class="pts">
+        <li>真正在承接“数据平台 + AI 智能体”这个需求的是本地云厂商，而且恰好在本届大会前一周，权威机构把这一品类的本土领导者排名给到了它们。</li>
+        <li>Snowflake 中国区不打这场仗，<b>客群、交付形态与定价逻辑都不同</b>。</li>
+        <li>两条平行市场，短期不交汇，长期是否交汇取决于跨国企业的境内数据政策要不要收紧。</li>
+      </ul>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-num">观察 05</div>
+      <h3 class="card-h">“开放”在中国区多了一层含义</h3>
+      <p class="lead">全球语境下，Snowflake 讲开放是为了消除“被一家厂商锁定”的顾虑：支持开放表格式、兼容外部计算引擎、承诺模型可替换；会上那句“没有人希望你因为技术原因被锁定”讲的就是这件事。</p>
+      <ul class="pts">
+        <li>在中国区，开放还承担了第二个功能：它是绕开单一云区域限制的手段。</li>
+        <li>通过对象存储的兼容协议，中国区客户的数据资产可以落在非 AWS 的国产云存储上，<b>AWS 从“唯一地基”降为“其中一个入口”</b>。</li>
+        <li>这让 Snowflake 中国区不被单一云商绑定，也让它与本地云厂商的关系从纯竞争变为既竞争又合作，对方既是可能的存储底座，又是正面战场的对手。</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- 03 产品全景 -->
+  <section id="products">
+    <div class="sec-head">
+      <div class="sec-no">03</div>
+      <h2 class="sec-title">产品全景</h2>
+      <div class="sec-desc">前述观察的事实支撑。上海站没有中国区专属的产品发布，展示的是一套全球架构的完整拼图。</div>
+    </div>
+
+    <article class="card reveal">
+      <div class="badges"><span class="badge b-arch">架构层</span><span class="badge">智能体控制平面</span></div>
+      <h3 class="card-h">Agentic Control Plane</h3>
+      <p class="lead">本届大会的核心概念。Christian Kleinerman（全球产品总裁）把企业级智能体拆成四个必须同时成立的要素：AI 模型、企业数据与上下文、连接企业系统的软件与应用，以及统一管理前三者的控制平面。</p>
+      <ul class="pts">
+        <li>他强调这不是面向未来数年的路线图，而是已经可以进入实际部署的架构。</li>
+        <li>控制平面要回答的问题，从过去的“谁能看哪些数据”扩展为：智能体可以调用什么模型、访问哪些数据、连接哪些系统、执行哪些动作、出了问题能否追溯、成本如何控制。</li>
+      </ul>
+    </article>
+
+    <article class="card reveal">
+      <div class="badges"><span class="badge b-prev">公开预览</span><span class="badge b-prev">可用区域未公布</span></div>
+      <h3 class="card-h">Cortex AI Gateway</h3>
+      <p class="lead">上海站宣布其进入公开预览，同期英文报道的措辞为“计划开放”，可用范围与区域未公布。企业级 MCP 网关，能力来自 2026 年 5 月完成收购的 Natoma。</p>
+      <ul class="pts">
+        <li>它把智能体对外部的调用收拢到一处：模型路由（按成本、延迟、能力、数据驻留地分发请求）、身份验证、策略执行、审计记录、预算上限。</li>
+        <li>官方称支持 <span class="num">100</span> 个以上 MCP 服务器。</li>
+        <li>治理策略继承自 Horizon Catalog，AI 的权限体系复用数据已有的权限体系，不另建一套。</li>
+      </ul>
+    </article>
+
+    <article class="card reveal">
+      <div class="badges"><span class="badge b-ga">并入 Horizon Context</span></div>
+      <h3 class="card-h">业务本体 Business Ontology</h3>
+      <p class="lead">由 AI 技术战略首席架构师贾天下主讲。核心主张是一句话：<b>事实只存一份，业务含义单独管理，剩下的让系统自动生成</b>。</p>
+      <ul class="pts">
+        <li>他用“图纸与楼”区分本体与知识图谱：本体定义抽象规则（球员是一种人，可以任职于俱乐部），知识图谱记录具体事实（某球员效力于某俱乐部，会随时间变化）。</li>
+        <li>价值出现在业务变化时：新增一种实体、调整一组关系，改的是业务定义，不必重新建表或重写下游查询。</li>
+        <li>查询语句没写错，缺的是业务规则：快照表如何读取、财年如何定义、哪些机会要剔除。</li>
+        <li>落地方向包括亚太一家银行的反洗钱（通过交易方、账户、交易之间的关系识别单表看不到的关联）、中东一家主权财富基金建模私募市场、电通旗下 Merkle 采用同类架构。</li>
+      </ul>
+      <div class="lim">
+        <span class="lim-t">现场给出的反例比正例更有说服力</span>
+        AI 回答“本季度合同总额”时给出 <span class="num">42 亿美元</span>，正确答案是 <span class="num">8,400 万美元</span>。
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="badges"><span class="badge b-ga">GA</span></div>
+      <h3 class="card-h">Horizon Context 与 Semantic View</h3>
+      <p class="lead">上下文层的两个组件。Semantic View 是 Snowflake 内的原生数据库对象，把经过治理的指标、维度、关系、同义词和已验证示例存在仓库里，向 Cortex Analyst、CoCo、CoWork、Cortex Sense 供给统一定义。Horizon Context 在其上做治理化的收集、充实、激活管线，向智能体提供企业语义。</p>
+      <div class="lim">
+        <span class="lim-t">边界值得标注</span>
+        Semantic View 只在 Snowflake 内可见，不触及仓库之外的数据；不原生呈现于 Power BI、Excel、Tableau 等业务侧工具；截至 2026 年中无跨账户复制能力。
+      </div>
+    </article>
+
+    <article class="card reveal">
+      <div class="badges"><span class="badge b-ga">GA</span></div>
+      <h3 class="card-h">CoCo 与 CoWork</h3>
+      <p class="lead">智能体控制平面的两个入口。CoCo 面向技术用户（原 Cortex Code），CoWork 面向业务用户（原 Snowflake Intelligence），共享技能、深度研究、MCP 连接等能力。</p>
+      <p class="lead" style="margin-bottom:0">上海站演示的职业体育联赛场景把它们串成一条链：</p>
+      <div class="flow">
+        <span class="flow-step">五类业务系统数据进入统一目录</span><span class="flow-arrow">→</span>
+        <span class="flow-step">敏感数据识别打标与权限治理</span><span class="flow-arrow">→</span>
+        <span class="flow-step">Semantic View 统一定义核心指标</span><span class="flow-arrow">→</span>
+        <span class="flow-step">CoWork 生成经营简报、Deep Research 交叉分析、MCP 连接协作系统执行动作</span>
+      </div>
+      <ul class="pts" style="margin-top:12px">
+        <li>中国区演示中的协作出口是钉钉。</li>
+      </ul>
+    </article>
+
+    <details style="margin-top:16px">
+      <summary>展开其余能力 ▾</summary>
+      <div style="border:1px solid var(--stroke);border-radius:var(--radius-sm);overflow:hidden;margin-top:8px">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <tr style="background:var(--card-2)"><th style="padding:8px 12px;text-align:left;font-weight:600;border-bottom:1px solid var(--stroke);color:var(--text-2);width:180px">能力</th><th style="padding:8px 12px;text-align:left;font-weight:600;border-bottom:1px solid var(--stroke);color:var(--text-2)">定位</th><th style="padding:8px 12px;text-align:left;font-weight:600;border-bottom:1px solid var(--stroke);color:var(--text-2);width:110px">状态</th></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Cortex Sense</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">运行时上下文引擎，从数据及使用方式中自动发现关系与定义。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">随 Cortex AI 提供</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Semantic Studio</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">让业务用户不写 SQL 定义共享业务逻辑。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--warm)">私有预览</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Semantic View Autopilot</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">自动创建并持续修正语义视图。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">随附能力</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Agent Identity</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">智能体加密身份，与人类活动区分，按 Agent 粒度施加访问控制。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">GA</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Agent Policy / Prompt Protection</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">智能体策略边界与提示词保护。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--warm)">分批开放</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">预算控制</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">智能体消费上限，与 FinOps 共用同一套记录。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--warm)">随 Cortex AI Gateway</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Horizon Catalog</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">数据、血缘与治理信息的统一目录。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">GA</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Iceberg REST Catalog API</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">外部引擎（Spark、Trino 等）直接读写。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">GA</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">模型开放</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">支持 Qwen、Kimi、GLM、DeepSeek 等国内外模型家族。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">GA</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2);font-weight:600">Snowpipe Streaming</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--text-2)">高性能流式接入架构，中国区已发布。</td><td style="padding:7px 12px;border-bottom:1px solid var(--stroke);color:var(--green)">GA（中国区 4 月）</td></tr>
+          <tr><td style="padding:7px 12px;border-bottom:none;color:var(--text-2);font-weight:600">SPCS</td><td style="padding:7px 12px;border-bottom:none;color:var(--text-2)">Snowpark Container Services，可承载本地大模型。</td><td style="padding:7px 12px;border-bottom:none;color:var(--green)">GA</td></tr>
+        </table>
+      </div>
+    </details>
+
+    <h3 style="font-size:15px;font-weight:700;color:var(--text);margin:28px 0 4px">上下文栈的分层</h3>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Snowflake 把企业上下文拆成由下至上的四层，逐层补齐从“数据可用”到“智能体可控”的距离。</p>
+    <div class="layer-stack">
+      <div class="layer"><div class="lname">数据与目录层</div><div class="lplayers">Horizon Catalog · Iceberg REST Catalog API · 开放表格式</div><div class="lbet">解决“数据在哪里、能不能被外部引擎读到”。</div></div>
+      <div class="layer"><div class="lname">语义层</div><div class="lplayers">Semantic View · Semantic Studio · Semantic View Autopilot</div><div class="lbet">解决“指标怎么定义、由谁定义”，把治理后的定义存入仓库。</div></div>
+      <div class="layer active"><div class="lname">本体层</div><div class="lplayers">Business Ontology（并入 Horizon Context）</div><div class="lbet">解决“业务对象之间是什么关系”。本届大会的加码重点，事实与含义分离管理。</div></div>
+      <div class="layer"><div class="lname">控制平面</div><div class="lplayers">Cortex AI Gateway · Agent Identity · Agent Policy · 预算控制</div><div class="lbet">解决“智能体能做什么、花了多少、有据可查吗”，治理对象从数据访问转向智能体行为。</div></div>
+    </div>
+  </section>
+
+  <!-- 04 客户实证 -->
+  <section id="cases">
+    <div class="sec-head">
+      <div class="sec-no">04</div>
+      <h2 class="sec-title">客户实证</h2>
+      <div class="sec-desc">来自上海站现场披露的生产环境案例。数字均为厂商或客户单方披露（vendor/customer-reported），未经独立验证。</div>
+    </div>
+
+    <div class="customer-grid">
+      <div class="customer reveal">
+        <div class="cname">西门子医疗</div>
+        <div class="cindustry">医疗科技 · 全球</div>
+        <div class="ctext">全球数据云建设，自 2020 年起与 Snowflake 合作。2026 年亚太团队进一步基于 Cortex 构建客户数字孪生，并计划让自主智能体逐步承担更多 BI 与分析工作。</div>
+        <div class="cdata">160+ 数据源 · 40 万张表 · 1.1 万名员工 · 340+ 用例</div>
+        <div class="ctext" style="margin-top:6px;font-size:12.5px;color:var(--muted)">数据准备周期：数小时 → 分钟级</div>
+      </div>
+      <div class="customer reveal">
+        <div class="cname">Plaud</div>
+        <div class="cindustry">AI 硬件 · 全球化</div>
+        <div class="ctext">AI Native 企业全球化过程中的数据基础建设，按不同市场合规要求选择模型。团队以“520”概括这段经历。</div>
+        <div class="cdata">250 万用户 · 170 个国家</div>
+        <div class="ctext" style="margin-top:6px;font-size:12.5px;color:var(--muted)">约 5 人、2 个月、0 专职运维完成 5 个区域部署；外部数据源 22 → 50+；海外用 GPT/Claude/Gemini，国内用 DeepSeek 与 GLM</div>
+      </div>
+      <div class="customer reveal">
+        <div class="cname">西门子能源</div>
+        <div class="cindustry">能源装备 · 全球/中国</div>
+        <div class="ctext">总部用 Cortex 统一工程知识环境，构建 “Chat with Documents” 入口。中国团队计划接入 MES、IoT 工厂运营数据，依托 SPCS 集成本地大语言模型，构建 “Chat with Data” 平台。</div>
+        <div class="cdata">全球 80 万+ 份分散工程文档集中管理</div>
+      </div>
+      <div class="customer reveal">
+        <div class="cname">Solventum</div>
+        <div class="cindustry">医疗科技 · 自 3M 医疗业务分拆</div>
+        <div class="ctext">在 Snowflake 落地中国后不久，启动中国数据平台从 0 到 1 重建，不到一年接入 ERP、物流、生产、客户及 Salesforce 并完成建模。分享者反复强调一个字：“准”。</div>
+        <div class="cdata">相较原 SQL Server 环境，查询效率提升约 10 倍</div>
+      </div>
+    </div>
+
+    <div class="info-box reveal" style="margin-top:16px">
+      <div class="label">分析师注</div>
+      <ul class="pts">
+        <li>四个案例中有三个的分享主体是跨国企业的亚太或大中华区团队，其中两个明确以“全球总部已建、中国/亚太跟进”的路径展开。</li>
+        <li>Snowflake 中国区当前承接的，是跨国企业在华机构的数据平台需求，以及中国团队的出海数据基础需求。</li>
+        <li>案例中的效率数字缺少基线说明（原环境配置、数据规模、并发条件），买方在自建评估时以自有负载验证更为稳妥。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 竞争格局 -->
+  <section id="competition">
+    <div class="sec-head">
+      <div class="sec-no">05</div>
+      <h2 class="sec-title">竞争格局</h2>
+      <div class="sec-desc">全球的对手与中国的对手，是两批公司</div>
+    </div>
+
+    <div class="cmp-wrap reveal">
+      <table class="cmp-table">
+        <tr><th></th><th>Snowflake 中国区</th><th>阿里云</th><th>腾讯云</th><th>Databricks（中国）</th></tr>
+        <tr><td><strong>落地形态</strong></td><td>AWS 中国宁夏区域，神州数码云技术有限公司（DCC）全权运营，独立域名与独立协议</td><td>自建公有云 + 私有化</td><td>自建公有云 + 私有化</td><td>无同等量级本地落地</td></tr>
+        <tr><td><strong>开通方式</strong></td><td>需通过 DCC 申请，无自助开通</td><td>自助开通</td><td>自助开通</td><td>—</td></tr>
+        <tr><td><strong>跨组织数据共享</strong></td><td>数据市场境内不开放；跨境、跨账户共享的可用范围官方未逐项列明</td><td>云内数据生态</td><td>云内数据生态</td><td>—</td></tr>
+        <tr><td><strong>智能体产品</strong></td><td>CoCo / CoWork / Cortex AI Gateway</td><td>DataWorks Data Agent、AIDBS</td><td>腾讯云 ADP 等</td><td>Genie（含 Genie Ontology）</td></tr>
+        <tr><td><strong>品类评价</strong></td><td>本体与上下文层为当前主攻方向</td><td>IDC《中国 Data Agent 2026》领导者居首</td><td>企业级智能体平台 + 协作生态打通</td><td>本体/语义层同样在推进</td></tr>
+        <tr><td><strong>合规与部署</strong></td><td>独立服务体系，境内数据驻留</td><td>全栈境内 + 信创适配</td><td>全栈境内 + 信创适配</td><td>—</td></tr>
+      </table>
+    </div>
+
+    <div class="comp-row reveal" style="margin-top:16px">
+      <div class="cr-title">两家在同一周被同一家机构定了位</div>
+      <p class="cr-text">9 月 1 日，IDC 发布《中国 Data Agent 2026 厂商评估》：<span class="num">18</span> 家入选，仅 <span class="num">4</span> 家进入领导者象限，阿里云居最领先位置；IDC 同时预测到 <span class="num">2028</span> 年 <span class="num">60%</span> 的中国 500 强企业将部署企业级 Data Agent。</p>
+      <div class="pull">这个结论与一周后 Snowflake 在上海的主命题指向同一件事：<strong>数据平台与智能体的结合点，已成为行业共识，不再属于某一家厂商的路线选择</strong>。</div>
+      <p class="cr-text" style="margin-top:10px">差别在于，本土厂商在该品类上拿到的评价、交付形态与合规路径，都是为境内市场定制的。</p>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:700;color:var(--text);margin:26px 0 4px">语义层：三家在同一周的技术共识</h3>
+    <div class="cmp-wrap reveal">
+      <table class="cmp-table">
+        <tr><th>厂商</th><th>语义/本体产品</th><th>自披露准确率</th><th>状态</th></tr>
+        <tr><td><strong>Snowflake</strong></td><td>业务本体 + Semantic View + Horizon Context</td><td>24.1% → 47.1% → <strong>86.3%</strong></td><td>本体并入 Horizon Context</td></tr>
+        <tr><td><strong>Databricks</strong></td><td>Genie Ontology（Metrics 层开源，基于 Open Semantic Interchange）</td><td><strong>84.5%</strong>（对照 52.4%）</td><td>预览</td></tr>
+        <tr><td><strong>Anthropic</strong>（自测，第三方引用）</td><td>语义层 + 先查询语义层的规则</td><td>21% → <strong>95%</strong></td><td>生产实践</td></tr>
+      </table>
+    </div>
+    <div style="margin-top:12px">
+      <ul class="pts">
+        <li>三家各自独立测出的数字量级相当，但题集、基线与统计口径不同，不构成横向可比。</li>
+        <li>这种同向性说明这是一次真实的技术转折，不属于单家的营销话术：给智能体接入经过治理的业务定义，能把它从“看起来能用”推到“可以上生产”。</li>
+      </ul>
+      <div class="pull"><strong>Snowflake 在这条战线上的差异点，是它把本体与治理上下文绑定</strong>：语义定义并未独立成层，它与权限、血缘、审计共用同一套机制。</div>
+      <p class="note">上述准确率均为各厂商自披露口径，题集与测试条件不同，相互之间不具备可比性。</p>
+    </div>
+
+    <div class="comp-row reveal" style="margin-top:16px">
+      <div class="cr-title">Snowflake 在中国区的优势与风险</div>
+      <div class="swot">
+        <div class="swot-col pro">
+          <div class="swot-h">优势</div>
+          <ul>
+            <li>全球产品的完整能力与迭代速度</li>
+            <li>跨国企业总部既有的合作关系</li>
+            <li>治理能力的长年积累</li>
+            <li>通过对象存储兼容协议实现的国产云存储接入</li>
+          </ul>
+        </div>
+        <div class="swot-col con">
+          <div class="swot-h">风险</div>
+          <ul>
+            <li>跨组织数据共享网络在中国区缺位</li>
+            <li>无自助开通拉长了获客链路</li>
+            <li>数据市场不开放削弱了平台对数据提供方的吸引力</li>
+            <li>客群集中在跨国企业与出海团队因而市场天花板受限</li>
+            <li>本地厂商在私有化部署与信创适配上的结构性优势</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 对买方的建议 -->
+  <section id="buyers">
+    <div class="sec-head">
+      <div class="sec-no">06</div>
+      <h2 class="sec-title">对买方的建议</h2>
+      <div class="sec-desc">按角色给可执行判断</div>
+    </div>
+
+    <div class="buyer-grid">
+      <div class="buyer reveal">
+        <div class="brole">数据平台负责人</div>
+        <div class="bjudg">境内落地前先要一份中国区与全球区的功能差异清单。官方文档已声明“某些功能可能无法在中国区域使用”，但未逐项公开，按全球版能力表做境内规划会踩空。</div>
+        <ul class="pts">
+          <li>语义层与本体层的投入值得提前启动：定义对象是客户自己的业务规则，这部分资产与平台选型解耦，即便未来更换平台也有残值。</li>
+          <li>同时留意 Semantic View 的既有边界，即只在 Snowflake 内可见、不原生供给业务侧 BI 工具、截至 2026 年中不支持跨账户复制，本体资产目前的形态是平台内对象，尚未成为可携带的行业标准。</li>
+        </ul>
+      </div>
+      <div class="buyer reveal">
+        <div class="brole">AI 平台负责人</div>
+        <div class="bjudg">智能体治理的评估重点在覆盖面。中心化网关只在关键智能体流量真正经过它时才产生价值，绕过控制层的调用会留下策略与审计缺口。</div>
+        <ul class="pts">
+          <li>采购前要求厂商说明第三方智能体、既有自研 Agent 的纳入方式。</li>
+          <li>上下文层的收益（准确率提升、单次调用成本下降）被作为卖点呈现，但测试条件未披露，建议以自有高难度问题集复现一次，这一步的成本远低于按官方数字做架构决策的风险。</li>
+        </ul>
+      </div>
+      <div class="buyer reveal">
+        <div class="brole">采购</div>
+        <div class="bjudg">合同层面确认三件事：</div>
+        <ul class="pts">
+          <li>中国区功能差异清单作为附件。</li>
+          <li>Keynote 披露的性能数字是否可复现（即是否接受以双方约定的基准做验收）。</li>
+          <li>退出条款中的数据处理与迁移责任划分。</li>
+        </ul>
+        <ul class="pts" style="margin-top:9px">
+          <li>签约主体是授权运营方，Snowflake Inc. 不是合同相对方，这会影响争议解决路径与服务水平承诺的可执行性。</li>
+          <li>若是跨国企业中国分部，还需确认中国区实例与全球实例之间的数据流转机制：两者互不访问意味着跨区分析需要重建一份数据链路。</li>
+        </ul>
+      </div>
+      <div class="buyer reveal">
+        <div class="brole">竞品厂商（含腾讯云）</div>
+        <div class="bjudg">Snowflake 在中国区被切掉的是它全球最强的部分：跨组织数据共享网络、数据市场、自助开通的低摩擦获客。这三项在境内都不是短期能补齐的，且与合规架构绑定。</div>
+        <ul class="pts">
+          <li>可以在两个方向上找位置：一是“数据不出境前提下的跨组织协作”，这恰好是全球方案在境内的功能空洞；二是语义与本体能力的“可迁移性”叙事。</li>
+          <li>如果客户的语义资产能脱离单一平台存在，这个卖点对担心锁定的买方有分量。</li>
+          <li>需要留意的是，Snowflake 开放模型选择与国产云存储接入的动作，会让“它不能接本地生态”这类简单对标失效，竞争点要落在交付形态与语义资产归属上。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 行业延伸 -->
+  <section id="industry">
+    <div class="sec-head">
+      <div class="sec-no">07</div>
+      <h2 class="sec-title">行业延伸</h2>
+      <div class="sec-desc">竞争焦点从“数据放在哪里”转向“数据意味着什么”</div>
+    </div>
+
+    <div class="pull pull-lead reveal">本届大会提出的行业级命题，是一句放在演示页上的表述：<strong>数据平台之间的竞争，正在从“数据放在哪里”向“数据意味着什么”延伸。</strong></div>
+    <p class="note" style="margin-bottom:14px">这句话的落点不在 Snowflake 一家身上。</p>
+
+    <ul class="pts">
+      <li>过去十年，数据平台的差异化建立在物理属性上：数据能不能搬、搬得贵不贵、查询够不够快。当存储与计算分离成为标配、开放表格式成为共识，这些维度逐渐被抹平。</li>
+      <li>与此同时，智能体把一个新的约束推到了台前：模型不会因为访问了数据就理解业务，它需要有人先把业务规则显性化。</li>
+      <li>于是语义层与本体层从“分析项目的加分项”变成“智能体能否上生产的前置条件”。</li>
+    </ul>
+    <div class="pull">Gartner 的判断是把通用语义层视作与数据平台、网络安全并列的关键基础设施，已超出可选分析组件的范畴。</div>
+
+    <p class="judg">真正的分歧不在要不要建语义层，而在语义资产归谁、能不能搬走。</p>
+
+    <div class="cmp-wrap reveal">
+      <table class="cmp-table">
+        <tr><th>路线</th><th>代表</th><th>语义资产的形态</th></tr>
+        <tr><td><strong>平台内对象</strong></td><td>Snowflake Semantic View</td><td>仓库内一等数据库对象，随权限体系治理，只能在平台内消费，无跨账户复制</td></tr>
+        <tr><td><strong>开放标准</strong></td><td>Databricks Metrics（开源，基于 Open Semantic Interchange）</td><td>以开放标准表达，理论上可被外部工具与引擎消费</td></tr>
+        <tr><td><strong>厂商中立层</strong></td><td>独立语义层产品</td><td>架设在数据平台之上，向多家 BI 与 AI 工具输出同一定义</td></tr>
+      </table>
+    </div>
+
+    <div style="margin-top:12px">
+      <ul class="pts">
+        <li>这三条路线的分野将决定一件事：企业在语义层上投入的工程与治理成本，是一项随平台绑定而贬值的沉没成本，还是一项可以跟着企业走的资产。前者的商业含义对平台厂商更有利，后者的商业含义对买方更有利。</li>
+      </ul>
+      <div class="pull"><strong>谁定义企业的语言，谁就掌握智能体正确性的基线</strong>。</div>
+      <p class="note">到目前为止，这个定义权的归属还没有形成标准，也没有出现被广泛接受的仲裁者。</p>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:700;color:var(--text);margin:24px 0 12px">待验证的问题</h3>
+
+    <div class="q-item reveal">
+      <div class="qnum">问题 1</div>
+      <div class="qh">上下文阶梯的测试条件未披露</div>
+      <p>24.1% 到 86.3% 的提升幅度很大，但厂商未说明题集难度、数据规模、语义覆盖度和人工介入比例。这类数字的行业价值取决于可复现性。缺少条件的基准，其证据效力接近演示。</p>
+    </div>
+    <div class="q-item reveal">
+      <div class="qnum">问题 2</div>
+      <div class="qh">中国区功能差异清单缺位</div>
+      <p>官方仅声明“某些功能可能无法在中国区域使用”，未逐项公开。跨国企业在做境内架构规划时，实际是在信息不对称条件下决策。</p>
+    </div>
+    <div class="q-item reveal">
+      <div class="qnum">问题 3</div>
+      <div class="qh">本体的维护成本与责任人未明确</div>
+      <p>业务本体的定义对象是业务规则，这决定了它天然需要业务侧参与，而不只是数据团队的工作。谁拥有本体、谁在业务规则变化时更新它、更新滞后时由谁负责。这个组织问题比技术方案更能决定本体架构的长期成败。</p>
+    </div>
+  </section>
+
+  <!-- 08 总结 -->
+  <section id="summary">
+    <div class="sec-head">
+      <div class="sec-no">08</div>
+      <h2 class="sec-title">总结</h2>
+    </div>
+
+    <div class="summary-hero reveal">
+      <p class="big">Snowflake World Tour 首次落地中国，交出的是一份清晰的战略取舍：<strong>把产品能力搬进境内，把数据网络留在境外</strong>。</p>
+      <ul class="pts">
+        <li>它选择用授权运营与独立实例换取合规准入，代价是让“数据云”这个品牌名在中国区失去了最能体现其网络效应的那一层。</li>
+        <li>它选择平移全球叙事，没有为本地需求重塑产品，代价是客群收窄到跨国企业在华机构与中国出海企业。</li>
+        <li>这不是错误的策略。对一个受制于数据主权规则的境外平台而言，这可能是唯一可行的路径，但它划定了这家公司在中国市场的能力上限。</li>
+      </ul>
+      <div class="pull" style="margin-top:14px">与此同时，本届大会提出的命题是行业级的，不因区域而打折：当模型趋同、存储与计算成为商品，<strong>决定智能体能否上生产的是企业语义的完整程度与治理水平</strong>。这条战线上，Snowflake、Databricks 与本土厂商站在同一道起跑线，且各有短板。</div>
+
+      <div class="judgment">
+        <div class="j-item">
+          <div class="j-period">短期 · 6–12 个月</div>
+          <p>中国区有三个可观测的信号：</p>
+          <ul class="pts">
+            <li>通过 DCC 签约的客户数量</li>
+            <li>跨国公司在华机构是否把境内数据平台从“部门级试点”提升为“区域标准件”</li>
+            <li>中国区与全球区的功能差异是否开始逐项收敛</li>
+          </ul>
+          <p style="margin-top:8px;color:var(--muted)">产品侧，Cortex AI Gateway 的 GA 时点是下一个可观测信号。</p>
+        </div>
+        <div class="j-item">
+          <div class="j-period">中期 · 12–24 个月</div>
+          <ul class="pts">
+            <li>中国市场的两条平行赛道是否交汇，取决于跨国企业的境内数据政策走向。</li>
+            <li>如果境内数据驻留要求收紧、跨区流转进一步受限，Snowflake 中国区的“单点平台”定位会被强化，本地厂商在私有化与信创维度上的优势相应放大。</li>
+            <li>语义层的标准之争在此期间会分出方向：开放标准路线与平台内对象路线，哪一种被更多企业接受为语义资产的存在形式。</li>
+          </ul>
+        </div>
+        <div class="j-item">
+          <div class="j-period">长期 · 24 个月以上</div>
+          <ul class="pts">
+            <li>如果语义层像存储与计算分离一样成为行业标配，那么数据平台的差异化将再次转移：从“谁能建语义层”转向“谁的语义资产能被最多系统消费”。</li>
+            <li>届时领先者的身份不取决于平台规模，而取决于它是否成为语义定义的事实参照系。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spa">
+        <div class="spa-label">Strategic Planning Assumption</div>
+        <p>到 2028 年，企业级语义与本体层将从数据平台的可选能力变为标配组件，<strong>置信度中等偏高</strong>；届时差异化的来源将从“是否具备语义层”转移到“语义资产的可移植性与跨平台消费能力”，该转移对买方有利、对平台厂商不利，<strong>置信度中等</strong>。</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div>Snowflake World Tour 上海 2026 · 深度专题报告</div>
+  <div style="margin-top:4px">基于大会现场披露内容、Snowflake 官方文档（中国区区域说明与数据市场可用性）、FY2027 Q2 财报电话会及多渠道行业分析综合撰写</div>
+  <div style="margin-top:4px">所有厂商与客户披露的性能及规模数字均未经独立验证，引用时保留原始归属</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Nav active state
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
