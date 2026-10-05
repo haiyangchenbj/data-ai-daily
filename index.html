@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-09-25</title>
+<title>Data+AI 全球日报 | 2026-10-05</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-09-25 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-10-05 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>业务人员熟悉的界面正在成为数据平台争夺的新入口</li>
-      <li>智能体负载倒逼数据库与湖仓重写隔离与计费方式</li>
-      <li>上下文与记忆从会话临时态转为可治理的长期资产</li>
+      <li>数据库的默认创建者从人变成了智能体</li>
+      <li>数据平台的隔离与计费单位下沉到单个智能体</li>
+      <li>头部厂商用零息可转债为并购与算力补充弹药</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>今天的共同动作是把智能体从能调用数据推进到被平台信任：入口下沉到业务界面，执行层为突发并发做隔离，上下文进入治理与计费范围。数据平台的竞争点正从引擎速度转向能否同时满足隔离、审计与成本可控。
+      <strong>总判断：</strong>智能体已经取代人成为数据库的主要创建者：平台必须把创建成本、隔离与治理下沉到单个智能体这一层，头部厂商则用零息可转债为并购与算力蓄力。数据平台的竞争焦点正从引擎与存储能力，转向能否以近乎零成本承载海量短生命周期的数据环境。
     </div>
   </div>
 
@@ -186,19 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Databricks 收购电子表格初创 Row Zero，把电子表格改成受治理的分析入口</h3>
-    <div class="source">来源：<a href="https://www.databricks.com/company/newsroom/press-releases/databricks-acquires-row-zero-bringing-live-governed-spreadsheets">Databricks 官方新闻稿：Databricks Acquires Row Zero, Bringing Live, Governed Spreadsheets to Genie</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，Databricks 宣布收购云端电子表格初创 Row Zero，交易金额未披露。Row Zero 由前 AWS 与 Tableau 工程师创立，2025 年 5 月完成 1000 万美元融资，可承载超过 100 万行实时数据；收购后其表格界面将接入智能体同事 Genie，并运行在 Genie Ontology、Unity Catalog 与 Unity Gateway 之上，用户权限、数据刷新、导出限制与操作审计随数据一并生效。公司联合创始人 Patrick Wendell 称，随着财务、运营与销售团队采用 Genie，无缝的表格体验是必需项；官方新闻稿把要解决的问题指向企业内规模最大的未治理数据管道——被导出到各处的散落表格。<br><b>为什么对数据平台重要：</b> 这次收购把数据平台的入口从 SQL 编辑器与 BI 看板挪到业务人员每天在用的表格，代价是治理与审计必须跟着界面一起下沉：只要有人在表格里写公式、跑模型、让智能体代劳，血缘、权限与审计就得在表格这一层成立。对平台厂商而言，竞争点从「谁的查询更快」转向「谁能把最不守规矩的分析方式关进治理边界」；对买方而言，评估重点在于表格里的写入能否回落到受管表、智能体在表格中的每一步是否留痕。</div>
+    <h3>Supabase 同日宣布收购 Turso 并完成 1.5 亿美元融资，把数据库按智能体逐个交付</h3>
+    <div class="source">来源：<a href="https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html">PR Newswire（Supabase 官方新闻稿）：Supabase Announces $150M in New Funding and Turso Acquisition</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，Supabase 在 Select 大会上一份新闻稿宣布两项交易：完成 1.5 亿美元新融资，由新加坡主权基金 GIC 领投，Alphabet 旗下 CapitalG、IronArc 与 SquarePeg 参投；同时收购以 Rust 重写 SQLite 的数据库公司 Turso，交易金额未披露。此轮距其 6 月 5 亿美元 F 轮仅四个月，部分资金用于员工流动性，其余投入面向智能体的新功能。公司披露目前每月新增逾 100 万用户与约 400 万个数据库，其中约 70% 由智能体或 AI 工具创建，数据库创建量同比增长约 600%。Turso 的盘云架构把预写日志放在对象存储上，单台服务器可托管数百万个数据库、按需加载并在闲置时挂起；创始人 Glauber Costa 将出任 Supabase 智能体服务负责人，Turso 产品继续独立运营并保持开源。同日发布的还有 Supabase Compute 沙箱、声明式 Schema 2.0 与应用自带 MCP server。<br><b>为什么对数据平台重要：</b> 数据库的默认创建者从人变成智能体之后，创建成本、隔离边界与治理方式都得重算：为每个智能体配一个可丢弃的独立库，比在共享库上用权限模型划分更便宜，也更符合「出错只污染一个沙箱」的隔离要求。代价在治理侧——嵌入式引擎的库文件本身没有角色、授权与策略，这些只能在数据库之外补建，而这一步通常在负载已经存在之后才发生。对厂商而言，竞争点从「谁的引擎更快」转向「谁能以近零成本承接海量短生命周期数据库」，Postgres 承担持久负载、嵌入式引擎承担一次性任务的两年层结构正在成形。</div>
 </div>
 <div class="item">
-    <h3>谷歌云为智能体重构运维数据库：AlloyDB 秒级开出沙箱实例并可按需归零</h3>
-    <div class="source">来源：<a href="https://cloud.google.com/blog/products/databases/announcing-postgresql-for-agents-in-alloydb">Google Cloud 官方博客：Announcing PostgreSQL for agents in AlloyDB</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，谷歌云宣布 AlloyDB 提供面向智能体的 PostgreSQL 能力（预览）。做法是在数秒内按需开出沙箱化数据库实例，这些实例与主库、备库和只读副本完全隔离，共享 Colossus 存储层并读取生产数据的实时副本，官方称可实现亚毫秒 I/O 与每秒超过 300 万次查询；智能体任务结束后实例自动缩容到零，按实际用量计费。实例使用完整的 AlloyDB PostgreSQL 引擎，可同时跑分析、向量、全文与空间检索，并可直接联邦查询 BigQuery 与 Spark 上的湖仓数据，无需额外 ETL。Manhattan Associates 首席技术官称，可在不影响核心交易处理的前提下支撑多智能体同时协作。<br><b>为什么对数据平台重要：</b> 智能体带来的不是稳定的读负载，而是突发、高并发、不可预测的查询洪峰。谷歌云给出的答案是给智能体开出用完即弃的隔离副本，而不是让它与生产共用读副本——这会改写数据平台的容量规划方式：从按峰值预留容量转向按推理循环计费，也把「隔离」从安全要求变成架构与成本要求。对运维数据库与数据平台而言是同一个问题：智能体的访问是否与生产负载在物理上分开，账单能否按任务归集。</div>
-</div>
-<div class="item">
-    <h3>Starburst Enterprise 482-e LTS：Iceberg 物化视图改为增量刷新，同时移除多项遗留组件</h3>
-    <div class="source">来源：<a href="https://www.starburst.io/blog/starburst-enterprise-delivers-incremental-iceberg-materialized-views-query-speed-improvements-and-enhanced-ai-intelligence/">Starburst 官方博客：Starburst Enterprise Delivers Incremental Iceberg Materialized Views, Query Speed improvements and Enhanced AI Intelligence</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，Starburst 发布 Starburst Enterprise 482-e LTS。核心变化包括：Iceberg 物化视图支持计划化的仅追加增量刷新（公开预览），此前刷新需对历史数据全量重算；Starburst Metastore 支持开放 Iceberg REST Catalog 规范并内置托管凭据（公开预览）；查询速度在内部基准下提升 10%；大查询可超出可用内存以避免 OOM（公开预览）；PyStarburst 支持 Arrow 协议，取数最快提升 7 倍；AIDA 增加 Token 消耗监控页与外部 MCP 服务器 OAuth 扩展。该版本同时移除打包的 Hive Metastore 镜像、旧版云存储文件系统、snowflake_jdbc 连接器与 Alluxio 支持，并反转 CHAR 与 VARCHAR 的隐式转换行为，升级前须按文档完成迁移。<br><b>为什么对数据平台重要：</b> 增量刷新把物化视图从「全量重算的代价」变成可持续维护的预计算产物，这是把遗留 Hive 管线上移到 Iceberg 的关键前置条件之一。同一版本集中移除四类遗留组件并反转类型转换语义，说明开放湖仓的迁移窗口正在关闭：继续使用打包元数据服务、旧对象存储配置或密码认证的集群，会在下一个 LTS 前后集中承压。升级清单本身构成选型信号，历史包袱越少的平台，下一个版本的迁移成本越低。</div>
+    <h3>Snowflake 完成 37.5 亿美元零息可转债发行，资金明确指向并购与战略投资</h3>
+    <div class="source">来源：<a href="https://www.stocktitan.net/sec-filings/SNOW/8-k-snowflake-inc-reports-material-event-c605b2b96119.html">Snowflake 8-K（2026 年 10 月 2 日提交）：完成 0.00% 可转换优先票据私募发行</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，Snowflake 就 37.5 亿美元零息可转换优先票据向美国证券交易委员会提交 8-K。票据分两档：20 亿美元 2029 年 10 月 15 日到期、17.5 亿美元 2031 年 10 月 15 日到期，两档票息均为 0.00% 且本金不累积，也不设常规利息支出。初始转股价分别约为 500.38 美元与 483.98 美元，较 9 月 28 日 328.12 美元的参考价分别溢价约 52.5% 与 47.5%。公司同步执行上限约 820.30 美元的看涨期权对冲，把全部转股情形的潜在稀释压到约 3% 量级。净募资约 37 亿美元，其中约 5.48 亿美元用于回购 2027 年到期的既有可转债，其余用于一般公司用途，官方口径包含回购股票、收购或对互补业务的战略投资。<br><b>为什么对数据平台重要：</b> 这笔交易把头部数据平台的弹药从留存收益扩展到零息长期债务：没有利息支出，稀释被上限期权压住，而资金用途明确写着收购与战略投资。对买方而言，未来一年数据平台的并购竞价会更激烈，整合风险也随之上升；对同赛道厂商而言，真正拉开的不是产品功能，而是融资成本与资本结构的差距——用零息债务补充并购预算的能力，不是每家都能复制。</div>
 </div>
   </div>
 
@@ -209,19 +204,29 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Snowflake 同日两项正式可用：流式写入支持分区托管 Iceberg 表，动态表增量刷新支持 VALUES 子句</h3>
-    <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-09-24-snowpipe-streaming-partitioned-iceberg-ga">Snowflake 发布说明（2026 年 9 月 24 日）：Snowpipe Streaming: Partitioned Apache Iceberg tables（正式可用）</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，Snowflake 发布两项正式可用更新。其一，Snowpipe Streaming 支持向分区化的 Snowflake 托管 Iceberg 表写入，覆盖 Iceberg v2 与 v3，写入使用表当前的分区规范，弹性通道与命名通道均支持，但不含 Snowpipe Streaming Classic 与外部管理的 Iceberg 表。其二，VALUES 子句可用于动态表增量刷新，适用于 INCREMENTAL、AUTO 与 ADAPTIVE 三种模式，典型场景是把常量集当作小型查找表在 FROM 子句中与基表关联。<br><b>对数据平台的影响：</b> 托管 Iceberg 表的写入路径补齐分区能力后，流式入库不必再在「分区带来的性能」与「格式的开放性」之间二选一，这会实际影响实时链路的落地形态：既要低延迟写入，又要让外部引擎读到同一份数据。增量刷新支持常量查找表则是在细节上降低刷新成本——常量集不再触发全量重算。两项都属能力补课型更新，补的正是把流式与开放湖表拼在一起时最常被卡住的位置。</div>
+    <h3>谷歌云 BigQuery 同日两项更新：Rust SDK 正式可用，数据工程智能体增加轻量模型支持</h3>
+    <div class="source">来源：<a href="https://cloud.google.com/bigquery/docs/release-notes">BigQuery 发布说明（2026 年 10 月 2 日）</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，BigQuery 发布说明中两项更新生效：BigQuery 的 Rust SDK 正式可用；Data Engineering Agent 新增对 gemini-3.7-flash 模型的支持，覆盖 us、eu 与 global 多区域端点。<br><b>对数据平台的影响：</b> Rust SDK 补齐了 BigQuery 客户端的多语言覆盖，对以 Rust 构建的数据服务、连接器与自研引擎是一块新拼图，也让「同一个仓被任意语言栈直连」这件事更彻底。把数据工程智能体的底层模型扩到更轻的档位，则是在同一套智能体工作流里留出成本与延迟的可选空间。两项都属于「把平台能力接到开发者与智能体已有工具链上」的补课型更新，不改变架构，但会影响选型时的语言与成本口径。</div>
 </div>
 <div class="item">
-    <h3>PhoenixAI 成为 Cloudera 基础数据库伙伴，实时数据库进入其私有云与主权云市场</h3>
-    <div class="source">来源：<a href="https://www.morningstar.com/news/pr-newswire/20260924ph55717/phoenixai-joins-cloudera-as-a-foundational-database-partner">PR Newswire（官方新闻稿，经 Morningstar 发布）：PhoenixAI Joins Cloudera as a Foundational Database Partner</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，PhoenixAI（原 CelerData，StarRocks 开源项目创建团队）宣布与 Cloudera 达成战略合作，成为其混合数据与 AI 平台及 Cloudera Anywhere Cloud Marketplace 的基础数据库伙伴。客户可在 Cloudera 的私有云与主权云环境中直接部署 PhoenixAI 数据库引擎，官方称可对实时流数据与湖仓格式数据提供亚秒级 SQL 查询，就地查询而无需反规范化、预聚合或额外 ETL，并支持细粒度角色权限与按查询审计。双方将在 Cloudera EVOLVE26（10 月 27 日，纽约）现场演示。<br><b>对数据平台的影响：</b> 这项合作把两件事绑在一起：实时查询引擎进入以自托管与主权部署为卖点的数据平台市场，并以「数据留在客户环境」为默认前提。对买方而言，实时分析引擎的可选集合从公有云托管服务扩展到私有化与主权场景，评估维度也随之改变——不只看查询延迟，还要看它能否在客户自有集群里满足权限、审计与数据驻留要求。</div>
+    <h3>Databricks 把 Unity Catalog 连接扩到通用 JDBC，ai_extract 标准模式换用新检查点</h3>
+    <div class="source">来源：<a href="https://docs.databricks.com/gcp/en/release-notes/product/2026/october">Databricks 发布说明（2026 年 10 月，含 10 月 2 日条目）</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，Databricks 发布说明列出两项更新：JDBC 版 Unity Catalog 连接正式可用，覆盖 Serverless 计算、DBR 19 及以上与 2025.40 及以上 SQL 仓库，并支持 SSL 证书，基于 OAuth 的机器对机器认证仍为 Beta；ai_extract 的标准（默认）模式启用新的模型检查点，官方称速度提升 2.3 倍、整体质量同步改善且不额外计费。<br><b>对数据平台的影响：</b> 把 Unity Catalog 的连接从自有客户端扩展到通用 JDBC，意味着外部 BI、自研应用与数据科学工具可以直接在治理边界内访问受管表，并用机器身份而非共享密钥完成认证。这回答的是一个常见审计问题：第三方工具接入后，权限、行级过滤与血缘是否照样生效。抽取函数的提速则落在成本侧，对以非结构化数据入湖为主的团队更直接。</div>
 </div>
 <div class="item">
-    <h3>谷歌云在巴西峰会上补齐智能体治理件：项目空间、技能注册表与智能体沙箱</h3>
-    <div class="source">来源：<a href="https://www.googlecloudpresscorner.com/2026-09-24-Google-Cloud-Expands-in-Brazil-to-Power-the-Next-Generation-of-Agentic-AI">Google Cloud 官方新闻稿：Google Cloud Expands in Brazil to Power the Next Generation of Agentic AI</a></div>
-    <div class="body"><b>摘要：</b> 9 月 24 日，谷歌云在巴西峰会宣布 Gemini Enterprise 与 Data Cloud 的多项新能力：Projects 为员工或团队提供持久化的文件与上下文空间，保留共享的组织记忆与运行状态；Skills Registry 集中治理技能，规定哪些技能可被某个智能体、个人或团队使用；Agent Sandbox 提供隔离环境，供智能体编译执行代码、使用命令行乃至浏览器。同日确认巴西技术基础设施到 2030 年翻倍，自 10 月 15 日起 Gemini Enterprise 在巴西支持本土数据处理与灾备；São Paulo 区域上线搭载 NVIDIA RTX PRO 6000 Blackwell 的 G4 实例，并扩大本地前置工程师团队。<br><b>对数据平台的影响：</b> 持久化项目空间、技能注册表与隔离沙箱，本质上是把智能体的上下文、权限与执行环境当作平台资产来管，这与数据平台正在做的元数据、权限与运行隔离是同一件事的两个入口。若企业把技能注册表当作智能体能力的准入清单，数据侧必须回答：每一份被技能读取的数据是否都在同一套权限与审计口径下，沙箱里的执行结果能否追溯到受管表。区域侧动作则提醒数据驻留仍是采购硬约束。</div>
+    <h3>Snowflake 给 Native App 中的 Cortex Agents 加了事件日志脱敏</h3>
+    <div class="source">来源：<a href="https://docs.snowflake.com/release-notes/2026/other/2026-10-02-native-apps-agent-observability">Snowflake 发布说明（2026 年 10 月 2 日）：Native Apps：Observability for Cortex Agents</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，Snowflake 发布说明称 Native App 中 Cortex Agents 的可观测性新增能力：当应用通过 REST 的 agent:run 接口或 SQL 的 DATA_AGENT_RUN 发起运行时，Snowflake 在把记录写入消费方事件表之前，会对编排方撰写的内容做脱敏处理，以保护编排方的知识产权。<br><b>对数据平台的影响：</b> 这一步处理的是可观测性与知识产权之间的冲突：消费方既要能查到智能体执行了哪些操作、由谁授权，又不能顺带看到编排方的提示词与编排逻辑。把脱敏放在平台写日志这一层，等于把「什么算敏感上下文」的判定从应用侧收回平台侧。随着智能体横向流动，谁能同时提供审计可见性与商业机密保护，会成为平台选型的一项硬指标。</div>
+</div>
+<div class="item">
+    <h3>AWS 同日更新数据库与缓存细节：Aurora DSQL 支持部分索引，Valkey 接入 OpenTelemetry</h3>
+    <div class="source">来源：<a href="https://aws.amazon.com/about-aws/whats-new/2026/10/aurora-dsql-partial-indexes/">AWS What's New（2026 年 10 月 2 日）：Aurora DSQL 支持部分索引</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，AWS 发布多项更新，与数据平台直接相关的有两项：Amazon Aurora DSQL 支持部分索引，可只对满足条件的数据行建索引，从而缩小索引体积并降低写入开销；Amazon ElastiCache for Valkey 支持 OpenTelemetry 指标与更细粒度的监控数据。<br><b>对数据平台的影响：</b> 部分索引把「只索引活跃子集」这一经典优化带进无服务器分布式 SQL 数据库，直接作用在索引体积与写放大这两项成本上；Valkey 侧接入 OpenTelemetry 则把缓存层并入既有的可观测栈，少维护一套专有监控。两项都属于细节层面的成本与运维改良，方向上一致：减少不必要的数据复制与工具重复。</div>
+</div>
+<div class="item">
+    <h3>Neon 把 embedding 生成并入 AI Gateway，与聊天模型共用端点与凭证</h3>
+    <div class="source">来源：<a href="https://neon.com/blog/generate-embeddings-with-neon-ai-gateway">Neon 博客（2026 年 10 月 2 日）：Generate embeddings with Neon AI Gateway</a></div>
+    <div class="body"><b>摘要：</b> 10 月 2 日，Neon 宣布其 AI Gateway 现在可以在与聊天模型相同的 OpenAI 兼容端点、同一套凭证下生成 embedding。对使用 Postgres 与 pgvector 的团队而言，向量生成与应用侧调用不再需要单独接入一家 embedding 服务。<br><b>对数据平台的影响：</b> 把 embedding 生成收进数据库网关，省掉的是数据在数据库与模型服务之间来回搬的一段链路，同时让向量写入与检索调用的凭证、配额与计费口径统一。这类「把模型调用挪到数据旁边」的做法，正在成为向量检索落地的常见形态：减少的是跨系统的信任与治理缝隙，而不只是几次网络调用。</div>
 </div>
   </div>
 
@@ -263,25 +268,25 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【降级】阿里云提出 Context Engine：上下文被定义为需要统一治理的新型数据资产</h3>
-    <div class="source">来源：<a href="https://hainan.ifeng.com/c/8wfxR8S9AC7">凤凰网海南：阿里云提出 Context Engine，让企业全域数据成为 Agent 的实时上下文</a></div>
-    <div class="body"><b>为什么值得继续看：</b> 在 2026 云栖大会（9 月 22—24 日，杭州）技术主论坛上，阿里云 CTO 李飞飞提出围绕模型、执行框架与上下文三个维度加持智能体落地，并称让智能体持续理解企业知识、业务状态与执行反馈，是决定能力上限也最难标准化的一环；Context Engine 的目标是把企业全域数据转化为实时上下文，让智能体从「知道什么」走向「此刻应该做什么」。同场推出的配套产品包括面向企业的实时上下文与记忆数据服务 Agent Context，以及以「一份数据、多种引擎、统一治理」为架构的 ApsaraLakebase；官方披露的参考案例包括小红书以共享上下文支撑数千名员工智能体协同。该议题的具体发生日无法从公开报道确证（大会会期跨本期窗口），报道日为 9 月 24 日，故降级收录；产品能力与效率数字均为厂商口径。<br><b>需要等待什么信号确认：</b> 上下文与记忆作为数据资产能否形成可落地的治理口径——跨会话复用后的版本一致性、权限继承与失效清理目前尚无成熟标准；官方给出的 Token 效率与复杂知识任务准确率提升是否有第三方或客户侧复现。</div>
+    <h3>【降级】Apache Iceberg 1.12.0 发布：类型能力补齐，细粒度读取限制先进规范</h3>
+    <div class="source">来源：<a href="https://iceberg.apache.org/blog/apache-iceberg-1.12.0-release/">Apache Iceberg 官方博客：Apache Iceberg 1.12.0 Release</a></div>
+    <div class="body"><b>为什么值得继续看：</b> 9 月 29 日，Iceberg 社区发布 1.12.0，包含 777 次提交、来自 142 位贡献者。亮点包括 Variant 与 geospatial 类型的读写支持、Flink 新增把 equality delete 转换为删除向量的维护任务、Spark 4.1 的 Hilbert 曲线聚类，以及规范层新增 loadTable 的细粒度读取限制——由目录侧决定行过滤与列脱敏策略、读取端强制执行，且规定读端无法执行任何一条限制时必须让查询失败，而不是静默返回原始数据。该版本同时移除 Spark 3.4 与 Flink 2.0 支持并废弃一批 API。原始发布日期早于本期窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 规范给了接口，实现还没跟上：1.12.0 中没有任何读取端真正执行读取限制，目录今天返回限制对象会被所有消费方静默忽略。需要观察各引擎与目录何时落地这套动作，才能判断开放湖仓的细粒度治理是纸面标准还是可用能力，也才能判断它是否会改变「开放格式治理必须依赖厂商客户端」的既有取舍。</div>
 </div>
 <div class="item">
-    <h3>【降级】Gartner 2026 年战略云平台服务魔力象限：阿里云据报首次进入领导者象限</h3>
-    <div class="source">来源：<a href="https://www.cinn.cn/xf/2026/09-24/01qePxR1.html">中国工业新闻网：AI 算力竞赛升级，全球云厂商竞速数据中心与全栈能力</a></div>
-    <div class="body"><b>为什么值得继续看：</b> 报道称阿里云在 Gartner 2026 年度全球《战略云平台服务魔力象限》报告中首次进入领导者象限，成为该象限唯一的中国与亚太厂商，与 AWS、微软、谷歌、Oracle 并列，并称 Gartner 将其定位从云基础设施厂商转向 AI 原生与智能体原生云厂商。该结论来自媒体转述，Gartner 报告原始发布日与完整象限名单未能在本期核实，按降级收录。<br><b>需要等待什么信号确认：</b> Gartner 官方报告页面的发布日期与完整厂商名单；以及象限位置在客户采购中的实际权重——若确实影响采购短名单，厂商的叙事重心会进一步从算力规模转向全栈与智能体能力。</div>
+    <h3>【降级】Cloudflare 把数据平台更名为 Basin 并全面可用，主打 Iceberg 加零出口费</h3>
+    <div class="source">来源：<a href="https://cloudflare.net/news/news-details/2026/Cloudflare-Launches-Basin-A-More-Open-and-Accessible-Data-Platform-for-Developers/default.aspx">Cloudflare 官方新闻稿：Cloudflare Launches Basin, A More Open and Accessible Data Platform for Developers</a></div>
+    <div class="body"><b>为什么值得继续看：</b> 10 月 1 日，Cloudflare 将原 Cloudflare Data Platform 正式更名为 Basin 并宣布全面可用：数据以 Apache Iceberg 表格式存放在 R2 对象存储上，提供摄入（Pipelines）、目录（Catalog）与无服务器 SQL 三段能力，DuckDB、Spark、Snowflake、PyIceberg 等可直接读取同一份表。官方称单条摄入流最高可达 3GB/s、SQL 支持 190 多个标量与聚合函数，并明确跨云、跨区域查询不收取出口费。Cloudflare 同时说明 Basin 面向更开放的 serverless 分析场景，并不打算替换所有数仓部署。原始发布日期早于本期窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 官方未公布单位价格、服务等级承诺与独立基准，大规模查询的单位成本需要买方自行压测；同时，V3 类型支持、更细粒度命名空间与表级授权、辖区支持等路线图项目都还没有交付日期。零出口费能否转化成实际的「表可搬」体验，取决于这些缺口补齐的速度。</div>
 </div>
 <div class="item">
-    <h3>【降级】Okta 牵头十二家厂商成立 Blueprint 联盟，智能体身份治理出现跨厂商参考架构</h3>
-    <div class="source">来源：<a href="https://cyberinsider.co.uk/vendors-agree-blueprint-for-ai-agents">Cyber Insider：Vendors agree blueprint for AI agents</a></div>
-    <div class="body"><b>为什么值得继续看：</b> 该联盟由 Okta 牵头，创始成员包括 AWS、CrowdStrike、Databricks、Docker、谷歌云、Salesforce、ServiceNow、Wiz、Zscaler 等十二家，把 Okta 今年 3 月发布的智能体安全蓝图扩展为跨厂商参考架构，主张智能体应被视为一等身份，而不是用户或应用的延伸。框架覆盖智能体发现与身份分配、任务级授权、可追溯委派、运行时监控，以及令牌吊销、会话终止、网络隔离等应急收敛手段，并计划用 MCP、OCSF、SSF、CAEP 等开放标准做互操作测试。该联盟于 9 月 22 日在 Okta 用户大会期间宣布，超出本期 24 小时窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 联盟是否按承诺公布跨厂商信号共享的测试结果与参考集成；Okta 计划在第三、第四季度交付的智能体网关与端点发现等控制是否按期可用。治理承诺只有落到可执行的阻断动作上，才会对数据平台的权限与审计设计形成实际约束。</div>
+    <h3>【降级】谷歌云 Spanner queues 正式可用：把消息队列写进数据库的同一个事务</h3>
+    <div class="source">来源：<a href="https://cloud.google.com/spanner/docs/queues/queues-overview">Google Cloud Spanner 文档：Spanner queues 概览</a></div>
+    <div class="body"><b>为什么值得继续看：</b> 谷歌云 Spanner queues 现已正式可用（该能力自 9 月 17 日起生效，官方博客 10 月 2 日发文详解）。队列以普通表行的形式存在 Spanner 内部，入队就是读写事务里的一次写入，让「改状态」与「派发下一步任务」要么一起提交、要么一起回滚，替代传统的发件箱加中继模式；同时提供定时投递、消息租约与逐条确认、流式 SQL 拉取消费，以及用标准 SQL 查询积压与超时。谷歌把面向智能体的「决定并执行」列为主要场景，可用于工具调用后的状态落库、多智能体交接与人工审批超时。原始可用日期早于本期窗口，故按博客发布日降级收录。<br><b>需要等待什么信号确认：</b> 官方只承诺至少一次投递与最多一次确认，外部副作用仍需调用方自己实现幂等，这一点在文档里写得很明确；队列容量跟随已有计算实例，纯事件洪流仍更适合专用消息中间件。需要观察其他数据库厂商是否跟进数据库内队列这一原语，以及它会不会改变智能体编排层的选型。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-09-25 08:00</p>
+    <p>信息截至北京时间 2026-10-05 08:00</p>
   </div>
 
 </div>
