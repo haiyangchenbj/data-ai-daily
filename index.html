@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-10-09</title>
+<title>Data+AI 全球日报 | 2026-10-12</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-10-09 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-10-12 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>目录层从各厂商私有资产走向跨平台联邦</li>
-      <li>专用小模型开始替代通用大模型做决策</li>
-      <li>气隙本地部署被做成云上平台的镜像</li>
+      <li>数据平台的竞争重心，从功能数量转向能否管住智能体的动作</li>
+      <li>交互入口持续上移，取数、试用与采购都开始走对话</li>
+      <li>开放表格式的摄取边界继续外扩，变更日志开始统一进管道</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>同一天里，湖仓竞争的落点从引擎性能移到三处：目录联邦扩到三家外部平台、专用小模型接手高频判断、气隙本地部署被做成云上平台的镜像。对买方，能否被他人读取、只付该付的钱、不出云，正取代跑分成为选型首要问题。
+      <strong>总判断：</strong>本期主线是智能体从问答走向执行。数据平台把代码执行、外部工具调用与采购入口逐步交给智能体，同时用沙箱、权限继承和目录把边界收住；湖仓侧继续把开放表格式的变更日志纳入统一摄取。厂商的比拼已从功能多少，移向能否让智能体的动作可管、可查。
     </div>
   </div>
 
@@ -186,19 +186,19 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>Google Cloud 发布通用 Gemini agent，同时把开放 Iceberg 表的联邦扩到 Databricks、Snowflake 与 AWS 三家目录</h3>
-    <div class="source">来源：<a href="https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026">Google Cloud 官方博客：Welcome to Gemini at Work 2026 — Introducing the Gemini agent</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，Google Cloud CEO Thomas Kurian 在 Gemini at Work 2026 上发布 Gemini agent：用户给的是"目标而非指令"，agent 自行拆解任务、跨模型路由、在企业既有策略下执行，并对外暴露统一 API。数据平台侧同步升级三处：Knowledge Catalog 让 agent 直接读取 Databricks、dbt、LookML 与 SAP 中的数据指标定义；Smart Storage 就地富化非结构化对象，把上下文写回对象本身并继承既有安全设定；Borderless Lakehouse 零拷贝直读 Salesforce Data 360、SAP、ServiceNow 与 Workday，并声明可联邦跨 Databricks Unity Catalog、Snowflake Polaris 与 AWS Glue 的开放 Iceberg 表。官方援引客户案例称 Bloomberg Media 的 SQL 查询准确率提升 63%，Etsy 迁移 3PB 后关键数据 join 快 60%。<br><b>为什么对数据平台重要：</b> 目录是当前锁定的实际位置——谁判定"当前版本的表是哪一份"，谁就掌握跨引擎准入。把联邦对象从自家湖扩到三家外部目录，等于承认目录层正从"厂商资产"变成"可被多方读取的公共入口"，这与前一日微软与 Snowflake 对 Apache Ossie 的承诺是同一方向。决定绑定深浅的仍是两个细节：跨目录读取是只读还是可写，以及凭证由谁签发——只要写入与凭证仍归各自平台，联邦就停在"能看不能改"，这恰恰是买方需要逐项追问的地方。</div>
+    <h3>Databricks 让 Genie One 在隔离沙箱中执行代码，权限仍沿用调用者</h3>
+    <div class="source">来源：<a href="https://docs.databricks.com/aws/en/ai-bi/release-notes/2026">Databricks 官方发布说明：AI/BI and Genie One release notes 2026</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日的发布说明显示，Genie One 现可在安全隔离的沙箱中运行代码，以承接 SQL 之外的分析任务。代码按调用者身份、沿用其已有权限执行，Databricks 明确 Unity Catalog 的治理与数据访问控制继续适用。发布说明同时提示更新为分批推送，账号可能滞后一周以上才生效。<br><b>为什么对数据平台重要：</b> 面向业务用户的智能体能力从"查数"扩到"算数"，平台要同时给出两条保证：沙箱解决执行隔离，权限继承解决治理归属。任一条缺失，Agent 场景就只能停在试用阶段，无法进入受监管数据。值得追问的是沙箱内的资源上限与出网策略如何设定，以及执行产物是否同样纳入目录与血缘。</div>
 </div>
 <div class="item">
-    <h3>Snowflake 在 Cortex AI Functions 中推出专用决策模型 Snowflake Decision，把高频判断交给小型专用模型</h3>
-    <div class="source">来源：<a href="https://www.snowflake.com/en/blog/snowflake-decision-cortex-ai-functions/">Snowflake 官方博客：Introducing Snowflake Decision in Cortex AI Functions</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，Snowflake 推出 Snowflake Decision（private preview），一个经 AI_COMPLETE 函数调用的决策模型，面向分类、打分、过滤与路由这类高频、答案有界的任务。它返回结构化答案——类别、分数或 0 到 1 的是非概率，供工作流直接消费；一次调用可同时回答多个问题。官方强调的卖点是治理继承：调用运行在 Cortex AI Functions 内，既有的访问控制、权限与审计策略自动适用于每一次决策。厂商自测称其在 29 项 Jev Decision Index 0.2.1 benchmark 上得分 57.63，为参与评测的 72 个模型中的最高分，并注明受接口限制只运行了基准子集。<br><b>为什么对数据平台重要：</b> 这条把"AI 进数据平台"的默认路径拆开了：过去逢任务就调通用大模型，成本与延迟被最昂贵的能力绑架；现在把高频、低推理复杂度的判断交给专用小模型，只在真正需要复杂推理时才上大模型。对买方，意义在于这类工作负载的单价可以被重新定价，而"治理自动继承"决定它能否直接用于受监管数据。判断成色要看两件事：评测是厂商自测、基准子集与选项上限都会影响可比性；以及它能否在客户自己的高容量表上跑出同等准确率。</div>
+    <h3>Snowflake 把数据市场发现交给对话式智能体，从检索走向采购</h3>
+    <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-09-agentic-marketplace-discovery-preview">Snowflake 官方发布说明：Agentic Marketplace Discovery (Public Preview)</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日，Snowflake 宣布 Agentic Marketplace Discovery 进入公开预览。用户可在 Snowsight 的 Marketplace Discover 页切换"智能体发现"与"市场搜索"，用自然语言描述需求，由 CoCo 找出并比较匹配的列表。在列表与角色权限允许的范围内，用户可从对话中查看详情、安装、发起试用或提交销售请求。<br><b>为什么对数据平台重要：</b> 数据产品的发现与试用被移进对话入口，市场页从检索工具变成智能体编排的界面。对平台方，这意味着列表元数据、权限模型与试用开通流程都要能被机器直接调用，而不只是渲染给人看。可观察的抓手是：安装与试用这类带副作用动作由谁确认，以及智能体在比较列表时依据的是厂商自述还是可核验的运行数据。</div>
 </div>
 <div class="item">
-    <h3>Valcon 与 Databricks 合作推出气隙本地数据平台 DDP，把主权部署做成云上平台的镜像</h3>
-    <div class="source">来源：<a href="https://valcon.com/insights/news/valcon-databricks-secure-data-platform">Valcon 官方新闻稿：Valcon launches highly secure, on-premises, air-gapped data platform, partnering with Databricks</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，欧洲咨询公司 Valcon 宣布与 Databricks 合作，面向欧洲与英国的公共部门、国防、金融服务与国家关键基础设施推出 Disconnected Data Platform（DDP）——一套本地、气隙的数据平台。方案设计是"云-本地同构"：一般云端负载继续跑在 Databricks，最敏感、必须留在本地的负载交给 DDP，两侧保持一致的平台体验。官方称 DDP 已用于加速 BAE Systems 的企业数据平台项目。Valcon 是 Databricks 金牌合作伙伴，本次合作的目标是让组织在满足主权、安全与监管要求的同时，仍能采用现代 AI 与分析能力。<br><b>为什么对数据平台重要：</b> 主权要求此前常把敏感客户挡在托管数据平台之外，可行方案要么是昂贵的私有化部署，要么是功能受限的裁剪版。把"云上平台的镜像"作为独立形态交付，等于承认数据平台需要第三种部署形态——既非纯公有云，也非传统私有化，而是与云侧同构、可双向互操作的气隙版本。对买方，关键判断是同构的程度：若气隙侧与云侧在功能、版本与治理模型上持续同步，迁移成本才可控；反之，气隙版会迅速落后成孤岛。这条也呼应了同日 Google Cloud 把联邦扩到外部目录的方向——数据的物理位置，正成为与数据可读性并列的采购诉求。</div>
+    <h3>湖仓开始直接摄取开放表格式的变更日志</h3>
+    <div class="source">来源：<a href="https://cloud.google.com/bigquery/docs/release-notes">Google Cloud 官方发布说明：BigQuery release notes</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日的 BigQuery 发布说明称，Lakehouse 现支持从 Delta Lake 与 Apache Iceberg 表做变更数据捕获摄取，状态为预览。用户可用 Dataflow 批处理作业同步 Delta Lake 的插入、更新、删除日志，或用批处理与流式作业同步 Apache Iceberg 的日志，写入 Lakehouse 的 Iceberg 表。<br><b>为什么对数据平台重要：</b> 变更日志此前分散在各表格式的私有能力里，现在被拉进统一摄取通道。对多引擎、多表格式并存的企业，增量同步不必再为每种格式各写一条管道，摄取层开始承担格式归一。这同时是一道边界题：格式归一发生在摄取层，意味着上游表格式的差异被吸收，但也把一致性判断从源系统移交给了湖仓侧，需要确认删除与更新事件在跨引擎读取时的可见性保证。</div>
 </div>
   </div>
 
@@ -209,19 +209,34 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Elastic 把 AI SRE 内建进 Observability，用四个引擎做"不依赖告警规则"的故障定位</h3>
-    <div class="source">来源：<a href="https://ir.elastic.co/News--Events/news/news-details/2026/Elastic-Introduces-Elastic-nightshift-AI-SRE-to-Investigate-with-the-Full-Context-Others-Cant-Afford-to-Keep/default.aspx">Elastic 官方新闻稿：Elastic Introduces Elastic nightshift AI SRE to Investigate with the Full Context Others Can't Afford to Keep</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，Elastic 宣布 Elastic nightshift AI SRE 进入 private preview，内建于 Elastic Observability，在 Serverless 上于早期访问期免费。它由四个引擎组成：Context 从遥测、代码、runbook 与 wiki 中抽取实体与关系，并累积每次调查的长期记忆；Detection 不依赖告警规则持续评估遥测，把跨服务的相关信号归并为单个 Significant Event；Investigation 从任意告警（含外部工具）出发，并行验证多个根因假设并给出证据；Remediation 推荐修复并可按需执行。官方称知识图谱会连接 GitHub 源码，指向可能引入异常的那个 commit。新闻稿援引 NeuBird AI 2026 年 4 月的研究称，78% 的组织在过去一年至少遇到过一次"没有告警、客户先发现"的事故。<br><b>对数据平台的影响：</b> 这条落在可观测性，但机制与数据平台高度同构：真正难的是把"系统知识"变成 agent 可用的上下文——实体关系、代码链接、历史事故记忆，正是数据平台里语义目录在做的事。Detection 明说不依赖人手写规则，等于承认"规则驱动"在这类高基数数据上已到极限，转向模型驱动的异常发现。对数据平台厂商，可借鉴的是"展示推理过程与盲区"这一设计：agent 给出结论同时列出每一步查询与无法验证的部分，这是把 agent 接进生产数据之前的信任前提。</div>
+    <h3>Apache Flink CDC 3.7.0 发布，把模型调用接进变更数据捕获管道</h3>
+    <div class="source">来源：<a href="https://flink.apache.org/2026/10/10/apache-flink-cdc-3.7.0-release-announcement">Apache Flink 官方发布公告：Apache Flink CDC 3.7.0 Release Announcement</a></div>
+    <div class="body"><b>摘要：</b> 10 月 10 日，Apache Flink 社区发布 Flink CDC 3.7.0。该版本引入可插拔的 AI 模型客户端 API 与 OpenAI 兼容客户端，在 YAML Transform 中提供补全、分类、翻译、摘要、信息抽取、脱敏、文本与图像嵌入等内置函数，并新增实验性的有序异步执行。同时新增 SQL Server 与 Apache Fluss Pipeline 源连接器，支持在 Pipeline YAML 中直接定义 Python UDF，Paimon 依赖升级至 2.0.0、Fluss 升级至 1.0.0。<br><b>对数据平台的影响：</b> 变更数据捕获管道开始承担轻量 AI 变换，模型调用被当作一种表达式放进流式作业。这对成本的直接影响是：原本要在下游单独跑的清洗与打标，可以在管道内完成，但代价是管道运行时长与模型调用量绑定。新增 Fluss 源连接器与 Paimon 依赖升级，说明 CDC 正在向湖流一体的目标端靠拢。</div>
 </div>
 <div class="item">
-    <h3>微软在开源博客说明 AI 时代的数据库布局，Azure HorizonDB 与 DocumentDB 并列</h3>
-    <div class="source">来源：<a href="https://opensource.microsoft.com/blog/2026/10/08/open-source-databases-in-the-ai-era-meet-microsoft-at-all-things-open">Microsoft Open Source 官方博客：Open-source databases in the AI era — Meet Microsoft at All Things Open</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，微软在其开源博客上梳理了面向 AI 时代的开源数据库投资：Azure DocumentDB 是基于开源 DocumentDB 引擎、由 Linux Foundation 治理的 MongoDB 兼容托管服务，开发者可用熟悉的 MongoDB 工具与驱动，支持本地、混合与多云；Azure HorizonDB 处于 preview，是微软下一代云原生、PostgreSQL 兼容的数据库服务，面向高性能关键业务与 AI 负载；此外还有托管的 Azure Database for PostgreSQL 与 MySQL。文章同时预告微软将以白金赞助商身份参加 10 月的 All Things Open 2026，并列出与 PostgreSQL、MongoDB 兼容性相关的分享场次。<br><b>对数据平台的影响：</b> 这条的价值在于把"兼容"与"治理归属"分开看：产品兼容一个开源生态，不等于该项目治理交给社区。微软把 DocumentDB 交给 Linux Foundation 治理并开源，而 Azure HorizonDB 只做 PostgreSQL 兼容、未声明开源内核，两种姿态并存，说明厂商在"借生态"与"让渡控制权"之间各有取舍。对买方，判断绑定风险的依据不是"是否兼容 PostgreSQL 或 MongoDB"，而是该服务的内核与扩展能否迁移、治理话语权在谁手里——这也正是本期目录层竞争在数据库侧的映射。</div>
+    <h3>DuckDB 的 CLI 加了 agent mode，按机器读者的方式输出</h3>
+    <div class="source">来源：<a href="https://duckdb.org/2026/10/09/agent-mode.html">DuckDB 官方博客：Agent Mode in the DuckDB CLI</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日，DuckDB 团队介绍随 DuckDB v2.0 发布的 CLI agent mode。当命令行检测到环境变量表明调用者是编码智能体、且输出不是终端时，CLI 改用紧凑 Markdown 表格、把错误输出为 JSON、对超长查询先给出预估行数、并在结果被截断时显式标注。官方实验由 Claude Code 回答 22 道 TPC-H 题目（规模因子 100），agent mode 与普通模式各跑三次，132 次全部正确，模型读到的输出从 123.6k token 降到 50.8k token，减少 59%；官方同时说明这部分节省只占总输入的约 0.5%。<br><b>对数据平台的影响：</b> 数据工具的默认输出开始按"机器读者"而非"终端用户"设计：省略对齐填充、显式声明截断、提前给出查询代价。这类改动不改变引擎能力，却直接决定智能体在数据管道里跑得准不准、贵不贵。官方主动标注节省幅度占总输入比例很低，也提示一个易被忽略的事实：真正吃掉 token 的往往不是查询结果，而是每一轮重复读入的上下文。</div>
 </div>
 <div class="item">
-    <h3>Teleskope 发布数据安全 co-pilot Kosmo，架构上不允许其自主执行变更</h3>
-    <div class="source">来源：<a href="https://www.globenewswire.com/news-release/2026/10/08/3377591/0/en/teleskope-launches-kosmo-an-ai-co-pilot-for-data-security-teams.html">GlobeNewswire（Teleskope 官方新闻稿）：Teleskope Launches Kosmo, an AI Co-Pilot for Data Security Teams</a></div>
-    <div class="body"><b>摘要：</b> 10 月 8 日，数据安全平台 Teleskope 宣布 Kosmo 正式可用，一套面向数据安全团队的 co-pilot，由 Search、Triage、Remediation、Policy、Reporting 五个专门 agent 支撑单一自然语言入口。它不只回答当前问题，还会主动指出下一步该排查哪批暴露面、哪类模式值得固化为策略、该把结果交给哪个数据 owner，并能为 PCI DSS、CIS、CCPA、NIST、PIPEDA 等框架生成报告。官方强调一条架构约束：Kosmo 没有任何能执行变更的工具，只做读取、推理与提议，任何改动都要人等批准；所有查询都在提问者自身权限下执行，送入模型的只有分类标签、计数与资源标识，不含文件内容。发布前它已在十余家客户的 beta 中运行。<br><b>对数据平台的影响：</b> 这条给出一个反直觉但实用的设计取向：把 agent 的价值限定在"想清楚该做什么"，而不是"替你做"。对数据治理与安全场景，这恰是最稳妥的落地路径——治理的难点从来不是执行修复，而是决定本季度该处理什么、以及怎么向数据 owner 与董事会解释，这些判断过去依赖稀缺的资深经验。对数据平台厂商，值得记的是"查询以提问者身份执行、敏感内容不进模型"这两条边界，它们是 agent 能跨越安全团队、被更大范围使用的前提；也说明当下 agent 产品的竞争点，正从能力转向可授予的权限范围。</div>
+    <h3>Snowflake 托管 Iceberg 表备份转正，术语从快照改为备份</h3>
+    <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-09-iceberg-backups">Snowflake 官方发布说明：Backups for disaster recovery and immutable storage</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日，Snowflake 宣布托管 Apache Iceberg 表的备份功能正式可用，覆盖面向灾难恢复与不可变存储的备份策略、备份集与保留锁，支持手动与定时备份、按对象类型恢复，并提供信息模式、账户用量与组织用量三类视图。官方同时把该能力的术语从 snapshot 统一改为 backup，旧的 SNAPSHOT 命令、视图与权限保留但标记为弃用，并计划在未来版本移除。<br><b>对数据平台的影响：</b> 开放表格式的灾备与合规保留，此前多由存储侧或第三方工具承担，现在被收进平台原生命令体系。术语从"快照"换成"备份"，让跨引擎沟通时的语义更贴近企业既有的备份与合规流程。对买方的实际影响是双重的：一方面保留锁与法律保留这类合规动作可以在平台内完成，另一方面命令与视图的重命名会传导到既有脚本，升级前需要清点对弃用名称的依赖。</div>
+</div>
+<div class="item">
+    <h3>Snowflake 把标签与数据保护策略搬上控制台，标签覆盖率可视化</h3>
+    <div class="source">来源：<a href="https://docs.snowflake.com/en/release-notes/2026/other/2026-10-09-snowsight-tags-data-protection-policies-ga">Snowflake 官方发布说明：Snowsight interface for tags and data protection policies</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日，Snowflake 宣布通过 Snowsight 界面管理标签与数据保护策略正式可用，需企业版及以上。用户可在治理与安全下的标签与策略页创建标签，并用面板查看各对象类型的标签覆盖率；数据保护策略同样支持在界面中创建与维护，可查看策略态势、策略列表，以及受保护的表、视图与列。<br><b>对数据平台的影响：</b> 标签与策略从"必须写 SQL 才能配"变成控制台可视操作，治理的落地门槛下降。覆盖率面板把标签覆盖变成可度量的指标，也让治理成效第一次有了能逐项核对的界面口径。需要留意的是，界面简化的是配置动作，不是判定逻辑：策略的实际生效范围、继承关系与冲突处理仍取决于底层模型，控制台只是把它显性化。</div>
+</div>
+<div class="item">
+    <h3>BigQuery 数据工程 Agent 在东京区域上线，并支持新一代小模型</h3>
+    <div class="source">来源：<a href="https://cloud.google.com/bigquery/docs/release-notes">Google Cloud 官方发布说明：BigQuery release notes</a></div>
+    <div class="body"><b>摘要：</b> 10 月 9 日的 BigQuery 发布说明称，数据工程 Agent 已在 asia-northeast1（东京）区域端点上线，并支持 gemini-3.5-flash 模型，状态为正式可用。此前的 10 月 2 日说明中，该能力已支持另一款模型并覆盖 us、eu 与 global 多区域端点。<br><b>对数据平台的影响：</b> 数据工程 Agent 的可选区域与模型继续扩容，对数据驻留要求较高、需要把处理留在本地的企业，可用范围从少数多区域端点扩展到东京这样的单一区域。区域与模型组合按端点分批放量，意味着选型时的实际可用性取决于所在区域，而不是产品整体是否宣布可用。对采购评估，落地区的合规资质与模型版本是否同步更新，是比功能清单更需要逐项确认的部分。</div>
+</div>
+<div class="item">
+    <h3>火山引擎云数据库 TiDB 版开启公测，交易与向量检索共用一份数据</h3>
+    <div class="source">来源：<a href="https://juejin.cn/pin/7694628974492041267">字节跳动数据库官方账号（掘金）：火山引擎「云数据库 TiDB 版」正式开启公测</a></div>
+    <div class="body"><b>摘要：</b> 火山引擎宣布云数据库 TiDB 版正式开启公测。该产品基于平凯星辰开源的 HTAP 数据库 TiDB 打造，全托管云原生，兼容 MySQL 协议生态，采用存算分离架构支持在线水平扩缩容，提供可视化控制台完成扩缩容、备份恢复与监控告警。官方称一套系统可同时支撑在线交易、实时分析与向量检索，交易与分析共用一份数据，并面向 RAG、Agent 平台、智能搜索等场景提供支撑，配套 30 天备份留存与任意时间点恢复。<br><b>对数据平台的影响：</b> 国内云厂商把开源 HTAP 数据库做成托管服务，卖点从"替代单机 MySQL"转向"交易、分析与向量检索共用一份数据"。向量检索与 HTAP 合流，说明国产数据库在补 AI 原生场景的底座位置，也把选型问题从"要不要单独上向量库"改成了"能不能共用一份数据"。实际成色取决于存算分离下的向量索引性能与事务一致性如何兼得，这两项通常互相牵制。</div>
 </div>
   </div>
 
@@ -232,9 +247,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3>政协委员撰文：数据产权统一登记的制度效能，取决于能否转化为市场活力</h3>
-    <div class="source">来源：<a href="https://www.cppcc.gov.cn/wylz/wyjy/202610/t20261008_908119.html">中国政协网：以数据产权统一登记激发数据要素市场活力</a></div>
-    <div class="body"><b>核心观点：</b> 10 月 8 日，中国政协网刊出委员建言文章，围绕数据产权统一登记展开。背景是"十五五"规划提出构建全国统一的数据产权登记体系，国家数据局 7 月印发《数据产权登记工作指引（试行）》，9 月 11 日国家数据产权登记服务系统上线试运行。文章的核心判断是：制度框架建立不等于价值自然释放，衡量改革成效不能只看建了多少平台、登记了多少数据、挂牌了多少产品，而要看高价值数据能否持续供给、能否低成本可信流通。作者据此提出三条路径——以权责利匹配推动高价值数据"供得出"、以统一规则保障数据"流得动"、以价值创造导向推动数据"用得好"。<br><b>映射到数据平台的判断：</b> 文章点出的"不敢供、不愿供、不会供"，本质是数据供给侧的权责利不对等：供数部门承担安全、个人信息保护与质量审核多重责任，却缺少免责边界与激励。这与数据平台侧的技术议题直接相连——要把"授权一次、多方复用"做成现实，登记环节必须产出可被机器读取的权属与授权凭据，否则每一次跨机构调用仍要重复合规核验。对数据平台厂商，这是一个明确的需求信号：谁能把登记、授权与调用计量打通成可审计的工程链条，谁就能承接跨机构数据流通的底座。</div>
+    <h3>镜舟科技 CEO 孙文现：数据平台的下一步是让 AI 正确理解数据</h3>
+    <div class="source">来源：<a href="https://m.tech.china.com/articles/20261010/202610101964540.html">中华网科技：从 StarRocks 到 MIP：数据平台的下一步是「理解」（署名文章，作者为镜舟科技 CEO 孙文现）</a></div>
+    <div class="body"><b>核心观点：</b> 孙文现在署名文章中提出，StarRocks 解决的是数据如何被更快查询，接下来的 MIP 要解决的是企业数据如何被 AI 正确理解和使用。他把客户反复提出的问题归纳为三类：AI 怎样使用已有数据、文档与结构化数据能否一起分析；同一个指标怎样让 AI 采用适合当前任务的定义；不同角色能看哪些数据，以及答案出现偏差后能否找到原因。他称 MIP 的方向正是在这些跨客户的讨论中逐渐形成的。<br><b>映射到数据平台的判断：</b> 引擎厂商开始把"语义与可核验"当作下一层竞争面：查询性能是入场券，业务口径的明确归属、按角色的数据可见性、以及答案可追溯，才是智能体直接消费数据时的真正门槛。这与此前厂商把语义层摆到目录位置的动向一致，但这次是来自国内引擎厂商的第一人称表述。可继续观察的是 MIP 是否会开放为跨平台规范，还是停留在自家产品内的能力集合。</div>
 </div>
   </div>
 
@@ -250,9 +265,9 @@
     <!-- <span class="funding-tag tag-ipo">IPO</span> -->
     <!-- <span class="funding-tag tag-ma">收购兼并</span> -->
     <div class="item">
-    <h3>【人事】Starburst 任命 Kerman Lau 为首席财务官，前 Moveworks CFO</h3>
-    <div class="source">来源：<a href="https://www.morningstar.com/news/business-wire/20261008889845/starburst-appoints-kerman-lau-as-chief-financial-officer">Business Wire（Starburst 官方新闻稿）：Starburst Appoints Kerman Lau as Chief Financial Officer</a></div>
-    <div class="body"><b>核心数据：</b> 任命即时生效、薪酬未披露；Kerman Lau 从业 25 年以上，此前任 Moveworks CFO，经历该公司被 ServiceNow 收购；Starburst 定位为"面向受治理数据与 AI 的企业智能平台"，基于 Trino 与 Apache Iceberg 构建，主打跨本地、多云与混合架构的联邦访问。<br><b>摘要：</b> 10 月 8 日，Starburst 宣布任命 Kerman Lau 为首席财务官，负责财务组织并参与增长战略、经营表现与资本配置。官方给出的背景是：企业加速采用 AI 后，agentic 负载与人类负载并行增长，"可信任、受治理的数据与业务上下文"变得关键，Starburst 想让 AI 平台与应用在没有事先把数据集中到单一平台的前提下，从试点走向生产。CEO Justin Borgman 强调要"在关键机会上积极投入，同时建立扩张所需的财务纪律"。Lau 本人称 Starburst 正处在企业技术最大转向的位置上，其能力是"给任何负载——人写的或 agent 发的——提供到达所需数据的网关"。<br><b>对数据平台的影响：</b> 这条的价值不在人事本身，而在它把公司的对外叙事钉在一条路线上：不做数据集中，改做联邦访问。这与本期 A 板块"目录层成为跨平台入口"是同一判断的两面——一旦买方接受"数据不搬、按需联邦"，厂商的竞争点就从存储与算力转向目录覆盖广度与治理一致性。引入一位经历过 SaaS 高速扩张与并购整合的 CFO，通常意味着公司准备进入以资本效率与规模化经营为主线的阶段。对买方，可观察的抓手是其联邦覆盖的目录名单是否继续扩大，以及治理能力是否从"可读"推进到"可写"。</div>
+    <h3>【投融资】OllyGarden 获 400 万美元融资，专做遥测数据质量</h3>
+    <div class="source">来源：<a href="https://tech.eu/2026/10/09/ollygarden-bags-4m-to-improve-telemetry-quality/">Tech.eu：OllyGarden bags $4M to improve telemetry quality</a></div>
+    <div class="body"><b>核心数据：</b> 融资 400 万美元，Next Frontier Capital 与 Grand Ventures 领投，ACTAI Ventures 参与，老股东 DIG Ventures 跟投；Datadog、Grafana Labs 与 Dash0 追加战略投资。公司成立于 2025 年，官方称过去一年已有客户把日志量降低最高 85%。<br><b>摘要：</b> 10 月 9 日，柏林公司 OllyGarden 宣布完成 400 万美元融资。该公司做遥测数据质量，通过持续评估数据质量并在采集源头实施修复，减少进入后端存储与分析平台的噪声数据。同期发布面向 OpenTelemetry 的 Minimum Viable Instrumentation 能力，用于识别采集缺口并给出基础采集标准建议。<br><b>对数据平台的影响：</b> 专做"数据质量前置修复"的工具获得可观测领域头部厂商的联合投资，说明控制数据规模与成本的压力已经从存储层前移到采集层。对数据平台团队，"先把数据收干净再入库"可能变成与压缩、分层同等重要的降本手段。值得注意的是，投资方里有三家是可观测平台本身，这意味着它们更倾向把数据减量放在上游而不是靠后端扩容承接。</div>
 </div>
   </div>
 
@@ -263,20 +278,25 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【跟踪】Gartner：2026 年全球 AI 支出预计达 2.59 万亿美元，AI 基础设施占比超四成</h3>
-    <div class="source">来源：<a href="https://www.nasdaq.com/press-release/26-trillion-and-climbing-where-ai-spending-going-2026-10-08">Nasdaq / PR Newswire（Wall Street Investor 市场评论）：$2.6 Trillion and Climbing — Where the AI Spending Is Going</a></div>
-    <div class="body"><b>为什么值得继续看：</b> 10 月 8 日的市场评论援引 Gartner 预测：2026 年全球 AI 支出预计达 2.59 万亿美元，较 2025 年的 1.76 万亿美元增长 47%，2027 年进一步升至 3.49 万亿美元；其中 AI 基础设施以 1.43 万亿美元占该年总支出的 45% 以上。Gartner 分析师 John-David Lovelock 称 2026 年将是"拐点年"。这条本身不涉及具体产品，但它给出的是数据平台预算所处的水位线：当资本开支以每年百亿美元级、并主要压在算力与数据中心上时，数据侧的目录、治理与语义层投入会更依赖"降本"而非"扩容"的叙事。值得继续跟踪的是，这份预测如何在后续季度被修正，以及基础设施之外的分析与数据管理子项是否被单列。<br><b>需要等待什么信号确认：</b> 一是 Gartner 是否在正式新闻稿中单列数据与分析软件的支出子项——子项能否被拆出，决定这条预测能否直接支撑数据平台的采购叙事；二是主要云厂商的季度资本开支指引是否与 47% 的增速一致，若实际增速回落，说明"拐点年"的判断需要下修；三是这类第三方市场评论稿与 Gartner 官方新闻稿之间的口径差异，引用时应回到 Gartner 原始声明核对，避免把二手转述当成一手结论。</div>
+    <h3>【跟踪】Google 加入 Apache Ossie，语义交换规范仍处孵化期</h3>
+    <div class="source">来源：<a href="https://news.qq.com/rain/a/20261010A001V300">腾讯新闻（原稿：CIO Dive）：微软谷歌支持 Apache Ossie，推进 AI 平台互操作性</a></div>
+    <div class="body"><b>为什么值得继续看：</b> 该规范用 JSON 与 YAML 描述数据集、字段、关系、指标与 AI 上下文，目标是让语义模型在 Snowflake、Databricks、Tableau、ThoughtSpot 等平台之间迁移，已有超过 60 家公司参与，包括 Databricks、Informatica、英伟达、甲骨文、Salesforce 与 Snowflake。微软称会开发 Power BI 语义模型与该规范的双向转换器，并推动把 DAX 纳入其认可的查询语言；Google 方面确认正在加入，但未披露具体贡献。项目仍处 Apache 孵化阶段，规范版本标注为开发草案，分析人士指出行列级安全、访问策略与认证状态尚未作为一等元素纳入，跨平台仍需重复配置；同时指出移植的是定义，围绕定义的行为仍留在各平台。<br><b>需要等待什么信号确认：</b> 规范从开发草案进入稳定发布，且转换后的模型在企业实际负载下能保持计算口径与结果一致。在此之前，把它当作长期互操作层的依据都还偏早，只能作为方向性投入的观察项。</div>
 </div>
 <div class="item">
-    <h3>【跟踪】Apache Doris 发布 4.1.5-rc01，实时分析型数据库继续按增量节奏迭代</h3>
-    <div class="source">来源：<a href="https://github.com/apache/doris/releases">Apache Doris 官方发布页（GitHub Releases）</a></div>
-    <div class="body"><b>为什么值得继续看：</b> 10 月 8 日，Apache Doris 发布 4.1.5-rc01，属候选发布（RC）而非正式版本，衔接 9 月 29 日的稳定版 4.1.4.1。Doris 的定位在近几个版本中持续向"面向 AI agent 的实时分析与混合检索数据库"靠拢：原生内置向量索引，支持在库内直接做向量检索与传统 SQL 的混合查询，并允许在 SQL 中调用大模型完成摘要、情感分析等任务，从而把一部分外部向量库的职责收进分析型数据库。其存算分离与 S3 对象存储支持，则是湖仓架构下的成本路径。这条按 RC 收录，不作为正式发布。<br><b>需要等待什么信号确认：</b> 一是 RC 转为正式版的时间点，以及 4.1.5 相对 4.1.4 的实质变更清单——RC 阶段的变更说明往往不完整，需等正式发布说明；二是"SQL 内调用大模型"这条能力在受治理数据上的权限与审计如何落地，这决定它能否进入企业生产；三是混合检索路线在客户侧的采用情况，即有多少场景真的把向量检索从独立数据库迁回分析型数据库，这决定该方向是产品卖点还是实际需求。</div>
+    <h3>【降级】ISG 三季度指数：增长几乎全部来自基础设施</h3>
+    <div class="source">来源：<a href="https://isg-one.com/articles/full-speed-ahead-for-ai">Information Services Group 官方文章：Full Speed Ahead for AI</a></div>
+    <div class="body"><b>为什么值得继续看：</b> ISG 的三季度指数显示，全球技术与商业服务的合并年度合同价值首次单季突破 500 亿美元，达到 525 亿美元，同比增长 63%，为有记录以来最高增速；其中基础设施即服务增长 115% 至 355 亿美元，软件即服务增长 21% 至 56 亿美元，托管服务仅增长 2.1%，合同数量还同比下降 8%。ISG 把 2026 年云相关支出增速预测从 30% 上调到 60%，维持托管服务 2.1% 的预测，并把基础设施周期描述为尚未见顶。该报告发布于 10 月 8 日，超出本期 24 小时时效窗口，故降级收录。<br><b>需要等待什么信号确认：</b> 下季度合同价值是否延续同等增速，以及这轮投入有多少真正转化为数据平台的常驻消费，而不是一次性的算力扩容。若基础设施增速回落而托管服务未回升，说明预算只是阶段性集中，而非结构性迁移。</div>
+</div>
+<div class="item">
+    <h3>【预告】Apache 社区年会本周在格拉斯哥举行，会前一天设 Lakehouse Day</h3>
+    <div class="source">来源：<a href="https://communityovercode.apache.org/events/glasgow-2026/">Apache 基金会 Community Over Code Glasgow 2026 官方活动页</a></div>
+    <div class="body"><b>为什么值得继续看：</b> Apache 基金会的 Community Over Code 于 10 月 11 日至 14 日在格拉斯哥举行，会前一天另设 Lakehouse Day。25 个以上项目报名参与 hackathon，议程分布在 20 个分会场，Apache Gluten 等数据侧项目安排了专场分享，内容涉及从规划到执行的优化路径，以及项目从孵化到顶级项目的架构与生态演进。开源社区的方向性发布通常走社区博客与技术媒体，不走产品文档，容易在此类日报中被漏掉。<br><b>需要等待什么信号确认：</b> 主论坛与各分会场是否发布跨项目路线图、新孵化项目或数据侧项目的架构变更。若出现版本计划或规范变更，下一期应回溯原始发布页确认首发日期，避免把会期内的转述当成发布日。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-10-09 08:00</p>
+    <p>信息截至北京时间 2026-10-12 08:00</p>
   </div>
 
 </div>
