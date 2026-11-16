@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-11-13</title>
+<title>Data+AI 全球日报 | 2026-11-16</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-11-13 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-11-16 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据治理正从独立工具收编进平台本体，目录与信任信号随数据走</li>
-      <li>温冷数据存储出现第三条介质路线，归档成本与取回速度权衡被重写</li>
-      <li>数据库可观测性加速托管化，自建遥测管道正被平台内置能力替代</li>
+      <li>模型调用控制面正成为数据平台的新治理边界</li>
+      <li>Agent 遥测与成本限额正按数仓的治理与计费模型落地</li>
+      <li>头部 SaaS 数据服务的可用性风险重回采购评估视野</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>本期信号集中在治理与存储两条底座线：治理能力随 Agent 落地被压进平台内置层，独立工具的采购逻辑让位于平台整体评估；存储侧新介质进入真实场景验证，AI 数据的长期持有成本出现新变量。治理选型与归档架构都到了重估窗口。
+      <strong>总判断：</strong>本期主线是数据平台接管 AI 的运营面：模型调用要过治理网关，Agent 遥测与成本限额落进客户自有表、按数仓模型治理。同时头部云的全球性故障提醒买方：治理能力集中化的另一面是可用性风险集中，采购评估需同时核验两者。
     </div>
   </div>
 
@@ -186,9 +186,14 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>微软数据治理战略重组：Purview 数据治理一年后退役，OneLake Catalog 成为唯一治理底座</h3>
+    <h3>Databricks 发布 OpenAI 工具企业落地指南，Codex 调用统一走 Unity Gateway</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://techcommunity.microsoft.com/blog/microsoft-security-blog/a-next-step-in-the-evolution-of-the-microsoft-data-governance-strategy/4572227">Microsoft Security Blog（Microsoft Community Hub）</a><br><b>摘要：</b> 微软 11 月 12 日宣布数据治理战略调整：Microsoft Fabric 正式成为其数据治理方案，OneLake Catalog 作为跨全域数据的统一治理基础，策略、信任信号、血缘与数据管理职责随数据留在平台内；Purview 数据治理（含统一目录、数据地图、工作流）支持将于 2027 年 11 月 12 日终止。Purview 此后聚焦数据安全与合规方向（分类、标注、防泄漏），治理能力包含在 Fabric 容量中计费，不再走独立计量。<br><b>为什么对数据平台重要：</b> 治理从旁挂工具并入数据平台，是"治理内置于平台"路线迄今最强的一次官方确认：同一套权限、敏感标签与血缘同时约束数据和消费数据的 AI Agent。独立数据目录厂商的市场空间被直接压缩，存量 Purview 治理客户面临一年迁移窗口，数据平台采购评估中治理项的计价方式随之改变。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.databricks.com/blog/openai-and-databricks-enterprise-ai-your-governed-data">Databricks 官方博客</a><br><b>摘要：</b> Databricks 于 11 月 13 日发布企业采用指南，给出在受治理数据上使用 OpenAI 工具的三条路径：业务用户经 ChatGPT 的 Genie 插件按企业指标定义查询，答案回链数据源且权限沿用既有边界；Codex 请求经 Unity Gateway 路由，OpenAI 密钥留在网关、每次调用留日志、管理者可按团队设预算（网关已 GA，部分配套工具仍为 Beta）；自定义 Agent 经 Model Serving 部署在受治理数据旁，无需外部 API Key。合作本体为 2025 年 9 月官宣的多年协议，本篇将其落成可执行的部署模式。<br><b>为什么对数据平台重要：</b> 模型调用的密钥管理、审计日志与预算控制正在向数据平台侧收敛，Unity Gateway 这类控制面成为数据平台承接企业 AI 的核心组件；「模型网关＋治理」预计将成为各平台的标配能力与采购评估项，Snowflake 的 Cortex AI Gateway 走的是同一方向。</div>
+</div>
+<div class="item">
+    <h3>Google Cloud 把 Agent 可观测性与治理压进 BigQuery 与 Looker</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/bigquery/docs/bigquery-agent-analytics">Google Cloud 官方文档 BigQuery Agent Analytics</a><br><b>摘要：</b> Google Cloud 于 11 月 13 日在官方博客宣布扩展 Google Data Cloud 的 Agent 可观测性与评估能力：一方 Agent 零配置发送遥测，用 ADK 或 LangGraph 构建的自定义 Agent 经一行 SDK 接入；对话日志（GA）经 Storage Write API 写入客户自有的 agent_events 表，继承 IAM、CMEK 与 VPC Service Controls；知识源带行级安全、策略标签或动态脱敏时，记录侧 fail-closed 跳过、执行侧 fail-open 不中断会话。成本侧新增按日 token 配额（Preview，可按项目/用户/Agent 强制），配合 BigQuery 按查询的字节扫描上限，在计费发生前拦截超大查询。<br><b>为什么对数据平台重要：</b> Agent 遥测的归属地被明确设计为客户自有 BigQuery 表而非第三方面板，隐私检查、成本限额与评估结果直接复用数仓的治理与计费模型；轨迹、token 消耗与评测分数正在成为数仓里的新数据品类，数据平台成为 AI 运营数据的默认存放与治理层。</div>
 </div>
   </div>
 
@@ -199,14 +204,9 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>华为磁电存储启动客户联合试商用，温冷数据存储出现第三条介质路线</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.cnstock.com/commonDetail/828042">上海证券报·中国证券网</a><br><b>摘要：</b> 11 月 12 日，华为新型存储系统试商用启动现场会在贵安云上屯举行，磁电存储系统客户联合试商用正式启动，技术从实验室验证进入真实场景验证阶段。华为已邀请平安科技、斗鱼等 10 余个行业 30 余家客户参与，配套超百 PB 存储测试资源，覆盖网盘存储、直播归档、金融票据、医疗影像等 20 余类场景，并在华为云乌兰察布数据中心开始部署；据透露明年规划的试商用容量已被客户全量预定。华为披露口径：对比 HDD 方案整体 TCO 降低约 30%，对比磁带库在成本相当前提下归档取回时间从 3-5 小时缩短至 30 分钟以内。<br><b>对数据平台的影响：</b> AI 语料驱动温冷数据占比快速上升，存储层成本结构出现新变量。磁电介质若在真实场景验证成立，湖仓归档层与备份层将多出介于 HDD 与磁带之间的选项，"存得起、取得快"改变归档架构的成本假设；这也是中国厂商首次定义并试商用的存储新介质，数据基础设施介质层的自主格局随之变化。</div>
-</div>
-<div class="item">
-    <h3>Azure SQL Managed Instance 托管性能监控进入公共预览</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://azure.microsoft.com/updates/">Azure Updates</a><br><b>摘要：</b> 微软 11 月 12 日宣布 Azure SQL Managed Instance 托管性能监控公共预览上线：由微软托管采集并存储性能遥测，提供单实例与全资产两级仪表盘，帮助识别性能趋势、异常与瓶颈，替代客户自建脚本与割裂监控工具；深度分析与自定义可视化可通过 RBAC 保护的 Azure Data Explorer 代理端点用 KQL 查询监控数据。<br><b>对数据平台的影响：</b> 数据库可观测性正从自建遥测管道转向厂商托管服务：采集、存储、仪表盘由平台内置，无需自运维监控基础设施。监控数据落在 ADX 上意味着运维数据可直接进入分析栈做多实例横向对比，中小团队数据库运维工具链被进一步收进平台，第三方数据库监控工具在云托管场景的必要性下降。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -217,9 +217,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3>Gartner：2026 数据与分析治理平台魔力象限发布，为 AI Agent 治理数据成为主线</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.ataccama.com/blog/ataccama-named-a-visionary-in-the-2026-gartner-magic-quadrant-for-data-and-analytics-governance-platforms-governing-data-for-ai-agents-and-what-comes-next">Ataccama 官方博客</a><br><b>核心观点：</b> Gartner 于 11 月 12 日发布《数据与分析治理平台魔力象限》（作者 Anurag Raj、Sarah Turkaly、Lulu Wang、Dalia Naguib）。入选 Visionary 的 Ataccama 围绕报告主题提出"数据信任层"路径：治理层横跨多个数据平台，为数据附加机器可读的信任分（Data Trust Index），AI Agent 在使用数据前先行核验；治理对象从"人和报表用的目录"扩展到"Agent 可消费的信任信号"。<br><b>映射到数据平台的判断：</b> 与同日微软把治理收进 Fabric 的动作互为印证（详见 A 板块）：集中维护的业务定义、质量与信任指标正成为 AI 落地的前置采购项，治理平台的评估口径从覆盖度转向"Agent 能否安全消费数据"，独立治理厂商与云内目录的竞争将集中在信任信号的可移植性上。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -237,7 +237,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日无合格信息</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -248,20 +248,20 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【跟踪】Purview 治理客户迁移窗口与高监管行业过渡安排</h3>
+    <h3>【降级】Google Knowledge Catalog 语义模型支持被多方报道 GA，一手发布记录待确认</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/zh-cn/partner-center/announcements/2026-november">Microsoft Learn 合作伙伴中心 2026 年 11 月公告</a><br><b>为什么值得继续看：</b> Purview 数据治理支持于 2027 年 11 月 12 日截止，微软即日起提供过渡指引，并特别提示有合同义务或属高监管行业的客户尽早与客户团队对接、逐一评估迁移范围。<br><b>需要等待什么信号确认：</b> 微软是否对高监管客户提供延长支持或例外安排；Atlan、Alation、Collibra、Informatica 等第三方目录厂商是否借迁移窗口承接存量 Purview 治理客户。</div>
+    <div class="body"><b>来源：</b> <a href="https://aiincontext.com/articles/google-makes-knowledge-catalog-semantic-support-generally-available">AI In Context 转述报道</a><br><b>为什么值得继续看：</b> 多家二手媒体于 11 月 14 日报道 Google Knowledge Catalog 语义模型支持正式 GA：可摄取 Looker LookML、BigQuery Graph、dbt MetricFlow、Snowflake Semantic Views、Databricks Metric Views 与 SAP Core Schema Notation 六来源的指标定义入统一上下文图，冲突定义并存并标注出处、由数据治理者裁决。但官方 Dataplex/Knowledge Catalog release notes 未见对应条目，GA 状态与一手发布日期尚无法确认。<br><b>需要等待什么信号确认：</b> Google Cloud 官方博客或 release notes 收录该条目；Knowledge Studio 从 Preview 转 GA 的状态变化。</div>
 </div>
 <div class="item">
-    <h3>【预告】Apache Doris 5.0：11 月发布窗口，实时增量计算与 Agent 式分析</h3>
+    <h3>【跟踪】微软 M365 全球服务中断涉及 Fabric、Power BI 与 Purview，恢复节奏待观察</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://doris.apache.org/community/roadmap/">Apache Doris 社区路线图</a><br><b>为什么值得继续看：</b> 社区路线图将 5.0 定位为聚焦实时增量计算的功能版本，规划于 2026 年 11 月交付；Doris Summit 2026 归纳的多模湖仓、增量计算、Agent 式分析三条主线中，后两条都压在这个版本上，查询并发与 Ad-hoc 特征按 Agent 消费者重新设计。<br><b>需要等待什么信号确认：</b> 官方发布公告与 release notes 是否按期在 11 月落地；增量计算的具体语义边界与面向 Agent 高并发 Ad-hoc 查询的能力范围。</div>
+    <div class="body"><b>来源：</b> <a href="https://big5.cctv.com/gate/big5/news.cctv.cn/2026/11/14/ARTIcp9G5NhU2UCxXvTWKF98261114.shtml">央视新闻</a><br><b>为什么值得继续看：</b> 故障自 11 月 12 日起发生并蔓延至 13 日，波及 Outlook、Teams、Copilot 及 Fabric、Power BI、Purview、Graph 等分析与治理服务；微软 13 日致歉，称源于此前一次网络容量升级、与网络攻击无关，尚无法预计完全恢复时间。数日前微软刚宣布 Purview 数据治理退役、能力并入 Fabric OneLake（11-13 期 A1），治理体系迁移与可用性事件叠加。<br><b>需要等待什么信号确认：</b> 微软官方事后复盘（RCA）公告；Fabric/Power BI 服务健康完全恢复；监管问询与企业客户 SLA 索赔的后续进展。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-11-13 08:00</p>
+    <p>信息截至北京时间 2026-11-16 08:00</p>
   </div>
 
 </div>
