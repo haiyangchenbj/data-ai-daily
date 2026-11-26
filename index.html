@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-11-25</title>
+<title>Data+AI 全球日报 | 2026-11-26</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-11-25 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-11-26 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据库厂商反向切入湖仓，AI数据底座竞争两边开打</li>
-      <li>数据要素与算力网络进入国家级行动计划，制度供给提速</li>
-      <li>超大规模云服务的故障恢复速度，正在变成企业采购的显性指标</li>
+      <li>数据库开始把智能体当一等公民，原生形态走向计费产品。</li>
+      <li>合规成为数据平台应用生态前提，受监管市场门槛继续抬高。</li>
+      <li>迁移工具持续加码，平台竞争从功能对标转向存量负载争夺。</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>AI 数据基础设施的边界正在重画：数据库厂商以湖库一体底座直接对标湖仓平台，政策端把数据要素与算力网络纳入国家级规划。平台选型的评估维度正在从事务、分析、多模态的单点性能，转向能否用一套底座承载 Agent 时代的数据负载。
+      <strong>总判断：</strong>窗口内信号密度低，但两条主线清晰：数据库正在把智能体当一等公民重写接口与计费形态，合规与可观测性加速内化为平台默认能力；头部云厂商年度大会下周开幕，数据平台新品大概率集中释放，短期宜少动、会后集中评估。
     </div>
   </div>
 
@@ -186,9 +186,9 @@
       <h2>Top Signals</h2>
     </div>
     <div class="item">
-    <h3>OceanBase 发布湖库一体 AI 数据平台 OceanLake，核心引擎开源</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://www.oceanbase.com/blog/oceanbase-ai-lakebase-architecture">OceanBase 官方博客</a><br><b>摘要：</b> 11月24日 OceanBase 在 AI 数据大会上发布湖库一体 AI 数据平台 OceanLake，同时将核心 AI 数据库以 OceanSeek 为代号按 Apache 2.0 协议开源。架构上以对象存储上的多模表为底座，统一管理结构化、半结构化与非结构化数据，SQL、Spark ETL、Daft on Ray 等 open 计算共用一份数据，配统一 Catalog、行级权限（RLS）、Agent 场景的 Fork Database 分支回滚与逻辑表；上下文层提供 PowerMem 记忆与 OSI 语义层、DataPilot 问数。官方同场披露：AI 业务收入超 1 亿元，海外营收占比超 15%（同比增长超 100%），公有云营收增长 80%；并按 Omdia 口径列亚太及大洋洲分布式事务型数据库市场份额第一（15.5%）。<br><b>为什么对数据平台重要：</b> 数据库厂商从交易侧反向进入湖仓与 Agent 数据底座，与 Databricks、Snowflake 从湖仓侧补事务能力形成对进；「一份数据同时服务事务、分析、搜索与 AI 计算」的主张若兑现，将直接压缩数据平台选型中「多引擎拼接 + CDC 同步」方案的生存空间，多模表与统一治理边界也会成为新的对标项。</div>
+    <div class="body">今日无合格信息：窗口内（2026-11-25 08:00 至 11-26 08:00）各第一优先级厂商无达到 A 板块门槛的已确认事件，宁缺毋滥，本板块留空。</div>
 </div>
   </div>
 
@@ -199,9 +199,19 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3></h3>
+    <h3>Snowflake Native Apps 对含容器应用提供 FedRAMP 支持（Azure）正式可用</h3>
     
-    <div class="body">今日无合格信息。</div>
+    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/release-notes/new-features">Snowflake Release Notes</a><br><b>摘要：</b> Snowflake 11 月 25 日功能更新：Native Apps 框架在 Azure 上对包含容器的应用提供 FedRAMP 支持，正式可用。此前容器类 Native App 无法进入 FedRAMP 认证环境，美国联邦客户只能在「用容器能力」与「留在合规区」之间二选一。<br><b>为什么对数据平台重要：</b> 受监管市场的合规边界直接决定应用生态上限。容器应用纳入 FedRAMP 后，软件商可以向联邦客户交付带自研运行时的数据应用，Snowflake 的应用分发半径从商业市场扩展到政府市场，合规能力本身变成应用分发的准入前提。</div>
+</div>
+<div class="item">
+    <h3>Azure Databricks Lakeflow 作业级查询性能洞察默认开启</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/zh-cn/Azure/databricks/release-notes/whats-coming">Azure Databricks Release Notes</a><br><b>摘要：</b> 自 2026 年 11 月 25 日起，启用合规安全配置文件的合格工作区默认获得改进的 Lakeflow 性能可观测性：作业层面直接展示任务级查询性能指标与数据量指标，并提供一键优化入口，覆盖无服务器计算、SQL 仓库与 Lakeflow 管道。<br><b>对数据平台的影响：</b> 性能可观测性从「可选开关」变成「默认能力」，管道调优的人力门槛进一步下降；对治理敏感行业客户，作业级性能与数据量基线可以直接纳入成本审计视角。</div>
+</div>
+<div class="item">
+    <h3>BigQuery 迁移服务新增 Databricks SQL 与 Spark SQL 方言转换（预览）</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/bigquery/docs/release-notes">BigQuery Release Notes</a><br><b>摘要：</b> 11 月 24 日，BigQuery Migration Service 进入预览：支持将 Databricks SQL 与 Apache Spark SQL 3.x/4.x 转换为 GoogleSQL，并直接从 Databricks 提取 schema 元数据，为存量作业整体搬迁提供托管工具链。<br><b>对数据平台的影响：</b> 迁移工具是最便宜的获客武器：把「换引擎」的第一道门槛——方言改写与元数据搬迁——做进托管服务后，BigQuery 直接面向 Databricks 存量 workload，跨平台切换成本被系统性压低。[补录 11-24]</div>
 </div>
   </div>
 
@@ -212,9 +222,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3>国家数据局：数字经济发展「十五五」行动计划</h3>
+    <h3></h3>
     
-    <div class="body"><b>来源：</b> <a href="https://paper.people.com.cn/rmrbhwb/pc/content/202611/25/content_30193039.html">人民日报海外版</a><br><b>核心观点：</b> 11月24日从国家数据局获悉，将组织实施数字经济发展「十五五」行动计划：到 2030 年数字经济核心产业增加值占 GDP 比重达 12.5%；完善数据流通利用规则，健全数据要素价格形成和收益分配机制；加快构建全国一体化算力网，建设运营国家数据基础设施；推进制定数字经济促进法，探索布局数据跨境流动服务基础设施。<br><b>映射到数据平台的判断：</b> 数据基础设施从技术选型问题升格为国家级规划命题：数据要素价格与收益分配机制落地后，企业数据平台将面对更明确的流通合规与定价约束；全国一体化算力网与国家数据基础设施投入，会带动跨域调度、可信流通类能力成为平台建设的合规底线，跨境流动基础设施则直接影响跨国企业数据架构的区域切分设计。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -243,20 +253,25 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【跟踪】微软就 M365 全球中断启动「红色警报」行动</h3>
+    <h3>【预告】AWS re:Invent 2026 下周开幕，数据平台年度发布窗口</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://news.qq.com/rain/a/20261125A03X5P00">腾讯新闻转引中新经纬（路透社报道）</a><br><b>为什么值得继续看：</b> 据路透社 11月24日援引的内部备忘录，微软启动最高优先级 Code Red 行动改革重大故障预防与响应机制：按区域隔离流量、过载时优先保障关键服务、用 AI 智能体辅助诊断，目标未来全球级中断 1 小时内恢复。该行动与此前的 13 项整改、年底区域隔离、2027 年一季度网关容量分区计划形成同一条主线。<br><b>需要等待什么信号确认：</b> 官方技术博客或信任中心对区域隔离机制与容量分区时间表的正式说明；Fabric、Power BI 等托管数据服务是否获得独立的 SLA 或容量承诺。</div>
+    <div class="body"><b>来源：</b> <a href="https://reinvent.awsevents.com">AWS re:Invent 官网</a><br><b>为什么值得继续看：</b> re:Invent 2026 将于 11 月 30 日至 12 月 4 日在拉斯维加斯举行，五场主题演讲覆盖 agentic AI、开发者工具与数据线，90 余场 launch session 同周可用。历届该会均为 AWS 数据与 AI 服务线的年度最大发布窗口，新品密度远超日常公告。<br><b>需要等待什么信号确认：</b> 重点关注 SageMaker、Redshift、Aurora 及数据治理线的新品与定价变化，以及 Serverless 与 Iceberg 生态的进一步整合动作。</div>
 </div>
 <div class="item">
-    <h3>【跟踪】Workday FY2027 Q3 财报：AI 产品合同价值三倍增长，语义层口径未披露</h3>
+    <h3>【预告】阿里云 PolarDB PostgreSQL Agentic Database 定档 12 月 1 日商业化</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://news.qq.com/rain/a/20261125A03PRA00">腾讯新闻（智通财经）</a><br><b>为什么值得继续看：</b> Workday 于美东时间 11月24日盘后发布 FY2027 Q3 财报：总营收 27.05 亿美元（+11.2%），订阅收入 25.32 亿美元（+12.8%）；AI 产品当季新增年化合同价值近 1.5 亿美元，为上年同期三倍以上，逾 2200 家核心客户购买至少一项 AI 产品。全年订阅收入指引上调至 99.58 亿美元。但 9 月宣布收购的语义层 Honeydew 并入 Data Cloud 后的商业化口径未单独披露。<br><b>需要等待什么信号确认：</b> 后续财报或分析师电话会对 Data Cloud/语义层收入的独立拆分；Honeydew 交割进度（原计划 FY2027 Q4）与产品整合节奏。</div>
+    <div class="body"><b>来源：</b> <a href="https://help.aliyun.com/document_detail/3064560.html">阿里云公告</a><br><b>为什么值得继续看：</b> 公告于 11 月 20 日发布（超出本期窗口，降级收录），确认 PolarDB PostgreSQL Agentic Database 将于 12 月 1 日结束公测并商业化，按 PCU 计费。产品定义面向 Agent 场景：原生 MCP Server、秒级建集群与分支、Scale to Zero、存储沉淀 OSS 与多模检索，把「Agent 原生数据库」从预览形态推进到计费正式版。<br><b>需要等待什么信号确认：</b> 商业化后首月的实际调用量与客户结构、PCU 定价在 Agent 间歇性负载下的真实成本表现，以及 PolarDB MySQL 版是否跟进同一形态。</div>
+</div>
+<div class="item">
+    <h3>【跟踪】Google ADK×MongoDB 集成官方文档上线，正式公告仍无日期</h3>
+    
+    <div class="body"><b>来源：</b> <a href="https://dochub.mongodb.org/docs/atlas/ai-integrations/google-adk">MongoDB 官方文档</a><br><b>为什么值得继续看：</b> 上期降级收录的「ADK×MongoDB 智能体持久化集成」现可在 MongoDB 官方文档检索到：MongoDbToolset（向量与混合搜索）、MongoDbSessionService（会话持久化）、MongoDbMemoryService（长期记忆）三组件齐备，pip 安装即用，官方一手状态得到确证。<br><b>需要等待什么信号确认：</b> 官方博客或 release notes 给出明确发布日期与 GA 口径后，该条目可升入正文板块；目前文档页无可核验的发布时间，继续观察。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-11-25 08:00</p>
+    <p>信息截至北京时间 2026-11-26 08:00</p>
   </div>
 
 </div>
