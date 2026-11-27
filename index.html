@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data+AI 全球日报 | 2026-11-26</title>
+<title>Data+AI 全球日报 | 2026-11-27</title>
 <style>
   :root {
     --primary: #1a73e8;
@@ -162,7 +162,7 @@
 
   <div class="header">
     <h1>📊 Data+AI 全球日报</h1>
-    <div class="date">2026-11-26 · 严格只包含过去24小时信息</div>
+    <div class="date">2026-11-27 · 严格只包含过去24小时信息</div>
   </div>
 
   <!-- 根据实际日报内容填充以下模板 -->
@@ -170,12 +170,12 @@
   <div class="summary-box">
     <h2>🔥 今日最重要的3个变化</h2>
     <ol>
-      <li>数据库开始把智能体当一等公民，原生形态走向计费产品。</li>
-      <li>合规成为数据平台应用生态前提，受监管市场门槛继续抬高。</li>
-      <li>迁移工具持续加码，平台竞争从功能对标转向存量负载争夺。</li>
+      <li>跨云联邦查询成为全区域默认能力，跨云孤岛的查询边界在松动</li>
+      <li>编排平台把智能体嵌进升级与运维动作，从回答问题走向代做检查</li>
+      <li>数据要素规则开始为AI用数定价定责，治理进入实操条款阶段</li>
     </ol>
     <div class="verdict">
-      <strong>总判断：</strong>窗口内信号密度低，但两条主线清晰：数据库正在把智能体当一等公民重写接口与计费形态，合规与可观测性加速内化为平台默认能力；头部云厂商年度大会下周开幕，数据平台新品大概率集中释放，短期宜少动、会后集中评估。
+      <strong>总判断：</strong>窗口内发布动作偏薄，但三条线同向：跨云查询下沉为默认能力，Agent 进入平台运维链路，政策把 AI 用数的产权、付费与责任写成可执行条款。数据平台的竞争正从存算性能转向查询可达范围、运维自动化深度与用数合规支撑，投入重点宜转向这三处。
     </div>
   </div>
 
@@ -188,7 +188,7 @@
     <div class="item">
     <h3></h3>
     
-    <div class="body">今日无合格信息：窗口内（2026-11-25 08:00 至 11-26 08:00）各第一优先级厂商无达到 A 板块门槛的已确认事件，宁缺毋滥，本板块留空。</div>
+    <div class="body">今日无合格信息。</div>
 </div>
   </div>
 
@@ -199,19 +199,14 @@
       <h2>Product & Tech</h2>
     </div>
     <div class="item">
-    <h3>Snowflake Native Apps 对含容器应用提供 FedRAMP 支持（Azure）正式可用</h3>
+    <h3>BigQuery cross-cloud connections GA：全区域直查 AWS、Azure 与 Salesforce Data 360</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://docs.snowflake.com/release-notes/new-features">Snowflake Release Notes</a><br><b>摘要：</b> Snowflake 11 月 25 日功能更新：Native Apps 框架在 Azure 上对包含容器的应用提供 FedRAMP 支持，正式可用。此前容器类 Native App 无法进入 FedRAMP 认证环境，美国联邦客户只能在「用容器能力」与「留在合规区」之间二选一。<br><b>为什么对数据平台重要：</b> 受监管市场的合规边界直接决定应用生态上限。容器应用纳入 FedRAMP 后，软件商可以向联邦客户交付带自研运行时的数据应用，Snowflake 的应用分发半径从商业市场扩展到政府市场，合规能力本身变成应用分发的准入前提。</div>
+    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/bigquery/docs/release-notes">BigQuery Release Notes</a><br><b>摘要：</b> Google Cloud 在 BigQuery Release Notes 宣布 cross-cloud connections 正式 GA：可从所有 BigQuery 区域查询 AWS、Azure 与 Salesforce Data 360 中的数据，功能可用性超出基于 BigQuery Omni 的标准连接。该能力此前以 Omni 等受限形态提供，本次连接层全量放开。<br><b>对数据平台的影响：</b> 跨云联邦查询正从特定形态的增值能力下沉为全区域默认能力，“数据不动、查询过去”从 BigQuery Omni 的特殊方案变成平台标配；企业做跨云分析时不再默认需要搬运数据或单独建链路，压缩了为跨云查询而复制数据的方案空间，并改变湖仓与仓库选型中的跨云能力权重。 [补录 11-25]</div>
 </div>
 <div class="item">
-    <h3>Azure Databricks Lakeflow 作业级查询性能洞察默认开启</h3>
+    <h3>Managed Airflow 推出 Agentic upgrade check：升级前由 Agent 预检 DAG 兼容性</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://learn.microsoft.com/zh-cn/Azure/databricks/release-notes/whats-coming">Azure Databricks Release Notes</a><br><b>摘要：</b> 自 2026 年 11 月 25 日起，启用合规安全配置文件的合格工作区默认获得改进的 Lakeflow 性能可观测性：作业层面直接展示任务级查询性能指标与数据量指标，并提供一键优化入口，覆盖无服务器计算、SQL 仓库与 Lakeflow 管道。<br><b>对数据平台的影响：</b> 性能可观测性从「可选开关」变成「默认能力」，管道调优的人力门槛进一步下降；对治理敏感行业客户，作业级性能与数据量基线可以直接纳入成本审计视角。</div>
-</div>
-<div class="item">
-    <h3>BigQuery 迁移服务新增 Databricks SQL 与 Spark SQL 方言转换（预览）</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/bigquery/docs/release-notes">BigQuery Release Notes</a><br><b>摘要：</b> 11 月 24 日，BigQuery Migration Service 进入预览：支持将 Databricks SQL 与 Apache Spark SQL 3.x/4.x 转换为 GoogleSQL，并直接从 Databricks 提取 schema 元数据，为存量作业整体搬迁提供托管工具链。<br><b>对数据平台的影响：</b> 迁移工具是最便宜的获客武器：把「换引擎」的第一道门槛——方言改写与元数据搬迁——做进托管服务后，BigQuery 直接面向 Databricks 存量 workload，跨平台切换成本被系统性压低。[补录 11-24]</div>
+    <div class="body"><b>来源：</b> <a href="https://cloud.google.com/composer/docs/release-notes">Cloud Composer Release Notes</a><br><b>摘要：</b> Google Cloud 11 月 26 日发布：Agentic upgrade check 在 Managed Airflow 上线。升级环境前可在控制台运行升级检查，询问 Managed Airflow Agent：所选 Airflow 构建或镜像版本要求 DAG 做哪些变更，提前暴露不兼容项。<br><b>对数据平台的影响：</b> 托管编排把 LLM Agent 嵌入版本升级这类高风险运维动作，DAG 兼容性预检从人工比对 release notes 变成对话式自动检查；若可靠性得到验证，将明显降低 Airflow 大版本升级的工程成本，也为“Agent 代做平台运维”提供了从问答走向执行动作的样本。</div>
 </div>
   </div>
 
@@ -222,9 +217,9 @@
       <h2>Views & Research</h2>
     </div>
     <div class="item">
-    <h3></h3>
+    <h3>国家数据局：《关于完善数据规则 赋能人工智能创新发展的若干意见》公开征求意见</h3>
     
-    <div class="body">今日无合格信息。</div>
+    <div class="body"><b>来源：</b> <a href="https://www.nda.gov.cn/sjj/hdjl/yjzq/yjzqform/list/index_pc.html?code=ff808081-a1d5596e-01a2-17aa8b5d-096b">国家数据局综合司公告</a><br><b>核心观点：</b> 11 月 26 日发布公开征求意见稿，围绕 AI 发展的数据要素需求提出三大方面十二项举措：推动数据产权制度在 AI 用数领域运用，合法采集、衍生、协议取得的数据可依法用于训练和推理；协调数据处理者与受托方关系，支持和鼓励为数据付费；建立数据质量评价、流通责任认定与纠纷调解机制，鼓励用 AI 破解语义对齐、数据分散等治理难题。征求意见期 11 月 26 日至 12 月 6 日，后续将通过试点推动落实。<br><b>映射到数据平台的判断：</b> AI 用数即将进入有明确规则层的阶段：数据产权登记凭证拟作为流通责任认定的重要考量，“为数据付费”被正式鼓励，高质量数据集建设与流通交易被点名推动；数据平台需要在血缘、授权凭证留存、来源可查验、质量测评上提前具备支撑能力，治理能力从合规成本项转向参与数据交易的前提项。</div>
 </div>
   </div>
 
@@ -253,25 +248,15 @@
       <h2>Watchlist</h2>
     </div>
     <div class="item">
-    <h3>【预告】AWS re:Invent 2026 下周开幕，数据平台年度发布窗口</h3>
+    <h3>【降级】NVIDIA×DuckDB：GPU 原生 SQL 引擎 Sirius 成为 DuckDB 核心扩展</h3>
     
-    <div class="body"><b>来源：</b> <a href="https://reinvent.awsevents.com">AWS re:Invent 官网</a><br><b>为什么值得继续看：</b> re:Invent 2026 将于 11 月 30 日至 12 月 4 日在拉斯维加斯举行，五场主题演讲覆盖 agentic AI、开发者工具与数据线，90 余场 launch session 同周可用。历届该会均为 AWS 数据与 AI 服务线的年度最大发布窗口，新品密度远超日常公告。<br><b>需要等待什么信号确认：</b> 重点关注 SageMaker、Redshift、Aurora 及数据治理线的新品与定价变化，以及 Serverless 与 Iceberg 生态的进一步整合动作。</div>
-</div>
-<div class="item">
-    <h3>【预告】阿里云 PolarDB PostgreSQL Agentic Database 定档 12 月 1 日商业化</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://help.aliyun.com/document_detail/3064560.html">阿里云公告</a><br><b>为什么值得继续看：</b> 公告于 11 月 20 日发布（超出本期窗口，降级收录），确认 PolarDB PostgreSQL Agentic Database 将于 12 月 1 日结束公测并商业化，按 PCU 计费。产品定义面向 Agent 场景：原生 MCP Server、秒级建集群与分支、Scale to Zero、存储沉淀 OSS 与多模检索，把「Agent 原生数据库」从预览形态推进到计费正式版。<br><b>需要等待什么信号确认：</b> 商业化后首月的实际调用量与客户结构、PCU 定价在 Agent 间歇性负载下的真实成本表现，以及 PolarDB MySQL 版是否跟进同一形态。</div>
-</div>
-<div class="item">
-    <h3>【跟踪】Google ADK×MongoDB 集成官方文档上线，正式公告仍无日期</h3>
-    
-    <div class="body"><b>来源：</b> <a href="https://dochub.mongodb.org/docs/atlas/ai-integrations/google-adk">MongoDB 官方文档</a><br><b>为什么值得继续看：</b> 上期降级收录的「ADK×MongoDB 智能体持久化集成」现可在 MongoDB 官方文档检索到：MongoDbToolset（向量与混合搜索）、MongoDbSessionService（会话持久化）、MongoDbMemoryService（长期记忆）三组件齐备，pip 安装即用，官方一手状态得到确证。<br><b>需要等待什么信号确认：</b> 官方博客或 release notes 给出明确发布日期与 GA 口径后，该条目可升入正文板块；目前文档页无可核验的发布时间，继续观察。</div>
+    <div class="body"><b>来源：</b> <a href="https://developer.nvidia.com/blog/get-started-with-gpu-accelerated-duckdb-analytics-using-the-sirius-core-extension/">NVIDIA Technical Blog</a><br><b>为什么值得继续看：</b> NVIDIA 与 DuckLabs 将开源 GPU 原生 SQL 引擎 Sirius 以核心扩展形式并入 DuckDB，随 DuckDB 2.0.1 LTS 提供，Apache-2.0 开源；INSTALL/LOAD 两条命令启用，不改写 SQL 与表结构，不支持的特性自动回退 CPU。官方口径 TPC-H 10TB 双 GPU 调优配置总时间 2369.4 秒降至 729.9 秒（3.25 倍），查询时段计算成本降约 79%。原始发布 11 月 20 日至 23 日，超出 24 小时窗口，降级收录。GPU 执行从独立引擎变成嵌入式分析引擎的可选扩展，CPU 向量化路线的引擎将面临同机 GPU 路径的性价比对比；执行边界放在可交换查询计划上，StarRocks 已列入支持路线图。<br><b>需要等待什么信号确认：</b> StarRocks 宿主支持的实际落地时间表；独立第三方在真实负载与计费口径下的复现数据；其他分析引擎是否以同样方式接入该执行边界。</div>
 </div>
   </div>
 
   <div class="footer">
     <p>Powered by Data+AI Daily Brief</p>
-    <p>信息截至北京时间 2026-11-26 08:00</p>
+    <p>信息截至北京时间 2026-11-27 08:00</p>
   </div>
 
 </div>
